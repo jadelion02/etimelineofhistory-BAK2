@@ -13,7 +13,7 @@ body {padding-top: 65px;}body {margin: 0; font-size: 18px;}b {color: white; text
 	    position: fixed; 			        	/* Stay in place */
 	    z-index: 1; 			            	/* Sit on top */
 	    padding-top: 10px;	 		        	/* Location of the box */
-	    left: 1%;
+	    left: 0;
 	    top: 4px;
 	    width: 100%; 			            	/* Full width */
 	    height: 100%; 			            	/* Full height */
@@ -28,8 +28,9 @@ body {padding-top: 65px;}body {margin: 0; font-size: 18px;}b {color: white; text
 	    //background-color: #fefefe;	    		/*Dark-grey
 	    margin: auto;
 	    padding: 5px;
-	    border: 1px solid #888;
+	    border: 2px solid #888;
 	    width: 30%;
+	    height: 25px; 					/* TESTING
 	/* Add Animation */  
 	    -webkit-animation-name: zoom;
 	    -webkit-animation-duration: 0.6s;
