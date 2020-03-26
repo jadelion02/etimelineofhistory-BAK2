@@ -12,7 +12,7 @@ body {padding-top: 65px;}body {margin: 0; font-size: 18px;}b {color: white; text
 	    display: none; 			            	/* Hidden by default */
 	    position: fixed; 			        	/* Stay in place */
 	    z-index: 1; 			            	/* Sit on top */
-	    padding-top: 20px;	 		        	/* Location of the box */
+	    padding-top: 10px;	 		        	/* Location of the box */
 	    left: 1%;
 	    top: 4px;
 	    width: 100%; 			            	/* Full width */
@@ -29,7 +29,7 @@ body {padding-top: 65px;}body {margin: 0; font-size: 18px;}b {color: white; text
 	    margin: auto;
 	    padding: 15px;
 	    border: 2px solid #888;
-	    width: 28%;
+	    width: 30%;
 	/* Add Animation */  
 	    -webkit-animation-name: zoom;
 	    -webkit-animation-duration: 0.6s;
