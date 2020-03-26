@@ -29,8 +29,9 @@ body {padding-top: 65px;}body {margin: 0; font-size: 18px;}b {color: white; text
 	    margin: auto;
 	    padding: 5px;
 	    border: 1px solid #888;
+	    height: 25%; 					/* TESTING
 	    width: 30%;
-	    /*height: 25px; 					/* TESTING
+
 	/* Add Animation */  
 	    -webkit-animation-name: zoom;
 	    -webkit-animation-duration: 0.6s;
