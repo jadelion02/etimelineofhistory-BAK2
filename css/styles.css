@@ -2,7 +2,7 @@
 
 .null {}
 
-body {padding-top: 58px;}
+body {padding-top: 60px;}
 body {margin: 0; font-size: 18px;}
 b {color: white; text-shadow: 2px 2px 4px #000000;}
 w {color: white;}
@@ -58,7 +58,7 @@ body.silex-runtime {opacity: 1;}
 	    display: none; 			/* Hidden by default */
 	    position: fixed; 			/* Stay in place */
 	    z-index: 1; 			/* Sit on top */
-	    padding-top: 15px;	 		/* Location of the box */
+	    padding-top: 10px;	 		/* Location of the box */
 	    left: 0;
 	    top: 0;
 	    width: 95%; 			/* Full width */
