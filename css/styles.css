@@ -58,7 +58,7 @@ body.silex-runtime {opacity: 1;}
 	    display: none; 			/* Hidden by default */
 	    position: fixed; 			/* Stay in place */
 	    z-index: 1; 			/* Sit on top */
-	    padding-top: 20px;	 		/* Location of the box */
+	    padding-top: 15px;	 		/* Location of the box */
 	    left: 0;
 	    top: 0;
 	    width: 95%; 			/* Full width */
