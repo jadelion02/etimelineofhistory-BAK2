@@ -19,7 +19,7 @@ w {color: white;}
 body, html {font-family: sans-serif, calibri; font-size: 9pt; //max-width: 1500px;}
 div.vis-editable,
     div.vis-editable.vis-selected {}div.vis-readonly,
-    div.vis-readonly.vis-selected {background-color: #d8d8e7; border-color: ;color: black; /color: white;}
+    div.vis-readonly.vis-selected {background-color: #d8d8e7; border-color: ;color: black; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); /color: white;}
 .vis-item .vis-item-overflow {overflow: visible;}
 .vis-item.vis-background.negative {background-color: rgba(255, 255, 0, 0.2);}//Background color of box
 .vis-item.white {background-color: #ffffff;}
