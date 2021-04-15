@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Creation Timeline</title>
@@ -35,143 +35,84 @@
 
 <div id="visualization"></div>
 
+<!-- Header Title -->
 <div class="header">
-     <h2>&emsp;<font size="5" font face="Times New Roman" color="red">e</font><font size="5" font 
-
-face="Times New Roman" color="black">Timeline of Creation &nbsp;&nbsp;</font>
-
-
-
-<!-- Background OK -->
-  	<!-- <Body background="img/NASA-HS201427a-HUDF.jpg"> -->
-<!-- Background ends -->
-
-
+     <h2>&emsp;<font size="5" font face="Times New Roman" color="black"><font size="5" font face="Times New Roman" color="red">e</font>Timeline of Creation<font size="5" font face="Times New Roman" color="red"></font>&nbsp;&nbsp;</font>
 
 <!-- Trigger/Open The Modal -->
 <!-- <button id="myBtn">^</button>-->
 <!-- <img src="img/favicon.ico" alt="Control">-->
 
-
+	     
+<!-- Background OK -->
+  	<Body background="img/bg11.jpg">  
+<!-- Background ends -->	     
+	     
+	     
 <!-- Home button -->
 <!--   <div align="center"> -->
-	<a href="index.htm" class="button">&#127968;</a> 
+	<a href="index.htm" class="button">&#127968;</a>&emsp; 
 <!--   </div> -->
 <!-- Home button Ends -->
 
-
+	     
   <div class="dropdown">
-    &emsp;<button id="myBtn">^</button>  
+    <button id="myBtn">^</button>  
+
+<!-- 		<input type="button" id="moveLeft" value="<" style="height:22px; width:40px"/> -->
+<!-- 		<input type="button" id="moveRight" value=">" style="height:22px; width:40px"/> -->
 
     <div class="dropdown-content">
-    <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');">
-    <!-- <p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p> -->
-    <style="font-size:="3"> Show Control &emsp;顯示控制 
+    <!--<p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p>&emsp;<input type="button" value="&#8505;" onclick="window.location.href='img/eTimeline Information.pdf';"/> -->
+    <!--<p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p>-->
+    <!--&emsp;<input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"/>-->
+    <!-- OK   <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"><style="font-size:70%;"> Show Control &nbsp;顯示控制 -->
+
+    <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"><font size="2" color="black"> &nbsp;&emsp;Show Control &nbsp;顯示控制</font>
 
     </div>
   </div>
 
 
-
 <!--NAV BUTTONS-->
 	<div align="right">
-		<input type="button" id="moveLeft2" value="<" style="height:22px; width:60px"/>
-		<input type="button" id="moveRight2" value=">" style="height:22px; width:60px"/>
+		<input type="button" id="moveLeft2" value="<" style="height:22px; width:40px"/>
+		<input type="button" id="moveRight2" value=">" style="height:22px; width:40px"/>
 		&emsp;&nbsp;
 	</div>
 <!--NAV BUTTONS-->
-
 
 <!-- Back To Top Arrow  -->
     <div id="backtop">&#9650;</div>
 <!-- Back To Top Arrow  -->
 
 
-<div class="progress-container">	
-    <div class="progress-bar" id="myBar"></div>
-  </div> 
- 	
-    <!-- </div> -->
-
-    <!-- </div>	-->
-
-
-</body>
 
 
 
-<!-- The Modal -->
-
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-
-<!--<div class="w3-modal-content w3-animate-zoom"> -->
-<!--<div class="w3-modal-content w3-animate-top"> -->
-<!--<div class="w3-modal-content w3-animate-bottom"> -->
-<!--<div class="w3-modal-content w3-animate-left"> -->
-<!--<div class="w3-modal-content w3-animate-right"> -->
-<!--<div class="w3-modal-content w3-animate-opacity"> -->
-<!--<div class="w3-modal w3-animate-opacity"> -->
-
-<!--<img src="img_snowtops.jpg" onclick="document.getElementById('modal01').style.display='block'" 
-
-class="w3-hover-opacity">
-<div id="modal01" class="w3-modal w3-animate-left" onclick="this.style.display='none'">
-
-</div> -->
-
-    	<span class="close">&times;</span>
-<!--    <p>Some text in the Modal..</p>  -->
-
-&nbsp;
-	<button onclick="showAllGroups()">&#9728;</button>	 <!--Unhide-->
-	&emsp;&emsp;&nbsp;&nbsp;
-	<input type="button" id="100" value="&#9668;" style="height:26px; width:28px" align="center"/>
-    	<input type="button" id="moveLeft" value="<" style="height:26px; width:30px" align="center"/>
-	<input type="button" id="777" value="*" style="height:26px; width:30px" align="center"/>
-    	<input type="button" id="moveRight" value=">" style="height:26px; width:30px" align="center"/>
-	<input type="button" id="4.760" value="&#9658;" style="height:26px; width:28px" align="center"/>
-	&nbsp;
-	<input type="button" id="zoomIn" value="+" style="height:26px; width:30px" align="center"/>	
-
-<!--+-->
-   	<input type="button" id="zoomOut" value="-" style="height:26px; width:30px" align="center"/>
-&ensp;
-
-
-  <!--Order Check Box--> <!--Order by id-->
-  	<label for="ordering"><font size="4" font face="calibri">&#8645;</label>
-	<input type="checkbox" id="ordering" unchecked/> 	
-
-  <!--      <input id="selection" size="9" value="1"> -->
-
-
-
-
+<!--The Modal-->
+<script language="javascript">
+<!--
+// == Begin == //
+document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%63%6C%61%73%73%3D%22%6D%6F%64%61%6C%22%3E%0A%0A%20%20%3C%21%2D%2D%20%4D%6F%64%61%6C%20%63%6F%6E%74%65%6E%74%20%2D%2D%3E%0A%20%20%3C%64%69%76%20%63%6C%61%73%73%3D%22%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%22%3E%0A%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%20%77%33%2D%61%6E%69%6D%61%74%65%2D%7A%6F%6F%6D%22%3E%20%2D%2D%3E%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%20%77%33%2D%61%6E%69%6D%61%74%65%2D%74%6F%70%22%3E%20%2D%2D%3E%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%20%77%33%2D%61%6E%69%6D%61%74%65%2D%62%6F%74%74%6F%6D%22%3E%20%2D%2D%3E%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%20%77%33%2D%61%6E%69%6D%61%74%65%2D%6C%65%66%74%22%3E%20%2D%2D%3E%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%20%77%33%2D%61%6E%69%6D%61%74%65%2D%72%69%67%68%74%22%3E%20%2D%2D%3E%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%20%77%33%2D%61%6E%69%6D%61%74%65%2D%6F%70%61%63%69%74%79%22%3E%20%2D%2D%3E%0A%3C%21%2D%2D%3C%64%69%76%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%20%77%33%2D%61%6E%69%6D%61%74%65%2D%6F%70%61%63%69%74%79%22%3E%20%2D%2D%3E%0A%0A%3C%21%2D%2D%3C%69%6D%67%20%73%72%63%3D%22%69%6D%67%5F%73%6E%6F%77%74%6F%70%73%2E%6A%70%67%22%20%6F%6E%63%6C%69%63%6B%3D%22%64%6F%63%75%6D%65%6E%74%2E%67%65%74%45%6C%65%6D%65%6E%74%42%79%49%64%28%27%6D%6F%64%61%6C%30%31%27%29%2E%73%74%79%6C%65%2E%64%69%73%70%6C%61%79%3D%27%62%6C%6F%63%6B%27%22%20%63%6C%61%73%73%3D%22%77%33%2D%68%6F%76%65%72%2D%6F%70%61%63%69%74%79%22%3E%0A%3C%64%69%76%20%69%64%3D%22%6D%6F%64%61%6C%30%31%22%20%63%6C%61%73%73%3D%22%77%33%2D%6D%6F%64%61%6C%20%77%33%2D%61%6E%69%6D%61%74%65%2D%6C%65%66%74%22%20%6F%6E%63%6C%69%63%6B%3D%22%74%68%69%73%2E%73%74%79%6C%65%2E%64%69%73%70%6C%61%79%3D%27%6E%6F%6E%65%27%22%3E%0A%0A%3C%2F%64%69%76%3E%20%2D%2D%3E%0A%0A%20%20%20%20%09%3C%73%70%61%6E%20%63%6C%61%73%73%3D%22%63%6C%6F%73%65%22%3E%26%74%69%6D%65%73%3B%3C%2F%73%70%61%6E%3E%0A%3C%21%2D%2D%20%20%20%20%3C%70%3E%53%6F%6D%65%20%74%65%78%74%20%69%6E%20%74%68%65%20%4D%6F%64%61%6C%2E%2E%3C%2F%70%3E%20%20%2D%2D%3E%0A%0A%26%6E%62%73%70%3B%0A%09%3C%62%75%74%74%6F%6E%20%6F%6E%63%6C%69%63%6B%3D%22%73%68%6F%77%41%6C%6C%47%72%6F%75%70%73%28%29%22%3E%26%23%39%37%32%38%3B%3C%2F%62%75%74%74%6F%6E%3E%09%20%3C%21%2D%2D%55%6E%68%69%64%65%2D%2D%3E%0A%09%26%65%6D%73%70%3B%26%65%6D%73%70%3B%26%6E%62%73%70%3B%26%6E%62%73%70%3B%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%31%22%20%76%61%6C%75%65%3D%22%26%23%39%36%36%38%3B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%20%20%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%6D%6F%76%65%4C%65%66%74%22%20%76%61%6C%75%65%3D%22%3C%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%37%37%37%22%20%76%61%6C%75%65%3D%22%26%23%78%32%37%31%44%3B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%35%70%78%22%3B%20%61%6C%69%67%6E%3D%22%74%6F%70%22%2F%3E%0A%20%20%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%6D%6F%76%65%52%69%67%68%74%22%20%76%61%6C%75%65%3D%22%3E%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%34%2E%37%36%30%22%20%76%61%6C%75%65%3D%22%26%23%39%36%35%38%3B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%26%6E%62%73%70%3B%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%7A%6F%6F%6D%49%6E%22%20%76%61%6C%75%65%3D%22%2B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%09%3C%21%2D%2D%2B%2D%2D%3E%0A%20%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%7A%6F%6F%6D%4F%75%74%22%20%76%61%6C%75%65%3D%22%2D%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%36%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%26%65%6D%73%70%3B%0A%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%43%68%65%63%6B%20%42%6F%78%2D%2D%3E%20%0A%20%20%3C%6C%61%62%65%6C%20%66%6F%72%3D%22%6F%72%64%65%72%69%6E%67%22%3E%3C%66%6F%6E%74%20%73%69%7A%65%3D%22%34%22%20%66%6F%6E%74%20%66%61%63%65%3D%22%63%61%6C%69%62%72%69%22%3E%26%23%38%36%34%35%3C%2F%6C%61%62%65%6C%3E%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%63%68%65%63%6B%62%6F%78%22%20%69%64%3D%22%6F%72%64%65%72%69%6E%67%22%20%75%6E%63%68%65%63%6B%65%64%2F%3E%20%09%3C%21%2D%2D%4F%72%64%65%72%20%62%79%20%69%64%2D%2D%3E%0A%0A'));
+//-->
+</script>
 <!--Modal Ends-->
 
-
-
-  <!--&emsp;&emsp;-->
-&nbsp;
+<!--&emsp;&emsp;-->
+&emsp;&nbsp;
   <div class="dropdown">
   <button class="dropbtn">?</button>
   <div class="dropdown-content">
-  <p style="font-size:70%;">&nbsp;-&nbsp;滾動滑鼠輪向上/下或拖動光標左/右移動時間表<br>&emsp;Scroll wheel 
-
-or Drag cursor L/R to move timeline</p>
-  <p style="font-size:68%;">&nbsp;-&nbsp;滾動滑鼠輪向上/下 + Ctrl 拉近放遠時間表<br>&emsp;Ctrl + Srcoll 
-
-wheel U/D to expand/compress timeline</p>
+  <p style="font-size:70%;">&nbsp;-&nbsp;拖動光標左/右移動時間表<br>&emsp;Drag cursor L/R to move timeline</p>
+  <p style="font-size:68%;">&nbsp;-&nbsp;滾動滑鼠輪向上/下拉近放遠<br>&emsp;Srcoll wheel U/D to expand/compress</p>
 
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#10025; 躲藏 Hide</p>
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9728;  出現 Unhide</p>
 
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9668; 開始 Beginning</p>
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;< 向左 Move Left</p>
-  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;* 銀河系 Milky Way</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#x271D;公元 1 AD</p>
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;> 向右 Move Right</p>
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9658; 現在 Present</p>
 
@@ -182,27 +123,28 @@ wheel U/D to expand/compress timeline</p>
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#128269; 找尋 Search</p>
   <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#8645; 排列 Order by id</p>
 
+
   </div>
 </div>
 
-      &nbsp;&nbsp;<input id="selection" size="9" value="100" style="width:82px"> 
+
+
+
+   &nbsp;&nbsp;<input id="selection" size="9" value="1"> 
 
   <!--Find Check Box & Find Button-->
-  <!--	<input type="text" id="selection" value="777"><input type="button" id="select" value="Find & 
+  <!--	<input type="text" id="selection" value="777"><input type="button" id="select" value="Find & Focus"> <label><input type="checkbox" id="focus" checked></label>-->
+	  
 
-Focus"> <label><input type="checkbox" id="focus" checked></label>-->
-	
-  <!--  &nbsp;&nbsp;<input id="selection" size="8" value="1">  -->
   <!--  &nbsp;&nbsp;<input id="selection" size="8" value="1" style="height:14px; width:80px">&nbsp;  -->
 
 
+<!--INDEX-->
 
-    <select id="theItems" name="theItems" onchange="otherSelect(this)" style="height:20px; width:250px">
+    <select id="theItems" name="theItems" onchange="otherSelect(this)" style="height:20px; width:256px">
 
 	<option value=">""</option>
-<!--	<option value="1">Gen. 1:1 - In the beginning, God created the Heaven and the Earth… -  
-
-BC</option> -->
+<!--	<option value="1">Gen. 1:1 - In the beginning, God created the Heaven and the Earth… -  BC</option> -->
 	<option value="100">1380x10MBC - "大爆炸 The 'Big Bang'</option>
 	<option value="103">1365x10MBC - 瑪土撒拉星 Mathuselah star</option>
 	<option value="104">1360x10MBC - 電離時代開始 Reionization era begins</option>
@@ -221,25 +163,15 @@ BC</option> -->
 	<option value="135">1050x10MBC - 最古老第一星族 Oldest population I stars</option>
 	<option value="136">1040x10MBC - 宇宙變得可居住 Universe becomes habitable</option>
 	<option value="141">&nbsp;990x10MBC - 星系团 JKCS 041</option>
-	<option value="143">&nbsp;970x10MBC - 宇宙達到其當前直徑的1/3  Universe reaches 1/3 of its present 
-
-diameter</option>
-	<option value="144">&nbsp;960x10MBC - 銀河系恆星形成率穩定 Milky Way star formation rate 
-
-stabilizes</option>
+	<option value="143">&nbsp;970x10MBC - 宇宙達到其當前直徑的1/3  Universe reaches 1/3 of its present diameter</option>
+	<option value="144">&nbsp;960x10MBC - 銀河系恆星形成率穩定 Milky Way star formation rate stabilizes</option>
 	<option value="147">&nbsp;935x10MBC - 巴納德的星空形態 Barnard`s star forms</option>
-	<option value="150">&nbsp;900x10MBC - 最古老暗能量的證據 Oldest known evidence for dark 
-
-energy</option>
+	<option value="150">&nbsp;900x10MBC - 最古老暗能量的證據 Oldest known evidence for dark energy</option>
 <option value=">""</option>
-	<option value="152">&nbsp;880x10MBC - 銀河系的薄磁盤開始形成 Milky Way`s thin disk starts to 
-
-form</option>
+	<option value="152">&nbsp;880x10MBC - 銀河系的薄磁盤開始形成 Milky Way`s thin disk starts to form</option>
 	<option value="155">&nbsp;850x10MBC - 拉蘭德21185紅矮星 Lalande 21185</option>
 	<option value="156">&nbsp;840x10MBC - 拉卡伊9352紅矮星 Lacaille 9352</option>
-	<option value="160">&nbsp;800x10MBC - 銀河系恆星形成率開始下降 Milky Way star formation rate 
-
-begins to decline</option>
+	<option value="160">&nbsp;800x10MBC - 銀河系恆星形成率開始下降 Milky Way star formation rate begins to decline</option>
 	<option value="162">&nbsp;780x10MBC - 開陽恆星形成 Mizar forms</option>
 	<option value="165">&nbsp;750x10MBC - 伽瑪射線暴 GRB 080319B</option>
 	<option value="169">&nbsp;710x10MBC - 宇宙降溫到5K以下 Universe cools below 5 K</option>
@@ -249,15 +181,11 @@ begins to decline</option>
 <option value=">""</option>
 	<option value="173">&nbsp;670x10MBC - 參宿一巨星形成 Alnitak forms</option>
 	<option value="175">&nbsp;650x10MBC - 銀河系開始呈螺旋狀 Milky Way starts spiralizing</option>
-	<option value="176">&nbsp;640x10MBC - 像地球狀行星的平均年齡 Age of an average earth-like 
-
-planet</option>
+	<option value="176">&nbsp;640x10MBC - 像地球狀行星的平均年齡 Age of an average earth-like planet</option>
 	<option value="178">&nbsp;620x10MBC - 天鵝座61星形成 61 Cygni forms</option>
 	<option value="180">&nbsp;600x10MBC - 暗能量超過地心吸力 Dark energy overtakes gravity</option>
 	<option value="182">&nbsp;580x10MBC - 天倉五恆星形成 Tau Ceti forms</option>
-	<option value="185">&nbsp;550x10MBC - 銀河系變成螺旋狀狀態 Milky Way becomes a spiral 
-
-galazy</option>
+	<option value="185">&nbsp;550x10MBC - 銀河系變成螺旋狀狀態 Milky Way becomes a spiral galazy</option>
 	<option value="189">&nbsp;520x10MBC - 格利泽570星形成 Gliese 570 forms</option>
 	<option value="192">&nbsp;485x10MBC - 半人馬星形成 Proxima Centauri forms</option>
 	<option value="193">&nbsp;470x10MBC - 超新星 SN 2005ap supernova</option>
@@ -274,30 +202,20 @@ galazy</option>
 	<option value="206">&nbsp;360x10MBC - 超大陸出現 Valbaara supercontinent emerges</option>
 <option value=">""</option>
 	<option value="207">&nbsp;350x10MBC - 藍藻化石 Cyanobacteria fossils</option>
-	<option value="208">&nbsp;346x10MBC - 細菌化石  Bacterial fossils in chert</option>
+	<option value="208">&nbsp;346x10MBC - 細菌化石 Bacterial fossils in chert</option>
 	<option value="210">&nbsp;330x10MBC - 地质構造壓縮 Compressional tectonics</option>
 	<option value="211">&nbsp;326x10MBC - Barberton event</option>
-	<option value="212">&nbsp;300x10MBC - 藍細菌發展真正的光合作用 Cyanobacteria develop true 
-
-photosynthesis</option>
+	<option value="212">&nbsp;300x10MBC - 藍細菌發展真正的光合作用 Cyanobacteria develop true photosynthesis</option>
 	<option value="213">&nbsp;290x10MBC - 網罟座形成 Zeta Reticuli forms</option>
-	<option value="214">&nbsp;290x10MBC - 潮汐降至1000英尺 Tides decline below 1000 ft / 303 
-
-m</option>
+	<option value="214">&nbsp;290x10MBC - 潮汐降至1000英尺 Tides decline below 1000 ft / 303 m</option>
 	<option value="215">&nbsp;270x10MBC - 第一個真核生物出現 First eukaryotes emerges</option>
-	<option value="216">&nbsp;260x10MBC - 最古老的巨型碳酸鹽平台 Oldest known giant carbonate 
-
-platform</option>
-	<option value="217">&nbsp;250x10MBC - 地殼構造板塊開始移動 Movement of the tectonic plates 
-
-commences</option>
+	<option value="216">&nbsp;260x10MBC - 最古老的巨型碳酸鹽平台 Oldest known giant carbonate platform</option>
+	<option value="217">&nbsp;250x10MBC - 地殼構造板塊開始移動 Movement of the tectonic plates commences</option>
 <option value=">""</option>
 	<option value="218">&nbsp;250x10MBC - 大氧化事件 Great Oxygenation event</option>
-	<option value="219">&nbsp;240x10MBC - Suavjarvi impact event</option>
+	<option value="219">&nbsp;240x10MBC - 蘇阿夫湖隕石大撞擊 Suavjarvi impact event</option>
 	<option value="220">&nbsp;240x10MBC - 休倫冰川開始 Huronian glaciation starts</option>
-	<option value="221">&nbsp;222x10MBC - 大氣中的氧氣含量超過1％ Atmospheric oxygen level surpasses 
-
-1%</option>
+	<option value="221">&nbsp;222x10MBC - 大氣中的氧氣含量超過1％ Atmospheric oxygen level surpasses 1%</option>
 	<option value="222">&nbsp;220x10MBC - 臭氧層形式 Ozone layer forms</option>
 	<option value="223">&nbsp;215x10MBC - 休倫冰川期結束 Huronian glaciation ends</option>
 	<option value="224">&nbsp;210x10MBC - 最早的真核生物化石 Earliest known eukaryote fossils</option>
@@ -305,56 +223,38 @@ commences</option>
 	<option value="226">&nbsp;202x10MBC - 弗里德堡隕石大撞擊 Vredefort impact event</option>
 	<option value="227">&nbsp;200x10MBC - 多種多樣的微体疑源类 Diversification of acritarchs</option>
 <option value=">""</option>
-	<option value="228">&nbsp;190x10MBC - 大氣中的氧氣含量超過15％ Atmospheric oxygen level surpasses 
-
-15%</option>
-	<option value="229">&nbsp;190x10MBC - Natural nuclear reactor forms in Oklo, Gabon</option>
+	<option value="228">&nbsp;190x10MBC - 大氣中的氧氣含量超過15％ Atmospheric oxygen level surpasses 15%</option>
+	<option value="229">&nbsp;190x10MBC - 天然核反應堆在奥克洛形成 Natural nuclear reactor forms in Oklo, Gabon</option>
 	<option value="230">&nbsp;185x10MBC - 第一噬菌體 First bacteriophages</option>
-	<option value="231">&nbsp;185x10MBC - Sudbury impact event</option>
+	<option value="231">&nbsp;185x10MBC - 索德柏立隕石大撞擊 Sudbury impact event</option>
 	<option value="232">&nbsp;180x10MBC - 哥倫比亞超級陸地出現 Supercontinent Columbia forms</option>
 	<option value="233">&nbsp;175x10MBC - 毘濕奴地下室岩石 Vishnu Basement Rocks</option>
 	<option value="234">&nbsp;170x10MBC - 最古老的沙丘 Oldest sand dune emerges</option>
-	<option value="235">&nbsp;160x10MBC - Platform covers expand</option>
-	<option value="236">&nbsp;160x10MBC - 線粒體同化為真核細胞 Mitochondria assimilate into eukaryotic 
-
-cells</option>
-	<option value="237">&nbsp;150x10MBC - 哥倫比亞超級陸地分離 Supercontinent Columbia breaks 
-
-up</option>
+	<option value="235">&nbsp;160x10MBC - 地質平台覆蓋範圍擴大 Platform covers expand</option>
+	<option value="236">&nbsp;160x10MBC - 線粒體同化為真核細胞 Mitochondria assimilate into eukaryotic cells</option>
+	<option value="237">&nbsp;150x10MBC - 哥倫比亞超級陸地分離 Supercontinent Columbia breaks up</option>
 <option value=">""</option>
 	<option value="238">&nbsp;145x10MBC - 地質平台涵蓋擴展 Geologic platform covers expand</option>
-	<option value="239">&nbsp;140x10MBC - 疊層石數量迅速增加 Population of stromatolites rapidly 
-
-rises</option>
+	<option value="239">&nbsp;140x10MBC - 疊層石數量迅速增加 Population of stromatolites rapidly rises</option>
 	<option value="240">&nbsp;137x10MBC - 南河三恒星形成 Procyon forms</option>
-	<option value="241">&nbsp;130x10MBC - 日長達17小時 Days are 17 hours long</option>
+      //<option value="241">&nbsp;130x10MBC - 日長達17小時 Days are 17 hours long</option>
 	<option value="242">&nbsp;130x10MBC - 格林維爾造山開始 Greenville orogeny starts</option>
 	<option value="243">&nbsp;125x10MBC - 第一陸地菌類 First land fungi</option>
 	<option value="244">&nbsp;120x10MBC - 超大陸羅丹尼亞形成 Supercontinent Rodinia forms</option>
 	<option value="245">&nbsp;120x10MBC - 红藻門 Bangiomorpha pubescens</option>
-	<option value="246">&nbsp;115x10MBC - 真核生物種群數量激增 Population explosion of 
-
-eukaryotes</option>
+	<option value="246">&nbsp;115x10MBC - 真核生物種群數量激增 Population explosion of eukaryotes</option>
 	<option value="247">&nbsp;110x10MBC - 最早的鞭毛原生生物 Earliest flagellate protists</option>
 <option value=">""</option>
 	<option value="248">&nbsp;105x10MBC - 第一個藻類 First vaucherian algae</option>
 	<option value="249">&nbsp;100x10MBC - 格林維爾造山結束 Greenville orogeny ends</option>
-	<option value="250">&nbsp;100x10MBC - 微体疑源类壽命急劇下降 Acritarch lifespan falls 
-
-sharply</option>
-	<option value="251">&nbsp;&nbsp;90x10MBC - 日長達19小時 Days are 19 hours long</option>
-	<option value="252">&nbsp;&nbsp;85x10MBC - 疊層石的數量開始減少 Population of stromatolites starts 
-
-to decline</option>
+	<option value="250">&nbsp;100x10MBC - 微体疑源类壽命急劇下降 Acritarch lifespan falls sharply</option>
+      //<option value="251">&nbsp;&nbsp;90x10MBC - 日長達19小時 Days are 19 hours long</option>
+	<option value="252">&nbsp;&nbsp;85x10MBC - 疊層石的數量開始減少 Population of stromatolites starts to decline</option>
 	<option value="253">&nbsp;&nbsp;80x10MBC - 原生生物數量激增 Protista population explodes</option>
 	<option value="254">&nbsp;&nbsp;77x10MBC - Kaigas 冰川結冰 glaciation</option>
-	<option value="255">&nbsp;&nbsp;75x10MBC - 超大陸羅丹尼亞州崩盤 Supercontinent Rodinia breaks 
-
-apart</option>
+	<option value="255">&nbsp;&nbsp;75x10MBC - 超大陸羅丹尼亞州崩盤 Supercontinent Rodinia breaks apart</option>
 	<option value="256">&nbsp;&nbsp;72x10MBC - Sturtian 冰川結冰 glaciation</option>
-	<option value="257">&nbsp;&nbsp;70x10MBC - 中國發現僵化蠕蟲印象 Fossilized worm impressions found 
-
-in China</option>
+	<option value="257">&nbsp;&nbsp;70x10MBC - 中國發現僵化蠕蟲印象 Fossilized worm impressions found in China</option>
 <option value=">""</option>
 	<option value="258">&nbsp;&nbsp;65x10MBC - Marinoan 冰川結冰 glaciation</option>
 	<option value="259">&nbsp;&nbsp;60x10MBC - 超大陸形成 Supercontinent Pannotia forms</option>
@@ -363,9 +263,7 @@ in China</option>
 	<option value="262">&nbsp;&nbsp;54x10MBC - 寒武紀大爆發 Cambrian explosion</option>
 	<option value="263">&nbsp;&nbsp;52.5x10MBC - 第一條前三葉蟲 First trilobites</option>
 	<option value="265">&nbsp;&nbsp;48.5x10MBC - 第一條無顎魚 First jawless fish</option>
-	<option value="266">&nbsp;&nbsp;45x10MBC - 植物和節肢動物定居在土地上 Plants and arthropods 
-
-colonize the land</option>
+	<option value="266">&nbsp;&nbsp;45x10MBC - 植物和節肢動物定居在土地上 Plants and arthropods colonize the land</option>
 	<option value="267">&nbsp;&nbsp;44.5x10MBC - 奧陶紀滅絕 Ordovician extinction event</option>
 	<option value="268">&nbsp;&nbsp;42x10MBC - 第一呼吸動物 First air-breathing animals</option>
 <option value=">""</option>
@@ -375,9 +273,7 @@ colonize the land</option>
 	<option value="273">&nbsp;&nbsp;36x10MBC - 第一個螃蟹和蕨類植物 First crab and ferns</option>
 	<option value="274">&nbsp;&nbsp;33x10MBC - 第一羊膜動物 First amniotes</option>
 	<option value="275">&nbsp;&nbsp;32x10MBC - 第一類爬行動物 First reptiles</option>
-	<option value="276">&nbsp;&nbsp;30.5x10MBC - 大氣氧水平達到35％的峰值 Atmospheric oxygen level 
-
-peaks at 35%</option>
+	<option value="276">&nbsp;&nbsp;30.5x10MBC - 大氣氧水平達到35％的峰值 Atmospheric oxygen level peaks at 35%</option>
 	<option value="278">&nbsp;&nbsp;28x10MBC - 第一隻甲蟲 First beetles</option>
 	<option value="279">&nbsp;&nbsp;27.5x10MBC - 第一隻獸孔目 First therapsids</option>
 	<option value="280">&nbsp;&nbsp;25.1x10MBC - 二疊紀滅絕 Permian extinction event</option>
@@ -388,28 +284,20 @@ peaks at 35%</option>
 	<option value="284">&nbsp;&nbsp;22x10MBC - 第一隻烏龜 First turtles</option>
 	<option value="285">&nbsp;&nbsp;20.1x10MBC - 三疊紀滅絕事件 Triassic extinction event</option>
 	<option value="287">&nbsp;&nbsp;19x10MBC - 第一個巨型蜥腳類動物 First giant sauropods</option>
-	<option value="288">&nbsp;&nbsp;18x10MBC - 盤古大陸分裂 Pangaea splits into Laurasia & 
-
-Gondwana</option>
+	<option value="288">&nbsp;&nbsp;18x10MBC - 盤古大陸分裂 Pangaea splits into Laurasia & Gondwana</option>
 	<option value="289">&nbsp;&nbsp;17.6x10MBC - 第一劍龍 First stegosaurs</option>
 	<option value="290">&nbsp;&nbsp;16.3x10MBC - 第一翼龍 First pterosaurs</option>
 	<option value="291">&nbsp;&nbsp;15.5x10MBC - 首鳥 First birds</option>
 <option value=">""</option>
-	<option value="292">&nbsp;&nbsp;14.5x10MBC - 馬達加斯加從非洲分裂 Madagascar splits from 
-
-Africa</option>
+	<option value="292">&nbsp;&nbsp;14.5x10MBC - 馬達加斯加從非洲分裂 Madagascar splits from Africa</option>
 	<option value="293">&nbsp;&nbsp;13x10MBC - 第一朵開花植物 First flowering plants</option>
-	<option value="294">&nbsp;&nbsp;13x10MBC - 勞拉西亞和岡瓦納開始分崩離析 Laurasia and Gondwana 
-
-begin to drift apart</option>
+	<option value="294">&nbsp;&nbsp;13x10MBC - 勞拉西亞和岡瓦納開始分崩離析 Laurasia and Gondwana begin to drift apart</option>
 	<option value="295">&nbsp;&nbsp;12x10MBC - 第一螞蟻 First ants</option>
 	<option value="296">&nbsp;&nbsp;11.5x10MBC - 第一個產卵哺乳動物 First egg-laying mammals</option>
 	<option value="297">&nbsp;&nbsp;10.6x10MBC - 棘龍進化 Spinosaurus evolves</option>
 	<option value="298">&nbsp;&nbsp;10x10MBC - 第一隻蜜蜂 First bees</option>
 	<option value="299">&emsp;9x10MBC - 魚龍滅絕 Ichthyosaurs go extinct</option>
-	<option value="300">&emsp;9x10MBC - 印度次大陸從岡瓦納分裂 Indian subcontinent splits from 
-
-Gondwana</option>
+	<option value="300">&emsp;9x10MBC - 印度次大陸從岡瓦納分裂 Indian subcontinent splits from Gondwana</option>
 	<option value="301">&emsp;8x10MBC - 澳大利亞從南極洲分裂 Australia splits from Antarctica</option>
 <option value=">""</option>
 	<option value="302">&emsp;8x10MBC - 蜥蜴龍出現 Hadrosaurs appear</option>
@@ -417,24 +305,18 @@ Gondwana</option>
 	<option value="305">&emsp;6.6x10MBC - 白堊紀滅絕 Cretaceous extinction event</option>
 	<option value="306">&emsp;6x10MBC - 靈長類動物進化 First primates evolve</option>
 	<option value="307">&emsp;5.5x10MBC - 首批現代鳥類 First modern birds</option>
-	<option value="308">&emsp;5.2x10MBC - 印度次大陸與亞洲相撞 Indian subcontinent collides with 
-
-Asia</option>
+	<option value="308">&emsp;5.2x10MBC - 印度次大陸與亞洲相撞 Indian subcontinent collides with Asia</option>
 	<option value="310">&emsp;4.7x10MBC - 鯨魚回到水中 Whales return to the water</option>
 	<option value="311">&emsp;4x10MBC - 南極冰蓋開始增長 Antarctic ice cap begins to grow</option>
 	<option value="312">&emsp;4x10MBC - 第一隻犬科動物進化 First canids evolve</option>
 	<option value="313">&emsp;3.5x10MBC - 草原開始普及 Grasslands become widespread</option>
 <option value=">""</option>
 	<option value="314">&emsp;3.4x10MBC - 第一隻貓科動物進化 First felids evolve</option>
-	<option value="315">&emsp;3x10MBC - 南美與南極洲分開 South America separates from 
-
-Antarctica</option>
+	<option value="315">&emsp;3x10MBC - 南美與南極洲分開 South America separates from Antarctica</option>
 	<option value="316">&emsp;2.6x10MBC - 第一批大象First elephants</option>
 	<option value="317">&emsp;2.6x10MBC - 拉加里塔火山噴發 La Garita eruption</option>
 	<option value="319">&emsp;2x10MBC - 第一頭長頸鹿 First giraffes</option>
-	<option value="320">&emsp;1.8x10MBC - 大猿和小猿的發散Divergence of great apes and lesser 
-
-apes</option>
+	<option value="320">&emsp;1.8x10MBC - 大猿和小猿的發散Divergence of great apes and lesser apes</option>
 	<option value="321">&emsp;1.5x10MBC - 第一帶蹄哺乳動物 First bovids</option> 
 	<option value="322">&emsp;1.5x10MBC - 第一隻袋鼠 First kangaroos</option >
 	<option value="323">&emsp;1.1x10MBC - 第一匹大馬 First large horses</option>
@@ -447,70 +329,41 @@ apes</option>
 	<option value="333">&emsp;0.3x10MBC - 南北美洲生物大遷徙 Great American Interchange</option>
 	<option value="334">&emsp;0.25x10MBC - 當前冰河時代開始 Current ice age begins</option>
 	<option value="335">&emsp;0.22x10MBC - 灵长目人出現Genus Homo appear</option>
-	<option value="337">&emsp;0.15x10MBC - 直立猿人首先使用火 First controlled use of fire by Homo 
-
-Erectus</option>
+	<option value="337">&emsp;0.15x10MBC - 直立猿人首先使用火 First controlled use of fire by Homo Erectus</option>
 	<option value="338">&emsp;0.12x10MBC - 先驅人進化 Homo antecessor evolves</option>
 <option value=">""</option>
-	<option value="342">&emsp;780,000 BC - 地球磁場的最後一次反轉 Last reversal of Earth`s magnetic 
-
-field</option>
+	<option value="342">&emsp;780,000 BC - 地球磁場的最後一次反轉 Last reversal of Earth`s magnetic field</option>
 	<option value="343">&emsp;640,000 BC - 黃石破火山口爆發 Yellowstone Caldera erupts</option>
 	<option value="344">&emsp;600,000 BC - 海德堡人進化 Homo heidelbergensis evolves</option>
 	<option value="345">&emsp;500,000 BC - 最早的"人類"雕刻 Earliest "human" engraving</option>
 	<option value="346">&emsp;400,000 BC - 格陵蘭冰融化 Greenland ice melts</option>
 	<option value="347">&emsp;300,000 BC - 巨猿消失 Gigantopithecus goes extinct</option>
 	<option value="348">&emsp;250,000 BC - 尼安德特人進化 Neanderthals evolve</option>
-	<option value="349">&emsp;195,000 BC - 現代的"人類"在非洲出現 Anatomically modern "humans" appear 
-
-in Africa</option>
+	<option value="349">&emsp;195,000 BC - 現代的"人類"在非洲出現 Anatomically modern "humans" appear in Africa</option>
 	<option value="350">&emsp;120,000 BC - 撒哈拉沙漠變得肥沃 Sahara becomes fertile</option>
-	<option value="351">&emsp;100,000 BC - 像人類的"人"開始遷移到非洲 "Human" like creatures begin 
-
-migrating out of Africa</option>
+	<option value="351">&emsp;100,000 BC - 像人類的"人"開始遷移到非洲 "Human" like creatures begin migrating out of Africa</option>
 	<option value="354">&emsp;70,000 BC - 多峇大火山爆發 Toba supervolcanic eruption</option>
 	<option value="357">&emsp;38,000 BC - 尼安德特人滅絕 Neanderthals go extinct</option>
 
 
 
-<!---->
-<!---->
-<!---->
-
     </select>
+
 
 <!--        <div id="otherBox" style="visibility: hidden;">-->
 <!--        If other: <input name="otherField" type="text" />-->
 
-  <!--Find Button-->
-  	<input type="checkbox" id="focus" checked>
-  	<input type="button" id="select" value="&#128269" style="height:22px; width:30px"; 
-
-align="center"/>	
-
-<!--</form>-->
-
-  <!--Order Check Box--> 
-  <!-- &emsp;<label for="ordering"><font size="4" font face="calibri"&#8645;</label> -->
-	<input type="checkbox" id="ordering" checked/>	
-<!--Order by id-->
-     
-      </div>
-    </div>
-  </div>
- </h2>
-</div>
 
 
+<script language="javascript">
+<!--
+// == Begin O == //
+document.write(unescape('%3C%21%2D%2D%46%69%6E%64%20%42%75%74%74%6F%6E%2D%2D%3E%0A%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%63%68%65%63%6B%62%6F%78%22%20%69%64%3D%22%66%6F%63%75%73%22%20%63%68%65%63%6B%65%64%3E%0A%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%73%65%6C%65%63%74%22%20%76%61%6C%75%65%3D%22%26%23%31%32%38%32%36%39%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%32%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%09%0A%0A%3C%21%2D%2D%3C%2F%66%6F%72%6D%3E%2D%2D%3E%0A%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%43%68%65%63%6B%20%42%6F%78%2D%2D%3E%20%0A%20%20%3C%21%2D%2D%20%26%65%6D%73%70%3B%3C%6C%61%62%65%6C%20%66%6F%72%3D%22%6F%72%64%65%72%69%6E%67%22%3E%3C%66%6F%6E%74%20%73%69%7A%65%3D%22%34%22%20%66%6F%6E%74%20%66%61%63%65%3D%22%63%61%6C%69%62%72%69%22%3E%26%23%38%36%34%35%3C%2F%6C%61%62%65%6C%3E%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%63%68%65%63%6B%62%6F%78%22%20%69%64%3D%22%6F%72%64%65%72%69%6E%67%22%20%75%6E%63%68%65%63%6B%65%64%2F%3E%20%2D%2D%3E%09%3C%21%2D%2D%4F%72%64%65%72%20%62%79%20%69%64%2D%2D%3E%0A%20%20%20%20%20%0A%0A%20%20%20%20%20%20%3C%2F%64%69%76%3E%0A%0A%20%20%20%20%3C%2F%64%69%76%3E%0A%0A%20%20%3C%2F%64%69%76%3E%0A%20%3C%2F%68%32%3E%0A%0A%3C%2F%64%69%76%3E%0A%0A%0A%0A%3C%66%6F%6F%74%65%72%3E%0A%20%20%26%6E%62%73%70%3B%3C%66%6F%6E%74%20%73%69%7A%65%3D%22%31%22%20%63%6F%6C%6F%72%3D%22%67%72%65%79%22%3E%50%72%65%70%61%72%65%64%20%62%79%3A%20%52%2E%20%53%69%65%77%3C%2F%66%6F%6E%74%3E%0A%3C%2F%66%6F%6F%74%65%72%3E%20%0A%0A%0A%0A%0A'));
+//-->
 
-<footer>
-    &nbsp;<font size="1" color="grey">Prepared by: R. Siew</font>
-</footer> 
 
-
-<!--<input type="text" name="n1" id="n1" onkeyup="sync()">-->
+</script><!--<input type="text" name="n1" id="n1" onkeyup="sync()">-->
 <!--<input type="text" name="n2" id="n2"/>-->
-
 
 
 <script>
@@ -547,26 +400,8 @@ window.onclick = function(event) {
     }
 }
 
-
 //Modal Ends
 
-
-//Move Functions
-        function move (percentage) {
-        var range = timeline.getWindow();
-        var interval = range.end - range.start;
-
-        timeline.setWindow({
-            start: range.start.valueOf() - interval * percentage,
-            end:   range.end.valueOf()   - interval * percentage
-        });
-    }
-
-    // Attach events to the navigation buttons
-    document.getElementById('zoomIn').onclick    = function () { timeline.zoomIn( 0.2); };
-    document.getElementById('zoomOut').onclick   = function () { timeline.zoomOut( 0.2); };
-    document.getElementById('moveLeft').onclick  = function () { move( 0.2); };
-    document.getElementById('moveRight').onclick = function () { move(-0.2); };
 
     // Attach events to the navigation buttons
     document.getElementById('moveLeft2').onclick  = function () { move( 0.2); };
@@ -574,12 +409,9 @@ window.onclick = function(event) {
 
 
 
-    //Dropdown OK
-    function otherSelect(obj)  
-    {           
-        var input = document.getElementById('selection');
-        input.value = obj.value;
-    }
+//Move Functions
+
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1 8(a){d 3=6.p();d b=3.9-3.c;6.k({c:3.c.f()-b*a,9:3.9.f()-b*a})}5.4(\'i\').7=1(){6.i(0.2)};5.4(\'g\').7=1(){6.g(0.2)};5.4(\'m\').7=1(){8(0.2)};5.4(\'l\').7=1(){8(-0.2)};1 n(e){d h=5.4(\'o\');h.j=e.j}',26,26,'|function||range|getElementById|document|timeline|onclick|move|end|percentage|interval|start|var|obj|valueOf|zoomOut|input|zoomIn|value|setWindow|moveRight|moveLeft|otherSelect|selection|getWindow'.split('|'),0,{}))
 
 //Move Ends
 
@@ -595,1309 +427,383 @@ window.onclick = function(event) {
   // DOM element where the Timeline will be attached
   var container = document.getElementById('visualization');
 
-  // Groups
+  // 
   var groups = new vis.DataSet([
 
-	{id: 1, content: '<font color="black">1. &nbsp;天父<br>&emsp;的世界
+//	{id: 1, content: '<font color="black">1.<br>&emsp;<br>&emsp;</font><br>&nbsp;&nbsp;&nbsp;'},
 
-<br>&emsp;&emsp;My<br>&emsp;Father`s<br>&emsp;World</font><br>&nbsp;&nbsp;&nbsp;'},    
-      
-	{id: 2, content: '<font color="darkblue">2. 地質時期<br>&nbsp;Geological<br>&emsp;Eons & 
+	//{id: 1, content: '<font size="5" font color="black">&nbsp;A.</font><br>'},
+	//{id: 2, content: '<font size="5" font color="black">&nbsp;B.</font><br>'},
+	  
+	{id: 1, content: '<font color="black">1. &nbsp;天父<br>&emsp;的世界<br>&emsp;&emsp;My<br>&emsp;Father`s<br>&emsp;World</font><br>&nbsp;&nbsp;&nbsp;'},    
+	{id: 2, content: '<font color="darkblue">2. 地質時期<br>&nbsp;Geological<br>&emsp;Eons & <br>&emsp;Periods</font><br>&nbsp;&nbsp;&nbsp;'},
+	{id: 3, content: '<font color="darkblue">3. 創世記<br>&emsp;Genesis</font><br>&nbsp;&nbsp;&nbsp;'},
+	  
+//	{id: 3, content: '<font size="5" font color="black">&nbsp;C.</font><br>'},
 
-<br>&emsp;Periods</font><br>&nbsp;&nbsp;&nbsp;'},
-      
-	{id: 3, content: '<font color="darkblue">3. 創世記
-
-<br>&emsp;Genesis</font><br>&nbsp;&nbsp;&nbsp;'},
-	
   ]);
 
-  // function to make all groups visible again
-  function showAllGroups(){
-    groups.forEach(function(group){
-      groups.update({id: group.id, visible: true});
-    })
-  };
 
-// function ends
+//Functions to make all group visible again
+
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 8(){2.7(3(1){2.6({0:1.0,5:4})})};',9,9,'id|group|groups|function|true|visible|update|forEach|showAllGroups'.split('|'),0,{}))
+
+//Function ends
 
 
   // create a dataset with items
 
   var items = new vis.DataSet([
   
+    //BACKGROUND
+
 
 	//BACKGROUND GROUP 1
 
-	{id: 'B101', content: '', start: '0000-10-07T04:01:00', end: '0923', type: 'background', group: 1, 
-
-className: 'black'},
-	{id: 'B102', content: '冥古宙 <br>HADEAN Eon', start: '0923', end: '0980', type: 'background', 
-
-group: 1, className: 'darkgrey'},
-	{id: 'B103', content: '太古宙 <br>ARCHEAN Eon', start: '0980', end: '1130', type: 'background', 
-
-group: 1, className: 'lightgreen'},
-	{id: 'B104', content: '元古宙 <br>PROTEROZOIC Eon', start: '1130', end: '1326', type: 
-
-'background', group: 1, className: 'lightyellow'},
-	{id: 'B105', content: '<br>寒武紀 <br>CAMBRIAN <br>Period', start: '1326', end: '1331-06-30', 
-
-type: 'background', group: 1, className: 'lightpurple'},
-	{id: 'B106', content: '<br><br>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1331-07-01', end: 
-
-'1335', type: 'background', group: 1, className: 'lightorange'},
-	{id: 'B107', content: '<br>志留紀 <br>SILURIAN <br>Period', start: '1335', end: '1338', type: 
-
-'background', group: 1, className: 'pink'},
-	{id: 'B108', content: '<br><br>泥盆纪 <br>DEVONIAN <br>Period', start: '1338', end: '1344', type: 
-
-'background', group: 1, className: 'green'},
-	{id: 'B109', content: '<br>石炭纪 <br>CARBONIFEROUS <br>Period', start: '1344', end: '1350', type: 
-
-'background', group: 1, className: 'blue'},
-	{id: 'B110', content: '<br><br>二叠紀 <br>PERMIAN <br>Period', start: '1350', end: '1354-11-23', 
-
-type: 'background', group: 1, className: 'beige'},
-	{id: 'B111', content: '<br>三叠紀 <br>TRIASSIC <br>Period', start: '1354-11-23', end: '1359-11-
-
-23', type: 'background', group: 1, className: 'orange'},
-	{id: 'B112', content: '<br><br>侏羅紀 <br>JURASSIC <br>Period', start: '1359-11-23', end: '1365-
-
-06-30', type: 'background', group: 1, className: 'brown'},
-	{id: 'B113', content: '<br>白堊紀 <br>CRETACEOUS <br>Period', start: '1365-06-30', end: '1373-05-
-
-25', type: 'background', group: 1, className: 'LavenderBlush'},
-	{id: 'B114', content: '<br><br>古近紀 <br>PALEOGENIAN <br>Period', start: '1373-05-25', end: 
-
-'1377-09-11', type: 'background', group: 1, className: 'turquoise'},
-	{id: 'B115', content: '<br>新近紀 <br>NEOGENIAN <br>Period', start: '1377-09-11', end: '1379-09-
-
-29T18:00:00', type: 'background', group: 1, className: 'darkgrey'},
-	{id: 'B116', content: '<br><br>第四紀 <br>QUATERNARY <br>Period', start: '1379-09-29T18:00:00', 
-
-end: '1379-12-29T18:56:12', type: 'background', group: 1, className: 'lightred'},
-	{id: 'B117', content: '<br>&ensp;<b>', start: '1379-12-29T18:56:12', end: '1379-12-29T22:13:37', 
-
-type: 'background', group: 1, className: 'lightblue'},
-	{id: 'B118', content: '<br> <br>', start: '1379-12-29T22:13:37', end: '1379-12-30T00:03:00', type: 
-
-'background', group: 1, className: 'red'},
+	{id: 'B101', content: '', start: '0000-10-07T04:01:00', end: '0923', type: 'background', group: 1, className: 'black'},
+	{id: 'B102', content: '冥古宙 <br>HADEAN Eon', start: '0923', end: '0980', type: 'background', group: 1, className: 'darkgrey'},
+	{id: 'B103', content: '太古宙 <br>ARCHEAN Eon', start: '0980', end: '1130', type: 'background', group: 1, className: 'lightgreen'},
+	{id: 'B104', content: '元古宙 <br>PROTEROZOIC Eon', start: '1130', end: '1326', type: 'background', group: 1, className: 'lightyellow'},
+	{id: 'B105', content: '<br>寒武紀 <br>CAMBRIAN <br>Period', start: '1326', end: '1331-06-30', type: 'background', group: 1, className: 'lightpurple'},
+	{id: 'B106', content: '<br><br>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1331-07-01', end: '1335', type: 'background', group: 1, className: 'lightorange'},
+	{id: 'B107', content: '<br>志留紀 <br>SILURIAN <br>Period', start: '1335', end: '1338', type: 'background', group: 1, className: 'pink'},
+	{id: 'B108', content: '<br><br>泥盆纪 <br>DEVONIAN <br>Period', start: '1338', end: '1344', type: 'background', group: 1, className: 'green'},
+	{id: 'B109', content: '<br>石炭纪 <br>CARBONIFEROUS <br>Period', start: '1344', end: '1350', type: 'background', group: 1, className: 'blue'},
+	{id: 'B110', content: '<br><br>二叠紀 <br>PERMIAN <br>Period', start: '1350', end: '1354-11-23', type: 'background', group: 1, className: 'beige'},
+	{id: 'B111', content: '<br>三叠紀 <br>TRIASSIC <br>Period', start: '1354-11-23', end: '1359-11-23', type: 'background', group: 1, className: 'orange'},
+	{id: 'B112', content: '<br><br>侏羅紀 <br>JURASSIC <br>Period', start: '1359-11-23', end: '1365-06-30', type: 'background', group: 1, className: 'brown'},
+	{id: 'B113', content: '<br>白堊紀 <br>CRETACEOUS <br>Period', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 1, className: 'LavenderBlush'},
+	{id: 'B114', content: '<br><br>古近紀 <br>PALEOGENIAN <br>Period', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 1, className: 'turquoise'},
+	{id: 'B115', content: '<br>新近紀 <br>NEOGENIAN <br>Period', start: '1377-09-11', end: '1379-09-29T18:00:00', type: 'background', group: 1, className: 'darkgrey'},
+	{id: 'B116', content: '<br><br>第四紀 <br>QUATERNARY <br>Period', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 1, className: 'lightred'},
+	{id: 'B117', content: '<br>&ensp;<b>', start: '1379-12-29T18:56:12', end: '1379-12-29T22:13:37', type: 'background', group: 1, className: 'lightblue'},
+	{id: 'B118', content: '<br> <br>', start: '1379-12-29T22:13:37', end: '1379-12-30T00:03:00', type: 'background', group: 1, className: 'red'},
 
 	//BACKGROUND GROUP 2
 
-	{id: 'B201', content: '', start: '0000-10-07T04:01:00', end: '0923', type: 'background', group: 2, 
-
-className: 'black'},
-	{id: 'B202', content: '<b>冥古宙 <br>HADEAN Eon', start: '0923', end: '0980', type: 'background', 
-
-group: 2, className: 'darkgrey'},
-	{id: 'B203', content: '<br><b>太古宙 <br>ARCHEAN Eon', start: '0980', end: '1130', type: 
-
-'background', group: 2, className: 'lightgreen'},
-	{id: 'B204', content: '<br><br><b>元古宙 <br>PROTEROZOIC Eon', start: '1130', end: '1326', type: 
-
-'background', group: 2, className: 'lightyellow'},
-	{id: 'B205', content: '<br><b>寒武紀 <br>CAMBRIAN <br>Period', start: '1326', end: '1331-06-30', 
-
-type: 'background', group: 2, className: 'lightpurple'},
-	{id: 'B206', content: '<br><br><b>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1331-07-01', end: 
-
-'1335', type: 'background', group: 2, className:'lightgrey'},
-	{id: 'B207', content: '<br><b>志留紀 <br>SILURIAN <br>Period', start: '1335', end: '1338', type: 
-
-'background', group: 2, className: 'pink'},
-	{id: 'B208', content: '<br><br><b>泥盆纪 <br>DEVONIAN <br>Period', start: '1338', end: '1344', 
-
-type: 'background', group: 2, className: 'green'},
-	{id: 'B209', content: '<br><b>石炭纪 <br>CARBONIFEROUS <br>Period', start: '1344', end: '1350', 
-
-type: 'background', group: 2, className: 'blue'},
-	{id: 'B210', content: '<br><br><b>二叠紀 <br>PERMIAN <br>Period', start: '1350', end: '1354-11-
-
-23', type: 'background', group: 2, className: 'beige'},
-	{id: 'B211', content: '<br><b>三叠紀 <br>TRIASSIC <br>Period', start: '1354-11-23', end: '1359-11
-
--23', type: 'background', group: 2, className: 'orange'},
-	{id: 'B212', content: '<br><br><b>侏羅紀 <br>JURASSIC <br>Period', start: '1359-11-23', end: 
-
-'1365-06-30', type: 'background', group: 2, className: 'brown'},
-	{id: 'B213', content: '<br><b>白堊紀 <br>CRETACEOUS <br>Period', start: '1365-06-30', end: '1373-
-
-05-25', type: 'background', group: 2, className: 'LavenderBlush'},
-	{id: 'B214', content: '<br><br><b>古近紀 <br>PALEOGENIAN <br>Period', start: '1373-05-25', end: 
-
-'1377-09-11', type: 'background', group: 2, className: 'turquoise'},
-	{id: 'B215', content: '<br><b>新近紀 <br>NEOGENIAN <br>Period', start: '1377-09-11', end: '1379-
-
-09-29T18:00:00', type: 'background', group: 2, className: 'darkgrey'},
-	{id: 'B216', content: '<br><br><b>第四紀 <br>QUATERNARY <br>Period', start: '1379-09-29T18:00:00', 
-
-end: '1379-12-29T18:56:12', type: 'background', group: 2, className: 'lightred'},
-	{id: 'B217', content: '<br>&ensp;<b>', start: '1379-12-29T18:56:12', end: '1379-12-29T22:13:37', 
-
-type: 'background', group: 2, className: 'lightblue'},
-	{id: 'B218', content: '<br><b>GRACE Period', start: '1379-12-29T22:13:37', end: '1379-12-
-
-30T00:03:00', type: 'background', group: 2, className: 'red'},
+	{id: 'B201', content: '', start: '0000-10-07T04:01:00', end: '0923', type: 'background', group: 2, className: 'black'},
+	{id: 'B202', content: '<b>冥古宙 <br>HADEAN Eon', start: '0923', end: '0980', type: 'background', group: 2, className: 'darkgrey'},
+	{id: 'B203', content: '<br><b>太古宙 <br>ARCHEAN Eon', start: '0980', end: '1130', type: 'background', group: 2, className: 'lightgreen'},
+	{id: 'B204', content: '<br><br><b>元古宙 <br>PROTEROZOIC Eon', start: '1130', end: '1326', type: 'background', group: 2, className: 'lightyellow'},
+	{id: 'B205', content: '<br><b>寒武紀 <br>CAMBRIAN <br>Period', start: '1326', end: '1331-06-30', type: 'background', group: 2, className: 'lightpurple'},
+	{id: 'B206', content: '<br><br><b>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1331-07-01', end: '1335', type: 'background', group: 2, className:'lightgrey'},
+	{id: 'B207', content: '<br><b>志留紀 <br>SILURIAN <br>Period', start: '1335', end: '1338', type: 'background', group: 2, className: 'pink'},
+	{id: 'B208', content: '<br><br><b>泥盆纪 <br>DEVONIAN <br>Period', start: '1338', end: '1344', type: 'background', group: 2, className: 'green'},
+	{id: 'B209', content: '<br><b>石炭纪 <br>CARBONIFEROUS <br>Period', start: '1344', end: '1350', type: 'background', group: 2, className: 'blue'},
+	{id: 'B210', content: '<br><br><b>二叠紀 <br>PERMIAN <br>Period', start: '1350', end: '1354-11-23', type: 'background', group: 2, className: 'beige'},
+	{id: 'B211', content: '<br><b>三叠紀 <br>TRIASSIC <br>Period', start: '1354-11-23', end: '1359-11-23', type: 'background', group: 2, className: 'orange'},
+	{id: 'B212', content: '<br><br><b>侏羅紀 <br>JURASSIC <br>Period', start: '1359-11-23', end: '1365-06-30', type: 'background', group: 2, className: 'brown'},
+	{id: 'B213', content: '<br><b>白堊紀 <br>CRETACEOUS <br>Period', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 2, className: 'LavenderBlush'},
+	{id: 'B214', content: '<br><br><b>古近紀 <br>PALEOGENIAN <br>Period', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 2, className: 'turquoise'},
+	{id: 'B215', content: '<br><b>新近紀 <br>NEOGENIAN <br>Period', start: '1377-09-11', end: '1379-09-29T18:00:00', type: 'background', group: 2, className: 'darkgrey'},
+	{id: 'B216', content: '<br><br><b>第四紀 <br>QUATERNARY <br>Period', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 2, className: 'lightred'},
+	{id: 'B217', content: '<br>&ensp;<b>', start: '1379-12-29T18:56:12', end: '1379-12-29T22:13:37', type: 'background', group: 2, className: 'lightblue'},
+	{id: 'B218', content: '<br><b>GRACE Period', start: '1379-12-29T22:13:37', end: '1379-12-30T00:03:00', type: 'background', group: 2, className: 'red'},
 
 	// BACKGROUND GROUP 3
 
-	//{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-
+	//{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0236',type: 'background', group: 3, className: 'black'},
+	//{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0236', end: '0471', title: '', type:'background', group: 3, className:'black'},
+	//{id: 'B303', content: '<b>3. 第三日<br>&emsp;Third Day', editable: false, start: '0471', end: '0707', title: '', type:'background', group: 3, className:'black'},
+	//{id: 'B304', content: '<b>4. 第四日<br>&emsp;Fourth Day', editable: false, start: '0707', end: '0923', title: '', type:'background', group: 3, className:'black'},
+	//{id: 'B305', content: '<b>4. 第四日<br>&emsp;Fourth Day', editable: false, start: '0923', end: '0942', title: '', type:'background', group: 3, className:'darkgrey'},
+	//{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '0942', end: '0980', title: '', type:'background', group: 3, className:'darkgrey'},
+	//{id: 'B307', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '0980', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
+	//{id: 'B308', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1130', end: '1178', title: '', type:'background', group: 3, className:'lightyellow'},
+	//{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1178', end: '1326', title: '', type:'background', group: 3, className:'lightyellow'},
+	//{id: 'B310', content: '6. 第六日<br>&emsp;Sixth Day', start: '1326', end: '1331-06-30', type: 'background', group: 3, className:'lightpurple'},
 
-07T04:00:00', end: '0236',type: 'background', group: 3, className: 'black'},
-	//{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0236', end: 
+//UPDATE
+//	{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0710',type: 'background', group: 3, className: 'black'},
+//	{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0710', end: '0923', title: '', type:'background', group: 3, className:'black'},
+//	{id: 'B3021', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0923', end: '0980', title: '', type:'background', group: 3, className:'darkgrey'},
+//	{id: 'B3022', content: '2. 第二日<br>&emsp;Second Day', editable: false, start: '0980', end: '1056', title: '', type:'background', group: 3, className:'lightgreen'},
+//	{id: 'B303', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1056', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
+//	{id: 'B3031', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1130', end: '1226', title: '', type:'background', group: 3, className:'lightyellow'},
+//	{id: 'B304', content: '4. 第四日<br>&emsp;Fourth Day', editable: false, start: '1226', end: '1303', title: '', type:'background', group: 3, className:'lightyellow'},
+//	{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1303', end: '1326', title: '', type:'background', group: 3, className:'lightyellow'},
+//	{id: 'B3061', content: '<br>', editable: false, start: '1326', end: '1331-07-01', title: '', type:'background', group: 3, className:'lightpurple'},
+//	{id: 'B3062', content: '<br>', editable: false, start: '1331', end: '1335', title: '', type:'background', group: 3, className:'lightgrey'},
+//	{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1343', end: '1343', title: '', type:'background', group: 3, className:'lightyellow'},
+//	{id: 'B310', content: '<br>', start: '1343', end: '1344', type: 'background', group: 3, className:'green'},
+//
+//	{id: 'B311', content: '<br><br>&ensp;<b>', start: '1331-07-01', end: '1335', type: 'background', group: 3, className: 'lightorange'},
+//	{id: 'B312', content: '<br>&ensp;<b>', start: '1335', end: '1338', type: 'background', group: 3, className: 'pink'},
+//	{id: 'B313', content: '<br><br>&ensp;<b>', start: '1338', end: '1344', type: 'background', group: 3, className: 'green'},
+//	{id: 'B314', content: '<br>&ensp;<b>', start: '1344', end: '1350', type: 'background', group: 3, className: 'blue'},
+//	{id: 'B315', content: '6. 第六日<br>&emsp;Sixth Day', start: '1350', end: '1354-11-23', type: 'background', group: 3, className: 'beige'},
+//	{id: 'B316', content: '<br>&ensp;<b>', start: '1354-11-23', end: '1359-11-23', type: 'background', group: 3, className: 'orange'},
+//	{id: 'B317', content: '<br><br>&ensp;<b>', start: '1359-11-23', end: '1365-06-30', type: 'background', group: 3, className: 'brown'},
+//	{id: 'B318', content: '<br>&ensp;<b>', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 3, className: 'LavenderBlush'},
+//	{id: 'B319', content: '<br><br>&ensp;<b>', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 3, className: 'turquoise'},
+//	{id: 'B320', content: '<br>&ensp;<b>', start: '1377-09-11', end: '1379-09-29T18:00:00', type: 'background', group: 3, className: 'darkgrey'},
+//	{id: 'B321', content: '<br><br>&ensp;<b>', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 3, className: 'lightred'},
+//	{id: 'B322', content: '<br>&ensp;<b>', start: '1379-12-29T18:56:12', end: '1379-12-29T22:13:37', type: 'background', group: 3, className: 'lightblue'},
+//	{id: 'B323', content: '<br>&ensp;<b>', start: '1379-12-29T22:13:37', end: '1379-12-30T00:03:00', type: 'background', group: 3, className: 'red'},
+//
+//	{id: 'B324', content: '6. 第六日 Sixth Day', editable: false, start: '1379-12-29T18:56:12', type: '', group: 3, className: 'grey'},
+//	{id: 'B325', content: '7. 第七日 Seventh Day', editable: false, start: '1379-12-29T18:56:13', type: '', group: 3, className: ''},
+//
+	{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0696',type:'background', group: 3, className: 'black'},
+	{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0677', end: '0923', title: '', type:'background', group: 3, className:'black'},
+	{id: 'B3022', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0923', end: '0980', title: '', type:'background', group: 3, className:'darkgrey'},
+	{id: 'B3024', content: '2. 第二日<br>&emsp;Second Day', editable: false, start: '0980', end: '1027', title: '', type:'background', group: 3, className:'lightgreen'},
+	{id: 'B303', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1027', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
+	{id: 'B3032', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1027', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
+	{id: 'B3034', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1130', end: '1226', title: '', type:'background', group: 3, className:'lightyellow'},
+	{id: 'B304', content: '4. 第四日<br>&emsp;Fourth Day', editable: false, start: '1226', end: '1289', title: '', type:'background', group: 3, className:'lightyellow'},
+	{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1289', end: '1326', title: '', type:'background', group: 3, className:'lightyellow'},
+	//{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1330', end: '1379-12-29T18:56:12', title: '', type:'background', group: 3, className:''},
+	{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1330', end: '1379-12-29T18:56:12', title: '', type:'', group: 3, className:''},
+	{id: 'B325', content: '7. 第七日<br> Seventh Day', editable: false, start: '1379-12-29T18:56:13', type: '', group: 3, className: ''},
 
-'0471', title: '', type:'background', group: 3, className:'black'},
-	//{id: 'B303', content: '<b>3. 第三日<br>&emsp;Third Day', editable: false, start: '0471', end: 
-
-'0707', title: '', type:'background', group: 3, className:'black'},
-	//{id: 'B304', content: '<b>4. 第四日<br>&emsp;Fourth Day', editable: false, start: '0707', end: 
-
-'0923', title: '', type:'background', group: 3, className:'black'},
-	//{id: 'B305', content: '<b>4. 第四日<br>&emsp;Fourth Day', editable: false, start: '0923', end: 
-
-'0942', title: '', type:'background', group: 3, className:'darkgrey'},
-	//{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '0942', end: 
-
-'0980', title: '', type:'background', group: 3, className:'darkgrey'},
-	//{id: 'B307', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '0980', end: 
-
-'1130', title: '', type:'background', group: 3, className:'lightgreen'},
-	//{id: 'B308', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1130', end: 
-
-'1178', title: '', type:'background', group: 3, className:'lightyellow'},
-	//{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1178', end: 
-
-'1326', title: '', type:'background', group: 3, className:'lightyellow'},
-	//{id: 'B310', content: '6. 第六日<br>&emsp;Sixth Day', start: '1326', end: '1331-06-30', type: 
-
-'background', group: 3, className:'lightpurple'},
-
-//UPDATE 3
-	{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-
-
-07T04:00:00', end: '0696',type:'background', group: 3, className: 'black'},
-	{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0677', end: 
-
-'0923', title: '', type:'background', group: 3, className:'black'},
-	{id: 'B3022', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0923', end: 
-
-'0980', title: '', type:'background', group: 3, className:'darkgrey'},
-	{id: 'B3024', content: '2. 第二日<br>&emsp;Second Day', editable: false, start: '0980', end: 
-
-'1027', title: '', type:'background', group: 3, className:'lightgreen'},
-	{id: 'B303', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1027', end: '1130', 
-
-title: '', type:'background', group: 3, className:'lightgreen'},
-	{id: 'B3032', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1027', end: 
-
-'1130', title: '', type:'background', group: 3, className:'lightgreen'},
-	{id: 'B3034', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1130', end: 
-
-'1226', title: '', type:'background', group: 3, className:'lightyellow'},
-	{id: 'B304', content: '4. 第四日<br>&emsp;Fourth Day', editable: false, start: '1226', end: 
-
-'1289', title: '', type:'background', group: 3, className:'lightyellow'},
-	{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1289', end: 
-
-'1326', title: '', type:'background', group: 3, className:'lightyellow'},
-	//{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1330', end: 
-
-'1379-12-29T18:56:12', title: '', type:'background', group: 3, className:''},
-	{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1330', end: '1379-
-
-12-29T18:56:12', title: '', type:'', group: 3, className:''},
-	{id: 'B325', content: '7. 第七日<br> Seventh Day', editable: false, start: '1379-12-29T18:56:13', 
-
-type: '', group: 3, className: ''},
-
-	{id: 'C205', content: '', start: '1326', end: '1331-06-30', type: 'background', group: 3, 
-
-className: 'lightpurple'},
-	{id: 'C206', content: '', start: '1331-07-01', end: '1335', type: 'background', group: 3, 
-
-className:'lightgrey'},
-	{id: 'C207', content: '', start: '1335', end: '1338', type: 'background', group: 3, className: 
-
-'pink'},
-	{id: 'C208', content: '', start: '1338', end: '1344', type: 'background', group: 3, className: 
-
-'green'},
-	{id: 'C209', content: '', start: '1344', end: '1350', type: 'background', group: 3, className: 
-
-'blue'},
-	{id: 'C210', content: '', start: '1350', end: '1354-11-23', type: 'background', group: 3, 
-
-className: 'beige'},
-	{id: 'C211', content: '', start: '1354-11-23', end: '1359-11-23', type: 'background', group: 3, 
-
-className: 'orange'},
-	{id: 'C212', content: '', start: '1359-11-23', end: '1365-06-30', type: 'background', group: 3, 
-
-className: 'brown'},
-	{id: 'C213', content: '', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 3, 
-
-className: 'LavenderBlush'},
-	{id: 'C214', content: '', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 3, 
-
-className: 'turquoise'},
-	{id: 'C215', content: '', start: '1377-09-11', end: '1379-09-29T18:56:12', type: 'background', 
-
-group: 3, className: 'darkgrey'},
-	{id: 'C216', content: '', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 
-
-'background', group: 3, className: 'lightred'},
-
-
-
-
+	{id: 'C205', content: '', start: '1326', end: '1331-06-30', type: 'background', group: 3, className: 'lightpurple'},
+	{id: 'C206', content: '', start: '1331-07-01', end: '1335', type: 'background', group: 3, className:'lightgrey'},
+	{id: 'C207', content: '', start: '1335', end: '1338', type: 'background', group: 3, className: 'pink'},
+	{id: 'C208', content: '', start: '1338', end: '1344', type: 'background', group: 3, className: 'green'},
+	{id: 'C209', content: '', start: '1344', end: '1350', type: 'background', group: 3, className: 'blue'},
+	{id: 'C210', content: '', start: '1350', end: '1354-11-23', type: 'background', group: 3, className: 'beige'},
+	{id: 'C211', content: '', start: '1354-11-23', end: '1359-11-23', type: 'background', group: 3, className: 'orange'},
+	{id: 'C212', content: '', start: '1359-11-23', end: '1365-06-30', type: 'background', group: 3, className: 'brown'},
+	{id: 'C213', content: '', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 3, className: 'LavenderBlush'},
+	{id: 'C214', content: '', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 3, className: 'turquoise'},
+	{id: 'C215', content: '', start: '1377-09-11', end: '1379-09-29T18:56:12', type: 'background', group: 3, className: 'darkgrey'},
+	{id: 'C216', content: '', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 3, className: 'lightred'},						   
+							   
+							   
     // CREATION OF THE HEAVEN AND THE EARTH - GROUP 1
 
-	{id: 1, content: '<font color="yellow" font size="2.0"><p>起初神創造天地...<br>創世記 
-
-1:1<br><br>In the beginning,<br>God created the heaven and the earth…<br>Gen. 1:1 ', editable: false, 
-
-start: '0000-10-07T04:00:00', title: '', type:'point', group: 1, className:''},
-	{id: 0, content: '<font color="white">...地是空虛混沌，淵面黑暗；　神的靈運行在水面上..<br>&emsp;
-
-創世記 1:2<br><br>...And the earth was without form, and void; and darkness was upon <br>&emsp;the face of 
-
-the deep. And the Spirit of God moved upon the face of the waters.<br>&emsp;Gen. 1:2', editable: false, 
-
-start: '0000-10-07T05:00:00', title: '', type:'point', group: 1, className:''},
-	{id: 100, content: '<w>"大爆炸 Big Bang"<br>', editable: false, start: '0000-10-07T04:01:00', 
-
-title: '~1380x10M BC<br>Beginning of the space and time ', type:'point', group: 2, className:''},
-//  	{id: 103, content: '<a href="img/HD 140283.jpg" target="new"><img src="img/HD 140283.jpg" alt="" 
-
-width="100px" height="100px"><br><a href="https://en.wikipedia.org/wiki/HD_140283" target="_blank"><font 
-
-color="white">103</a>. Mathuselah star<br>', editable: false, start: '0015', title: '1365x10M BC<br><img 
-
-src="img/HD 140283.jpg" style="width:810px; height:480px;"><br>Oldest know star in the universe ', type: 
-
-'point', group: 1, className:''},
-	{id: 103, content: '<a href="img/HD 140283.jpg" target="new"><img src="img/HD 140283.jpg" alt="" 
-
-width="100px" height="100px"><br><a href="https://en.wikipedia.org/wiki/HD_140283" target="_blank"><font 
-
-color="white">103</a>. 瑪土撒拉星<br>&emsp;&emsp;&nbsp;Mathuselah star<br>', editable: false, start: 
-
-'0015', title: '1365x10M BC<br>Oldest know star in the universe ', type: 'point', group: 1, className:''},
-	{id: 104, content: '<font color="white">104. 電離時代開始<br>&emsp;&emsp;&nbsp;Reioniztion era 
-
-begins<br>', editable: false, start: '0020', title: '1360x10M BC<br>Early stars start ionizing 
-
-interstellar gas ', type:'point', group: 1, className:''},
-	{id: 105, content: '<a href="img/Black-Hole.jpg" target="new"><img src="img/Black-Hole.jpg" alt="" 
-
-width="100px" height="100px"><br><font color="white">105.</a> 第一太空黑洞形成<br>&emsp;&emsp;&nbsp;First 
-
-black holes form<br>', editable: false, start: '0030', title: '1350x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 107, content: '<font color="white">107. 恆星形成 <br>&emsp;&emsp;&nbsp;Mass star 
-
-formation<br>', editable: false, start: '0050', title: '1330M BC<br>Universe starts to heat once again ', 
-
-type:'point', group: 1, className:''},
-	{id: 108, content: '<font color="white">108. 第一星系形成 <br>&emsp;&emsp;&nbsp;First galaxies 
-
-form<br>', editable: false, start: '0060', title: '1320M BC<br> ', type:'point', group: 1, className:''},
-	{id: 109, content: '<font color="white">109. 伽瑪射線暴 <br>&emsp;&emsp;&nbsp;GRB 090423<br>', 
-
-editable: false, start: '0070', title: '1317M BC<br>Oldest gamma ray burst ever observed ', type:'point', 
-
-group: 1, className:''},
-	{id: 110, content: '<a href="img/NASA-HS201427a-HUDF.jpg" target="new"><img src="img/NASA-
-
-HS201427a-HUDF.jpg" alt="" width="100px" height="100px"><br><font color="white">110.</a> 哈勃超深場 
-
-<br>&emsp;&emsp;&nbsp;Hubble ultra deep field<br>', editable: false, start: '0080', title: '1300M BC<br> 
-
-', type:'point', group: 1, className:''},
-	{id: 111, content: '<font color="white">111. 電離時期終結 <br>&emsp;&emsp;&nbsp;Reionization era 
-
-ends<br>', editable: false, start: '0090', title: '1290M BC<br> ', type:'point', group: 1, className:''},
-	{id: 112, content: '<font color="white">112. 類星體 <br>&emsp;&emsp;&nbsp;Quasar CFHQS J2329-
-
-0301<br>', editable: false, start: '0095', title: '1285M BC<br>Oldest known quasar ', type:'point', group: 
-
-1, className:''},
-	{id: 113, content: '<font color="white">113. 脈衝星 <br>&emsp;&emsp;&nbsp;PST B1620-26<br>', 
-
-editable: false, start: '0110', title: '1270x10M BC<br>Oldest known exoplanet ', type:'point', group: 1, 
-
-className:''},
-	{id: 114, content: '<a href="img/Milky Way.jpg" target="new"><img src="img/Milky Way.jpg" alt="" 
-
-width="100px" height="100px"><br><font color="white">114.</a> 銀河形成 <br>&emsp;&emsp;&nbsp;Milky Way 
-
-forms<br>', editable: false, start: '0120', title: '1260x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 119, content: '<font color="white">119. 伽瑪射線暴超新星 <br>&emsp;&emsp;&nbsp;GRB 140419A 
-
-Supernova<br>', editable: false, start: '0170', title: '1210x10M BC<br>Second oldest gamma ray burst ', 
-
-type:'point', group: 1, className:''},
-	{id: 123, content: '<font color="white">123. 螺旋星系 <br>&emsp;&emsp;&nbsp;BX442 galaxy<br>', 
-
-editable: false, start: '0210', title: '1170x10M BC<br>Oldest known spiral galaxy ', type:'point', group: 
-
-1, className:''},
-	{id: 125, content: '<font color="white">125. 卡普坦B外行星 <br>&emsp;&emsp;&nbsp;Kapteyn B<br>', 
-
-editable: false, start: '0230', title: '1150x10M BC<br>Oldest known exoplanet lying within the habitable 
-
-zone ', type:'point', group: 1, className:''},
-	{id: 126, content: '<font color="white">126. 銀河系的宇宙光暈形式 <br>&emsp;&emsp;&nbsp;Milky 
-
-Way`s cosmic halo forms<br>', editable: false, start: '0240', title: '1140x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 130, content: '<font color="white">130. 宇宙開始降溫 <br>&emsp;&emsp;&nbsp;Universe starts to 
-
-cool<br>', editable: false, start: '0280', title: '1100x10M BC<br>Temperature averages around 13000 K ', 
-
-type:'point', group: 1, className:''},
-	{id: 135, content: '<font color="white">135. 最古老第一星族 <br>&emsp;&emsp;&nbsp;Oldest 
-
-population I stars<br>', editable: false, start: '0330', title: '1050x10M BC<br> ', type:'point', group: 
-
-1, className:''},
-	{id: 136, content: '<font color="white">136. 宇宙變得可居住 <br>&emsp;&emsp;&nbsp;Universe becomes 
-
-habitable<br>', editable: false, start: '0340', title: '1040x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 141, content: '<font color="white">141. 星系团 <br>&emsp;&emsp;&nbsp;JKCS 041<br>', editable: 
-
-false, start: '0390', title: '990x10M BC<br>Oldest galactic cluster ', type:'point', group: 1, 
-
-className:''},
-	{id: 143, content: '<font color="white">143. 宇宙達到其當前直徑的1/3 
-
-<br>&emsp;&emsp;&nbsp;Universe reaches 1/3 of its present diameter<br>', editable: false, start: '0410', 
-
-title: '970x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 144, content: '<font color="white">144. 銀河系恆星形成率穩定 <br>&emsp;&emsp;&nbsp;Milky Way 
-
-star formation rate stabilizes<br>', editable: false, start: '0420', title: '960x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 147, content: '<font color="white">147. 巴納德的星空形態 <br>&emsp;&emsp;&nbsp;Barnard`s star 
-
-forms<br>', editable: false, start: '0445', title: '935x10M BC<br>Oldest chose solar neighbour ', 
-
-type:'point', group: 1, className:''},
-	{id: 150, content: '<font color="white">150. 最古老暗能量的證據 <br>&emsp;&emsp;&nbsp;Oldest known 
-
-evidence for dark energy<br>', editable: false, start: '0480', title: '900x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 152, content: '<font color="white">152. 銀河系的薄磁盤開始形成 <br>&emsp;&emsp;&nbsp;Milky 
-
-Way`s thin disk starts to form<br>', editable: false, start: '0500', title: '880x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 155, content: '<font color="white">155. 拉蘭德21185紅矮星 <br>&emsp;&emsp;&nbsp;Lalande 
-
-21185<br>', editable: false, start: '0530', title: '850x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 156, content: '<font color="white">156. 拉卡伊9352紅矮星 <br>&emsp;&emsp;&nbsp;Lacaille 
-
-9352<br>', editable: false, start: '0540', title: '840x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 160, content: '<font color="white">160. 銀河系恆星形成率開始下降 <br>&emsp;&emsp;&nbsp;Milky 
-
-Way star formation rate begins to decline<br>', editable: false, start: '0580', title: '800x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 162, content: '<font color="white">162. 開陽恆星形成 <br>&emsp;&emsp;&nbsp;Mizar forms<br>', 
-
-editable: false, start: '0600', title: '780x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 165, content: '<font color="white">165. 伽瑪射線暴 <br>&emsp;&emsp;&nbsp;GRB 080319B. Most 
-
-powerful gamma <br>&emsp;&emsp;&nbsp;ray burst ever observed by humans', editable: false, start: '0630', 
-
-title: '750x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 169, content: '<font color="white">169. 宇宙降溫到5K以下 <br>&emsp;&emsp;&nbsp;Universe cools 
-
-below 5 K<br>', editable: false, start: '0670', title: '710x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 170, content: '<font color="white">170. 大星系的生長變慢 <br>&emsp;&emsp;&nbsp;Growth of 
-
-large galaxies slows<br>', editable: false, start: '0680', title: '700x10M BC<br> ', type:'point', group: 
-
-1, className:''},
-	{id: 171, content: '<font color="white">171. 宇宙年齡的一半 <br>&emsp;&emsp;&nbsp;1/2 the age of 
-
-the universe<br>', editable: false, start: '0690', title: '690x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 172, content: '<font color="white">172. 人馬座形成 <br>&emsp;&emsp;&nbsp;Alpha Centauri 
-
-forms<br>', editable: false, start: '0700', title: '680x10M BC<br>Closest star system to the sun ', 
-
-type:'point', group: 1, className:''},
-	{id: 173, content: '<font color="white">173. 參宿一巨星形成 <br>&emsp;&emsp;&nbsp;Alnitak 
-
-forms<br>', editable: false, start: '0710', title: '670x10M BC<br>Left star of the Orion`s Belt ', 
-
-type:'point', group: 1, className:''},
-	{id: 175, content: '<font color="white">175. 銀河系開始呈螺旋狀 <br>&emsp;&emsp;&nbsp;Milky Way 
-
-starts spiralizing<br>', editable: false, start: '0730', title: '650x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 176, content: '<font color="white">176. 像地球狀行星的平均年齡 <br>&emsp;&emsp;&nbsp;Age of 
-
-an average earth-like planet<br>', editable: false, start: '0740', title: '640x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 178, content: '<font color="white">178. 天鵝座61星形成 <br>&emsp;&emsp;&nbsp;61 Cygni 
-
-forms<br>', editable: false, start: '0760', title: '620x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 180, content: '<font color="white">180. 暗能量超過地心吸力 <br>&emsp;&emsp;&nbsp;Dark energy 
-
-overtakes gravity<br>', editable: false, start: '0780', title: '600x10M BC<br>Universe`s expansion rate 
-
-starts to accelerate ', type:'point', group: 1, className:''},
-	{id: 182, content: '<font color="white">182. 天倉五恆星形成 <br>&emsp;&emsp;&nbsp;Tau Ceti 
-
-forms<br>', editable: false, start: '0800', title: '580x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 185, content: '<font color="white">185. 銀河系變成螺旋狀狀態 <br>&emsp;&emsp;&nbsp;Milky Way 
-
-becomes a spiral galazy<br>', editable: false, start: '0830', title: '550x10M BC<br>Solar nebula starts 
-
-collapsing ', type:'point', group: 1, className:''},
-	{id: 189, content: '<font color="white">189. 格利泽570星形成 <br>&emsp;&emsp;&nbsp;Gliese 570 
-
-forms<br>', editable: false, start: '0860', title: '520x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 192, content: '<font color="white">192. 半人馬星形成 <br>&emsp;&emsp;&nbsp;Proxima Centauri 
-
-forms<br>', editable: false, start: '0895', title: '485x10M BC<br>Closest star to the Sun ', type:'point', 
-
-group: 1, className:''},
-	{id: 193, content: '<font color="white">193. 超新星 <br>&emsp;&emsp;&nbsp;SN 2005ap supernova', 
-
-editable: false, start: '0910', title: '470x10M BC<br>Brightest supernova ever observed ', type:'point', 
-
-group: 1, className:''},
-
-	//{id: 194, content: '<a href="img/Sun.gif" target="new"><img src="img/Sun.gif" alt="" 
-
-width="100px" height="100px"><br>太陽被造 Sun forms<br>', editable: true, start: '0923', title: '194. 
-
-457x10M BC<br>Proto-earth forms (planets, asteroids & comets form from the sun`s protoplanetary disk) ', 
-
-type:'point', group: 1, className:''},
-	//{id: 194, content: '<br><a href="img/Sun.gif" target="new"><img src="img/Sun.gif" alt="" 
-
-width="100px" height="100px"><br>太陽被造<br>Sun forms', editable: false, start: '0923', end: '0923', 
-
-title: '194. 457x10M BC<br>Proto-earth forms (planets, asteroids & comets form from the sun`s 
-
-protoplanetary disk) ', type:'point', group: 1, className:''},
-	//{id: 195, content: '<br><br><a href="img/Moon.gif" target="new"><img src="img/Moon.gif" alt="" 
-
-width="25px" height="25px"><br>月亮被造<br>Moon forms', editable: false, start: '0923', end: '0923', 
-
-title: '195. 456x10M BC<br>Theia impacts Earth, the Moon forms from the coalesced debris ', type:'point', 
-
-group: 1, className:''},
-
-	{id: 194, content: '<br><br>194. 太陽被造<br>Sun forms', editable: false, start: '0923', end: 
-
-'0923', title: '457x10M BC<br>Proto-earth forms (planets, asteroids & comets form from the sun`s 
-
-protoplanetary disk)', type:'', group: 1, className:''},
-	{id: 195, content: '<br><br>195. 月亮被造<br>Moon forms', editable: false, start: '0923', end: 
-
-'0923', title: '456x10M BC<br>Vegetation altered the atmosphere, the sky becomes clearer making celestial 
-
-bodies visible ', type:'', group: 1, className:''},
-
-	{id: 198, content: '198. 地球的海洋形成 <br>&emsp;&emsp;&nbsp;Oceans form on Earth<br>', editable: 
-
-false, start: '0940', title: '440x10M BC<br>First known minerals (Zircons form at Jack Hills, Australia) 
-
-', type:'point', group: 1, className:''},
-	{id: 200, content: '200. 生命在地球出現 <br>&emsp;&emsp;&nbsp;Life emerges on Earth<br>', 
-
-editable: false, start: '0960', title: '420x10M BC<br>Early estimate ', type:'point', group: 1, 
-
-className:''},
-	{id: 201, content: '201. 最早的石 <br>&emsp;&emsp;&nbsp;Earliest known rock<br>', editable: false, 
-
-start: '0970', title: '410x10M BC<br>Earliest known rock ', type:'point', group: 1, className:''},
-	{id: 202, content: '202. 綠石帶 <br>&emsp;&emsp;&nbsp;Greenstone rock belt<br>', editable: false, 
-
-start: '0980', title: '400x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 203, content: '203. 生命在地球出現 <br>&emsp;&emsp;&nbsp;Life emerges on Earth<br>', 
-
-editable: false, start: '0990', title: '390x10M BC<br>Late estimate ', type:'point', group: 1, 
-
-className:''},
-	{id: 204, content: '204. 最古老的帶狀鐵形成 <br>&emsp;&emsp;&nbsp;Oldest banded iorn 
-
-formation<br>', editable: false, start: '1000', title: '380x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 205, content: '205. 格陵蘭的生物石墨 <br>&emsp;&emsp;&nbsp;Biogenic graphite in 
-
-Greenland<br>', editable: false, start: '1010', title: '370x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 206, content: '206. 超大陸出現 <br>&emsp;&emsp;&nbsp;Valbaara supercontinent emerges<br>', 
-
-editable: false, start: '1020', title: '360x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 207, content: '207. 藍藻化石 <br>&emsp;&emsp;&nbsp;Cyanobacteria fossils<br>', editable: 
-
-false, start: '1030', title: '350x10M BC<br>Warrawoona, oldest fossil evidence of life on Earth ', 
-
-type:'point', group: 1, className:''},
-	{id: 208, content: '208. 細菌化石 <br>&emsp;&emsp;&nbsp;Bacterial fossils in chert<br>', editable: 
-
-false, start: '1034', title: '346x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 210, content: '210. 地质構造壓縮 <br>&emsp;&emsp;&nbsp;Compressional tectonics<br>', 
-
-editable: false, start: '1050', title: '330x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 211, content: '211. Barberton event<br>', editable: false, start: '1054', title: '326x10M 
-
-BC<br>One of the largest impacts ever left a 300 m (480 km) crater ', type:'point', group: 1, 
-
-className:''},
-	{id: 212, content: '212. 藍細菌發展真正的光合作用. 開始產生氧氣 
-
-<br>&emsp;&emsp;&nbsp;Cyanobacteria develop true photosynthesis.<br>&emsp;&emsp;&nbsp;Life begins to 
-
-produce oxygen', editable: false, start: '1080', title: '300x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 213, content: '213. 網罟座形成 <br>&emsp;&emsp;&nbsp;Zeta Reticuli forms<br>', editable: 
-
-false, start: '1090', title: '290x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 214, content: '214. 潮汐降至303公尺 <br>&emsp;&emsp;&nbsp;Tides decline below 303 m<br>', 
-
-editable: false, start: '1090', title: '290x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 215, content: '215. 第一個真核生物出現 <br>&emsp;&emsp;&nbsp;First eukaryotes emerges<br>', 
-
-editable: false, start: '1110', title: '270x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 216, content: '216. 最古老的巨型碳酸鹽平台 <br>&emsp;&emsp;&nbsp;Oldest known giant carbonate 
-
-platform<br>', editable: false, start: '1120', title: '260x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 217, content: '217. 地殼構造板塊開始移動 <br>&emsp;&emsp;&nbsp;Movement of the tectonic 
-
-plates commences<br>', editable: false, start: '1130', title: '250x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 218, content: '218. 大氧化事件. 細菌產生的氧氣開始在大氣中積累 <br>&emsp;&emsp;&nbsp;Great 
-
-Oxygenation event. Bacterials produced <br>&emsp;&emsp;&nbsp;oxygen starts to accumulate in the 
-
-atmosphere', editable: false, start: '1130', title: '250x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 219, content: '219. 蘇阿夫湖隕石大撞擊 <br>&emsp;&emsp;&nbsp;Suavjarvi impact 
-
-event.<br>&emsp;&emsp;&nbsp;Left oldest still recognizable crater', editable: false, start: '1140', title: 
-
-'240x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 220, content: '220. 休倫冰川開始 <br>&emsp;&emsp;&nbsp;Huronian glaciation starts', editable: 
-
-false, start: '1140', title: '240x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 221, content: '221. 大氣中的氧氣含量超過1％ <br>&emsp;&emsp;&nbsp;Atmospheric oxygen level 
-
-surpasses 1%<br>', editable: false, start: '1158', title: '222x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 222, content: '222. 臭氧層形式 <br>&emsp;&emsp;&nbsp;Ozone layer forms<br>', editable: false, 
-
-start: '1160', title: '220x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 223, content: '223. 休倫冰川期結束 <br>&emsp;&emsp;&nbsp;Huronian glaciation ends<br>', 
-
-editable: false, start: '1165', title: '215x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 224, content: '224. 最早的真核生物化石 <br>&emsp;&emsp;&nbsp;Earliest known eukaryote 
-
-fossils<br>', editable: false, start: '1170', title: '210x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 225, content: '225. 最早的多細胞生命 <br>&emsp;&emsp;&nbsp;Earliest muticellular life<br>', 
-
-editable: false, start: '1170', title: '210x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 226, content: '226. 弗里德堡隕石大撞擊. 有史以來<br>&emsp;&emsp;&nbsp;最大的撞擊之一留下300公
-
-里的石坑 <br>&emsp;&emsp;&nbsp;Vredefort impact event. One of the <br>&emsp;&emsp;&nbsp;largest impacts 
-
-ever left a 300 km crater', editable: false, start: '1178', title: '202x10M BC<br> ', type:'point', group: 
-
-1, className:''},
-	{id: 227, content: '227. 多種多樣的微体疑源类 <br>&emsp;&emsp;&nbsp;Diversification of 
-
-acritarchs<br>', editable: false, start: '1180', title: '200x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 228, content: '228. 大氣中的氧氣含量超過15％ <br>&emsp;&emsp;&nbsp;Atmospheric oxygen level 
-
-surpasses 15%<br>', editable: false, start: '1190', title: '190x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 229, content: '229. 天然核反應堆在非洲加蓬的奥克洛形成 <br>&emsp;&emsp;&nbsp;Natural nuclear 
-
-reactor forms in Oklo, Gabon<br>', editable: false, start: '1190', title: '190x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 230, content: '230. 第一噬菌體 <br>&emsp;&emsp;&nbsp;First bacteriophages<br>', editable: 
-
-false, start: '1195', title: '185x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 231, content: '231. 索德柏立隕石大撞擊, 留下250公里的石坑 <br>&emsp;&emsp;&nbsp;Sudbury 
-
-impact event. Left a 250 km crater', editable: false, start: '1195', title: '185x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 232, content: '232. 哥倫比亞超級陸地出現 <br>&emsp;&emsp;&nbsp;Supercontinent Columbia 
-
-forms<br>', editable: false, start: '1200', title: '180x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 233, content: '233. 毘濕奴地下室岩石. 大峽谷中最古老的岩石 <br>&emsp;&emsp;&nbsp;Vishnu 
-
-Basement Rocks. Oldest rocks in <br>&emsp;&emsp;&nbsp;the Grand Canyon', editable: false, start: '1205', 
-
-title: '175x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 234, content: '234. 最古老的沙丘 <br>&emsp;&emsp;&nbsp;Oldest sand dune emerges<br>', 
-
-editable: false, start: '1210', title: '170x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 235, content: '235. 地質平台覆蓋範圍擴大 <br>&emsp;&emsp;&nbsp;Platform covers expand<br>', 
-
-editable: false, start: '1220', title: '160x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 236, content: '236. 線粒體同化為真核細胞 <br>&emsp;&emsp;&nbsp;Mitochondria assimilate into 
-
-eukaryotic cells<br>', editable: false, start: '1220', title: '160x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 237, content: '237. 哥倫比亞超級陸地分離 <br>&emsp;&emsp;&nbsp;Supercontinent Columbia breaks 
-
-up<br>', editable: false, start: '1230', title: '150x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 238, content: '238. 地質平台涵蓋擴展 <br>&emsp;&emsp;&nbsp;Geologic platform covers 
-
-expand<br>', editable: false, start: '1235', title: '145x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 239, content: '239. 疊層石數量迅速增加 <br>&emsp;&emsp;&nbsp;Population of stromatolites 
-
-rapidly rises<br>', editable: false, start: '1240', title: '140x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 240, content: '240. 南河三恒星形成. 小犬座中最亮的星 <br>&emsp;&emsp;&nbsp;Procyon forms. 
-
-Brightest star in Canis Minor', editable: false, start: '1243', title: '137x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-
-	{id: 2401, content: '<br><a href="img/Sun.gif" target="new"><img src="img/Sun.gif" alt="" 
-
-width="100px" height="100px"><br>太陽出現<br>Sun appears', editable: false, start: '1250', end: '1250', 
-
-title: '194. 457x10M BC<br>Vegetation alters the atmosphere making celestial bodies visible', type:'', 
-
-group: 1, className:'lightyellow'},
-	{id: 2402, content: '<br><br><a href="img/Moon.gif" target="new"><img src="img/Moon.gif" alt="" 
-
-width="25px" height="25px"><br>月亮出現<br>Moon appears', editable: false, start: '1250', end: '1250', 
-
-title: '195. 456x10M BC<br>Vegetation alters the atmosphere making celestial bodies visible', type:'', 
-
-group: 1, className:''},
-
-	{id: 241, content: '241. 日長達17小時 <br>&emsp;&emsp;&nbsp;Days are 17 hours long<br>', editable: 
-
-false, start: '1250', title: '130x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 242, content: '242. 格林維爾造山開始 <br>&emsp;&emsp;&nbsp;Greenville orogeny starts<br>', 
-
-editable: false, start: '1250', title: '130x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 243, content: '243. 第一陸地菌類 <br>&emsp;&emsp;&nbsp;First land fungi<br>', editable: 
-
-false, start: '1255', title: '125x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 244, content: '244. 超大陸羅丹尼亞形成 <br>&emsp;&emsp;&nbsp;Supercontinent Rodinia 
-
-forms<br>', editable: false, start: '1260', title: '120x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 245, content: '245. 红藻門. 第一類性繁殖生物 <br>&emsp;&emsp;&nbsp;Bangiomorpha pubescens. 
-
-<br>&emsp;&emsp;&nbsp;First sexually reproducing organism', editable: false, start: '1260', title: 
-
-'120x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 246, content: '246. 真核生物種群數量激增 <br>&emsp;&emsp;&nbsp;Population explosion of 
-
-eukaryotes<br>', editable: false, start: '1265', title: '115x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 247, content: '247. 最早的鞭毛原生生物 <br>&emsp;&emsp;&nbsp;Earliest flagellate 
-
-protists<br>', editable: false, start: '1270', title: '110x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 248, content: '248. 第一個藻類 <br>&emsp;&emsp;&nbsp;First vaucherian algae<br>', editable: 
-
-false, start: '1275', title: '105x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 249, content: '249. 格林維爾造山結束 <br>&emsp;&emsp;&nbsp;Greenville orogeny ends<br>', 
-
-editable: false, start: '1280', title: '100x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 250, content: '250. 微体疑源类壽命急劇下降 <br>&emsp;&emsp;&nbsp;Acritarch lifespan falls 
-
-sharply<br>', editable: false, start: '1280', title: '100x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 251, content: '251. 日長達19小時 <br>&emsp;&emsp;&nbsp;Days are 19 hours long<br>', editable: 
-
-false, start: '1290', title: '90x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 252, content: '252. 疊層石的數量開始減少 <br>&emsp;&emsp;&nbsp;Population of stromatolites 
-
-<br>&emsp;&emsp;&nbsp;starts to decline<br>', editable: false, start: '1295', title: '85x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 253, content: '253. 原生生物數量激增 <br>&emsp;&emsp;&nbsp;Protista population explodes<br>', 
-
-editable: false, start: '1300', title: '80x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 254, content: '254. Kaigas <br>&emsp;&emsp;&nbsp;冰川結冰 glaciation<br>', editable: false, 
-
-start: '1303', title: '77x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 255, content: '255. 超大陸羅丹尼亞州崩盤 <br>&emsp;&emsp;&nbsp;Supercontinent Rodinia breaks 
-
-apart<br>', editable: false, start: '1305', title: '75x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 256, content: '256. 冰川結冰 <br>&emsp;&emsp;&nbsp;Sturtian glaciation<br>', editable: false, 
-
-start: '1308', title: '72x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 257, content: '257. 中國發現僵化蠕蟲印象 <br>&emsp;&emsp;&nbsp;Fossilized worm impressions 
-
-found in China<br>', editable: false, start: '1310', title: '70x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 258, content: '258. 冰川結冰 <br>&emsp;&emsp;&nbsp;Marinoan glaciation<br>', editable: false, 
-
-start: '1315', title: '65x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 259, content: '259. 超大陸形成 <br>&emsp;&emsp;&nbsp;Supercontinent Pannotia forms<br>', 
-
-editable: false, start: '1320', title: '60x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 260, content: '260. 泛非造山 <br>&emsp;&emsp;&nbsp;Pan-African orogeny<br>', editable: false, 
-
-start: '1320', title: '60x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 261, content: '261. 阿瓦隆大爆發. 艾迪卡拉生物群出現 <br>&emsp;&emsp;&nbsp;Avalon explosion. 
-
-Ediacaran fauna emerges', editable: false, start: '1322-06-30', title: '57.5x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 262, content: '262. 寒武紀大爆發. 最主要的動物門出現<br>&emsp;&emsp;&nbsp;Cambrian explosion. 
-
-Exponential diversification <br>&emsp;&emsp;&nbsp;of life. Most major animal phyla appear.', editable: 
-
-false, start: '1326', title: '54x10M BC<br> ', type:'point', group: 1, className:''},
-//	{id: 263, content: '263. First trilobites<br>', editable: false, start: '1327-06-30', title: 
-
-'52.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 263, content: '<img src="img/trilobite.png" border="0" style="width:30px; 
-
-height:30px;"><br>263. 第一條前三葉蟲 <br>&emsp;&emsp;&nbsp;First trilobites<br>', editable: false, start: 
-
-'1327-06-30', title: '52.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 265, content: '265. 第一條無顎魚 <br>&emsp;&emsp;&nbsp;First jawless fish<br>', editable: 
-
-false, start: '1331-06-30', title: '48.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 266, content: '266. 植物和節肢動物定居在土地上<br>&emsp;&emsp;&nbsp;Plants and arthropods 
-
-colonize the land<br>', editable: false, start: '1335', title: '45x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 267, content: '267. 奧陶紀滅絕. 所有物種的60％被滅絕<br>&emsp;&emsp;&nbsp;Ordovician 
-
-extinction event. 60% of <br>&emsp;&emsp;&nbsp;all species go extinct', editable: false, start: '1335-06-
-
-30', title: '44.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 268, content: '268. 第一呼吸動物<br>&emsp;&emsp;&nbsp;First air-breathing animals<br>', 
-
-editable: false, start: '1338', title: '42x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 270, content: '270. 第一個四腳動物. 所有物種的70％被滅絕 <br>&emsp;&emsp;&nbsp;First 
-
-tetrapods. 70% of all species go extinct', editable: false, start: '1340-06-30', title: '39.5x10M BC<br> 
-
-', type:'point', group: 1, className:''},
-	{id: 271, content: '271. 第一棵樹狀植物 <br>&emsp;&emsp;&nbsp;First tree-like plants<br>', 
-
-editable: false, start: '1342', title: '38x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 272, content: '272. 泥盆紀晚期滅絕 <br>&emsp;&emsp;&nbsp;Late Devonian extinction<br>', 
-
-editable: false, start: '1343', title: '37x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 273, content: '273. 第一個螃蟹和蕨類植物 <br>&emsp;&emsp;&nbsp;First crab and ferns<br>', 
-
-editable: false, start: '1344', title: '36x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 274, content: '274. 第一羊膜動物 <br>&emsp;&emsp;&nbsp;First amniotes<br>', editable: false, 
-
-start: '1347', title: '33x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 275, content: '275. 第一類爬行動物 <br>&emsp;&emsp;&nbsp;First reptiles<br>', editable: 
-
-false, start: '1348', title: '32x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 276, content: '276. 大氣氧水平達到35％的峰值 <br>&emsp;&emsp;&nbsp;Atmospheric oxygen level 
-
-peaks at 35%<br>&emsp;&emsp;&nbsp;Arthropods grow into unprecendented sizes', editable: false, start: 
-
-'1349-06-30', title: '30.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 278, content: '278. 第一隻甲蟲 <br>&emsp;&emsp;&nbsp;First beetles<br>', editable: false, 
-
-start: '1352', title: '28x10M BC<br> ', type:'point', group: 1, className:''},
-//	{id: 279, content: '279. First therapsids<br>', editable: false, start: '1352-06-30', title: 
-
-'27.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 279, content: '<img src="img/Therapsid.png" border="0" style="width:60px; 
-
-height:35px;"><br>279. 第一隻獸孔目 <br>&emsp;&emsp;&nbsp;First therapsids<br>', editable: false, start: 
-
-'1352-06-30', title: '27.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 280, content: '280. 二疊紀滅絕. 歷史上最大規模的滅絕事件, <br>&emsp;&emsp;&nbsp;所有物種中90
-
--96％滅絕 <br>&emsp;&emsp;&nbsp;Permian extinction event. Largest extinction event<br>&emsp;&emsp;&nbsp;in 
-
-history where 90-96% of all species go extinct', editable: false, start: '1354-11-23', title: '25.1x10M 
-
-BC<br> ', type:'point', group: 1, className:''},
-	{id: 281, content: '281. 天狼星形成. 夜空中最亮的星<br>&emsp;&emsp;&nbsp;Sirius forms. Brightest 
-
-star<br>&emsp;&emsp;&nbsp;in the night sky', editable: false, start: '1355', title: '25x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 282, content: '282. 第一隻恐龍 <br>&emsp;&emsp;&nbsp;First dinosaurs<br>', editable: false, 
-
-start: '1356-11-23', title: '23.1x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 283, content: '283. 第一批哺乳動物 <br>&emsp;&emsp;&nbsp;First mamals<br>', editable: false, 
-
-start: '1357-06-30', title: '22.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 284, content: '284. 第一隻烏龜 <br>&emsp;&emsp;&nbsp;First turtles<br>', editable: false, 
-
-start: '1358', title: '22x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 285, content: '285. 三疊紀滅絕事件. 所有物種的75％被滅絕 <br>&emsp;&emsp;&nbsp;Triassic 
-
-extinction event. 75% of all species go extinct', editable: false, start: '1359-11-23', title: '20.1x10M 
-
-BC<br> ', type:'point', group: 1, className:''},
-//	{id: 287, content: '287. First giant sauropods<br>', editable: false, start: '1361', title: 
-
-'19x10M BC<br> ', type:'point', group: 1, className:''},
-        {id: 287, content: '<a href="img/sauropod-dinosaur.png" target="new"><img src="img/sauropod-
-
-dinosaur.gif" border="0" style="width:220px; height:220px;"><br>287.</a>  第一個巨型蜥腳類動物 
-
-<br>&emsp;&emsp;&nbsp;First giant sauropods<br>', editable: false, start: '1361', end: '1361', title: 
-
-'19x10M BC<br> ', type:'', group: 1, className:''},
-	{id: 288, content: '288. 盤古大陸分裂 <br>&emsp;&emsp;&nbsp;Pangaea splits into Laurasia & 
-
-Gondwana<br>', editable: false, start: '1362', title: '18x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 289, content: '<a href="img/Stegosaurus.png" target="new"><img src="img/Stegosaurus2.gif" 
-
-alt="" width="150px" height="50px"><br>289.</a>  第一劍龍 <br>&emsp;&emsp;&nbsp;First stegosaurus<br>', 
-
-editable: false, start: '1362-05-25', end: '1362-05-25', title: '17.6x10M BC<br> ', type:'', group: 1, 
-
-className:''},
-	{id: 290, content: '<a href="img/Pterosaurus3.png" target="new"><img src="img/Pterosaurus3.gif" 
-
-alt="" width="100px" height="100px"><br>290.</a> 第一翼龍 <br>&emsp;&emsp;&nbsp;First pterosaurus<br>', 
-
-editable: false, start: '1363-09-11', end: '1363-09-11', title: '16.3x10M BC<br> ', type:'', group: 1, 
-
-className:''},
-	{id: 291, content: '291. 首鳥 <br>&emsp;&emsp;&nbsp;First birds<br>', editable: false, start: 
-
-'1364-06-30', title: '15.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 292, content: '292. 馬達加斯加從非洲分裂 <br>&emsp;&emsp;&nbsp;Madagascar splits from 
-
-Africa<br>', editable: false, start: '1365-06-30', title: '14.5x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 293, content: '293. 第一朵開花植物 <br>&emsp;&emsp;&nbsp;First flowering plants<br>', 
-
-editable: false, start: '1367', title: '13x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 294, content: '294. 勞拉西亞和岡瓦納開始分崩離析 <br>&emsp;&emsp;&nbsp;Laurasia and Gondwana 
-
-begin to drift apart<br>', editable: false, start: '1367', title: '13x10M BC<br> ', type:'point', group: 
-
-1, className:''},
-	{id: 295, content: '295. 第一螞蟻 <br>&emsp;&emsp;&nbsp;First ants<br>', editable: false, start: 
-
-'1368', title: '12x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 296, content: '296. 第一個產卵哺乳動物 <br>&emsp;&emsp;&nbsp;First egg-laying mammals<br>', 
-
-editable: false, start: '1368-06-30', title: '11.5x10M BC<br> ', type:'point', group: 1, className:''},
-//	{id: 297, content: '297. Spinosaurus evolves<br>Largest off all carnivorous dinosaurs', editable: 
-
-false, start: '1369-05-25', title: '10.6x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 297, content: '<img src="img/Spinosaurus.png" border="0" style="width:80px; 
-
-height:50px;"><br>297. 棘龍進化<br>&emsp;&emsp;&nbsp;Spinosaurus evolves<br>&emsp;&emsp;&nbsp;Largest off 
-
-all carnivorous dinosaurs', editable: false, start: '1369-05-25', title: '10.6x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 298, content: '298. 第一隻蜜蜂 <br>&emsp;&emsp;&nbsp;First bees<br>', editable: false, start: 
-
-'1370', title: '10x10M BC<br> ', type:'point', group: 1, className:''},
-//	{id: 299, content: '299. Ichthyosaurs go extinct<br>', editable: false, start: '1371', title: 
-
-'9x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 299, content: '<img src="img/ichthyosaurus.png" border="0" style="width:80px; 
-
-height:50px;"><br>299. 魚龍滅絕<br>&emsp;&emsp;&nbsp;Ichthyosaurs go extinct<br>', editable: false, start: 
-
-'1371', title: '9x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 300, content: '300. 印度次大陸從岡瓦納分裂 <br>&emsp;&emsp;&nbsp;Indian subcontinent splits 
-
-from Gondwana<br>', editable: false, start: '1371', title: '9x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 301, content: '301. 澳大利亞從南極洲分裂 <br>&emsp;&emsp;&nbsp;Australia splits from 
-
-Antarctica<br>', editable: false, start: '1372', title: '8x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-        {id: 302, content: '<img src="img/Hadrosaurus.png" border="0" style="width:180px; 
-
-height:75px;"><br>302. 蜥蜴龍出現 <br>&emsp;&emsp;&nbsp;Hadrosaurs appear<br>', editable: false, start: 
-
-'1372', title: '8x10M BC<br> ', type:'point', group: 1, className:''},
-//	{id: 304, content: '304. Tyrannosaurus Rex evolves<br>', editable: false, start: '1373-03-13', 
-
-title: '6.8x10M BC<br> ', type:'point', group: 1, className:''},
-//	{id: 304, content: '<a href="img/Tyrannosaurus Rex.png" target="new"><img src="img/Tyrannosaurus 
-
-Rex.gif" border="0" style="width:103px; height:103px;"><br>304. Tyrannosaurus Rex evolves<br>', editable: 
-
-false, start: 1373-03-13', end: 1373-03-13', title: '6.8x10M BC<br> ', type:'', group: 1, className:''},
-	{id: 304, content: '<a href="img/Tyrannosaurus Rex.png" target="new"><img src="img/Tyrannosaurus 
-
-Rex.gif" border="0" style="width:103px; height:103px;"><br>304.</a>  霸王龍進化 
-
-<br>&emsp;&emsp;&nbsp;Tyrannosaurus Rex evolves<br>', editable: false, start: '1373-03-13', end: '1373-03
-
--13', title: '6.8x10M BC<br> ', type:'', group: 1, className:''},
-	{id: 305, content: '305. 白堊紀滅絕. 包括所有非禽類恐龍<br>&emsp;&emsp;&nbsp;在內的所有物種中有75
-
-％被滅絕 <br>&emsp;&emsp;&nbsp;Cretaceous extinction event. 75% of all species, 
-
-<br>&emsp;&emsp;&nbsp;including all non-avion dinosaurs, go extinct', editable: false, start: '1373-05-
-
-25', title: '6.6x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 306, content: '306. 靈長類動物進化 <br>&emsp;&emsp;&nbsp;First primates evolve<br>', 
-
-editable: false, start: '1374', title: '6x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 307, content: '307. 首批現代鳥類 <br>&emsp;&emsp;&nbsp;First modern birds<br>', editable: 
-
-false, start: '1374-06-30', title: '5.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 308, content: '308. 印度次大陸與亞洲相撞. 西藏和喜馬拉雅山開始崛起 
-
-<br>&emsp;&emsp;&nbsp;Indian subcontinent collides with Asia.<br>&emsp;&emsp;&nbsp;Tibet & Himalayas start 
-
-to rise', editable: false, start: '1374-10-18', title: '5.2x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 310, content: '310. 鯨魚回到水中 <br>&emsp;&emsp;&nbsp;Whales return to the water<br>', 
-
-editable: false, start: '1375-04-18', title: '4.7x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 311, content: '311. 南極冰蓋開始增長 <br>&emsp;&emsp;&nbsp;Antarctic ice cap begins to 
-
-grow<br>', editable: false, start: '1376', title: '4x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 312, content: '312. 第一隻犬科動物進化 <br>&emsp;&emsp;&nbsp;First canids evolve<br>', 
-
-editable: false, start: '1376', title: '4x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 313, content: '313. 草原開始普及 <br>&emsp;&emsp;&nbsp;Grasslands become widespread<br>', 
-
-editable: false, start: '1376-06-30', title: '3.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 314, content: '314. 第一隻貓科動物進化 <br>&emsp;&emsp;&nbsp;First felids evolve<br>', 
-
-editable: false, start: '1376-08-06', title: '3.4x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 315, content: '315. 南美與南極洲分開 <br>&emsp;&emsp;&nbsp;South America separates from 
-
-Antarctica<br>', editable: false, start: '1377', title: '3x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 316, content: '316. 第一批大象 <br>&emsp;&emsp;&nbsp;First elephants<br>Eritreum 
-
-melakeghebrekristosi', editable: false, start: '1377-05-25', title: '2.6x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 317, content: '317. 拉加里塔火山噴發 <br>&emsp;&emsp;&nbsp;La Garita eruption.', editable: 
-
-false, start: '1377-05-25', title: '2.6x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 319, content: '319. 第一頭長頸鹿 <br>&emsp;&emsp;&nbsp;First giraffes<br>', editable: false, 
-
-start: '1378', title: '2x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 320, content: '320. 大猿和小猿的發散 <br>&emsp;&emsp;&nbsp;Divergence of great apes and 
-
-lesser apes<br>', editable: false, start: '1378-03-13', title: '1.8x10M BC<br> ', type:'point', group: 1, 
-
-className:''},
-	{id: 321, content: '321. 第一帶蹄哺乳動物 <br>&emsp;&emsp;&nbsp;First bovids<br>', editable: 
-
-false, start: '1378-06-30', title: '1.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 322, content: '322. 第一隻袋鼠 <br>&emsp;&emsp;&nbsp;First kangaroos<br>', editable: false, 
-
-start: '1378-06-30', title: '1.5x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 323, content: '323. 第一匹大馬 <br>&emsp;&emsp;&nbsp;First large horses<br>', editable: 
-
-false, start: '1378-11-23', title: '1.1x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 326, content: '326. 參宿七恆星形成, 獵戶座最亮的星<br>&emsp;&emsp;&nbsp;Rigel forms. 
-
-Brightest star in Orion', editable: false, start: '1379-03-13', title: '0.8x10M BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 327, content: '327. 參宿四恆星形成, 獵戶座第二顆最亮的星 <br>&emsp;&emsp;&nbsp;Betelgeuse 
-
-forms. Second brightest star in Orion', editable: false, start: '1379-03-31', title: '0.75x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 329, content: '329. 墨西拿鹽度危機, 直布羅陀海峽緊閉至地中海幹 
-
-<br>&emsp;&emsp;&nbsp;Messinian salinity crisis, Strait of Gilbratar <br>&emsp;&emsp;&nbsp;closes tight 
-
-Mediterranean Sea dries out', editable: false, start: '1379-05-25', title: '0.596x10M BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 331, content: '331. 第一批現代哺乳動物 <br>&emsp;&emsp;&nbsp;First modern mamals<br>', 
-
-editable: false, start: '1379-08-06', title: '0.4x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 332, content: '332. 南方古猿進化 <br>&emsp;&emsp;&nbsp;Australopithecus evolves<br>', 
-
-editable: false, start: '1379-08-06', title: '0.4x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 333, content: '333. 南北美洲生物大遷徙 <br>&emsp;&emsp;&nbsp;Great American Interchange', 
-
-editable: false, start: '1379-09-11', title: '0.3x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 334, content: '334. 當前冰河時代開始 <br>&emsp;&emsp;&nbsp;Current ice age begins<br>', 
-
-editable: false, start: '1379-09-29', title: '0.25x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 335, content: '335. 灵长目人出現 <br>&emsp;&emsp;&nbsp;Genus Homo appear<br>', editable: 
-
-false, start: '1379-10-10', title: '0.22x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 337, content: '337. 直立猿人首先使用火 <br>&emsp;&emsp;&nbsp;First controlled use of fire by 
-
-Homo Erectus<br>', editable: false, start: '1379-11-05', title: '0.15x10M BC<br> ', type:'point', group: 
-
-1, className:''},
-	{id: 338, content: '338. 先驅人進化 <br>&emsp;&emsp;&nbsp;Homo antecessor evolves<br>', editable: 
-
-false, start: '1379-11-16', title: '0.12x10M BC<br> ', type:'point', group: 1, className:''},
-	{id: 342, content: '342. 地球磁場的最後一次反轉 <br>&emsp;&emsp;&nbsp;Last reversal of Earth`s 
-
-magnetic field<br>', editable: false, start: '1379-12-01', title: '780,000 BC<br> ', type:'point', group: 
-
-1, className:''},
-	{id: 343, content: '343. 黃石破火山口爆發 <br>&emsp;&emsp;&nbsp;Yellowstone Caldera erupts<br>', 
-
-editable: false, start: '1379-12-06', title: '640,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 344, content: '344. 海德堡人進化 <br>&emsp;&emsp;&nbsp;Homo heidelbergensis evolves<br>', 
-
-editable: false, start: '1379-12-08', title: '600,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 345, content: '345. 最早的"人類"雕刻 <br>&emsp;&emsp;&nbsp;Earliest "human" 
-
-engraving<br>&emsp;&emsp;&nbsp;Zig-zag patterns on shells in Java', editable: false, start: '1379-12-11', 
-
-title: '500,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 346, content: '346. 格陵蘭冰融化 <br>&emsp;&emsp;&nbsp;Greenland ice melts<br>', editable: 
-
-false, start: '1379-12-15', title: '400,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 347, content: '347. 巨猿消失 <br>&emsp;&emsp;&nbsp;Gigantopithecus goes extinct<br>', 
-
-editable: false, start: '1379-12-19', title: '300,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 348, content: '348. 尼安德特人進化 <br>&emsp;&emsp;&nbsp;Neanderthals evolve<br>', editable: 
-
-false, start: '1379-12-20', title: '250,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 349, content: '349. 現代的"人類"在非洲出現 <br>&emsp;&emsp;&nbsp;Anatomically modern "humans" 
-
-appear in Africa<br>', editable: false, start: '1379-12-22', title: '195,000 BC<br> ', type:'point', 
-
-group: 1, className:''},
-	{id: 350, content: '350. 撒哈拉沙漠變得肥沃 <br>&emsp;&emsp;&nbsp;Sahara becomes fertile<br>', 
-
-editable: false, start: '1379-12-25', title: '120,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 351, content: '351. 像人類的"人"開始遷移到非洲 <br>&emsp;&emsp;&nbsp;"Human" like creatures 
-
-begin migrating out of Africa<br>', editable: false, start: '1379-12-26', title: '100,000 BC<br> ', 
-
-type:'point', group: 1, className:''},
-	{id: 354, content: '354. 多峇大火山爆發, "人口"下降至10,000<br>&emsp;&emsp;&nbsp;Toba 
-
-supervolcanic eruption<br>&emsp;&emsp;&nbsp;"Human" population falls to ~10,000', editable: false, start: 
-
-'1379-12-27', title: '70,000 BC<br> ', type:'point', group: 1, className:''},
-	{id: 357, content: '357. 尼安德特人滅絕 <br>&emsp;&emsp;&nbsp;Neanderthals go extinct<br>', 
-
-editable: false, start: '1379-12-28', title: '38,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 1, content: '<font color="yellow" font size="2.0"><p>起初神創造天地...<br>創世記 1:1<br><br>In the beginning,<br>God created the heaven and the earth…<br>Gen. 1:1 ', editable: false, start: '0000-10-07T04:00:00', title: '', type:'point', group: 1, className:''},
+	{id: 0, content: '<font color="white">...地是空虛混沌，淵面黑暗；　神的靈運行在水面上..<br>&emsp;創世記 1:2<br><br>...And the earth was without form, and void; and darkness was upon <br>&emsp;the face of the deep. And the Spirit of God moved upon the face of the waters.<br>&emsp;Gen. 1:2', editable: false, start: '0000-10-07T05:00:00', title: '', type:'point', group: 1, className:''},
+	{id: 100, content: '<w>"大爆炸 Big Bang"<br>', editable: false, start: '0000-10-07T04:01:00', title: '~1380x10M BC<br>Beginning of the space and time ', type:'point', group: 2, className:''},
+//  	{id: 103, content: '<a href="img/HD 140283.jpg" target="new"><img src="img/HD 140283.jpg" alt="" width="100px" height="100px"><br><a href="https://en.wikipedia.org/wiki/HD_140283" target="_blank"><font color="white">103</a>. Mathuselah star<br>', editable: false, start: '0015', title: '1365x10M BC<br><img src="img/HD 140283.jpg" style="width:810px; height:480px;"><br>Oldest know star in the universe ', type: 'point', group: 1, className:''},
+	{id: 103, content: '<a href="img/HD 140283.jpg" target="new"><img src="img/HD 140283.jpg" alt="" width="100px" height="100px"><br><a href="https://en.wikipedia.org/wiki/HD_140283" target="_blank"><font color="white">103</a>. 瑪土撒拉星<br>&emsp;&emsp;&nbsp;Mathuselah star<br>', editable: false, start: '0015', title: '1365x10M BC<br>Oldest know star in the universe ', type: 'point', group: 1, className:''},
+	{id: 104, content: '<font color="white">104. 電離時代開始<br>&emsp;&emsp;&nbsp;Reioniztion era begins<br>', editable: false, start: '0020', title: '1360x10M BC<br>Early stars start ionizing interstellar gas ', type:'point', group: 1, className:''},
+	{id: 105, content: '<a href="img/Black-Hole.jpg" target="new"><img src="img/Black-Hole.jpg" alt="" width="100px" height="100px"><br><font color="white">105.</a> 第一太空黑洞形成<br>&emsp;&emsp;&nbsp;First black holes form<br>', editable: false, start: '0030', title: '1350x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 107, content: '<font color="white">107. 恆星形成 <br>&emsp;&emsp;&nbsp;Mass star formation<br>', editable: false, start: '0050', title: '1330M BC<br>Universe starts to heat once again ', type:'point', group: 1, className:''},
+	{id: 108, content: '<font color="white">108. 第一星系形成 <br>&emsp;&emsp;&nbsp;First galaxies form<br>', editable: false, start: '0060', title: '1320M BC<br> ', type:'point', group: 1, className:''},
+	{id: 109, content: '<font color="white">109. 伽瑪射線暴 <br>&emsp;&emsp;&nbsp;GRB 090423<br>', editable: false, start: '0070', title: '1317M BC<br>Oldest gamma ray burst ever observed ', type:'point', group: 1, className:''},
+	{id: 110, content: '<a href="img/NASA-HS201427a-HUDF.jpg" target="new"><img src="img/NASA-HS201427a-HUDF.jpg" alt="" width="100px" height="100px"><br><font color="white">110.</a> 哈勃超深場 <br>&emsp;&emsp;&nbsp;Hubble ultra deep field<br>', editable: false, start: '0080', title: '1300M BC<br> ', type:'point', group: 1, className:''},
+	{id: 111, content: '<font color="white">111. 電離時期終結 <br>&emsp;&emsp;&nbsp;Reionization era ends<br>', editable: false, start: '0090', title: '1290M BC<br> ', type:'point', group: 1, className:''},
+	{id: 112, content: '<font color="white">112. 類星體 <br>&emsp;&emsp;&nbsp;Quasar CFHQS J2329-0301<br>', editable: false, start: '0095', title: '1285M BC<br>Oldest known quasar ', type:'point', group: 1, className:''},
+	{id: 113, content: '<font color="white">113. 脈衝星 <br>&emsp;&emsp;&nbsp;PST B1620-26<br>', editable: false, start: '0110', title: '1270x10M BC<br>Oldest known exoplanet ', type:'point', group: 1, className:''},
+	{id: 114, content: '<a href="img/Milky Way.jpg" target="new"><img src="img/Milky Way.jpg" alt="" width="100px" height="100px"><br><font color="white">114.</a> 銀河形成 <br>&emsp;&emsp;&nbsp;Milky Way forms<br>', editable: false, start: '0120', title: '1260x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 119, content: '<font color="white">119. 伽瑪射線暴超新星 <br>&emsp;&emsp;&nbsp;GRB 140419A Supernova<br>', editable: false, start: '0170', title: '1210x10M BC<br>Second oldest gamma ray burst ', type:'point', group: 1, className:''},
+	{id: 123, content: '<font color="white">123. 螺旋星系 <br>&emsp;&emsp;&nbsp;BX442 galaxy<br>', editable: false, start: '0210', title: '1170x10M BC<br>Oldest known spiral galaxy ', type:'point', group: 1, className:''},
+	{id: 125, content: '<font color="white">125. 卡普坦B外行星 <br>&emsp;&emsp;&nbsp;Kapteyn B<br>', editable: false, start: '0230', title: '1150x10M BC<br>Oldest known exoplanet lying within the habitable zone ', type:'point', group: 1, className:''},
+	{id: 126, content: '<font color="white">126. 銀河系的宇宙光暈形式 <br>&emsp;&emsp;&nbsp;Milky Way`s cosmic halo forms<br>', editable: false, start: '0240', title: '1140x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 130, content: '<font color="white">130. 宇宙開始降溫 <br>&emsp;&emsp;&nbsp;Universe starts to cool<br>', editable: false, start: '0280', title: '1100x10M BC<br>Temperature averages around 13000 K ', type:'point', group: 1, className:''},
+	{id: 135, content: '<font color="white">135. 最古老第一星族 <br>&emsp;&emsp;&nbsp;Oldest population I stars<br>', editable: false, start: '0330', title: '1050x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 136, content: '<font color="white">136. 宇宙變得可居住 <br>&emsp;&emsp;&nbsp;Universe becomes habitable<br>', editable: false, start: '0340', title: '1040x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 141, content: '<font color="white">141. 星系团 <br>&emsp;&emsp;&nbsp;JKCS 041<br>', editable: false, start: '0390', title: '990x10M BC<br>Oldest galactic cluster ', type:'point', group: 1, className:''},
+	{id: 143, content: '<font color="white">143. 宇宙達到其當前直徑的1/3 <br>&emsp;&emsp;&nbsp;Universe reaches 1/3 of its present diameter<br>', editable: false, start: '0410', title: '970x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 144, content: '<font color="white">144. 銀河系恆星形成率穩定 <br>&emsp;&emsp;&nbsp;Milky Way star formation rate stabilizes<br>', editable: false, start: '0420', title: '960x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 147, content: '<font color="white">147. 巴納德的星空形態 <br>&emsp;&emsp;&nbsp;Barnard`s star forms<br>', editable: false, start: '0445', title: '935x10M BC<br>Oldest chose solar neighbour ', type:'point', group: 1, className:''},
+	{id: 150, content: '<font color="white">150. 最古老暗能量的證據 <br>&emsp;&emsp;&nbsp;Oldest known evidence for dark energy<br>', editable: false, start: '0480', title: '900x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 152, content: '<font color="white">152. 銀河系的薄磁盤開始形成 <br>&emsp;&emsp;&nbsp;Milky Way`s thin disk starts to form<br>', editable: false, start: '0500', title: '880x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 155, content: '<font color="white">155. 拉蘭德21185紅矮星 <br>&emsp;&emsp;&nbsp;Lalande 21185<br>', editable: false, start: '0530', title: '850x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 156, content: '<font color="white">156. 拉卡伊9352紅矮星 <br>&emsp;&emsp;&nbsp;Lacaille 9352<br>', editable: false, start: '0540', title: '840x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 160, content: '<font color="white">160. 銀河系恆星形成率開始下降 <br>&emsp;&emsp;&nbsp;Milky Way star formation rate begins to decline<br>', editable: false, start: '0580', title: '800x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 162, content: '<font color="white">162. 開陽恆星形成 <br>&emsp;&emsp;&nbsp;Mizar forms<br>', editable: false, start: '0600', title: '780x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 165, content: '<font color="white">165. 伽瑪射線暴 <br>&emsp;&emsp;&nbsp;GRB 080319B. Most powerful gamma <br>&emsp;&emsp;&nbsp;ray burst ever observed by humans', editable: false, start: '0630', title: '750x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 169, content: '<font color="white">169. 宇宙降溫到5K以下 <br>&emsp;&emsp;&nbsp;Universe cools below 5 K<br>', editable: false, start: '0670', title: '710x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 170, content: '<font color="white">170. 大星系的生長變慢 <br>&emsp;&emsp;&nbsp;Growth of large galaxies slows<br>', editable: false, start: '0680', title: '700x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 171, content: '<font color="white">171. 宇宙年齡的一半 <br>&emsp;&emsp;&nbsp;1/2 the age of the universe<br>', editable: false, start: '0690', title: '690x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 172, content: '<font color="white">172. 人馬座形成 <br>&emsp;&emsp;&nbsp;Alpha Centauri forms<br>', editable: false, start: '0700', title: '680x10M BC<br>Closest star system to the sun ', type:'point', group: 1, className:''},
+	{id: 173, content: '<font color="white">173. 參宿一巨星形成 <br>&emsp;&emsp;&nbsp;Alnitak forms<br>', editable: false, start: '0710', title: '670x10M BC<br>Left star of the Orion`s Belt ', type:'point', group: 1, className:''},
+	{id: 175, content: '<font color="white">175. 銀河系開始呈螺旋狀 <br>&emsp;&emsp;&nbsp;Milky Way starts spiralizing<br>', editable: false, start: '0730', title: '650x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 176, content: '<font color="white">176. 像地球狀行星的平均年齡 <br>&emsp;&emsp;&nbsp;Age of an average earth-like planet<br>', editable: false, start: '0740', title: '640x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 178, content: '<font color="white">178. 天鵝座61星形成 <br>&emsp;&emsp;&nbsp;61 Cygni forms<br>', editable: false, start: '0760', title: '620x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 180, content: '<font color="white">180. 暗能量超過地心吸力 <br>&emsp;&emsp;&nbsp;Dark energy overtakes gravity<br>', editable: false, start: '0780', title: '600x10M BC<br>Universe`s expansion rate starts to accelerate ', type:'point', group: 1, className:''},
+	{id: 182, content: '<font color="white">182. 天倉五恆星形成 <br>&emsp;&emsp;&nbsp;Tau Ceti forms<br>', editable: false, start: '0800', title: '580x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 185, content: '<font color="white">185. 銀河系變成螺旋狀狀態 <br>&emsp;&emsp;&nbsp;Milky Way becomes a spiral galazy<br>', editable: false, start: '0830', title: '550x10M BC<br>Solar nebula starts collapsing ', type:'point', group: 1, className:''},
+	{id: 189, content: '<font color="white">189. 格利泽570星形成 <br>&emsp;&emsp;&nbsp;Gliese 570 forms<br>', editable: false, start: '0860', title: '520x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 192, content: '<font color="white">192. 半人馬星形成 <br>&emsp;&emsp;&nbsp;Proxima Centauri forms<br>', editable: false, start: '0895', title: '485x10M BC<br>Closest star to the Sun ', type:'point', group: 1, className:''},
+	{id: 193, content: '<font color="white">193. 超新星 <br>&emsp;&emsp;&nbsp;SN 2005ap supernova', editable: false, start: '0910', title: '470x10M BC<br>Brightest supernova ever observed ', type:'point', group: 1, className:''},
+
+	//{id: 194, content: '<a href="img/Sun.gif" target="new"><img src="img/Sun.gif" alt="" width="100px" height="100px"><br>太陽被造 Sun forms<br>', editable: true, start: '0923', title: '194. 457x10M BC<br>Proto-earth forms (planets, asteroids & comets form from the sun`s protoplanetary disk) ', type:'point', group: 1, className:''},
+	//{id: 194, content: '<br><a href="img/Sun.gif" target="new"><img src="img/Sun.gif" alt="" width="100px" height="100px"><br>太陽被造<br>Sun forms', editable: false, start: '0923', end: '0923', title: '194. 457x10M BC<br>Proto-earth forms (planets, asteroids & comets form from the sun`s protoplanetary disk) ', type:'point', group: 1, className:''},
+	//{id: 195, content: '<br><br><a href="img/Moon.gif" target="new"><img src="img/Moon.gif" alt="" width="25px" height="25px"><br>月亮被造<br>Moon forms', editable: false, start: '0923', end: '0923', title: '195. 456x10M BC<br>Theia impacts Earth, the Moon forms from the coalesced debris ', type:'point', group: 1, className:''},
+
+	{id: 194, content: '<br><br>194. 太陽被造<br>Sun forms', editable: false, start: '0923', end: '0923', title: '457x10M BC<br>Proto-earth forms (planets, asteroids & comets form from the sun`s protoplanetary disk)', type:'', group: 1, className:''},
+	{id: 195, content: '<br><br>195. 月亮被造<br>Moon forms', editable: false, start: '0923', end: '0923', title: '456x10M BC<br>Vegetation altered the atmosphere, the sky becomes clearer making celestial bodies visible ', type:'', group: 1, className:''},
+
+	{id: 198, content: '198. 地球的海洋形成 <br>&emsp;&emsp;&nbsp;Oceans form on Earth<br>', editable: false, start: '0940', title: '440x10M BC<br>First known minerals (Zircons form at Jack Hills, Australia) ', type:'point', group: 1, className:''},
+	{id: 200, content: '200. 生命在地球出現 <br>&emsp;&emsp;&nbsp;Life emerges on Earth<br>', editable: false, start: '0960', title: '420x10M BC<br>Early estimate ', type:'point', group: 1, className:''},
+	{id: 201, content: '201. 最早的石 <br>&emsp;&emsp;&nbsp;Earliest known rock<br>', editable: false, start: '0970', title: '410x10M BC<br>Earliest known rock ', type:'point', group: 1, className:''},
+	{id: 202, content: '202. 綠石帶 <br>&emsp;&emsp;&nbsp;Greenstone rock belt<br>', editable: false, start: '0980', title: '400x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 203, content: '203. 生命在地球出現 <br>&emsp;&emsp;&nbsp;Life emerges on Earth<br>', editable: false, start: '0990', title: '390x10M BC<br>Late estimate ', type:'point', group: 1, className:''},
+	{id: 204, content: '204. 最古老的帶狀鐵形成 <br>&emsp;&emsp;&nbsp;Oldest banded iorn formation<br>', editable: false, start: '1000', title: '380x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 205, content: '205. 格陵蘭的生物石墨 <br>&emsp;&emsp;&nbsp;Biogenic graphite in Greenland<br>', editable: false, start: '1010', title: '370x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 206, content: '206. 超大陸出現 <br>&emsp;&emsp;&nbsp;Valbaara supercontinent emerges<br>', editable: false, start: '1020', title: '360x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 207, content: '207. 藍藻化石 <br>&emsp;&emsp;&nbsp;Cyanobacteria fossils<br>', editable: false, start: '1030', title: '350x10M BC<br>Warrawoona, oldest fossil evidence of life on Earth ', type:'point', group: 1, className:''},
+	{id: 208, content: '208. 細菌化石 <br>&emsp;&emsp;&nbsp;Bacterial fossils in chert<br>', editable: false, start: '1034', title: '346x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 210, content: '210. 地质構造壓縮 <br>&emsp;&emsp;&nbsp;Compressional tectonics<br>', editable: false, start: '1050', title: '330x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 211, content: '211. Barberton event<br>', editable: false, start: '1054', title: '326x10M BC<br>One of the largest impacts ever left a 300 m (480 km) crater ', type:'point', group: 1, className:''},
+	{id: 212, content: '212. 藍細菌發展真正的光合作用. 開始產生氧氣 <br>&emsp;&emsp;&nbsp;Cyanobacteria develop true photosynthesis.<br>&emsp;&emsp;&nbsp;Life begins to produce oxygen', editable: false, start: '1080', title: '300x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 213, content: '213. 網罟座形成 <br>&emsp;&emsp;&nbsp;Zeta Reticuli forms<br>', editable: false, start: '1090', title: '290x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 214, content: '214. 潮汐降至303公尺 <br>&emsp;&emsp;&nbsp;Tides decline below 303 m<br>', editable: false, start: '1090', title: '290x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 215, content: '215. 第一個真核生物出現 <br>&emsp;&emsp;&nbsp;First eukaryotes emerges<br>', editable: false, start: '1110', title: '270x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 216, content: '216. 最古老的巨型碳酸鹽平台 <br>&emsp;&emsp;&nbsp;Oldest known giant carbonate platform<br>', editable: false, start: '1120', title: '260x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 217, content: '217. 地殼構造板塊開始移動 <br>&emsp;&emsp;&nbsp;Movement of the tectonic plates commences<br>', editable: false, start: '1130', title: '250x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 218, content: '218. 大氧化事件. 細菌產生的氧氣開始在大氣中積累 <br>&emsp;&emsp;&nbsp;Great Oxygenation event. Bacterials produced <br>&emsp;&emsp;&nbsp;oxygen starts to accumulate in the atmosphere', editable: false, start: '1130', title: '250x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 219, content: '219. 蘇阿夫湖隕石大撞擊 <br>&emsp;&emsp;&nbsp;Suavjarvi impact event.<br>&emsp;&emsp;&nbsp;Left oldest still recognizable crater', editable: false, start: '1140', title: '240x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 220, content: '220. 休倫冰川開始 <br>&emsp;&emsp;&nbsp;Huronian glaciation starts', editable: false, start: '1140', title: '240x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 221, content: '221. 大氣中的氧氣含量超過1％ <br>&emsp;&emsp;&nbsp;Atmospheric oxygen level surpasses 1%<br>', editable: false, start: '1158', title: '222x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 222, content: '222. 臭氧層形式 <br>&emsp;&emsp;&nbsp;Ozone layer forms<br>', editable: false, start: '1160', title: '220x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 223, content: '223. 休倫冰川期結束 <br>&emsp;&emsp;&nbsp;Huronian glaciation ends<br>', editable: false, start: '1165', title: '215x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 224, content: '224. 最早的真核生物化石 <br>&emsp;&emsp;&nbsp;Earliest known eukaryote fossils<br>', editable: false, start: '1170', title: '210x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 225, content: '225. 最早的多細胞生命 <br>&emsp;&emsp;&nbsp;Earliest muticellular life<br>', editable: false, start: '1170', title: '210x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 226, content: '226. 弗里德堡隕石大撞擊. 有史以來<br>&emsp;&emsp;&nbsp;最大的撞擊之一留下300公里的石坑 <br>&emsp;&emsp;&nbsp;Vredefort impact event. One of the <br>&emsp;&emsp;&nbsp;largest impacts ever left a 300 km crater', editable: false, start: '1178', title: '202x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 227, content: '227. 多種多樣的微体疑源类 <br>&emsp;&emsp;&nbsp;Diversification of acritarchs<br>', editable: false, start: '1180', title: '200x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 228, content: '228. 大氣中的氧氣含量超過15％ <br>&emsp;&emsp;&nbsp;Atmospheric oxygen level surpasses 15%<br>', editable: false, start: '1190', title: '190x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 229, content: '229. 天然核反應堆在非洲加蓬的奥克洛形成 <br>&emsp;&emsp;&nbsp;Natural nuclear reactor forms in Oklo, Gabon<br>', editable: false, start: '1190', title: '190x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 230, content: '230. 第一噬菌體 <br>&emsp;&emsp;&nbsp;First bacteriophages<br>', editable: false, start: '1195', title: '185x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 231, content: '231. 索德柏立隕石大撞擊, 留下250公里的石坑 <br>&emsp;&emsp;&nbsp;Sudbury impact event. Left a 250 km crater', editable: false, start: '1195', title: '185x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 232, content: '232. 哥倫比亞超級陸地出現 <br>&emsp;&emsp;&nbsp;Supercontinent Columbia forms<br>', editable: false, start: '1200', title: '180x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 233, content: '233. 毘濕奴地下室岩石. 大峽谷中最古老的岩石 <br>&emsp;&emsp;&nbsp;Vishnu Basement Rocks. Oldest rocks in <br>&emsp;&emsp;&nbsp;the Grand Canyon', editable: false, start: '1205', title: '175x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 234, content: '234. 最古老的沙丘 <br>&emsp;&emsp;&nbsp;Oldest sand dune emerges<br>', editable: false, start: '1210', title: '170x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 235, content: '235. 地質平台覆蓋範圍擴大 <br>&emsp;&emsp;&nbsp;Platform covers expand<br>', editable: false, start: '1220', title: '160x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 236, content: '236. 線粒體同化為真核細胞 <br>&emsp;&emsp;&nbsp;Mitochondria assimilate into eukaryotic cells<br>', editable: false, start: '1220', title: '160x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 237, content: '237. 哥倫比亞超級陸地分離 <br>&emsp;&emsp;&nbsp;Supercontinent Columbia breaks up<br>', editable: false, start: '1230', title: '150x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 238, content: '238. 地質平台涵蓋擴展 <br>&emsp;&emsp;&nbsp;Geologic platform covers expand<br>', editable: false, start: '1235', title: '145x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 239, content: '239. 疊層石數量迅速增加 <br>&emsp;&emsp;&nbsp;Population of stromatolites rapidly rises<br>', editable: false, start: '1240', title: '140x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 240, content: '240. 南河三恒星形成. 小犬座中最亮的星 <br>&emsp;&emsp;&nbsp;Procyon forms. Brightest star in Canis Minor', editable: false, start: '1243', title: '137x10M BC<br> ', type:'point', group: 1, className:''},
+
+	{id: 2401, content: '<br><a href="img/Sun.gif" target="new"><img src="img/Sun.gif" alt="" width="100px" height="100px"><br>太陽出現<br>Sun appears', editable: false, start: '1250', end: '1250', title: '194. 457x10M BC<br>Vegetation alters the atmosphere making celestial bodies visible', type:'', group: 1, className:'lightyellow'},
+	{id: 2402, content: '<br><br><a href="img/Moon.gif" target="new"><img src="img/Moon.gif" alt="" width="25px" height="25px"><br>月亮出現<br>Moon appears', editable: false, start: '1250', end: '1250', title: '195. 456x10M BC<br>Vegetation alters the atmosphere making celestial bodies visible', type:'', group: 1, className:''},
+
+      //{id: 241, content: '241. 日長達17小時 <br>&emsp;&emsp;&nbsp;Days are 17 hours long<br>', editable: false, start: '1250', title: '130x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 242, content: '242. 格林維爾造山開始 <br>&emsp;&emsp;&nbsp;Greenville orogeny starts<br>', editable: false, start: '1250', title: '130x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 243, content: '243. 第一陸地菌類 <br>&emsp;&emsp;&nbsp;First land fungi<br>', editable: false, start: '1255', title: '125x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 244, content: '244. 超大陸羅丹尼亞形成 <br>&emsp;&emsp;&nbsp;Supercontinent Rodinia forms<br>', editable: false, start: '1260', title: '120x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 245, content: '245. 红藻門. 第一類性繁殖生物 <br>&emsp;&emsp;&nbsp;Bangiomorpha pubescens. <br>&emsp;&emsp;&nbsp;First sexually reproducing organism', editable: false, start: '1260', title: '120x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 246, content: '246. 真核生物種群數量激增 <br>&emsp;&emsp;&nbsp;Population explosion of eukaryotes<br>', editable: false, start: '1265', title: '115x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 247, content: '247. 最早的鞭毛原生生物 <br>&emsp;&emsp;&nbsp;Earliest flagellate protists<br>', editable: false, start: '1270', title: '110x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 248, content: '248. 第一個藻類 <br>&emsp;&emsp;&nbsp;First vaucherian algae<br>', editable: false, start: '1275', title: '105x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 249, content: '249. 格林維爾造山結束 <br>&emsp;&emsp;&nbsp;Greenville orogeny ends<br>', editable: false, start: '1280', title: '100x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 250, content: '250. 微体疑源类壽命急劇下降 <br>&emsp;&emsp;&nbsp;Acritarch lifespan falls sharply<br>', editable: false, start: '1280', title: '100x10M BC<br> ', type:'point', group: 1, className:''},
+      //{id: 251, content: '251. 日長達19小時 <br>&emsp;&emsp;&nbsp;Days are 19 hours long<br>', editable: false, start: '1290', title: '90x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 252, content: '252. 疊層石的數量開始減少 <br>&emsp;&emsp;&nbsp;Population of stromatolites <br>&emsp;&emsp;&nbsp;starts to decline<br>', editable: false, start: '1295', title: '85x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 253, content: '253. 原生生物數量激增 <br>&emsp;&emsp;&nbsp;Protista population explodes<br>', editable: false, start: '1300', title: '80x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 254, content: '254. Kaigas <br>&emsp;&emsp;&nbsp;冰川結冰 glaciation<br>', editable: false, start: '1303', title: '77x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 255, content: '255. 超大陸羅丹尼亞州崩盤 <br>&emsp;&emsp;&nbsp;Supercontinent Rodinia breaks apart<br>', editable: false, start: '1305', title: '75x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 256, content: '256. 冰川結冰 <br>&emsp;&emsp;&nbsp;Sturtian glaciation<br>', editable: false, start: '1308', title: '72x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 257, content: '257. 中國發現僵化蠕蟲印象 <br>&emsp;&emsp;&nbsp;Fossilized worm impressions found in China<br>', editable: false, start: '1310', title: '70x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 258, content: '258. 冰川結冰 <br>&emsp;&emsp;&nbsp;Marinoan glaciation<br>', editable: false, start: '1315', title: '65x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 259, content: '259. 超大陸形成 <br>&emsp;&emsp;&nbsp;Supercontinent Pannotia forms<br>', editable: false, start: '1320', title: '60x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 260, content: '260. 泛非造山 <br>&emsp;&emsp;&nbsp;Pan-African orogeny<br>', editable: false, start: '1320', title: '60x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 261, content: '261. 阿瓦隆大爆發. 艾迪卡拉生物群出現 <br>&emsp;&emsp;&nbsp;Avalon explosion. Ediacaran fauna emerges', editable: false, start: '1322-06-30', title: '57.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 262, content: '262. 寒武紀大爆發. 最主要的動物門出現<br>&emsp;&emsp;&nbsp;Cambrian explosion. Exponential diversification <br>&emsp;&emsp;&nbsp;of life. Most major animal phyla appear.', editable: false, start: '1326', title: '54x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 263, content: '263. First trilobites<br>', editable: false, start: '1327-06-30', title: '52.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 263, content: '<img src="img/trilobite.png" border="0" style="width:30px; height:30px;"><br>263. 第一條前三葉蟲 <br>&emsp;&emsp;&nbsp;First trilobites<br>', editable: false, start: '1327-06-30', title: '52.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 265, content: '265. 第一條無顎魚 <br>&emsp;&emsp;&nbsp;First jawless fish<br>', editable: false, start: '1331-06-30', title: '48.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 266, content: '266. 植物和節肢動物定居在土地上<br>&emsp;&emsp;&nbsp;Plants and arthropods colonize the land<br>', editable: false, start: '1335', title: '45x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 267, content: '267. 奧陶紀滅絕. 所有物種的60％被滅絕<br>&emsp;&emsp;&nbsp;Ordovician extinction event. 60% of <br>&emsp;&emsp;&nbsp;all species go extinct', editable: false, start: '1335-06-30', title: '44.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 268, content: '268. 第一呼吸動物<br>&emsp;&emsp;&nbsp;First air-breathing animals<br>', editable: false, start: '1338', title: '42x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 270, content: '270. 第一個四腳動物. 所有物種的70％被滅絕 <br>&emsp;&emsp;&nbsp;First tetrapods. 70% of all species go extinct', editable: false, start: '1340-06-30', title: '39.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 271, content: '271. 第一棵樹狀植物 <br>&emsp;&emsp;&nbsp;First tree-like plants<br>', editable: false, start: '1342', title: '38x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 272, content: '272. 泥盆紀晚期滅絕 <br>&emsp;&emsp;&nbsp;Late Devonian extinction<br>', editable: false, start: '1343', title: '37x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 273, content: '273. 第一個螃蟹和蕨類植物 <br>&emsp;&emsp;&nbsp;First crab and ferns<br>', editable: false, start: '1344', title: '36x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 274, content: '274. 第一羊膜動物 <br>&emsp;&emsp;&nbsp;First amniotes<br>', editable: false, start: '1347', title: '33x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 275, content: '275. 第一類爬行動物 <br>&emsp;&emsp;&nbsp;First reptiles<br>', editable: false, start: '1348', title: '32x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 276, content: '276. 大氣氧水平達到35％的峰值 <br>&emsp;&emsp;&nbsp;Atmospheric oxygen level peaks at 35%<br>&emsp;&emsp;&nbsp;Arthropods grow into unprecendented sizes', editable: false, start: '1349-06-30', title: '30.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 278, content: '278. 第一隻甲蟲 <br>&emsp;&emsp;&nbsp;First beetles<br>', editable: false, start: '1352', title: '28x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 279, content: '279. First therapsids<br>', editable: false, start: '1352-06-30', title: '27.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 279, content: '<img src="img/Therapsid.png" border="0" style="width:60px; height:35px;"><br>279. 第一隻獸孔目 <br>&emsp;&emsp;&nbsp;First therapsids<br>', editable: false, start: '1352-06-30', title: '27.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 280, content: '280. 二疊紀滅絕. 歷史上最大規模的滅絕事件, <br>&emsp;&emsp;&nbsp;所有物種中90-96％滅絕 <br>&emsp;&emsp;&nbsp;Permian extinction event. Largest extinction event<br>&emsp;&emsp;&nbsp;in history where 90-96% of all species go extinct', editable: false, start: '1354-11-23', title: '25.1x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 281, content: '281. 天狼星形成. 夜空中最亮的星<br>&emsp;&emsp;&nbsp;Sirius forms. Brightest star<br>&emsp;&emsp;&nbsp;in the night sky', editable: false, start: '1355', title: '25x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 282, content: '282. 第一隻恐龍 <br>&emsp;&emsp;&nbsp;First dinosaurs<br>', editable: false, start: '1356-11-23', title: '23.1x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 283, content: '283. 第一批哺乳動物 <br>&emsp;&emsp;&nbsp;First mamals<br>', editable: false, start: '1357-06-30', title: '22.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 284, content: '284. 第一隻烏龜 <br>&emsp;&emsp;&nbsp;First turtles<br>', editable: false, start: '1358', title: '22x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 285, content: '285. 三疊紀滅絕事件. 所有物種的75％被滅絕 <br>&emsp;&emsp;&nbsp;Triassic extinction event. 75% of all species go extinct', editable: false, start: '1359-11-23', title: '20.1x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 287, content: '287. First giant sauropods<br>', editable: false, start: '1361', title: '19x10M BC<br> ', type:'point', group: 1, className:''},
+        {id: 287, content: '<a href="img/sauropod-dinosaur.png" target="new"><img src="img/sauropod-dinosaur.gif" border="0" style="width:220px; height:220px;"><br>287.</a>  第一個巨型蜥腳類動物 <br>&emsp;&emsp;&nbsp;First giant sauropods<br>', editable: false, start: '1361', end: '1361', title: '19x10M BC<br> ', type:'', group: 1, className:''},
+	{id: 288, content: '288. 盤古大陸分裂 <br>&emsp;&emsp;&nbsp;Pangaea splits into Laurasia & Gondwana<br>', editable: false, start: '1362', title: '18x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 289, content: '<a href="img/Stegosaurus.png" target="new"><img src="img/Stegosaurus2.gif" alt="" width="150px" height="50px"><br>289.</a>  第一劍龍 <br>&emsp;&emsp;&nbsp;First stegosaurus<br>', editable: false, start: '1362-05-25', end: '1362-05-25', title: '17.6x10M BC<br> ', type:'', group: 1, className:''},
+	{id: 290, content: '<a href="img/Pterosaurus3.png" target="new"><img src="img/Pterosaurus3.gif" alt="" width="100px" height="100px"><br>290.</a> 第一翼龍 <br>&emsp;&emsp;&nbsp;First pterosaurus<br>', editable: false, start: '1363-09-11', end: '1363-09-11', title: '16.3x10M BC<br> ', type:'', group: 1, className:''},
+	{id: 291, content: '291. 首鳥 <br>&emsp;&emsp;&nbsp;First birds<br>', editable: false, start: '1364-06-30', title: '15.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 292, content: '292. 馬達加斯加從非洲分裂 <br>&emsp;&emsp;&nbsp;Madagascar splits from Africa<br>', editable: false, start: '1365-06-30', title: '14.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 293, content: '293. 第一朵開花植物 <br>&emsp;&emsp;&nbsp;First flowering plants<br>', editable: false, start: '1367', title: '13x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 294, content: '294. 勞拉西亞和岡瓦納開始分崩離析 <br>&emsp;&emsp;&nbsp;Laurasia and Gondwana begin to drift apart<br>', editable: false, start: '1367', title: '13x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 295, content: '295. 第一螞蟻 <br>&emsp;&emsp;&nbsp;First ants<br>', editable: false, start: '1368', title: '12x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 296, content: '296. 第一個產卵哺乳動物 <br>&emsp;&emsp;&nbsp;First egg-laying mammals<br>', editable: false, start: '1368-06-30', title: '11.5x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 297, content: '297. Spinosaurus evolves<br>Largest off all carnivorous dinosaurs', editable: false, start: '1369-05-25', title: '10.6x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 297, content: '<img src="img/Spinosaurus.png" border="0" style="width:80px; height:50px;"><br>297. 棘龍進化<br>&emsp;&emsp;&nbsp;Spinosaurus evolves<br>&emsp;&emsp;&nbsp;Largest off all carnivorous dinosaurs', editable: false, start: '1369-05-25', title: '10.6x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 298, content: '298. 第一隻蜜蜂 <br>&emsp;&emsp;&nbsp;First bees<br>', editable: false, start: '1370', title: '10x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 299, content: '299. Ichthyosaurs go extinct<br>', editable: false, start: '1371', title: '9x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 299, content: '<img src="img/ichthyosaurus.png" border="0" style="width:80px; height:50px;"><br>299. 魚龍滅絕<br>&emsp;&emsp;&nbsp;Ichthyosaurs go extinct<br>', editable: false, start: '1371', title: '9x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 300, content: '300. 印度次大陸從岡瓦納分裂 <br>&emsp;&emsp;&nbsp;Indian subcontinent splits from Gondwana<br>', editable: false, start: '1371', title: '9x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 301, content: '301. 澳大利亞從南極洲分裂 <br>&emsp;&emsp;&nbsp;Australia splits from Antarctica<br>', editable: false, start: '1372', title: '8x10M BC<br> ', type:'point', group: 1, className:''},
+        {id: 302, content: '<img src="img/Hadrosaurus.png" border="0" style="width:180px; height:75px;"><br>302. 蜥蜴龍出現 <br>&emsp;&emsp;&nbsp;Hadrosaurs appear<br>', editable: false, start: '1372', title: '8x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 304, content: '304. Tyrannosaurus Rex evolves<br>', editable: false, start: '1373-03-13', title: '6.8x10M BC<br> ', type:'point', group: 1, className:''},
+//	{id: 304, content: '<a href="img/Tyrannosaurus Rex.png" target="new"><img src="img/Tyrannosaurus Rex.gif" border="0" style="width:103px; height:103px;"><br>304. Tyrannosaurus Rex evolves<br>', editable: false, start: 1373-03-13', end: 1373-03-13', title: '6.8x10M BC<br> ', type:'', group: 1, className:''},
+	{id: 304, content: '<a href="img/Tyrannosaurus Rex.png" target="new"><img src="img/Tyrannosaurus Rex.gif" border="0" style="width:103px; height:103px;"><br>304.</a>  霸王龍進化 <br>&emsp;&emsp;&nbsp;Tyrannosaurus Rex evolves<br>', editable: false, start: '1373-03-13', end: '1373-03-13', title: '6.8x10M BC<br> ', type:'', group: 1, className:''},
+	{id: 305, content: '305. 白堊紀滅絕. 包括所有非禽類恐龍<br>&emsp;&emsp;&nbsp;在內的所有物種中有75％被滅絕 <br>&emsp;&emsp;&nbsp;Cretaceous extinction event. 75% of all species, <br>&emsp;&emsp;&nbsp;including all non-avion dinosaurs, go extinct', editable: false, start: '1373-05-25', title: '6.6x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 306, content: '306. 靈長類動物進化 <br>&emsp;&emsp;&nbsp;First primates evolve<br>', editable: false, start: '1374', title: '6x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 307, content: '307. 首批現代鳥類 <br>&emsp;&emsp;&nbsp;First modern birds<br>', editable: false, start: '1374-06-30', title: '5.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 308, content: '308. 印度次大陸與亞洲相撞. 西藏和喜馬拉雅山開始崛起 <br>&emsp;&emsp;&nbsp;Indian subcontinent collides with Asia.<br>&emsp;&emsp;&nbsp;Tibet & Himalayas start to rise', editable: false, start: '1374-10-18', title: '5.2x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 310, content: '310. 鯨魚回到水中 <br>&emsp;&emsp;&nbsp;Whales return to the water<br>', editable: false, start: '1375-04-18', title: '4.7x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 311, content: '311. 南極冰蓋開始增長 <br>&emsp;&emsp;&nbsp;Antarctic ice cap begins to grow<br>', editable: false, start: '1376', title: '4x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 312, content: '312. 第一隻犬科動物進化 <br>&emsp;&emsp;&nbsp;First canids evolve<br>', editable: false, start: '1376', title: '4x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 313, content: '313. 草原開始普及 <br>&emsp;&emsp;&nbsp;Grasslands become widespread<br>', editable: false, start: '1376-06-30', title: '3.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 314, content: '314. 第一隻貓科動物進化 <br>&emsp;&emsp;&nbsp;First felids evolve<br>', editable: false, start: '1376-08-06', title: '3.4x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 315, content: '315. 南美與南極洲分開 <br>&emsp;&emsp;&nbsp;South America separates from Antarctica<br>', editable: false, start: '1377', title: '3x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 316, content: '316. 第一批大象 <br>&emsp;&emsp;&nbsp;First elephants<br>Eritreum melakeghebrekristosi', editable: false, start: '1377-05-25', title: '2.6x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 317, content: '317. 拉加里塔火山噴發 <br>&emsp;&emsp;&nbsp;La Garita eruption.', editable: false, start: '1377-05-25', title: '2.6x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 319, content: '319. 第一頭長頸鹿 <br>&emsp;&emsp;&nbsp;First giraffes<br>', editable: false, start: '1378', title: '2x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 320, content: '320. 大猿和小猿的發散 <br>&emsp;&emsp;&nbsp;Divergence of great apes and lesser apes<br>', editable: false, start: '1378-03-13', title: '1.8x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 321, content: '321. 第一帶蹄哺乳動物 <br>&emsp;&emsp;&nbsp;First bovids<br>', editable: false, start: '1378-06-30', title: '1.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 322, content: '322. 第一隻袋鼠 <br>&emsp;&emsp;&nbsp;First kangaroos<br>', editable: false, start: '1378-06-30', title: '1.5x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 323, content: '323. 第一匹大馬 <br>&emsp;&emsp;&nbsp;First large horses<br>', editable: false, start: '1378-11-23', title: '1.1x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 326, content: '326. 參宿七恆星形成, 獵戶座最亮的星<br>&emsp;&emsp;&nbsp;Rigel forms. Brightest star in Orion', editable: false, start: '1379-03-13', title: '0.8x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 327, content: '327. 參宿四恆星形成, 獵戶座第二顆最亮的星 <br>&emsp;&emsp;&nbsp;Betelgeuse forms. Second brightest star in Orion', editable: false, start: '1379-03-31', title: '0.75x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 329, content: '329. 墨西拿鹽度危機, 直布羅陀海峽緊閉至地中海幹 <br>&emsp;&emsp;&nbsp;Messinian salinity crisis, Strait of Gilbratar <br>&emsp;&emsp;&nbsp;closes tight Mediterranean Sea dries out', editable: false, start: '1379-05-25', title: '0.596x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 331, content: '331. 第一批現代哺乳動物 <br>&emsp;&emsp;&nbsp;First modern mamals<br>', editable: false, start: '1379-08-06', title: '0.4x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 332, content: '332. 南方古猿進化 <br>&emsp;&emsp;&nbsp;Australopithecus evolves<br>', editable: false, start: '1379-08-06', title: '0.4x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 333, content: '333. 南北美洲生物大遷徙 <br>&emsp;&emsp;&nbsp;Great American Interchange', editable: false, start: '1379-09-11', title: '0.3x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 334, content: '334. 當前冰河時代開始 <br>&emsp;&emsp;&nbsp;Current ice age begins<br>', editable: false, start: '1379-09-29', title: '0.25x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 335, content: '335. 灵长目人出現 <br>&emsp;&emsp;&nbsp;Genus Homo appear<br>', editable: false, start: '1379-10-10', title: '0.22x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 337, content: '337. 直立猿人首先使用火 <br>&emsp;&emsp;&nbsp;First controlled use of fire by Homo Erectus<br>', editable: false, start: '1379-11-05', title: '0.15x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 338, content: '338. 先驅人進化 <br>&emsp;&emsp;&nbsp;Homo antecessor evolves<br>', editable: false, start: '1379-11-16', title: '0.12x10M BC<br> ', type:'point', group: 1, className:''},
+	{id: 342, content: '342. 地球磁場的最後一次反轉 <br>&emsp;&emsp;&nbsp;Last reversal of Earth`s magnetic field<br>', editable: false, start: '1379-12-01', title: '780,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 343, content: '343. 黃石破火山口爆發 <br>&emsp;&emsp;&nbsp;Yellowstone Caldera erupts<br>', editable: false, start: '1379-12-06', title: '640,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 344, content: '344. 海德堡人進化 <br>&emsp;&emsp;&nbsp;Homo heidelbergensis evolves<br>', editable: false, start: '1379-12-08', title: '600,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 345, content: '345. 最早的"人類"雕刻 <br>&emsp;&emsp;&nbsp;Earliest "human" engraving<br>&emsp;&emsp;&nbsp;Zig-zag patterns on shells in Java', editable: false, start: '1379-12-11', title: '500,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 346, content: '346. 格陵蘭冰融化 <br>&emsp;&emsp;&nbsp;Greenland ice melts<br>', editable: false, start: '1379-12-15', title: '400,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 347, content: '347. 巨猿消失 <br>&emsp;&emsp;&nbsp;Gigantopithecus goes extinct<br>', editable: false, start: '1379-12-19', title: '300,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 348, content: '348. 尼安德特人進化 <br>&emsp;&emsp;&nbsp;Neanderthals evolve<br>', editable: false, start: '1379-12-20', title: '250,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 349, content: '349. 現代的"人類"在非洲出現 <br>&emsp;&emsp;&nbsp;Anatomically modern "humans" appear in Africa<br>', editable: false, start: '1379-12-22', title: '195,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 350, content: '350. 撒哈拉沙漠變得肥沃 <br>&emsp;&emsp;&nbsp;Sahara becomes fertile<br>', editable: false, start: '1379-12-25', title: '120,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 351, content: '351. 像人類的"人"開始遷移到非洲 <br>&emsp;&emsp;&nbsp;"Human" like creatures begin migrating out of Africa<br>', editable: false, start: '1379-12-26', title: '100,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 354, content: '354. 多峇大火山爆發, "人口"下降至10,000<br>&emsp;&emsp;&nbsp;Toba supervolcanic eruption<br>&emsp;&emsp;&nbsp;"Human" population falls to ~10,000', editable: false, start: '1379-12-27', title: '70,000 BC<br> ', type:'point', group: 1, className:''},
+	{id: 357, content: '357. 尼安德特人滅絕 <br>&emsp;&emsp;&nbsp;Neanderthals go extinct<br>', editable: false, start: '1379-12-28', title: '38,000 BC<br> ', type:'point', group: 1, className:''},
 	
-        {id: 368, content: '神造亞當和夏娃<br>God creates Adam & Eve<br>', editable: false, start: '1379-
+        {id: 368, content: '神造亞當和夏娃<br>God creates Adam & Eve<br>', editable: false, start: '1379-12-29T18:56:12', title: '3761 BC<br> ', type:'point', group: 1, className:'lightgrey'},
+	{id: 777, content: '<b>耶穌 Jesus &#x271D;<br>', editable: false, start: '1379-12-29T22:13:37', title: '~3 BC -  AD 30<br> ', type:'point', group: 1, className:'bloodred'},
+	{id: 4.760, content: '<font color="black">現在 PRESENT<br>', editable: false, start: '1379-12-30T00:03:00', title: '', type:'point', group: 1, className:'white'},
 
-12-29T18:56:12', title: '3761 BC<br> ', type:'point', group: 1, className:'lightgrey'},
-	{id: 777, content: '<b>耶穌 Jesus &#x271D;<br>', editable: false, start: '1379-12-29T22:13:37', 
 
-title: '~3 BC -  AD 30<br> ', type:'point', group: 1, className:'bloodred'},
-	{id: 4.760, content: '<font color="black">現在 PRESENT<br>', editable: false, start: '1379-12-
 
-30T00:03:00', title: '', type:'point', group: 1, className:'white'},
 
+
+//TEST AREA
+
+//	NAME 4 - GROUP 4
+
+//	NAME 5 - GROUP 5
+    
+//	NAME 6 - GROUP 6
 
 
 
   ]);
-  
  
-// When the user scrolls the page, execute myFunction 
-	  window.onscroll = function() {myFunction()};
-
-	  function myFunction() {
-	    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-	    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-	    var scrolled = (winScroll / height) * 100;
-	    document.getElementById("myBar").style.width = scrolled + "%";
-	  }
-
-  // create visualization
-	  var container = document.getElementById('visualization');
-	    var options = {
-
-	    groupOrder: function (a, b) {
-	    return a.value - b.value;
-	    },
-	    groupOrderSwap: function (a, b, groups) {
-	    	var v = a.value;
-	    	a.value = b.value;
-	    	b.value = v;
-	    },
-
-	    groupTemplate: function(group){
-	        var container = document.createElement('div');
-	        var label = document.createElement('span');
-	        label.innerHTML = group.content + ' ';
-	        container.insertAdjacentElement('afterBegin',label);
-	        var hide = document.createElement('button');
-	        hide.innerHTML = '&#10025';		//Hide
-	        hide.style.fontSize = 'small';
-	        hide.addEventListener('click',function(){
-	        groups.update({id: group.id, visible: false});
-	      });
-
-	      container.insertAdjacentElement('beforeEnd',hide);
-	      return container;
-	      },
-	      showCurrentTime: false,  
-	      orientation: 'both',
-
-	      stack: true,
-
-	      horizontalScroll: true,
-
-	      zoomKey: 'ctrlKey',
-
-
-	      editable: true,
-	      editable: true,
-	      start: new Date(-0002, 1, 1),
-	      end: new Date(0155, 1, 1)
-	      };
-  
-
-	  var timeline = new vis.Timeline(container);
-	  timeline.setOptions(options);
-	  timeline.setGroups(groups);  
-	  timeline.setItems(items);
-  
-
-	  var ordering = document.getElementById('ordering');
-
-	  ordering.onchange = function () {
-
-	    timeline.setOptions({
-
-	      order: ordering.checked ? customOrder: null
-
-	    });
-
-	  };
-
-  //ID 
-	  document.getElementById('100').onclick = function() {
-	    timeline.focus(100);
-	  };
-	  document.getElementById('777').onclick = function() {
-	    timeline.focus(185, {animation: {duration: 3000, easingFunction: 'linear'}}); // ms
-	  };
-	  document.getElementById('4.760').onclick = function() {
-	    timeline.focus(4.760);
-	  };
-  
-
+// eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1O.1h=5(){M()};5 M(){2 J=3.1g.O||3.A.O;2 z=3.A.1f-3.A.1e;2 E=(J/z)*u;3.6("1d").D.15=E+"%"}2 h=3.6(\'U\');2 k={S:5(a,b){r a.8-b.8},1c:5(a,b,g){2 v=a.8;a.8=b.8;b.8=v},1b:5(B){2 h=3.t(\'1a\');2 y=3.t(\'19\');y.W=B.18+\' \';h.N(\'17\',y);2 j=3.t(\'16\');j.W=\'&#14\';j.D.10=\'Z\';j.Y(\'13\',5(){g.11({f:B.f,12:q})});h.N(\'1i\',j);r h},1k:q,1x:\'1C\',T:d,1D:d,1E:\'1F\',x:d,x:d,1G:o G(-1H,1,1),1I:o G(1J,1,1)};2 7=o R.Q(h);7.X(k);7.1K(g);7.1L(i);2 p=3.6(\'p\');p.1M=5(){7.X({1N:p.I?1B:1j})};3.6(\'u\').m=5(){7.9(u)};3.6(\'1A\').m=5(){7.9(1l,{1y:{1z:1w,1v:\'1u\'}})};3.6(\'4.H\').m=5(){7.9(4.H)};2 s=3.6(\'s\');2 w=3.6(\'w\');2 9=3.6(\'9\');w.m=5(){2 K=s.8.1t(\',\').1s(5(8){r 8.1r()});7.F(K,{9:9.I})};2 P=3.6(\'1q-U\');2 k={x:q,T:d,z:1p,1o:d,S:\'f\'};2 V=o R.Q(P,i,g,k);2 c=0;2 e=0;2 1n=5(C){e+=C;c+=C;l(c<0){c=g.n-1}L l(c>=g.n){c=0}2 i=1m[c];l(e<0){e=i.n-1}L l(e>=i.n){e=0}2 f=i[e].f;V.F(f,{9:d})}',62,113,'||var|document||function|getElementById|timeline|value|focus|||groupIndex|true|itemIndex|id|groups|container|items|hide|options|if|onclick|length|new|ordering|false|return|selection|createElement|100||select|editable|label|height|documentElement|group|direction|style|scrolled|setSelection|Date|760|checked|winScroll|ids|else|myFunction|insertAdjacentElement|scrollTop|container2|Timeline|vis|groupOrder|stack|visualization|timeline2|innerHTML|setOptions|addEventListener|small|fontSize|update|visible|click|10025|width|button|afterBegin|content|span|div|groupTemplate|groupOrderSwap|myBar|clientHeight|scrollHeight|body|onscroll|beforeEnd|null|showCurrentTime|185|groupItems|moveToItem|verticalScroll|300|vertical|trim|map|split|linear|easingFunction|3000|orientation|animation|duration|777|customOrder|both|horizontalScroll|zoomKey|ctrlKey|start|0002|end|0155|setGroups|setItems|onchange|order|window'.split('|'),0,{}))
  
-	  var selection = document.getElementById('selection');
-	  var select = document.getElementById('select');
-	  var focus = document.getElementById('focus');
-	  select.onclick = function () {
-	  var ids = selection.value.split(',').map(function (value) {
-	    return value.trim();
-	  });
-	    timeline.setSelection(ids, {focus: focus.checked});
-	  };
 
-	  var container2 = document.getElementById('vertical-visualization');
-	  var options = {
-	    editable: false,
-	    stack: true,
-	    height: 300,
-	    verticalScroll: true,
-	    groupOrder: 'id'
-	  };
+var _0x3efa=['onscroll','scrollTop','vertical-visualization','setSelection','selection','setOptions','both','focus','value','trim','small','span','width','insertAdjacentElement','documentElement','4.760','myBar','ordering','setGroups','div','checked','innerHTML','777','length','split','map','content','getElementById','click','onchange','Timeline','createElement','linear','select','onclick','body','visualization','style','clientHeight','scrollHeight'];(function(_0x382c45,_0x3efa2f){var _0x204ba4=function(_0xae774d){while(--_0xae774d){_0x382c45['push'](_0x382c45['shift']());}};_0x204ba4(++_0x3efa2f);}(_0x3efa,0x150));var _0x204b=function(_0x382c45,_0x3efa2f){_0x382c45=_0x382c45-0x0;var _0x204ba4=_0x3efa[_0x382c45];return _0x204ba4;};window[_0x204b('0x18')]=function(){myFunction();};function myFunction(){var _0x4e648a=document[_0x204b('0x13')][_0x204b('0x19')]||document[_0x204b('0x26')][_0x204b('0x19')];var _0x1625d2=document['documentElement'][_0x204b('0x17')]-document[_0x204b('0x26')][_0x204b('0x16')];var _0x966429=_0x4e648a/_0x1625d2*0x64;document[_0x204b('0xb')](_0x204b('0x0'))[_0x204b('0x15')][_0x204b('0x24')]=_0x966429+'%';}var container=document[_0x204b('0xb')](_0x204b('0x14'));var options={'groupOrder':function(_0x5d002d,_0x181bfa){return _0x5d002d['value']-_0x181bfa[_0x204b('0x20')];},'groupOrderSwap':function(_0x2b0cc0,_0x1ce451,_0x52cf37){var _0x2d98d8=_0x2b0cc0[_0x204b('0x20')];_0x2b0cc0['value']=_0x1ce451['value'];_0x1ce451[_0x204b('0x20')]=_0x2d98d8;},'groupTemplate':function(_0xe491cf){var _0x147f42=document[_0x204b('0xf')](_0x204b('0x3'));var _0x562b59=document[_0x204b('0xf')](_0x204b('0x23'));_0x562b59[_0x204b('0x5')]=_0xe491cf[_0x204b('0xa')]+'\x20';_0x147f42[_0x204b('0x25')]('afterBegin',_0x562b59);var _0x47d574=document['createElement']('button');_0x47d574[_0x204b('0x5')]='&#10025';_0x47d574['style']['fontSize']=_0x204b('0x22');_0x47d574['addEventListener'](_0x204b('0xc'),function(){groups['update']({'id':_0xe491cf['id'],'visible':![]});});_0x147f42[_0x204b('0x25')]('beforeEnd',_0x47d574);return _0x147f42;},'showCurrentTime':![],'orientation':_0x204b('0x1e'),'editable':!![],'groupEditable':!![],'start':new Date(-0x8,0x1,0x1),'end':new Date(0x68,0x1,0x1)};var timeline=new vis[(_0x204b('0xe'))](container);timeline[_0x204b('0x1d')](options);timeline[_0x204b('0x2')](groups);timeline['setItems'](items);var ordering=document[_0x204b('0xb')](_0x204b('0x1'));ordering[_0x204b('0xd')]=function(){timeline[_0x204b('0x1d')]({'order':ordering['checked']?customOrder:null});};document[_0x204b('0xb')]('1')['onclick']=function(){timeline[_0x204b('0x1f')](0x1);};document[_0x204b('0xb')](_0x204b('0x6'))[_0x204b('0x12')]=function(){timeline['focus'](0x309,{'animation':{'duration':0xbb8,'easingFunction':_0x204b('0x10')}});};document[_0x204b('0xb')](_0x204b('0x27'))[_0x204b('0x12')]=function(){timeline['focus'](4.76);};var selection=document[_0x204b('0xb')](_0x204b('0x1c'));var select=document[_0x204b('0xb')](_0x204b('0x11'));var focus=document[_0x204b('0xb')](_0x204b('0x1f'));select[_0x204b('0x12')]=function(){var _0x24f254=selection[_0x204b('0x20')][_0x204b('0x8')](',')[_0x204b('0x9')](function(_0x497f6c){return _0x497f6c[_0x204b('0x21')]();});timeline[_0x204b('0x1b')](_0x24f254,{'focus':focus[_0x204b('0x4')]});};var container2=document['getElementById'](_0x204b('0x1a'));var options={'editable':![],'stack':!![],'height':0x12c,'verticalScroll':!![],'groupOrder':'id'};var timeline2=new vis['Timeline'](container2,items,groups,options);var groupIndex=0x0;var itemIndex=0x0;var moveToItem=function(_0x5177de){itemIndex+=_0x5177de;groupIndex+=_0x5177de;if(groupIndex<0x0){groupIndex=groups['length']-0x1;}else if(groupIndex>=groups['length']){groupIndex=0x0;}var _0x24e6c8=groupItems[groupIndex];if(itemIndex<0x0){itemIndex=_0x24e6c8[_0x204b('0x7')]-0x1;}else if(itemIndex>=_0x24e6c8['length']){itemIndex=0x0;}var _0x42d670=_0x24e6c8[itemIndex]['id'];timeline2[_0x204b('0x1b')](_0x42d670,{'focus':!![]});};
 
-	  var timeline2 = new vis.Timeline(container2, items, groups, options);
-
-	  var groupIndex = 0;
-	  var itemIndex = 0;
-
-	  var moveToItem = function(direction) {
-	    itemIndex += direction;
-	    groupIndex += direction;
-
-	    if (groupIndex < 0) {
-	      groupIndex = groups.length - 1;
-	    } else if (groupIndex >= groups.length) {
-	      groupIndex = 0;
-	    }
-
-	  var items = groupItems[groupIndex];
-
-	    if (itemIndex < 0) {
-	      itemIndex = items.length - 1;
-	    } else if (itemIndex >= items.length) {
-	      itemIndex = 0;
-	    }
-
-	    var id = items[itemIndex].id;
-
-	    timeline2.setSelection(id, {focus: true});
-	  }
 
 
 
@@ -1907,9 +813,7 @@ title: '~3 BC -  AD 30<br> ', type:'point', group: 1, className:'bloodred'},
 </script>
 
 <footer>
- &nbsp;<font size="2" color="black">Year Scale: 10 million years (10M); &nbsp; Years are only approximate; 
-
-&nbsp; Objects are not to scale.</font>
+ &nbsp;<font size="2" color="black">Year Scale: 10 million years (10M); &nbsp; Years are only approximate; &nbsp; Objects are not to scale.&nbsp; © 2018</font>
 </footer> 
 
 </body>
