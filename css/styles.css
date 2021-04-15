@@ -127,7 +127,7 @@
         top: 0;
         z-index: 1;
         width: 100%;				
-      	height: 72px;				/* Height of header colour */
+      	height: 70px;				/* Height of header colour */
         background-color: #cccccc;
     }
 
@@ -147,17 +147,6 @@
         //max-width: 1500px;
     }
 
-    .progress-container {
-    width: 100%;
-    height: 3px;
-    background: #cccccc;
-    }
-
-    .progress-bar {
-    height: 3px;
-//  background: #4caf50;   
-    background: #FA8072;
-    width: 0%;
 
 
     div.vis-editable,
