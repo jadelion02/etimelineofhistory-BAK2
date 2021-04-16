@@ -155,7 +155,7 @@
     div.vis-readonly,
     div.vis-readonly.vis-selected {
       /* custom styling for readonly items... */
-      background-color: #d8d8e7;
+      background-color: #FF4500;
       border-color: ;
       color: black;
       /color: white;
