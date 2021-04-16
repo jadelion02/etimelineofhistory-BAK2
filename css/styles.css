@@ -185,7 +185,8 @@
    	<input type="button" id="zoomOut" value="-" style="height:26px; width:30px"; align="center"/>&emsp;
 
   <!--Order Check Box--> 
-  <label for="ordering"><font size="4" font face="calibri">&#8645</label><input type="checkbox" id="ordering" unchecked/> 	<!--Order by id-->
+  	<label for="ordering"><font size="4" font face="calibri">&#8645</label><input type="checkbox" id="ordering" checked/> 	
+  <!--Order by id-->
 
     //    <input id="selection" size="9" value="1">                    
  
