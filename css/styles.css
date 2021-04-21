@@ -165,6 +165,17 @@
     }
 
     /* Custom new classes overrule the styles for selected events */
+    .vis-item.vis-selected.black {
+      background-color: #9a4bfa;
+      border-color: white;
+      border-width: 2px;
+      color: black;
+      font-size: 12pt;
+      font-weight: bold;
+      //box-shadow: 10px 12px 16px 0px rgba(0,0,0,0.4);
+      }
+
+    /* Custom new classes overrule the styles for selected events */
     .vis-item.vis-selected {
       background-color: ;
       border-color: white;
@@ -174,7 +185,6 @@
       font-weight: bold;
       //box-shadow: 0 0 10px grey;
     }
-
 
     .vis-item .vis-item-overflow {
       overflow: visible;
