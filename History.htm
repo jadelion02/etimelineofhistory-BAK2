@@ -17,123 +17,206 @@
     
 <!--Style Sheet goes here-->
 
+<style>
+	
+    .vis-item.vis-background.negative {
+      background-color: rgba(255, 255, 0, 0.2);
+    }
+
+    // Background color of box
+    .vis-item.white { background-color: #ffffff;}
+    .vis-item.lightgrey { background-color: #f1f1f1;}
+    .vis-item.grey { background-color: #EAEAEA;}
+    .vis-item.darkgrey { background-color: #cccccc;}
+    .vis-item.darkgrey2 { background-color: #19181A;}
+    .vis-item.pink { background-color: #ffe6e6;}    
+    .vis-item.red { background-color: #FA8072;}
+    .vis-item.bloodred { background-color: #FF4500;}
+    .vis-item.orange { background-color: #ffd699;}
+    .vis-item.yellow { background-color: #ffff99;}
+    .vis-item.lightyellow { background-color: #ffffe6;}
+    .vis-item.darkyellow { background-color: #ffff00;}        
+    .vis-item.green { background-color: #B4EEB4;}
+    .vis-item.lightgreen { background-color: #e6ffcc;}
+    .vis-item.turquoise { background-color: #7beadf;}
+    .vis-item.lightblue { background-color: #cceeff;}
+    .vis-item.blue { background-color: #99daff;}
+    .vis-item.lightpurple { background-color: #ffe6ff;}
+    .vis-item.purple { background-color: #ff99ff;} 
+    .vis-item.darkpurple { background-color: #ff4dff;}
+    .vis-item.beige { background-color: #f9f2ec;}
+    .vis-item.brown { background-color: #d2a679;}
+    .vis-item.black { background-color: #000000;}     
+    .vis-item.silver { background-color: #c0c0c0;}
 
 
+<!-- Back To Top Arrow  -->
+        body {font-family:Verdana, sans-serif;}
+      /*  p {padding:20px 0;} */
+
+        #backtop {
+            position: fixed;
+            left:auto;right: 20px;top:auto;bottom: 20px;
+            outline: none;
+            overflow:hidden;
+            color:#fff;
+            text-align:center;
+            background-color:rgba(49,79,96,0.84);
+            height:40px;
+            width:40px;
+            line-height:40px;
+            font-size:14px;
+            border-radius:2px;
+            cursor:pointer;
+            transition:all 0.3s linear;
+            z-index:999999;
+            opacity:1;
+            display:none;
+        }
+
+        #backtop:hover {
+	    background-color:#27CFC3;
+        }
+        #backtop.mcOut {
+            opacity:0;
+        }
+<!-- Back To Top Arrow  -->    
+
+ 
+<!-- for Home button -->
+	a.button {
+    	-webkit-appearance: button;
+    	-moz-appearance: button;
+    	appearance: button;
+
+    	text-decoration: none;
+    	color: initial;
+	}
+<!-- Home button ends -->	
+	
+</style>
+
+	
 <META name="GENERATOR" content="MSHTML 11.00.9600.18860">
 
 <!--    -->
 </head>
 <body>
 
+
 <div id="visualization"></div>
 
 <!-- Header Title -->
 <div class="header">
-     <h2>&emsp;<font size="5" font="" face="Times New Roman" color="red">e</font><font size="5" font="" face="Times New Roman" color="black">Timeline of History &nbsp;&nbsp;</font>
+     <h2>&emsp;<font size="5" font face="Times New Roman" color="red">e</font><font size="5" font face="Times New Roman" color="black">Timeline of History &nbsp;&nbsp;</font>
+
+
+
+<!-- Background OK -->
+  	 <Body background="img/bg15.jpg">  
+<!-- Background ends -->
+
 
 <!-- Trigger/Open The Modal -->
 <!-- <button id="myBtn">^</button>-->
 <!-- <img src="img/favicon.ico" alt="Control">-->
 
-	     
-<!-- Background OK -->
-  	<Body background="img/bg15.jpg">  
-<!-- Background ends -->
 
 <!-- Home button -->
 <!--   <div align="center"> -->
-	<a href="index.htm" class="button">&#127968;</a>&emsp; 
+	<a href="index.htm" class="button">&#127968;</a> 
 <!--   </div> -->
-<!-- Home button Ends -->	     
-	     
-	     
-  <div class="dropdown">
-    <button id="myBtn">^</button>  
+<!-- Home button Ends -->
 
-<!-- 		<input type="button" id="moveLeft" value="<" style="height:22px; width:40px"/> -->
-<!-- 		<input type="button" id="moveRight" value=">" style="height:22px; width:40px"/> -->
+
+  <div class="dropdown">
+    &emsp;<button id="myBtn">^</button>
+
 
     <div class="dropdown-content">
-    <!--<p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p>&emsp;<input type="button" value="&#8505;" onclick="window.location.href='img/eTimeline Information.pdf';"/> -->
-    <!--<p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p>-->
-    <!--&emsp;<input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"/>-->
-    <!-- OK   <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"><style="font-size:70%;"> Show Control &nbsp;顯示控制 -->
-
-    <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"><font size="2" color="black"> &nbsp;&emsp;Show Control &nbsp;顯示控制</font>
+    <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');">
+    <!-- <p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p> -->
+    <style="font-size:="3"> Show Control &emsp;顯示控制 
 
     </div>
   </div>
 
 
 <!--NAV BUTTONS-->
-	<div align="right">
-		<input type="button" id="moveLeft2" value="<" style="height:22px; width:40px"/>
-		<input type="button" id="moveRight2" value=">" style="height:22px; width:40px"/>
-		&emsp;&nbsp;
-	</div>
+    <div align="right">
+	<input type="button" id="moveLeft2" value="&#9664;" style="height:22px; width:60px"/>
+     	<input type="button" id="moveRight2" value="&#9654;" style="height:22px; width:60px"/>
+	&emsp;&nbsp;
+    </div>
 <!--NAV BUTTONS-->
 
+
 <!-- Back To Top Arrow  -->
-    	<div id="backtop">&#9650;</div>
+    <div id="backtop">&#9650;</div>
 <!-- Back To Top Arrow  -->
 
+  <div class="progress-container">	
+    <div class="progress-bar" id="myBar"></div>
+  </div> 
+ 	
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+</body>
 
 
+<!-- The Modal -->
 
-<!--The Modal-->
 
 <script language="javascript">
 <!--
 // == Begin Free HTML Source Code Obfuscation Protection from https://snapbuilder.com == //
 document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%63%6C%61%73%73%3D%22%6D%6F%64%61%6C%22%3E%0A%3C%21%2D%2D%20%4D%6F%64%61%6C%20%63%6F%6E%74%65%6E%74%20%2D%2D%3E%0A%09%3C%64%69%76%20%63%6C%61%73%73%20%3D%20%22%6D%6F%64%61%6C%2D%63%6F%6E%74%65%6E%74%22%3E%0A%09%3C%64%69%76%20%69%64%20%3D%20%22%6D%6F%64%61%6C%30%31%22%20%63%6C%61%73%73%20%3D%20%22%77%33%2D%6D%6F%64%61%6C%20%77%33%2D%61%6E%69%6D%61%74%65%2D%6C%65%66%74%22%20%6F%6E%63%6C%69%63%6B%20%3D%20%22%74%68%69%73%2E%73%74%79%6C%65%2E%64%69%73%70%6C%61%79%3D%27%6E%6F%6E%65%27%22%3E%0A%3C%2F%64%69%76%3E%0A%0A%20%20%20%20%09%3C%73%70%61%6E%20%63%6C%61%73%73%3D%22%63%6C%6F%73%65%22%3E%26%74%69%6D%65%73%3B%3C%2F%73%70%61%6E%20%3E%0A%3C%21%2D%2D%20%20%20%20%3C%70%3E%53%6F%6D%65%20%74%65%78%74%20%69%6E%20%74%68%65%20%4D%6F%64%61%6C%2E%2E%3C%2F%70%3E%20%20%2D%2D%3E%0A%09%26%6E%62%73%70%3B%0A%09%3C%62%75%74%74%6F%6E%20%6F%6E%63%6C%69%63%6B%3D%22%73%68%6F%77%41%6C%6C%47%72%6F%75%70%73%28%29%22%3E%26%23%39%37%32%38%3B%3C%2F%62%75%74%74%6F%6E%3E%09%20%3C%21%2D%2D%55%6E%68%69%64%65%2D%2D%3E%0A%09%26%65%6D%73%70%3B%26%65%6D%73%70%3B%26%6E%62%73%70%3B%26%6E%62%73%70%3B%26%6E%62%73%70%3B%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%31%22%20%76%61%6C%75%65%3D%22%26%23%39%36%36%38%3B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%20%20%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%6D%6F%76%65%4C%65%66%74%22%20%76%61%6C%75%65%3D%22%3C%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%37%37%37%22%20%76%61%6C%75%65%3D%22%2B%22%20%73%74%79%6C%65%3D%22%62%61%63%6B%67%72%6F%75%6E%64%2D%63%6F%6C%6F%72%3A%20%23%63%63%63%63%63%63%3B%20%62%6F%72%64%65%72%2D%63%6F%6C%6F%72%3A%20%72%65%64%3B%20%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%20%20%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%6D%6F%76%65%52%69%67%68%74%22%20%76%61%6C%75%65%3D%22%3E%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%34%2E%37%36%30%22%20%76%61%6C%75%65%3D%22%26%23%39%36%35%38%3B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%26%6E%62%73%70%3B%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%7A%6F%6F%6D%49%6E%22%20%76%61%6C%75%65%3D%22%2B%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%09%0A%09%3C%21%2D%2D%2B%2D%2D%3E%0A%20%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%7A%6F%6F%6D%4F%75%74%22%20%76%61%6C%75%65%3D%22%2D%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%33%30%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%0A%09%26%65%6D%73%70%3B%0A%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%43%68%65%63%6B%20%42%6F%78%2D%2D%3E%20%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%62%79%20%69%64%2D%2D%3E%0A%20%20%09%3C%6C%61%62%65%6C%20%66%6F%72%3D%22%6F%72%64%65%72%69%6E%67%22%3E%3C%66%6F%6E%74%20%73%69%7A%65%3D%22%34%22%20%66%6F%6E%74%20%66%61%63%65%3D%22%63%61%6C%69%62%72%69%22%3E%26%23%38%36%34%35%3B%3C%2F%6C%61%62%65%6C%3E%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%63%68%65%63%6B%62%6F%78%22%20%69%64%3D%22%6F%72%64%65%72%69%6E%67%22%20%63%68%65%63%6B%65%64%2F%3E%20%09%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%62%79%20%69%64%2D%2D%3E%0A'));
 //-->
-</script>		
-		
+</script>
+
+
 <!--Modal Ends-->
 
-<!--&emsp;&emsp;-->
-&emsp;&nbsp;
+  <!--&emsp;&emsp;-->
+&nbsp;
   <div class="dropdown">
   <button class="dropbtn">?</button>
   <div class="dropdown-content">
   <p style="font-size:70%;">&nbsp;-&nbsp;滾動滑鼠輪向上/下或拖動光標左/右移動時間表<br>&emsp;Scroll wheel or Drag cursor L/R to move timeline</p>
   <p style="font-size:68%;">&nbsp;-&nbsp;滾動滑鼠輪向上/下 + Ctrl 拉近放遠時間表<br>&emsp;Ctrl + Srcoll wheel U/D to expand/compress timeline</p>
 
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;✩ 躲藏 Hide</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;☀ 出現 Unhide</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#10025; 躲藏 Hide</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9728;  出現 Unhide</p>
 
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;◄ 開始 Beginning</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;&lt; 向左 Move Left</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;✝ 公元 1 AD</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;&gt; 向右 Move Right</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;►現在 Present</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9668; 開始 Beginning</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;< 向左 Move Left</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#x271D;公元 1 AD</p>	<!-- &#x271D;公元 1 AD -->
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;> 向右 Move Right</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9658; 現在 Present</p>
 
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;➕ 拉近 Expand</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;➖ 放遠 Compress</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#10133; 拉近 Expand</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#10134; 放遠 Compress</p>
 
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;☑ 確定 Confirm</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;🔍 找尋 Search</p>
-  <p style="font-size:70%;">&nbsp;▪ &nbsp;⇅ 排列 Order by id</p>
-
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#9745; 確定 Confirm</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#128269; 找尋 Search</p>
+  <p style="font-size:70%;">&nbsp;&#9642; &nbsp;&#8645; 排列 Order by id</p>
 
   </div>
 </div>
 
-
-   &nbsp;&nbsp;<input id="selection" size="9" value="1"> 
+      &nbsp;&nbsp;<input id="selection" size="9" value="1" style="width:82px"> 
 
   <!--Find Check Box & Find Button-->
   <!--	<input type="text" id="selection" value="777"><input type="button" id="select" value="Find & Focus"> <label><input type="checkbox" id="focus" checked></label>-->
-	  
-
+  <!--  &nbsp;&nbsp;<input id="selection" size="8" value="1">  -->
   <!--  &nbsp;&nbsp;<input id="selection" size="8" value="1" style="height:14px; width:80px">&nbsp;  -->
 
 
-<!--INDEX-->
-
     <select id="theItems" name="theItems" onchange="otherSelect(this)" style="height:20px; width:256px">
-	<option value=">""</option>
 
+	<option value=">""</option>
 	<option value="1">1. 聖經人物&nbsp;Biblical Characters</option>
 	<option value="1">亞當 Adam</option>
 	<option value="1.002">塞特 Seth</option>
@@ -180,7 +263,7 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 	<option value="1.041">希西家 Hezekiah</option>
 	<option value="1.0411">瑪拿西 Manasseh</option>
 	<option value="1.0412">亞們 Amon</option>
-	<option value="1.0414">耶哥尼雅 Jeconiah</option>
+	<option value="1.0414">约雅斤(耶哥尼雅) Jehoiachin(Jeconiah)</option>
 	<option value="1.042">約西亞 Josiah</option>
 	<option value="1.0421">約哈斯 Jehoahaz</option>
 	<option value="1.0422">約雅敬 Jehoiakim</option>
@@ -198,8 +281,9 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 	<option value="1.054">約瑟 Joseph</option>
 	<option value="777">耶穌 Jesus</option>
 
-<option value=">" "<="" option="">
-</option><option value="4">4. 華夏黄帝&nbsp;Chinese Emperors</option>
+
+<option value=">""</option>
+<option value="4">4. 華夏黄帝&nbsp;Chinese Emperors</option>
 <!--三皇-->
 	<option value="4">三皇</option>
 <!--五帝-->
@@ -733,7 +817,7 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 	<option value="4.642">西夏 - 仁宗李仁孝</option>
 	<option value="4.643">西夏 - 桓宗李纯佑</option>
 	<option value="4.644">西夏 - 襄宗李安全</option>
-	<option value="4.645">西夏 - 神宗李遵顼</option>
+	<option	value="4.645">西夏 - 神宗李遵顼</option>
 	<option value="4.646">西夏 - 献宗李德旺</option>
 	<option value="4.647">西夏 - 末帝李睍</option>
 <!--金-->
@@ -748,6 +832,7 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 	<option value="4.657">金 - 金哀宗宛颜守绪</option>
 	<option value="4.658">金 - 金末帝完颜承麟</option>
 <!--元-->
+	<option value="4.659">元（孛儿只斤氏)</option>
 	<option value="4.66">元太祖(成吉思汗)孛儿只斤铁木真</option>
 	<option value="4.661">元睿宗(监國)孛儿只斤拖雷</option>
 	<option value="4.662">元太宗孛儿只斤窝阔台</option>
@@ -849,12 +934,9 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 	<option value="4.768">中华人民共和国 - 胡錦濤</option>
 	<option value="4.769">中华人民共和国 - 習近平</option>
 
-<!---->
-<!---->
-<!---->
 
-<option value=">" "<="" option="">
-</option><option value="5">5. 華夏朝代&nbsp;Chinese Dynasties</option>
+<option value=">""</option>
+<option value="5">5. 華夏朝代&nbsp;Chinese Dynasties</option>
 	<option value="5.001">夏朝</option>
 	<option value="5.002">商 (殷商)</option>
 	<option value="5.034">西周</option>
@@ -884,42 +966,45 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 	<option value="5.722">中華民國</option>
 	<option value="5.759">中华人民共和国</option>
 
-	    
-</select>
+
+<!---->
+<!---->
+<!---->
+
+    </select>
 
 
-<!--        <div id="otherBox" style="visibility: hidden;">-->
-<!--        If other: <input name="otherField" type="text" />-->
-
-
-
-
-<script>
-// == Begin O == //
+<script language="javascript">
+<!--
+// == Begin Free HTML Source Code Obfuscation Protection from https://snapbuilder.com == //
 document.write(unescape('%3C%21%2D%2D%20%20%20%20%20%20%20%20%3C%64%69%76%20%69%64%3D%22%6F%74%68%65%72%42%6F%78%22%20%73%74%79%6C%65%3D%22%76%69%73%69%62%69%6C%69%74%79%3A%20%68%69%64%64%65%6E%3B%22%3E%2D%2D%3E%0A%3C%21%2D%2D%20%20%20%20%20%20%20%20%49%66%20%6F%74%68%65%72%3A%20%3C%69%6E%70%75%74%20%6E%61%6D%65%3D%22%6F%74%68%65%72%46%69%65%6C%64%22%20%74%79%70%65%3D%22%74%65%78%74%22%20%2F%3E%2D%2D%3E%0A%0A%20%20%3C%21%2D%2D%46%69%6E%64%20%42%75%74%74%6F%6E%2D%2D%3E%0A%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%63%68%65%63%6B%62%6F%78%22%20%69%64%3D%22%66%6F%63%75%73%22%20%63%68%65%63%6B%65%64%3E%0A%20%20%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%62%75%74%74%6F%6E%22%20%69%64%3D%22%73%65%6C%65%63%74%22%20%76%61%6C%75%65%3D%22%26%23%31%32%38%32%36%39%22%20%73%74%79%6C%65%3D%22%68%65%69%67%68%74%3A%32%32%70%78%3B%20%77%69%64%74%68%3A%33%30%70%78%22%3B%20%61%6C%69%67%6E%3D%22%63%65%6E%74%65%72%22%2F%3E%09%0A%0A%3C%21%2D%2D%3C%2F%66%6F%72%6D%3E%2D%2D%3E%0A%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%43%68%65%63%6B%20%42%6F%78%2D%2D%3E%20%0A%20%20%3C%21%2D%2D%20%26%65%6D%73%70%3B%3C%6C%61%62%65%6C%20%66%6F%72%3D%22%6F%72%64%65%72%69%6E%67%22%3E%3C%66%6F%6E%74%20%73%69%7A%65%3D%22%34%22%20%66%6F%6E%74%20%66%61%63%65%3D%22%63%61%6C%69%62%72%69%22%26%23%38%36%34%35%3B%3C%2F%6C%61%62%65%6C%3E%0A%09%3C%69%6E%70%75%74%20%74%79%70%65%3D%22%63%68%65%63%6B%62%6F%78%22%20%69%64%3D%22%6F%72%64%65%72%69%6E%67%22%20%75%6E%63%68%65%63%6B%65%64%2F%3E%0A%20%20%3C%21%2D%2D%4F%72%64%65%72%20%62%79%20%69%64%2D%2D%3E%0A%20%20%20%20%20%0A%20%20%20%20%20%20%3C%2F%64%69%76%3E%0A%20%20%20%20%3C%2F%64%69%76%3E%0A%20%20%3C%2F%64%69%76%3E%0A%20%3C%2F%68%32%3E%0A%3C%2F%64%69%76%3E%0A%0A%0A%0A%3C%66%6F%6F%74%65%72%3E%0A%20%20%20%20%26%6E%62%73%70%3B%3C%66%6F%6E%74%20%73%69%7A%65%3D%22%31%22%20%63%6F%6C%6F%72%3D%22%67%72%65%79%22%3E%52%2E%20%53%69%65%77%20%20%A9%20%32%30%32%30%3C%2F%66%6F%6E%74%3E%0A%3C%2F%66%6F%6F%74%65%72%3E%20%0A'));
+//-->
 </script>
 
-			     
 
-<!--<input type="text" name="n1" id="n1" onkeyup="sync()">-->
-<!--<input type="text" name="n2" id="n2"/>-->
 
 <script>
-    /**
+
+   /**
      * Move the timeline a given percentage to left or right
      * @param {Number} percentage   For example 0.1 (left) or -0.1 (right)
      */
+    
 
 // Get the modal
 var modal = document.getElementById('myModal');
+
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
@@ -931,21 +1016,18 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
 //Modal Ends
 
-
-    // Attach events to the navigation buttons
-    document.getElementById('moveLeft2').onclick  = function () { move( 0.2); };
-    document.getElementById('moveRight2').onclick = function () { move(-0.2); };
 
 
 
 //Move Functions
 
-//eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1 8(a){d 3=6.p();d b=3.9-3.c;6.k({c:3.c.f()-b*a,9:3.9.f()-b*a})}5.4(\'i\').7=1(){6.i(0.2)};5.4(\'g\').7=1(){6.g(0.2)};5.4(\'m\').7=1(){8(0.2)};5.4(\'l\').7=1(){8(-0.2)};1 n(e){d h=5.4(\'o\');h.j=e.j}',26,26,'|function||range|getElementById|document|timeline|onclick|move|end|percentage|interval|start|var|obj|valueOf|zoomOut|input|zoomIn|value|setWindow|moveRight|moveLeft|otherSelect|selection|getWindow'.split('|'),0,{}))
-
 eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1 7(d){a 6=8.r();a c=6.b-6.9;8.k({9:6.9.g()-c*d,b:6.b.g()-c*d})}4.3(\'e\').5=1(){8.e(0.2)};4.3(\'i\').5=1(){8.i(0.2)};4.3(\'m\').5=1(){7(0.2)};4.3(\'n\').5=1(){7(-0.2)};4.3(\'l\').5=1(){7(0.2)};4.3(\'o\').5=1(){7(-0.2)};1 p(h){a f=4.3(\'q\');f.j=h.j}',28,28,'|function||getElementById|document|onclick|range|move|timeline|start|var|end|interval|percentage|zoomIn|input|valueOf|obj|zoomOut|value|setWindow|moveLeft2|moveLeft|moveRight|moveRight2|otherSelect|selection|getWindow'.split('|'),0,{}))
-			    
+
+
 //Move Ends
 
 
@@ -959,23 +1041,24 @@ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/
 
   // DOM element where the Timeline will be attached
   var container = document.getElementById('visualization');
-  // 
+
+  // Groups
   var groups = new vis.DataSet([
-
-    {id: 1, content: '<font color="black">1. 聖經人物<br>&emsp;Biblical<br>Characters</font><br>&nbsp;&nbsp;&nbsp;'},
-    {id: 2, content: '<font color="black">2. 聖經歷史<br>&emsp;Biblical<br>&nbsp;&nbsp;&nbsp;&nbsp;Events</font><br>&nbsp;&nbsp;&nbsp;'},    
-    {id: 3, content: '<font color="darkblue">3. 華夏人物<br>&emsp;Chinese<br>Characters</font><br>&nbsp;&nbsp;&nbsp;'},
-    {id: 4, content: '<font color="darkblue">4. 華夏黄帝<br>&emsp;Chinese<br>&nbsp;&nbsp;Emperors</font><br>&nbsp;&nbsp;&nbsp;'},
-    {id: 5, content: '<font color="darkblue">5. 華夏朝代<br>&emsp;Chinese<br>&nbsp;&nbsp;Dynasties</font><br>&nbsp;&nbsp;&nbsp;'},
-    {id: 6, content: '<font color="darkpurple">6. 世界事件<br>&emsp;World<br>&nbsp;&nbsp;&nbsp;&nbsp;Events</font><br>&nbsp;&nbsp;&nbsp;'}
-
+    {id: 1, content: '<font color="black">1. 聖經人物<br>&emsp;Biblical<br>&emsp;Characters</font><br>&nbsp;&nbsp;&nbsp;'},
+    {id: 2, content: '<font color="black">2. 聖經歷史<br>&emsp;Biblical<br>&emsp;Events</font><br>&nbsp;&nbsp;&nbsp;'},    
+    {id: 3, content: '<font color="darkblue">3. 華夏人物<br>&emsp;Chinese<br>&emsp;Characters</font><br>&nbsp;&nbsp;&nbsp;'},
+    {id: 4, content: '<font color="darkblue">4. 華夏黄帝<br>&emsp;Chinese<br>&emsp;Emperors</font><br>&nbsp;&nbsp;&nbsp;'},
+    {id: 5, content: '<font color="darkblue">5. 華夏朝代<br>&emsp;Chinese<br>&emsp;Dynasties</font><br>&nbsp;&nbsp;&nbsp;'},
+    {id: 6, content: '<font color="darkpurple">6. 世界事件<br>&emsp;World<br>&emsp;Events</font><br>&nbsp;&nbsp;&nbsp;'}
+	
   ]);
 
-//Functions to make all group visible again
+
+  // function to make all groups visible again
 
 eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 8(){2.7(3(1){2.6({0:1.0,5:4})})};',9,9,'id|group|groups|function|true|visible|update|forEach|showAllGroups'.split('|'),0,{}))
 
-//Function ends
+  // function ends
 
 
   // create a dataset with items
@@ -983,8 +1066,8 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
   var items = new vis.DataSet([
   
     //BACKGROUND
-  //{id: 'A', content: '<p>起初神創造天地...<br>創世記 1:1<br><br>In the beginning, <br>God created the heaven and the earth...</br>Genesis 1:1<br></p>', start: '0000-10-07T04:00:00', end: '-0000', type: 'point', group: 2, className: ''},
-  //{id: 'A1', content: '<p>起初神創造天地...<br><a href="Creation.htm" target="_blank">創</a>世記 1:1 <br><br>In the beginning, <br>God created the heaven and the earth...</br><a href="eTimeline of Creation.htm" target="_blank">G</a>enesis 1:1<br></p>', start: '0000-10-07T04:00:00', end: '-0000', type: 'point', group: 2, className: ''},					      
+ //   {id: 'A1', content: '<p>起初神創造天地...<br>創世記 1:1<br><br>In the beginning, <br>God created the heaven and the earth...</br>Genesis 1:1<br></p>', start: '0000-10-07T04:00:00', end: '-0000', type: 'background', group: 2, className: ''},
+
     {id: 'A2', content: '第七日 Seventh Day', editable: false, editable: false, start: '0000-10-13', end: '0000-10-14', title:'天地萬物都造齊了. <br>到第七日,   神造物的工已經完畢, 就在第七日歇了他一切的工, 安息了. <br>神賜福給第七日, 定為聖日, 因為在這日  神歇了他一切創造的工,就安息了. <br>創造天地的來歷, 在耶和華  神造天地的日子, 乃是這樣.', type: 'point', group: 2, className: 'LavenderBlush'},
     {id: 'A1', content: '', start: '0000-10-13', end: '0000-10-14', type: 'background', group: 2, className: 'LavenderBlush'},
     {id: 'A4', content: '第六日 Sixth Day', editable: false, editable: false, start: '0000-10-12', end: '0000-10-13', title:'神說, 地要生出活物來, 各從其類. 牲畜, 昆蟲, 野獸, 各從其類.事就這樣成了. <br>於是  神造出野獸, 各從其類. 牲畜, 各從其類.地上一切昆蟲, 各從其類. 神看著是好的. <br>神說, 我們要照著我們的形像, 按著我們的樣式造人,使他們管理海裡的魚, 空中的鳥, 地上的牲畜, 和全地,並地上所爬的一切昆蟲. <br>神就照著自己的形像造人, 乃是照著他的形像造男造女. <br>神就賜福給他們, 又對他們說, 要生養眾多, 遍滿地面, 治理這地.也要管理海裡的魚, 空中的鳥, 和地上各樣行動的活物. <br>神說, 看哪, 我將遍地上一切結種子的菜蔬和一切樹上所結有核的果子,全賜給你們作食物. <br>至於地上的走獸和空中的飛鳥, 並各樣爬在地上有生命的物,我將青草賜給牠們作食物.事就這樣成了. <br>神看著一切所造的都甚好. 有晚上, 有早晨, 是第六日.', type: 'point', group: 2, className: 'brown'},
@@ -1001,31 +1084,32 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 'A13', content: '', start: '0000-10-07T04:00:00', end: '0000-10-08', type: 'background', group: 2, className: 'pink'},
     {id: 'A15', content: '<p>起初神創造天地...<br>創世記 1<a href="Creation.htm" target="_blank">:</a>1<br><br>In the beginning, <br>God created the heaven and the earth...</br>Genesis 1<a href="Creation.htm" target="_blank">:</a>1<br></p>', editable: false, editable: false, start: '0000-10-07T04:00:00', end: '-0000', type: 'point', group: 2, className: 'lightgrey'},
 
-    {id: 'B', content: '<br>&ensp;律法時代<br>&ensp;Period - Law', start: '2448', end: '3787-04-03', type: 'background', group: 1},
-    {id: 'C', content: '<br>&ensp;律法時代<br>&ensp;Period - Law', start: '2448', end: '3787-04-03', type: 'background', group: 2},
+    {id: 'B', content: '<b><br>&ensp;律法時代<br>&ensp;Period - Law', start: '2448', end: '3787-04-03', type: 'background', group: 1},
+    {id: 'C', content: '<b><br>&ensp;律法時代<br>&ensp;Period - Law', start: '2448', end: '3797-04-03', type: 'background', group: 2},
     {id: 'D', content: '', start: '0658-01-01', end: '6000-01-01', type: 'background', group: 3, className: 'negative'}, 
     {id: 'E', content: '', start: '0658-01-01', end: '6000-01-01', type: 'background', group: 4, className: 'negative'},
     {id: 'F', content: '', start: '0658-01-01', end: '6000-01-01', type: 'background', group: 5, className: 'negative'},
   //{id: 'F', content: '&ensp;Period - F', start: '2022-01-01', end: '2449-01-01', type: 'background', group: 'non-existing'}, 
     {id: 'G', content: '&ensp;恩典時代<br>&ensp;Period - Grace', start: '3787-04-03', end: '6000-01-01', type: 'background', group: 1, className: 'pink'},
     {id: 'H', content: '', start: '3787-04-03', end: '6000-01-01', type: 'background', group: 2, className: 'pink'},
-//    {id: 'J', content: '', start: '0000-10-07T04:00:00', end: '6000-01-01', type: 'background', group: 6, className: ''},
-//    {id: 'K', content: '', start: '0000-10-07T04:00:00', end: '0001-10-07', type: 'background', group: 1, className: ''},
-					      
+//  {id: 'J', content: '', start: '0000-10-07T04:00:00', end: '6000-01-01', type: 'background', group: 6, className: ''},
+//  {id: 'K', content: '', start: '0000-10-07T04:00:00', end: '0001-10-07', type: 'background', group: 1, className: 'lightyellow'},
 
-
+ 
     // BIBLICAL CHARACTER - GROUP 1
+	//1.
+
   //{id: 777, content: '<b>耶穌 Jesus &#x271D;</b>', editable: false, start: '3761', end: '3790', title: '~3 BC -  AD 30', group: 1, className:'bloodred', style: "color: black; background-color: red;"},
   //{id: 1, content: '1. <b>亞當 Adam</b>&emsp;(創 Gen 5:3)', editable: false, start:'0000-10-12T19:00:00', end: '0930-01-01', title:'3761 BC - 2831 BC', group: 1, className:'blue', style: "background-color: ;"},
     {id: 1, content: '<a href="img/Adam - Joseph Timeline.pdf" target="_blank">1</a>. <b>亞當 Adam</b>&emsp;(創 Gen 5:3)', editable: false, start: '0000-10-12T19:00:00', end: '0930-01-01', title: '3761 BC - 2831 BC', group: 1, className:'blue', style: "background-color: ;"},
-    {id: 1.002, content: '1.002. 塞特 Seth&emsp;(創 Gen 5:6)', editable: false, start: '0130-01-01', end: '1042-01-01', title: '3631 BC - 2719 BC', group: 1, className:'green'},    
-    {id: 1.003, content: '1.003. 以挪士 Enosh&emsp;(創 Gen 5:9)', editable: false, start: '0235-01-01', end: '1142-01-01', title: '3526 BC - 2621 BC', group: 1, className:'lightblue'},
-    {id: 1.004, content: '1.004. 該南 Cainan&emsp;(創 Gen 5:12)', editable: false, start: '0325-01-01', end: '1235-01-01', title: '3436 BC - 2526 BC', group: 1, className:'beige'},
-    {id: 1.005, content: '1.005. 瑪勒列 Mahalalel&emsp;(創 Gen 5:15)', editable: false, start: '0395-01-01', end: '1290-01-01', title: '3366 BC - 2471 BC', group: 1, className:'orange'},
-    {id: 1.006, content: '1.006. 雅列 Jared&emsp;(創 Gen 5:18)', editable: false, start: '0460-01-01', end: '1422-01-01', title: '3301 BC - 2339 BC', group: 1, className:'silver'},    
-    {id: 1.007, content: '1.007. 以諾 Enoch&emsp;(創 Gen 5:21)', editable: false, start: '0622-01-01', end: '0987-01-01', title: '3139 BC - 2774 BC', group: 1, className:'lightblue'},    
-    {id: 1.008, content: '1.008. 瑪土撒拉 Methuselah&emsp;(創 Gen 5:25)', editable: false, start: '0687-01-01', end: '1656-01-01', title: '3074 BC - 2105 BC', group: 1, className:'lightblue'},    
-    {id: 1.009, content: '1.009. 拉麥 Lamech&emsp;(創 Gen 5:28)', editable: false, start: '0874-01-01', end: '1651-01-01', title: '2887 BC - 2110 BC', group: 1, className:'lightblue'},    
+    {id: 1.002, content: '1.002. 塞特 Seth &emsp;(創 Gen 5:6)', editable: false, start: '0130-01-01', end: '1042-01-01', title: '3631 BC - 2719 BC', group: 1, className:'green'},    
+    {id: 1.003, content: '1.003. 以挪士 Enosh &emsp;(創 Gen 5:9)', editable: false, start: '0235-01-01', end: '1142-01-01', title: '3526 BC - 2621 BC', group: 1, className:'lightblue'},
+    {id: 1.004, content: '1.004. 該南 Cainan &emsp;(創 Gen 5:12)', editable: false, start: '0325-01-01', end: '1235-01-01', title: '3436 BC - 2526 BC', group: 1, className:'beige'},
+    {id: 1.005, content: '1.005. 瑪勒列 Mahalalel &emsp;(創 Gen 5:15)', editable: false, start: '0395-01-01', end: '1290-01-01', title: '3366 BC - 2471 BC', group: 1, className:'orange'},
+    {id: 1.006, content: '1.006. 雅列 Jared &emsp;(創 Gen 5:18)', editable: false, start: '0460-01-01', end: '1422-01-01', title: '3301 BC - 2339 BC', group: 1, className:'brown'},    
+    {id: 1.007, content: '1.007. 以諾 Enoch &emsp;(創 Gen 5:21)', editable: false, start: '0622-01-01', end: '0987-01-01', title: '3139 BC - 2774 BC', group: 1, className:'lightblue'},    
+    {id: 1.008, content: '1.008. 瑪土撒拉 Methuselah &emsp;(創 Gen 5:25)', editable: false, start: '0687-01-01', end: '1656-01-01', title: '3074 BC - 2105 BC', group: 1, className:'lightblue'},    
+    {id: 1.009, content: '1.009. 拉麥 Lamech &emsp;(創 Gen 5:28)', editable: false, start: '0874-01-01', end: '1651-01-01', title: '2887 BC - 2110 BC', group: 1, className:'lightblue'},    
 
    {id: 1.00701, content: '<b>元前3000年, 3000 BC<br>', editable: false, start: '0761', title: '元前3000年, 3000 BC ', type:'', group: 1, className:'', style: "color: white; background-color: ;", style: "color: white; background-color: #7FB3D5;"},
    {id: 1.00706, content: '<b>元前3000年, 3000 BC<br>', editable: false, start: '0761', title: '元前3000年, 3000 BC ', type:'', group: 6, className:'', style: "color: white; background-color: ;", style: "color: white; background-color: #7FB3D5;"},
@@ -1041,24 +1125,25 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
    {id: 6.80001, content: '<b>主後2240年, AD 2240<br>', editable: false, start: '6000', title: '主後2240年, AD 2240', type:'', group: 1, className:'', style: "color: white; background-color: ;", style: "color: white; background-color: #7FB3D5;"},
    {id: 6.80006, content: '<b>主後2240年, AD 2240<br>', editable: false, start: '6000', title: '主後2240年, AD 2240', type:'', group: 6, className:'', style: "color: white; background-color: ;", style: "color: white; background-color: #7FB3D5;"},
 
-    {id: 1.01, content: '1.01. 挪亞 Noah&emsp;(創 Gen 5:32)', editable: false, start: '1056-01-01', end: '2006-01-01', title: '2705 BC - 1755 BC', group: 1, className:'lightblue'},    
+    {id: 1.01, content: '1.01. 挪亞 Noah &emsp;(創 Gen 5:32)', editable: false, start: '1056-01-01', end: '2006-01-01', title: '2705 BC - 1755 BC', group: 1, className:'lightblue'},    
+
     {id: 1.0105, content: '1.0105. 雅弗 Japheth &emsp;(創 Gen 5:32)', editable: false, start: '1556', end: '1556', title: '2205 BC', type: '', group: 1, className:'lightblue'},
     {id: 1.011, content: '1.011. 閃 Shem &emsp;(創 Gen 11:10)', editable: false, start: '1558-01-01', end: '2158-01-01', title: '2203 BC - 1603 BC',  type:'', group: 1, className:'lightblue'},    
     {id: 1.0115, content: '1.0115. 含 Ham  &emsp;(創 Gen 9:24)', editable: false, start: '1560', end: '1560', title: '~2201 BC', type:'', group: 1, className:'lightblue'},
 
-    {id: 1.012, content: '1.012. 亞法撒 Arphaxad&emsp;(創 Gen 11:12)', editable: false, start: '1658', end: '2096', title: '2103 BC - 1665 BC', group: 1, className:'lightblue'},
-    {id: 1.013, content: '1.013. 沙拉 Salah&emsp;(創 Gen 11:14)', editable: false, start: '1693', end: '2126', title: '2068 BC - 1635 BC', group: 1, className:'lightblue'},
-    {id: 1.014, content: '1.014. 希伯 Eber&emsp;(創 Gen 11:16)', editable: false, start: '1723', end: '2187', title: '2038 BC - 1574 BC', group: 1, className:'lightblue'},
-    {id: 1.015, content: '1.015. 法勒 Peleg&emsp;(創 Gen 11:18)', editable: false, start: '1757', end: '1996', title: '2004 BC - 1765 BC', group: 1, className:'lightblue'},
+    {id: 1.012, content: '1.012. 亞法撒 Arphaxad &emsp;(創 Gen 11:12)', editable: false, start: '1658', end: '2096', title: '2103 BC - 1665 BC', group: 1, className:'lightblue'},
+    {id: 1.013, content: '1.013. 沙拉 Salah &emsp;(創 Gen 11:14)', editable: false, start: '1693', end: '2126', title: '2068 BC - 1635 BC', group: 1, className:'lightblue'},
+    {id: 1.014, content: '1.014. 希伯 Eber &emsp;(創 Gen 11:16)', editable: false, start: '1723', end: '2187', title: '2038 BC - 1574 BC', group: 1, className:'lightblue'},
+    {id: 1.015, content: '1.015. 法勒 Peleg &emsp;(創 Gen 11:18)', editable: false, start: '1757', end: '1996', title: '2004 BC - 1765 BC', group: 1, className:'lightblue'},
 
-    {id: 1.016, content: '1.016. 拉吳 Reu&emsp;(創 Gen 11:20)', editable: false, start: '1787', end: '2026', title: '1974 BC - 1735 BC', group: 1, className:'lightblue'},
-    {id: 1.017, content: '1.017. 西鹿 Serug&emsp;(創 Gen 11:22)', editable: false, start: '1819', end: '2049', title: '1942 BC - 1712 BC', group: 1, className:'lightblue'},
-    {id: 1.018, content: '1.018. 拿鶴 Nahor&emsp;(創 Gen 11:24)', editable: false, start: '1849', end: '1997', title: '1912 BC - 1764 BC', group: 1, className:'lightblue'},
-    {id: 1.019, content: '1.019. 他拉 Terah&emsp;(創 Gen 11:26)', editable: false, start: '1878', end: '2083', title: '1883 BC - 1678 BC', group: 1, className:'lightblue'},
-    {id: 1.02, content: '<a href="https://en.wikipedia.org/wiki/Abraham" target="_blank">1.02</a>. 亞伯拉罕 Abraham&emsp;(創 Gen 21:05)', editable: false, start: '1948', end: '2123', title: '1813 BC - 1638 BC (Act 7:4 - 60 years later)', group: 1, className:'lightblue'},
-    {id: 1.021, content: '<a href="https://en.wikipedia.org/wiki/Isaac" target="_blank">1.021</a>. 以撒 Issac&emsp;(創 Gen 25:26)', editable: false, start: '2048', end: '2228', title: '1713 BC - 1533 BC', group: 1, className:'lightblue'},    
-    {id: 1.022, content: '<a href="http://www.jewishencyclopedia.com/articles/8381-jacob#anchor5" target="_blank">1.022</a>. 雅各 Jacob&emsp;(創 Gen 41:46)', editable: false, start: '2108', end: '2255', title: '1653 BC - 1506 BC', group: 1, className:'lightblue'},
-    {id: 1.023, content: '<a href="https://en.wikipedia.org/wiki/Joseph_(Genesis)" target="_blank">1.023</a>. 約瑟 Joseph&emsp;', editable: false, start: '2199', end: '2309', title: '1562 BC - 1452 BC', group: 1, className:'lightblue'},
+    {id: 1.016, content: '1.016. 拉吳 Reu &emsp;(創 Gen 11:20)', editable: false, start: '1787', end: '2026', title: '1974 BC - 1735 BC', group: 1, className:'lightblue'},
+    {id: 1.017, content: '1.017. 西鹿 Serug &emsp;(創 Gen 11:22)', editable: false, start: '1819', end: '2049', title: '1942 BC - 1712 BC', group: 1, className:'lightblue'},
+    {id: 1.018, content: '1.018. 拿鶴 Nahor &emsp;(創 Gen 11:24)', editable: false, start: '1849', end: '1997', title: '1912 BC - 1764 BC', group: 1, className:'lightblue'},
+    {id: 1.019, content: '1.019. 他拉 Terah &emsp;(創 Gen 11:26)', editable: false, start: '1878', end: '2083', title: '1883 BC - 1678 BC', group: 1, className:'lightblue'},
+    {id: 1.02, content: '<a href="https://en.wikipedia.org/wiki/Abraham" target="_blank">1.02</a>. 亞伯拉罕 Abraham &emsp;(創 Gen 21:05)', editable: false, start: '1948', end: '2123', title: '1813 BC - 1638 BC (Act 7:4 - 60 years later)', group: 1, className:'lightblue'},
+    {id: 1.021, content: '<a href="https://en.wikipedia.org/wiki/Isaac" target="_blank">1.021</a>. 以撒 Issac &emsp;(創 Gen 25:26)', editable: false, start: '2048', end: '2228', title: '1713 BC - 1533 BC', group: 1, className:'lightblue'},    
+    {id: 1.022, content: '<a href="http://www.jewishencyclopedia.com/articles/8381-jacob#anchor5" target="_blank">1.022</a>. 雅各 Jacob &emsp;(創 Gen 41:46)', editable: false, start: '2108', end: '2255', title: '1653 BC - 1506 BC', group: 1, className:'lightblue'},
+    {id: 1.023, content: '<a href="https://en.wikipedia.org/wiki/Joseph_(Genesis)" target="_blank">1.023</a>. 約瑟 Joseph &emsp;', editable: false, start: '2199', end: '2309', title: '1562 BC - 1452 BC', group: 1, className:'lightblue'},
 
     {id: 1.024, content: '1.024. 摩西 Moses', editable: false, start: '2369', end: '2489', title: '1393 BC - 1273 BC', group: 1, className:'lightblue'},
     {id: 1.025, content: '1.025. 約書亞 Joshua', editable: false, start: '2427', end: '2516', title: '1335 BC - 1246 BC', group: 1, className:'lightblue'},   
@@ -1085,7 +1170,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 1.041, content: '<a href="https://en.wikipedia.org/wiki/Hezekiah" target="_blank">1.041</a>. 希西家 Hezekiah', editable: false, start: '3045', end: '3074', title: '716 BC - 687 BC', group: 1, className:'lightyellow'},
     {id: 1.0411, content: '<a href="https://en.wikipedia.org/wiki/Manasseh_of_Judah" target="_blank">1.0411</a>. 瑪拿西 Manasseh', editable: false, start: '3074', end: '3118', title: '687 BC - 643 BC', group: 1, className:'lightyellow'},
     {id: 1.0412, content: '<a href="https://en.wikipedia.org/wiki/Amon_of_Judah" target="_blank">1.0412</a>. 亞們 Amon', editable: false, start: '3118', end: '3120', title: '643 BC - 641 BC', group: 1, className:'lightyellow'},
-    {id: 1.0414, content: '<a href="https://en.wikipedia.org/wiki/Jeconiah" target="_blank">1.0414</a>. 耶哥尼雅 Jeconiah', editable: false, start: '3163', end: '3164', title: '598 BC - 597 BC', group: 1, className:'lightyellow'},
+    {id: 1.0414, content: '<a href="https://en.wikipedia.org/wiki/Jeconiah" target="_blank">1.0414</a>. 约雅斤(耶哥尼雅) Jehoiachin(Jeconiah)', editable: false, start: '3163', end: '3164', title: '598 BC - 597 BC', group: 1, className:'lightyellow'},
     {id: 1.042, content: '<a href="https://en.wikipedia.org/wiki/Josiah" target="_blank">1.042</a>. 約西亞 Josiah', editable: false, start: '3120', end: '3152', title: '641 BC - 609 BC', group: 1, className:'lightyellow'},
     {id: 1.0421, content: '<a href="https://en.wikipedia.org/wiki/Jehoahaz_of_Judah" target="_blank">1.0421</a>. 約哈斯 Jehoahaz', editable: false, start: '3152', end: '3152', title: '609 BC - 609 BC', group: 1, className:'lightyellow'},
     {id: 1.0422, content: '<a href="https://en.wikipedia.org/wiki/Jehoiakim" target="_blank">1.0422</a>. 約雅敬 Jehoiakim', editable: false, start: '3152', end: '3163', title: '609 BC - 598 BC', group: 1, className:'lightyellow'},
@@ -1112,6 +1197,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     //{id: 2., content: '<a href="https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B4%AA%E6%B0%B4" target="_blank">2.</a>. 大洪水 The Great Flood', editable: false, start: '1656', end: '1656', title: '2105 BC', group: 2, className:''},
   //{id: 2.0005, content: '挪亞建方舟 Noah builds ark', editable: false, start: '1616', end: '1616', title: '2145 BC - 2105 BC', type: '', group: 2, className:''},
   //{id: 2.0005, content: '挪亞建方舟 Noah builds ark', editable: false, start: '1581', end: '1581', title: '~2180 BC - 2105 BC', type: '', group: 2, className:''},
+  //{id: 2.0005, content: '挪亞建方舟 Noah builds ark <img src="img/noahsark 2.png" border="0" style="width:140px; height:80px;">',editable: false, start: '1581', end: '1581', title: '~2180 BC - 2105 BC<br>', type:'', group: 2, className:''},
     {id: 2.0005, content: '<br><img src="img/noahsark.png" border="0" style="width:120px; height:60px;"><br>挪亞建方舟 Noah builds ark<br>',editable: false, start: '1581', end: '1581', title: '~2180 BC - 2105 BC<br>', type:'', group: 2, className:''},
     {id: 2, content: '<br><img src="img/Noah009R4.png" border="0" style="width:103px; height:103px;"><br><a href="https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%B4%AA%E6%B0%B4"target="_blank">2</a>. 大洪水 The Great Flood',editable:false, start:'1656',end:'1656',title:'2105 BC<br>',type:'',group:2,className:''},
 
@@ -1147,10 +1233,13 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 2.035, content: '2.035. 以利 Priest Eli', editable: false, start: '2569', end: '2667', title: '1192 BC - 1094 BC', group: 2, className:'grey'},
     {id: 2.036, content: '2.036. 撒母耳先知 Prophet Samuel ', editable: false, start: '2659', end: '2747', title: '1102 BC - 1094 BC', group: 2, className:'grey'}, 
     {id: 2.037, content: '2.037. 迦得先知 Prophet Gad', editable: false, start: '2736', end: '2790', title: '1118 BC - 971 BC', group: 2, className:'grey'},
-    {id: 2.042, content: '<img src="img/P04 David.png" border="0" style="width:70px; height:110px;"><br>2.042. 大衛和哥利亞<br>&emsp;&emsp;&emsp;David & Goliath<br>',editable: false, start: '2741', end: '2741', title: '', type:'', group: 2, className:''},
+//  {id: 2.042, content: '<img src="img/P04 David.png" border="0" style="width:70px; height:110px;"><br>2.042. 大衛和哥利亞<br>&emsp;&emsp;&emsp;David & Goliath<br>',editable: false, start: '2741', end: '2741', title: '', type:'', group: 2, className:''},
+    {id: 2.042, content: '2.042. 大衛和哥利亞<br>&emsp;&emsp;&emsp;David & Goliath <img src="img/P04 David.png" border="0" style="width:70px; height:110px;">',editable: false, start: '2741', end: '2741', title: '', type:'', group: 2, className:''},
+
     {id: 2.043, content: '2.043. 拿單先知 Prophet Nathan<br>',editable: false, start: '2771', end: '2790', title: '990 BC - 971 BC', type:'', group: 2, className:'grey'},
 
-    {id: 2.045, content: '<img src="img/Temple Building.png" border="0" style="width:120px; height:60px;"><br>2.045. 建造聖殿<br>&emsp;&emsp;&emsp;First Temple built',editable: false, start: '2804', end: '2804', title: '957 BC<br> ', type:'', group: 2, className:''},
+//  {id: 2.045, content: '<img src="img/Temple Building.png" border="0" style="width:120px; height:60px;"><br>2.045. 建造聖殿<br>&emsp;&emsp;&emsp;First Temple built',editable: false, start: '2804', end: '2804', title: '957 BC<br> ', type:'', group: 2, className:''},
+    {id: 2.045, content: '2.045. 建造聖殿<br>&emsp;&emsp;&emsp;First Temple built <img src="img/Temple Building.png" border="0" style="width:120px; height:60px;"><br>',editable: false, start: '2804', end: '2804', title: '957 BC<br> ', type:'', group: 2, className:''},
     {id: 2.046, content: '2.046. 亞希雅先知 Prophet Ajijah<br>',editable: false, start: '2821', end: '2851', title: '940 BC - 910 BC', type:'', group: 2, className:'grey'},
     {id: 2.048, content: '2.048. 易多先知 Prophet Iddo<br>',editable: false, start: '2830', end: '2850', title: '931 BC - 911 BC', type:'', group: 2, className:'grey'},
     {id: 2.049, content: '2.049. 示瑪雅先知 Prophet Shemaiah<br>',editable: false, start: '2830', end: '2850', title: '931 BC - 911 BC', type:'', group: 2, className:'grey'},
@@ -1217,22 +1306,22 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 2.118, content: '<a href="https://en.wikipedia.org/wiki/Jehoshaphat" target="_blank">2.118</a>. 約沙法 Jehoshaphat (猶大國王 King of Judah)', editable: false, start: '2891', end: '2912', title: '870 BC - 849 BC', group: 2, className:'lightyellow'},
     {id: 2.119, content: '<a href="https://en.wikipedia.org/wiki/Jehoram_of_Judah" target="_blank">2.119</a>. 約蘭 Jehoram (猶大國王 King of Judah)', editable: false, start: '2913', end: '2920', title: '848 BC - 841 BC', group: 2, className:'lightyellow'},
     {id: 2.12, content: '<a href="https://en.wikipedia.org/wiki/Ahaziah_of_Judah" target="_blank">2.12</a>. 亞哈謝 Ahaziah (猶大國王 King of Judah)', editable: false, start: '2920', end: '2920', title: '841 BC - 841 BC', group: 2, className:'lightyellow'},
-    {id: 2.121, content: '<a href="https://en.wikipedia.org/wiki/Athaliah" target="_blank">2.121</a>. 亞他利雅 (女王) Athaliah (Queen) (猶大國 Kingdom of Judah)', editable: false, start: '2920', end: '2926', title: '841 BC - 835 BC', group: 2, className:'lightyellow'},
+    {id: 2.121, content: '<a href="https://en.wikipedia.org/wiki/Athaliah" target="_blank">2.121</a>. 亞他利雅 (女王) Athaliah (Queen) (猶大國 Kingdom of Judah)', editable: false, start: '2920', end: '2926', title: '841 BC - 835 BC', group: 2, className:'lightyellow'},
     {id: 2.122, content: '<a href="https://en.wikipedia.org/wiki/Jehoash_of_Judah" target="_blank">2.122</a>. 約阿施 Jehoash (猶大國王 King of Judah)', editable: false, start: '2926', end: '2965', title: '835 BC - 796 BC', group: 2, className:'lightyellow'},
     {id: 2.123, content: '<a href="https://en.wikipedia.org/wiki/Amaziah_of_Judah" target="_blank">2.123</a>. 亞瑪謝 Amaziah (猶大國王 King of Judah)', editable: false, start: '2965', end: '2994', title: '796 BC - 767 BC', group: 2, className:'lightyellow'},
-    {id: 2.124, content: '<a href="https://en.wikipedia.org/wiki/Uzziah" target="_blank">2.124</a>. 亞撒利雅(烏西雅) Uzziah (猶大國王 King of Judah)', editable: false, start: '2994', end: '3021', title: '767 BC - 740 BC', group: 2, className:'lightyellow'},
+    {id: 2.124, content: '<a href="https://en.wikipedia.org/wiki/Uzziah" target="_blank">2.124</a>. 烏西雅(亞撒利雅) Uzziah(Ahaziah) (猶大國王 King of Judah)', editable: false, start: '2994', end: '3021', title: '767 BC - 740 BC', group: 2, className:'lightyellow'},
     {id: 2.125, content: '<a href="https://en.wikipedia.org/wiki/Jotham_of_Judah" target="_blank">2.125</a>. 約坦 Jotham (猶大國王 King of Judah)', editable: false, start: '3021', end: '3029', title: '740 BC - 732 BC', group: 2, className:'lightyellow'},
     {id: 2.126, content: '<a href="https://en.wikipedia.org/wiki/Ahaz" target="_blank">2.126</a>. 亞哈斯 Ahaz (猶大國王 King of Judah)', editable: false, start: '3029', end: '3045', title: '732 BC - 716 BC', group: 2, className:'lightyellow'},
-    {id: 2.127, content: '<a href="https://en.wikipedia.org/wiki/Hezekiah" target="_blank">2.127</a>. 希西家 Hezekiah (Co-regency) (猶大國王 King of Judah)', editable: false, start: '3032', end: '3032', title: '729 BC - 729 BC', group: 2, className:'lightyellow'},
+    {id: 2.127, content: '<a href="https://en.wikipedia.org/wiki/Hezekiah" target="_blank">2.127</a>. 希西家 Hezekiah (Co-regency) (猶大國王 King of Judah)', editable: false, start: '3032', end: '3032', title: '729 BC - 729 BC', group: 2, className:'lightyellow'},
     {id: 2.128, content: '<a href="https://en.wikipedia.org/wiki/Hezekiah" target="_blank">2.128</a>. 希西家 Hezekiah (猶大國王 King of Judah)', editable: false, start: '3045', end: '3064', title: '716 BC - 697 BC', group: 2, className:'lightyellow'},
-    {id: 2.129, content: '<a href="https://en.wikipedia.org/wiki/Hezekiah" target="_blank">2.129</a>. 希西家 Hezekiah (Co-regency) (猶大國王 King of Judah)', editable: false, start: '3064', end: '3074', title: '697 BC - 687 BC', group: 2, className:'lightyellow'},
-    {id: 2.13, content: '<a href="https://en.wikipedia.org/wiki/Manasseh_of_Judah" target="_blank">2.13</a>. 瑪拿西 Manasseh (Co-regency) (猶大國王 King of Judah)', editable: false, start: '3064', end: '3074', title: '697 BC - 687 BC', group: 2, className:'lightyellow'},
+    {id: 2.129, content: '<a href="https://en.wikipedia.org/wiki/Hezekiah" target="_blank">2.129</a>. 希西家 Hezekiah (Co-regency) (猶大國王 King of Judah)', editable: false, start: '3064', end: '3074', title: '697 BC - 687 BC', group: 2, className:'lightyellow'},
+    {id: 2.13, content: '<a href="https://en.wikipedia.org/wiki/Manasseh_of_Judah" target="_blank">2.13</a>. 瑪拿西 Manasseh (Co-regency) (猶大國王 King of Judah)', editable: false, start: '3064', end: '3074', title: '697 BC - 687 BC', group: 2, className:'lightyellow'},
     {id: 2.131, content: '<a href="https://en.wikipedia.org/wiki/Manasseh_of_Judah" target="_blank">2.131</a>. 瑪拿西 Manasseh (猶大國王 King of Judah)', editable: false, start: '3074', end: '3118', title: '687 BC - 643 BC', group: 2, className:'lightyellow'},
     {id: 2.132, content: '<a href="https://en.wikipedia.org/wiki/Amon_of_Judah" target="_blank">2.132</a>. 亞們 Amon (猶大國王 King of Judah)', editable: false, start: '3118', end: '3120', title: '643 BC - 641 BC', group: 2, className:'lightyellow'},
     {id: 2.133, content: '<a href="https://en.wikipedia.org/wiki/Josiah" target="_blank">2.133</a>. 約西亞 Josiah (猶大國王 King of Judah)', editable: false, start: '3120', end: '3152', title: '641 BC - 609 BC', group: 2, className:'lightyellow'},
     {id: 2.134, content: '<a href="https://en.wikipedia.org/wiki/Jehoahaz_of_Judah" target="_blank">2.134</a>. 約哈斯 Jehoahaz (猶大國王 King of Judah)', editable: false, start: '3152', end: '3152', title: '609 BC - 609 BC', group: 2, className:'lightyellow'},
     {id: 2.135, content: '<a href="https://en.wikipedia.org/wiki/Jehoiakim" target="_blank">2.135</a>. 約雅敬 Jehoiakim (猶大國王 King of Judah)', editable: false, start: '3152', end: '3163', title: '609 BC - 598 BC', group: 2, className:'lightyellow'},
-    {id: 2.136, content: '<a href="https://en.wikipedia.org/wiki/Jeconiah" target="_blank">2.136</a>. 耶哥尼雅 Jeconiah (猶大國王 King of Judah)', editable: false, start: '3163', end: '3164', title: '598 BC - 597 BC', group: 2, className:'lightyellow'},
+    {id: 2.136, content: '<a href="https://en.wikipedia.org/wiki/Jeconiah" target="_blank">2.136</a>. 约雅斤(耶哥尼雅) Jehoiachin(Jeconiah) (猶大國王 King of Judah)', editable: false, start: '3163', end: '3164', title: '598 BC - 597 BC', group: 2, className:'lightyellow'},
     {id: 2.137, content: '<a href="https://en.wikipedia.org/wiki/Zedekiah" target="_blank">2.137</a>. 西底家 Zedekiah (猶大國王 King of Judah)', editable: false, start: '3164', end: '3175', title: '597 BC - 586 BC', group: 2, className:'lightyellow'},
     {id: 2.139, content: '<a href="https://en.wikipedia.org/wiki/Ezra" target="_blank">2.139</a>. 以斯拉 Ezra', editable: false, start: '3281', end: '3321', title: '480 BC - 440 BC', group: 2, className:'grey'},
     {id: 2.14, content: '<a href="https://en.wikipedia.org/wiki/Nehemiah" target="_blank">2.14</a>. 以斯帖 Esther<br>', editable: false, start: '3282', end: '3296', title: '479 BC - 465 BC<br>', type:'', group: 2, className:'grey'},
@@ -1245,7 +1334,6 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 2.208, content: '2.208. 帝國羅馬開始; 奧古斯都<br>&emsp;&emsp;&emsp;凱撒成為第一位皇帝  Imperial Rome begins;<br>&emsp;&emsp;&emsp;Augustus Cæsar becomes 1st Emperor', editable: false, start: '3734', end: '3734', title: '27 BC', group: 2, className:'grey'},
     {id: 2.209, content: '<a href="https://en.wikipedia.org/wiki/Star_of_Bethlehem" target="_blank">2.209</a>. 博士抵達耶路撒冷尋找彌賽亞<br>&emsp;&emsp;&emsp;Magi arrive in Jerusalem <br>&emsp;&emsp;&emsp;looking for the Messiah', editable: false, start: '3757', end: '3757', title: '4 BC', group: 2, className:'grey'},
     {id: 2.21, content: '2.21. 希律死 Herod dies', editable: false, start: '3757', end: '3757', title: '4 BC', group: 2, className:'grey'},
-
     {id: 2.214, content: '<a href="Revelation.htm" target="_blank">2.214</a>. 使徒約翰  Apostle John', editable: false, start: '3766', end: '3860', title: 'AD 6 - AD 100', type:'', group: 2, className:'grey'},
     {id: 2.215, content: '<a href="https://en.wikipedia.org/wiki/Pontius_Pilate" target="_blank">2.215</a>. 比拉多 Pontius Pilate', editable: false, start: '3783', end: '3794', title: 'AD 23 - AD 34', group: 2, className:'beige'},
     {id: 2.216, content: '2.216. 耶穌施洗 Baptism of Jesus', editable: false, start: '3784', end: '3784', title: 'AD 24', group: 2, className:''},
@@ -2154,9 +2242,9 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 5.681, content: '<a href="img/192 MING.jpg" target="new"><img src="img/192 MING.jpg" alt="明朝" width="84px" height="50px"> </a>明', editable: false, start: '5128', end: '5128', title: 'AD 1368 - AD 1644', type:'', group: 5, className:''},
     {id: 5.706, content: '<a href="https://zh.wikipedia.org/wiki/%E6%B8%85%E6%9C%9D" target="_blank">5.706</a>. 清<br>', editable: false, start: '5376', end: '5671', title: 'AD 1616 - AD 1911 <br><img src="img/193 TSING.jpg" style="width:810px; height:480px;"><br>清', type:'', group: 5, className:'lightgreen'},
     {id: 5.7061, content: '<a href="img/193 TSING.jpg" target="new"><img src="img/193 TSING.jpg" alt="清朝" width="84px" height="50px"> </a>清', editable: false, start: '5376', end: '5376', title: 'AD 1616 - AD 1911', type:'', group: 5, className:''},
-    {id: 5.722, content: '<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B" target="_blank">5.722</a>. 中華民國<br>', editable: false, start: '5672', end: '5780', title: 'AD 1912 - Present <br><img src="img/235 1949 RoC.jpg" style="width:810px; height:480px;"><br>中華民國', type:'', group: 5, className:'pink'},
+    {id: 5.722, content: '<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B" target="_blank">5.722</a>. 中華民國<br>', editable: false, start: '5672', end: '5778', title: 'AD 1912 - AD 2018 <br><img src="img/235 1949 RoC.jpg" style="width:810px; height:480px;"><br>中華民國', type:'', group: 5, className:'pink'},
     {id: 5.7221, content: '<a href="img/235 1949 RoC.jpg" target="new"><img src="img/235 1949 RoC.jpg" alt="中華民國" width="84px" height="50px"> </a>中華民國', editable: false, start: '5672', end: '5672', title: 'AD 1912 - AD 2018', type:'', group: 5, className:''},
-    {id: 5.759, content: '<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD" target="_blank">5.759</a>. 中华人民共和国<br>', editable: false, start: '5709', end: '5780', title: 'AD 1949 - Present <br>中华人民共和国', type:'', group: 5, className:'red'},
+    {id: 5.759, content: '<a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD" target="_blank">5.759</a>. 中华人民共和国<br>', editable: false, start: '5709', end: '5778', title: 'AD 1949 - AD 2018 <br>中华人民共和国', type:'', group: 5, className:'red'},
 
 
     
@@ -2171,37 +2259,62 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 6., content: '6. 埃及的第一個王朝<br>&emsp;First dynasty of Egypt', editable: false, start: '0661', title: '3100 BC', type: 'point', group: 6, className:''},
 
     {id: 6.001, content: '6.001. 三皇五帝<br>&emsp;&emsp;&emsp;3 Sovereigns & 5 Emperors', editable: false, start: '0658', title: '3103 BC', type: 'point', group: 6, className:''},
-    {id: 6.002, content: '6.002. 胡夫國王完成了吉薩大金字塔<br>&emsp;&emsp;&emsp;King Khufu completes the Great Pyramid of Giza', editable: false, start: '1201', title: '2560 BC', type: 'point', group: 6, className:''}, 
+    {id: 6.002, content: '6.002. 胡夫國王完成了吉薩大金字塔<br>&emsp;&emsp;&emsp;King Khufu completes the Great Pyramid of Giza', editable: false, start: '1201', title: '2560 BC', type: 'point', group: 6, className:''}, 
     {id: 6.003, content: '6.003. 禹大帝在中國建立了夏代<br>&emsp;&emsp;&emsp;Yu the Great establishes the Xia Dynasty in China', editable: false, start: '1691', title: '2070 BC', type: 'point', group: 6, className:''},
     {id: 6.004, content: '6.004. 在尤卡坦半島出現瑪雅文化<br>&emsp;&emsp;&emsp;Emergence of Maya culture in the Yucatán Peninsula', editable: false, start: '1761', title: '2000 BC', type: 'point', group: 6, className:''},
-    {id: 6.005, content: '6.005. 古巴比倫王漢穆拉比<br>&emsp;&emsp;&emsp;Ancient Babylon King Hammurabi', editable: false, start: '1969', end: '2011', title: '1792 BC - 1750 BC', type: '', group: 6, className:'lightpurple'},
+
+{id: 6.0021, content: '<a href="https://en.wikipedia.org/wiki/Mentuhotep_II" target="_blank">6.0021</a>. 古埃及法老 曼图霍特普二世 Nebhepetre Mentuhotep II<br>', editable: false, start: '1700', end: '1751', title: '2061 BC - 2010BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0022, content: '<a href="https://en.wikipedia.org/wiki/Mentuhotep_III" target="_blank">6.0022</a>. 古埃及法老 曼图霍特普三世 Pharaoh Sankhkare Mentuhotep III<br>', editable: false, start: '1751', end: '1763', title: '2010 BC - 1998BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0023, content: '<a href="https://en.wikipedia.org/wiki/Mentuhotep_IV" target="_blank">6.0023</a>. 古埃及法老 曼图霍特普四世 Pharaoh Mentuhotep IV<br>', editable: false, start: '1763', end: '1770', title: '1998 BC - 1991BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0024, content: '<a href="https://en.wikipedia.org/wiki/Amenemhat_I" target="_blank">6.0024</a>. 古埃及法老 阿蒙涅姆赫特一世 Pharaoh Amenemhat I<br>', editable: false, start: '1770', end: '1799', title: '1991 BC - 1962BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0025, content: '<a href="https://en.wikipedia.org/wiki/Senusret_I" target="_blank">6.0025</a>. 古埃及法老 辛努塞尔特一世 Pharaoh Senusret I<br>', editable: false, start: '1790', end: '1835', title: '1971 BC - 1926BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0026, content: '<a href="https://en.wikipedia.org/wiki/Amenemhat_II" target="_blank">6.0026</a>. 古埃及法老 阿蒙涅姆赫特二世法老 Pharaoh Nubkaure Amenemhat II<br>', editable: false, start: '1847', end: '1919', title: '1914 BC - 1842BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0027, content: '<a href="https://en.wikipedia.org/wiki/Senusret_II" target="_blank">6.0027</a>. 古埃及法老 辛努塞尔特二世法老 Pharaoh Khakheperre Senusret II<br>', editable: false, start: '1864', end: '1883', title: '1897 BC - 1878BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0028, content: '<a href="https://en.wikipedia.org/wiki/Senusret_III" target="_blank">6.0028</a>. 古埃及法老 辛努塞尔特三世法老 Pharaoh Khakaure Senwosret III<br>', editable: false, start: '1883', end: '1922', title: '1878 BC - 1839BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0029, content: '<a href="https://en.wikipedia.org/wiki/Amenemhat_III" target="_blank">6.0029</a>. 古埃及法老 阿蒙涅姆赫特三世法老 Pharaoh Amenemhat III<br>', editable: false, start: '1901', end: '1947', title: '1860 BC - 1814BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0031, content: '<a href="https://en.wikipedia.org/wiki/Amenemhat_IV" target="_blank">6.0031</a>. 古埃及法老 阿蒙涅姆赫特四世法老 Pharaoh Amenemhat IV<br>', editable: false, start: '1939', end: '1997', title: '1822 BC - 1764BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.0032, content: '<a href="https://en.wikipedia.org/wiki/Sobekneferu" target="_blank">6.0032</a>. 古埃及法老 塞贝克涅弗鲁法老 Pharaoh Sobekneferu<br>', editable: false, start: '1955', end: '1959', title: '1806 BC - 1802BC<br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.005, content: '6.005. 古巴比倫王 漢穆拉比<br>&emsp;&emsp;&emsp;Ancient Babylon King Hammurabi', editable: false, start: '1969', end: '2011', title: '1792 BC - 1750 BC', type: '', group: 6, className:'green'},
     {id: 6.006, content: '6.006. 商代在中國的開始,充分發展中國文字系統的證據<br>&emsp;&emsp;&emsp;The beginning of Shang Dynasty in China,<br>&emsp;&emsp;&emsp;evidence of a fully developed Chinese writing system', editable: false, start: '2161', title: '1600 BC', type: 'point', group: 6, className:''},
     {id: 6.007, content: '6.007. 赫梯人在東地中海地區占主導地位<br>&emsp;&emsp;&emsp;Beginning of Hittite dominance of the Eastern Mediterranean region', editable: false, start: '2161', title: '1600 BC', type: 'point', group: 6, className:''},
-    {id: 6.008, content: '<a href="https://en.wikipedia.org/wiki/Ahmose_I" target="_blank">6.008</a>. 雅赫摩斯一世<br>&emsp;&emsp;&emsp;Pharaoh Nebpehtire Ahmose I<br>', editable: false, start: '2191', end: '2217', title: '1570 BC - 1544 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.009, content: '<a href="https://en.wikipedia.org/wiki/Amenhotep_I" target="_blank">6.009</a>. 阿蒙霍特普一世<br>&emsp;&emsp;&emsp;Pharaoh Djeserkare Amenhotep I<br>', editable: false, start: '2220', end: '2241', title: '1541 BC - 1520 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.01, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_I" target="_blank">6.01</a>. 图特摩斯一世法老<br>&emsp;&emsp;&emsp;Pharaoh Aakheperkare Thutmose I<br>', editable: false, start: '2241', end: '2269', title: '1520 BC - 1492 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.011, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_II" target="_blank">6.011</a>. 图特摩斯二世法老<br>&emsp;&emsp;&emsp;Pharaoh Aakheperenre Thutmose II<br>', editable: false, start: '2269', end: '2282', title: '1492 BC - 1479 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.012, content: '<a href="https://en.wikipedia.org/wiki/Hatshepsut" target="_blank">6.012</a>. 哈特谢普苏特法老<br>&emsp;&emsp;&emsp;Pharaoh Hatshepsut<br>', editable: false, start: '2282', end: '2303', title: '1479 BC - 1458 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.008, content: '<a href="https://en.wikipedia.org/wiki/Ahmose_I" target="_blank">6.008</a>. 埃及法老 雅赫摩斯一世 Pharaoh Nebpehtire Ahmose I<br>', editable: false, start: '2191', end: '2217', title: '1570 BC - 1544BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.009, content: '<a href="https://en.wikipedia.org/wiki/Amenhotep_I" target="_blank">6.009</a>. 埃及法老 阿蒙霍特普一世 Pharaoh Djeserkare Amenhotep I<br>', editable: false, start: '2220', end: '2241', title: '1541 BC - 1520BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.01, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_I" target="_blank">6.01</a>. 埃及法老 图特摩斯一世 Pharaoh Aakheperkare Thutmose I<br>', editable: false, start: '2241', end: '2269', title: '1520 BC - 1492BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.011, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_II" target="_blank">6.011</a>. 埃及法老 图特摩斯二世 Pharaoh Aakheperenre Thutmose II<br>', editable: false, start: '2269', end: '2282', title: '1492 BC - 1479BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.012, content: '<a href="https://en.wikipedia.org/wiki/Hatshepsut" target="_blank">6.012</a>. 埃及法老 哈特谢普苏特<br>&emsp;&emsp;&emsp;Pharaoh Hatshepsut<br>', editable: false, start: '2282', end: '2303', title: '1479 BC - 1458BC<br>', type:'', group: 6, className:'lightblue'},
 
     {id: 6.013, content: '6.013. 在中美洲的形成時期, 墨西哥前<br>&emsp;&emsp;&emsp;哥倫比亞的奧爾梅克文明盛行<br>&emsp;&emsp;&emsp;Olmec civilization flourishes in Pre-Columbian Mexico,<br>&emsp;&emsp;&emsp;during Mesoamerica`s Formative period<br>', editable: false, start: '2361', title: '1400 BC<br> ', type:'point', group: 6, className:''},
-    {id: 6.014, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_III" target="_blank">6.014</a>. 图特摩斯三世法老<br>&emsp;&emsp;&emsp;Pharaoh Menkheperre Thutmose III<br>', editable: false, start: '2303', end: '2336', title: '1458 BC - 1425 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.015, content: '<a href="https://en.wikipedia.org/wiki/Amenhotep_II" target="_blank">6.015</a>. 阿蒙霍特普二世法老<br>&emsp;&emsp;&emsp;Pharaoh Aakheperrure Amenhotep II<br>', editable: false, start: '2336', end: '2361', title: '1425 BC - 1400 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.016, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_IV" target="_blank">6.016</a>. 图特摩斯四世法老<br>&emsp;&emsp;&emsp;Pharaoh Menkheperure Thutmose IV<br>', editable: false, start: '2361', end: '2371', title: '1400 BC - 1390 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.017, content: '<a href="https://en.wikipedia.org/wiki/Amenhotep_III" target="_blank">6.017</a>. 阿蒙霍特普三世法老<br>&emsp;&emsp;&emsp;Pharaoh Nebmaatre Amenhotep III The Magnificent King<br>', editable: false, start: '2371', end: '2409', title: '1390 BC - 1352 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.018, content: '<a href="https://en.wikipedia.org/wiki/Nefertiti" target="_blank">6.018</a>. 娜芙蒂蒂 - 古埃及大皇后<br>&emsp;&emsp;&emsp;Neferneferuaten Nefertiti - Queen consort of Egypt<br>', editable: false, start: '2408', end: '2425', title: '1353 BC - 1336 BC<br>', type:'', group: 6, className:'lightblue'},
 
-    {id: 6.019, content: '<a href="https://en.wikipedia.org/wiki/Akhenaten" target="_blank">6.019</a>. 阿肯那顿法老<br>&emsp;&emsp;&emsp;Pharaoh Neferkheperure-waenre Amenhotep IV/Akhenaten<br>', editable: false, start: '2409', end: '2425', title: '1352 BC - 1336 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.02, content: '<a href="https://en.wikipedia.org/wiki/Smenkhkare" target="_blank">6.02</a>. 斯門卡瑞法老<br>&emsp;&emsp;&emsp;Pharaoh Ankhkheperure Smenkhkare<br>', editable: false, start: '2426', end: '2427', title: '1335 BC - 1334 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.021, content: '<a href="https://en.wikipedia.org/wiki/Neferneferuaten" target="_blank">6.021</a>. 法老 Pharaoh Ankhkheperure-mery-<br>&emsp;&emsp;&emsp;Neferkheperure/Neferneferuaten<br>', editable: false, start: '2427', end: '2429', title: '1334 BC - 1332 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.022, content: '<a href="https://en.wikipedia.org/wiki/Tutankhamun" target="_blank">6.022</a>. 圖坦卡門法老<br>&emsp;&emsp;&emsp;Pharaoh  Nebkheperure Tutankhaten<br>&emsp;&emsp;&emsp;Tutankhamun - The Boy King<br>', editable: false, start: '2429', end: '2437', title: '1332 BC - 1324 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.023, content: '<a href="https://en.wikipedia.org/wiki/Ay" target="_blank">6.023</a>. 阿伊法老<br>&emsp;&emsp;&emsp;Pharaoh Kheperkheperure Ay <br>', editable: false, start: '2437', end: '2441', title: '1324 BC - 1320 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.024, content: '<a href="https://en.wikipedia.org/wiki/Horemheb" target="_blank">6.024</a>. 霍朗赫布法老<br>&emsp;&emsp;&emsp;Pharaoh Djeserkheperure-setpenre Horemheb<br>', editable: false, start: '2441', end: '2469', title: '1320 BC - 1292 BC<br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.025, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_I" target="_blank">6.025</a>. 拉美西斯法老一世<br>&emsp;&emsp;&emsp;Pharaoh Menpehtire Ramesses I<br>', editable: false, start: '2469', end: '2471', title: '1292 BC - 1290 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.026, content: '<a href="https://en.wikipedia.org/wiki/Seti_I" target="_blank">6.026</a>. 塞提一世法老<br>&emsp;&emsp;&emsp;Pharaoh Menmaatre Seti I<br>', editable: false, start: '2471', end: '2482', title: '1290 BC - 1279 BC<br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.027, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_II" target="_blank">6.027</a>. 拉美西斯二世法老<br>&emsp;&emsp;&emsp;Pharaoh Usermaatre-setpenre Ramesses II the Great<br>', editable: false, start: '2482', end: '2548', title: '1279 BC - 1213 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.014, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_III" target="_blank">6.014</a>. 埃及法老 图特摩斯三世 Menkheperre Thutmose III<br>', editable: false, start: '2303', end: '2336', title: '1458 BC - 1425BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.015, content: '<a href="https://en.wikipedia.org/wiki/Amenhotep_II" target="_blank">6.015</a>. 埃及法老 阿蒙霍特普二世 Aakheperrure Amenhotep II<br>', editable: false, start: '2336', end: '2361', title: '1425 BC - 1400 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.016, content: '<a href="https://en.wikipedia.org/wiki/Thutmose_IV" target="_blank">6.016</a>. 埃及法老 图特摩斯四世 Menkheperure Thutmose IV<br>', editable: false, start: '2361', end: '2371', title: '1400 BC - 1390 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.017, content: '<a href="https://en.wikipedia.org/wiki/Amenhotep_III" target="_blank">6.017</a>. 埃及法老 阿蒙霍特普三世<br>&emsp;&emsp;&emsp;Nebmaatre Amenhotep III The Magnificent King<br>', editable: false, start: '2371', end: '2409', title: '1390 BC - 1352 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.018, content: '<a href="https://en.wikipedia.org/wiki/Nefertiti" target="_blank">6.018</a>. 埃及大皇后 娜芙蒂蒂<br>&emsp;&emsp;&emsp;Neferneferuaten Nefertiti-Queen consort of Egypt<br>', editable: false, start: '2408', end: '2425', title: '1353 BC - 1336 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.019, content: '<a href="https://en.wikipedia.org/wiki/Akhenaten" target="_blank">6.019</a>. 埃及法老 阿肯那顿 Neferkheperure-waenre Amenhotep IV / Akhenaten<br>', editable: false, start: '2409', end: '2425', title: '1352 BC - 1336 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.020, content: '<a href="https://en.wikipedia.org/wiki/Smenkhkare" target="_blank">6.020</a>. 埃及法老 斯門卡瑞 Ankhkheperure Smenkhkare<br>', editable: false, start: '2426', end: '2427', title: '1335 BC - 1334 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.021, content: '<a href="https://en.wikipedia.org/wiki/Neferneferuaten" target="_blank">6.021</a>. 埃及女法老 Ankhkheperure-mery-Neferkheperure/Neferneferuaten<br>', editable: false, start: '2427', end: '2429', title: '1334 BC - 1332 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.022, content: '<a href="https://en.wikipedia.org/wiki/Tutankhamun" target="_blank">6.022</a>. 埃及法老 圖坦卡門<br>&emsp;&emsp;&emsp;Pharaoh  Nebkheperure Tutankhaten<br>&emsp;&emsp;&emsp;Tutankhamun - The Boy King<br>', editable: false, start: '2429', end: '2437', title: '1332 BC - 1324 BC<br>1370 BC - 1330 BC', type:'', group: 6, className:'lightblue'},
+{id: 6.023, content: '<a href="https://en.wikipedia.org/wiki/Ay" target="_blank">6.023</a>. 埃及法老 阿伊 Pharaoh Kheperkheperure Ay <br>', editable: false, start: '2437', end: '2441', title: '1324 BC - 1320 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.024, content: '<a href="https://en.wikipedia.org/wiki/Horemheb" target="_blank">6.024</a>. 埃及法老 霍朗赫布<br>&emsp;&emsp;&emsp;Pharaoh Djeserkheperure-setpenre Horemheb<br>', editable: false, start: '2441', end: '2469', title: '1320 BC - 1292 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.025, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_I" target="_blank">6.025</a>. 埃及法老 拉美西斯一世 Pharaoh Menpehtire Ramesses I<br>', editable: false, start: '2469', end: '2471', title: '1292 BC - 1290 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.026, content: '<a href="https://en.wikipedia.org/wiki/Seti_I" target="_blank">6.026</a>. 埃及法老 塞提一世 Pharaoh Menmaatre Seti I<br>', editable: false, start: '2471', end: '2482', title: '1290 BC - 1279 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.027, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_II" target="_blank">6.027</a>. 埃及法老 拉美西斯二世<br>&emsp;&emsp;&emsp;Pharaoh Usermaatre-setpenre Ramesses II the Great<br>', editable: false, start: '2482', end: '2548', title: '1279 BC - 1213 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.03, content: '<a href="https://en.wikipedia.org/wiki/Merneptah" target="_blank">6.03</a>. 埃及法老 麥倫普塔 Pharaoh Merneptah<br>', editable: false, start: '2548', end: '2558', title: '1213 BC - 1203 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.031, content: '<a href="https://en.wikipedia.org/wiki/Amenmesse" target="_blank">6.031</a>. 埃及法老 阿蒙麥西斯 Pharaoh Amenmesse<br>', editable: false, start: '2740', end: '2563', title: '1021 BC - 1198 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.032, content: '<a href="https://en.wikipedia.org/wiki/Seti_II" target="_blank">6.032</a>. 埃及法老 塞提二世 Pharaoh Seti II<br>', editable: false, start: '2558', end: '2564', title: '1203 BC - 1197 BC<br>', type:'point', group: 6, className:'lightblue'},
 
     {id: 6.033, content: '6.033. 以周武王為首的周武推翻商代末代周王<br>&emsp;&emsp;&emsp;The Zhou force (led by King Wu of Zhou) overthrows<br>&emsp;&emsp;&emsp;the last king of Shang Dynasty; Zhou Dynasty<br>&emsp;&emsp;&emsp;establishes in China', editable: false, start: '2715', title: '1046 BC', type: 'point', group: 6, className:''},
+
+{id: 6.034, content: '<a href="https://en.wikipedia.org/wiki/Siptah" target="_blank">6.034</a>. 埃及法老 西普塔 Pharaoh Siptah<br>', editable: false, start: '2564', end: '2570', title: '1197 BC - 1191 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.035, content: '<a href="https://en.wikipedia.org/wiki/Twosret" target="_blank">6.035</a>. 埃及法老 塔沃斯塔王后 Pharaoh Twosret<br>', editable: false, start: '2570', end: '2572', title: '1191 BC - 1189 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.036, content: '<a href="https://en.wikipedia.org/wiki/Setnakhte" target="_blank">6.036</a>. 埃及法老 塞特納赫特 Pharoah Setnakhte<br>', editable: false, start: '2572', end: '2575', title: '1189 BC - 1186 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.037, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_III" target="_blank">6.037</a>. 埃及法老 拉美西斯三世 Ramesses III<br>', editable: false, start: '2576', end: '2606', title: '1185 BC - 1155 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.038, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_IV" target="_blank">6.038</a>. 埃及法老 拉美西斯四世 Ramesses IV<br>', editable: false, start: '2606', end: '2612', title: '1155 BC - 1149 BC<br>', type:'', group: 6, className:'lightblue'},
+{id: 6.039, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_V" target="_blank">6.039</a>. 埃及法老 拉美西斯五世 Ramesses V<br>', editable: false, start: '2612', end: '2616', title: '1149 BC - 1145 BC<br>', type:'', group: 6, className:'lightblue'},
+
+{id: 6.041, content: '<a href="https://en.wikipedia.org/wiki/Ramesses_VII" target="_blank">6.041</a>. 埃及法老 拉美西斯七世 Ramesses VII<br>', editable: false, start: '2625', end: '2632', title: '1136 BC - 1129 BC<br>', type:'', group: 6, className:'lightblue'},
+
 
     {id: 6.046, content: '6.046. 希臘城邦的崛起<br>&emsp;&emsp;&emsp;Rise of Greek city-states', editable: false, start: '2961', title: '800 BC', type: 'point', group: 6, className:''},
     {id: 6.047, content: '6.047. 首次記錄奧運<br>&emsp;&emsp;&emsp;First recorded Olympic Games', editable: false, start: '2985', title: '776 BC', type: 'point', group: 6, className:''},
@@ -2210,17 +2323,17 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 6.05, content: "6.05. &nbsp;春秋時期在中國開始; 周朝的權力正在減弱<br>&emsp;&emsp;&emsp;Spring and Autumn period begins in China; Zhou Dynasty's power is diminishing", editable: false, start: '2991', title: '770 BC', type: 'point', group: 6, className:''},
     {id: 6.051, content: '6.051. 羅馬的建立<br>&emsp;&emsp;&emsp;Founding of Rome<br>', editable: false, start: '3008', title: '753 BC<br> ', type:'point', group: 6, className:''},
 
-    {id: 6.0521, content: '<a href="https://en.wikipedia.org/wiki/Nabopolassar" target="_blank">6.0521</a>. 巴比倫王那波帕拉薩爾<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;Chaldean king of Babylonia Nabopolassar<br>', editable: false, start: '3135', end: '3156', title: '626 BC - 605 BC<br>', type:'', group: 6, className:'green'},
+    {id: 6.0521, content: '<a href="https://en.wikipedia.org/wiki/Nabopolassar" target="_blank">6.0521</a>. 巴比倫王 那波帕拉薩爾<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;Chaldean king of Babylonia Nabopolassar<br>', editable: false, start: '3135', end: '3156', title: '626 BC - 605 BC<br>', type:'', group: 6, className:'green'},
 
-    {id: 6.0522, content: '<a href="https://en.wikipedia.org/wiki/Nebuchadnezzar_II" target="_blank">6.0522</a>. 巴比倫王尼布甲尼撒二世<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Nebuchadnezzar II<br>', editable: false, start: '3157', end: '3199', title: '604 BC - 562 BC<br>', type:'', group: 6, className:'green'},
+    {id: 6.0522, content: '<a href="https://en.wikipedia.org/wiki/Nebuchadnezzar_II" target="_blank">6.0522</a>. 巴比倫王 尼布甲尼撒二世<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Nebuchadnezzar II<br>', editable: false, start: '3157', end: '3199', title: '604 BC - 562 BC<br>', type:'', group: 6, className:'green'},
 
-    {id: 6.0523, content: '<a href="https://en.wikipedia.org/wiki/Amel-Marduk" target="_blank">6.0523</a>. 巴比倫王以未米羅達<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Amel-Marduk<br>', editable: false, start: '3199', end: '3201', title: '562 BC - 560 BC<br>', type:'', group: 6, className:'green'},
+    {id: 6.0523, content: '<a href="https://en.wikipedia.org/wiki/Amel-Marduk" target="_blank">6.0523</a>. 巴比倫王 以未米羅達<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Amel-Marduk<br>', editable: false, start: '3199', end: '3201', title: '562 BC - 560 BC<br>', type:'', group: 6, className:'green'},
 
-    {id: 6.0524, content: '<a href="https://en.wikipedia.org/wiki/Neriglissar" target="_blank">6.0524</a>. 巴比倫王涅里格利沙爾<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Neriglissar<br>', editable: false, start: '3201', end: '3205', title: '560 BC - 556 BC<br>', type:'', group: 6, className:'green'},
+    {id: 6.0524, content: '<a href="https://en.wikipedia.org/wiki/Neriglissar" target="_blank">6.0524</a>. 巴比倫王 涅里格利沙爾<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Neriglissar<br>', editable: false, start: '3201', end: '3205', title: '560 BC - 556 BC<br>', type:'', group: 6, className:'green'},
 
-    {id: 6.0525, content: '<a href="https://en.wikipedia.org/wiki/Labashi-Marduk" target="_blank">6.0525</a>. 巴比倫王拉巴施馬爾杜克<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Labashi-Marduk<br>', editable: false, start: '3205', end: '3205', title: '556 BC<br>', type:'', group: 6, className:'green'},
+    {id: 6.0525, content: '<a href="https://en.wikipedia.org/wiki/Labashi-Marduk" target="_blank">6.0525</a>. 巴比倫王 拉巴施馬爾杜克<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Labashi-Marduk<br>', editable: false, start: '3205', end: '3205', title: '556 BC<br>', type:'', group: 6, className:'green'},
 
-    {id: 6.0526, content: '<a href="https://en.wikipedia.org/wiki/Nabonidus" target="_blank">6.0526</a>. 巴比倫王那波尼德 (子伯沙撒)<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Nabonidus (son Belshazzar)<br>', editable: false, start: '3205', end: '3222', title: '556 BC - 539 BC<br>', type:'', group: 6, className:'green'},
+    {id: 6.0526, content: '<a href="https://en.wikipedia.org/wiki/Nabonidus" target="_blank">6.0526</a>. 巴比倫王 那波尼德 (子伯沙撒)<br>&nbsp;&nbsp;&emsp;&emsp;&emsp;King of Babylon Nabonidus (son Belshazzar)<br>', editable: false, start: '3205', end: '3222', title: '556 BC - 539 BC<br>', type:'', group: 6, className:'green'},
 
     {id: 6.056, content: '6.056. 波斯帝國的崛起<br>&emsp;&emsp;&emsp;Rise of Persian Empire<br>', editable: false, start: '3108', title: '653 BC<br> ', type:'point', group: 6, className:''},
 
@@ -2242,40 +2355,85 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 6.072, content: '<a href="https://en.wikipedia.org/wiki/Plato" target="_blank">6.072</a>. 柏拉圖<br>&emsp;&emsp;&emsp;Plato', editable: false, start: '3333', end: '3413', title: '428 BC - 348 BC', type: 'point', group: 6, className:''},
     {id: 6.073, content: '<a href="https://en.wikipedia.org/wiki/Aristotle" target="_blank">6.073</a>. 亞里士多德<br>&emsp;&emsp;&emsp;Aristotle', editable: false, start: '3377', end: '3439', title: '384 BC - 322 BC', type: 'point', group: 6, className:''},
 
-    {id: 6.132, content: '<a href="https://en.wikipedia.org/wiki/Cyrus_the_Great" target="_blank">6.132</a>. 波斯古列大帝 Persia Cyrus the Great<br>', editable: false, start: '3202', end: '3231', title: '559 BC - 530 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.133, content: '<a href="https://en.wikipedia.org/wiki/Cambyses_II" target="_blank">6.133</a>. 波斯甘比斯二世 Persia Cambyses II<br>', editable: false, start: '3231', end: '3239', title: '530 BC - 522 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.135, content: '<a href="https://en.wikipedia.org/wiki/Darius_the_Great" target="_blank">6.135</a>. 波斯 大利烏王一世 Persia Darius I<br>', editable: false, start: '3239', end: '3275', title: '522 BC - 486 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.136, content: '<a href="https://en.wikipedia.org/wiki/Xerxes_I" target="_blank">6.136</a>. 波斯 薛西王一世(亞哈隨魯王) Persia Xerxes I (King Ahasuerus)<br>', editable: false, start: '3276', end: '3296', title: '485 BC - 465 BC<br>', type:'', group: 6, className:'lightgreen'},
+    {id: 6.132, content: '<a href="https://en.wikipedia.org/wiki/Cyrus_the_Great" target="_blank">6.132</a>. 波斯王 古列大帝 Persia Cyrus the Great<br>', editable: false, start: '3202', end: '3231', title: '559 BC - 530 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+    {id: 6.133, content: '<a href="https://en.wikipedia.org/wiki/Cambyses_II" target="_blank">6.133</a>. 波斯王 甘比斯二世 Persia Cambyses II<br>', editable: false, start: '3231', end: '3239', title: '530 BC - 522 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.135, content: '<a href="https://en.wikipedia.org/wiki/Darius_the_Great" target="_blank">6.135</a>. 波斯王 大利烏王一世 Persia Darius I<br>', editable: false, start: '3239', end: '3275', title: '522 BC - 486 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.136, content: '<a href="https://en.wikipedia.org/wiki/Xerxes_I" target="_blank">6.136</a>. 波斯王 薛西王一世(亞哈隨魯王) Persia Xerxes I (King Ahasuerus)<br>', editable: false, start: '3276', end: '3296', title: '485 BC - 465 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
     {id: 6.137, content: '<a href="https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia" target="_blank">6.137</a>. 波斯 亞達薛西王一世 Persia Artaxerxes I<br>', editable: false, start: '3296', end: '3337', title: '465 BC - 424 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.138, content: '<a href="https://en.wikipedia.org/wiki/Xerxes_II_of_Persia" target="_blank">6.138</a>. 波斯 薛西王二世 Persia Xerxes II<br>', editable: false, start: '3337', end: '3337', title: '424 BC - 424 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.14, content: '<a href="https://en.wikipedia.org/wiki/Darius_II" target="_blank">6.14</a>. 波斯 大利烏王二世 Persia Darius II<br>', editable: false, start: '3337', end: '3357', title: '424 BC - 404 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.141, content: '<a href="https://en.wikipedia.org/wiki/Artaxerxes_II_of_Persia" target="_blank">6.141</a>. 波斯 亞達薛西王二世 Persia Artaxerxes II<br>', editable: false, start: '3357', end: '3403', title: '404 BC - 358 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.142, content: '<a href="https://en.wikipedia.org/wiki/Artaxerxes_III" target="_blank">6.142</a>. 波斯亞達薛西王三世 Persia Artaxerxes III<br>', editable: false, start: '3403', end: '3423', title: '358 BC - 338 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.143, content: '<a href="https://en.wikipedia.org/wiki/Arses_of_Persia" target="_blank">6.143</a>. 波斯 亞達薛西王四世 Persia Artaxerxes IV<br>', editable: false, start: '3423', end: '3425', title: '338 BC - 336 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.144, content: '<a href="https://en.wikipedia.org/wiki/Darius_III" target="_blank">6.144</a>. 波斯 大利烏王三世 Persia Darius III<br>', editable: false, start: '3425', end: '3431', title: '336 BC - 330 BC<br>', type:'', group: 6, className:'lightgreen'},
-    {id: 6.145, content: '<a href="https://en.wikipedia.org/wiki/Bessus" target="_blank">6.145</a>. 波斯 亞達薛西王五世 Persia Artaxerxes V<br>', editable: false, start: '3431', end: '3432', title: '330 BC - 329 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.138, content: '<a href="https://en.wikipedia.org/wiki/Xerxes_II_of_Persia" target="_blank">6.138</a>. 波斯王 薛西王二世 Persia Xerxes II<br>', editable: false, start: '3337', end: '3337', title: '424 BC - 424 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.14, content: '<a href="https://en.wikipedia.org/wiki/Darius_II" target="_blank">6.14</a>. 波斯王 大利烏王二世 Persia Darius II<br>', editable: false, start: '3337', end: '3357', title: '424 BC - 404 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.141, content: '<a href="https://en.wikipedia.org/wiki/Artaxerxes_II_of_Persia" target="_blank">6.141</a>. 波斯王 亞達薛西王二世 Persia Artaxerxes II<br>', editable: false, start: '3357', end: '3403', title: '404 BC - 358 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.142, content: '<a href="https://en.wikipedia.org/wiki/Artaxerxes_III" target="_blank">6.142</a>. 波斯王 亞達薛西王三世 Persia Artaxerxes III<br>', editable: false, start: '3403', end: '3423', title: '358 BC - 338 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.143, content: '<a href="https://en.wikipedia.org/wiki/Arses_of_Persia" target="_blank">6.143</a>. 波斯王 亞達薛西王四世 Persia Artaxerxes IV<br>', editable: false, start: '3423', end: '3425', title: '338 BC - 336 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.144, content: '<a href="https://en.wikipedia.org/wiki/Darius_III" target="_blank">6.144</a>. 波斯王 大利烏王三世 Persia Darius III<br>', editable: false, start: '3425', end: '3431', title: '336 BC - 330 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
+    {id: 6.145, content: '<a href="https://en.wikipedia.org/wiki/Bessus" target="_blank">6.145</a>. 波斯王 亞達薛西王五世 Persia Artaxerxes V<br>', editable: false, start: '3431', end: '3432', title: '330 BC - 329 BC<br>', type:'', group: 6, className:'lightgreen'},
+    
+
     {id: 6.149, content: '<a href="https://en.wikipedia.org/wiki/Alexander_the_Great" target="_blank">6.149</a>. 馬其頓 亞歷山大大帝 (死在巴比倫)<br>&emsp;&emsp;&emsp;Macedonia Alexander the Great (Died in Babylon)<br>', editable: false, start: '3425', end: '3438', title: '336 BC - 323-06-13 BC<br>', type:'', group: 6, className:'grey'},
     {id: 6.15, content: '<a href="https://en.wikipedia.org/wiki/Philip_III_of_Macedon" target="_blank">6.15</a>. 馬其頓 腓力三世 Macedonia Philip III<br>', editable: false, start: '3438', end: '3444', title: '323 BC - 317 BC<br>', type:'', group: 6, className:'grey'},
+
     {id: 6.151, content: '<a href="https://en.wikipedia.org/wiki/Alexander_IV_of_Macedon" target="_blank">6.151</a>. 馬其頓 亞歷山大四世 Macedonia Alexander IV<br>', editable: false, start: '3438', end: '3452', title: '323 BC - 309 BC<br>', type:'', group: 6, className:'grey'},
+
     {id: 6.152, content: '<a href="https://en.wikipedia.org/wiki/Perdiccas_III_of_Macedon" target="_blank">6.152</a>. 馬其頓 Macedonia Perdiccas<br>', editable: false, start: '3438', end: '3440', title: '323 BC - 321 BC<br>', type:'', group: 6, className:'grey'},
+
     {id: 6.153, content: '<a href="https://en.wikipedia.org/wiki/Antipater" target="_blank">6.153</a>. 馬其頓 Macedonia Antipater<br>', editable: false, start: '3440', end: '3442', title: '321 BC - 319 BC<br>', type:'', group: 6, className:'grey'},
+
     {id: 6.154, content: '<a href="https://en.wikipedia.org/wiki/Polyperchon" target="_blank">6.154</a>. 馬其頓 Macedonia Polyperchon<br>', editable: false, start: '3442', end: '3445', title: '319 BC - 316 BC<br>', type:'', group: 6, className:'grey'},
+
     {id: 6.155, content: '<a href="https://en.wikipedia.org/wiki/Cassander" target="_blank">6.155</a>. 馬其頓 Macedonia Cassander <br>', editable: false, start: '3445', end: '3452', title: '316 BC - 309 BC<br>', type:'', group: 6, className:'grey'},
+
     {id: 6.157, content: '<a href="https://en.wikipedia.org/wiki/Seleucus_I_Nicator" target="_blank">6.157</a>. 西流基 西流基一世 Seleucid Seleucus I Nicator<br>', editable: false, start: '3448', end: '3480', title: '313 BC - 281 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.158, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_I_Soter" target="_blank">6.158</a>. 西流基 安提奧卡斯一世  Seleucid Antiochus I Soter<br>', editable: false, start: '3480', end: '3500', title: '281 BC - 261 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.159, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_II_Theos" target="_blank">6.159</a>. 西流基 安提奧卡斯二世 Seleucid Antiochus II Theos <br>', editable: false, start: '3500', end: '3515', title: '261 BC - 246 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.16, content: '<a href="https://en.wikipedia.org/wiki/Seleucus_II_Callinicus" target="_blank">6.16</a>. 西流基 西流基二世 Seleucid Seleucus II Callinicus<br>', editable: false, start: '3515', end: '3536', title: '246 BC - 225 BC<br>', type:'', group: 6, className:'lightgreen'},
+ 
     {id: 6.161, content: '<a href="https://en.wikipedia.org/wiki/Seleucus_III_Ceraunus" target="_blank">6.161</a>. 西流基 西流基三世 Seleucid Seleucus III Ceraunus<br>', editable: false, start: '3536', end: '3538', title: '225 BC - 223 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.162, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_III_the_Great" target="_blank">6.162</a>. 西流基 安提奧卡斯三世 Seleucid Antiochus III the Great<br>', editable: false, start: '3538', end: '3574', title: '223 BC - 187 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.163, content: '<a href="https://en.wikipedia.org/wiki/Seleucus_IV_Philopator" target="_blank">6.163</a>. 西流基 西流基四世 Seleucid Seleucus IV Philopator<br>', editable: false, start: '3574', end: '3586', title: '187 BC - 175 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.164, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_IV_Epiphanes" target="_blank">6.164</a>. 西流基 安提奧卡斯四世 Seleucid Antiochus IV Epiphanes <br>', editable: false, start: '3586', end: '3598', title: '175 BC - 163 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.165, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_V_Eupator" target="_blank">6.165</a>. 西流基 安提奧卡斯五世 Seleucid Antiochus V Eupator<br>', editable: false, start: '3598', end: '3600', title: '163 BC - 161 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.166, content: '<a href="https://en.wikipedia.org/wiki/Demetrius_I_Soter" target="_blank">6.166</a>. 西流基 德米特里一世 Seleucid Demetrius I Soter<br>', editable: false, start: '3600', end: '3611', title: '161 BC - 150 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.167, content: '<a href="https://en.wikipedia.org/wiki/Alexander_Balas" target="_blank">6.167</a>. 西流基 亞歷山大一世 Seleucid Alexander Balas<br>', editable: false, start: '3611', end: '3615', title: '150 BC - 146 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.168, content: '<a href="https://en.wikipedia.org/wiki/Demetrius_II_Nicator" target="_blank">6.168</a>. 西流基 德米特里二世 Seleucid Demetrius II Nicator<br>', editable: false, start: '3615', end: '3622', title: '146 BC - 139 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.169, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_VI_Dionysus" target="_blank">6.169</a>. 西流基 安提奧卡斯六世 Seleucid Antiochus VI Dionysus<br>', editable: false, start: '3616', end: '3619', title: '145 BC - 142 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.17, content: '<a href="https://en.wikipedia.org/wiki/Antiochus_VII_Sidetes" target="_blank">6.17</a>. 西流基 安提奧卡斯七世 Seleucid Antiochus VII Sidetes<br>', editable: false, start: '3622', end: '3632', title: '139 BC - 129 BC<br>', type:'', group: 6, className:'lightgreen'},
+
     {id: 6.171, content: '<a href="https://en.wikipedia.org/wiki/Maccabean_Revolt" target="_blank">6.171</a>. 馬卡比起義 Maccabean Revolt<br>', editable: false, start: '3594', end: '3601', title: '167 BC - 160 BC<br>', type:'', group: 6, className:'blue'},
+
+
     {id: 6.172, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_I_Soter" target="_blank">6.172</a>. 托勒密一世 Ptolemy I Soter<br>', editable: false, start: '3456', end: '3479', title: '305 BC - 282 BC<br>', type:'', group: 6, className:'lightblue'},
     {id: 6.173, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_II_Philadelphus" target="_blank">6.173</a>. 托勒密二世 Ptolemy II Philadelphus<br>', editable: false, start: '3476', end: '3515', title: '285 BC - 246 BC<br>', type:'', group: 6, className:'lightblue'},
     {id: 6.174, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_III_Euergetes" target="_blank">6.174</a>. 托勒密三世 Ptolemy III Euergetes<br>', editable: false, start: '3515', end: '3539', title: '246 BC - 222 BC<br>', type:'', group: 6, className:'lightblue'},
@@ -2292,7 +2450,8 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 6.185, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_X_Alexander_I" target="_blank">6.185</a>. 托勒密十世 Ptolemy X Alexander I<br>', editable: false, start: '3654', end: '3673', title: '107 BC - 88 BC<br>', type:'', group: 6, className:'lightblue'},
     {id: 6.186, content: '<a href="https://en.wikipedia.org/wiki/Septuagint" target="_blank">6.186</a>. 七十士譯本-將希伯來文聖經譯成希臘文<br>&emsp;&emsp;&emsp;Septuagint LXX  translate the Torah from Biblical Hebrew into Greek', editable: false, start: '3513', end: '3629', title: '248 BC - 132 BC', type: 'point', group: 6, className:''},
     {id: 6.187, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_XI_Alexander_II" target="_blank">6.187</a>. 托勒密十一世 Ptolemy XI Alexander II<br>', editable: false, start: '3681', end: '3681', title: '80 BC - 80 BC<br>', type:'', group: 6, className:'lightblue'},
-  //{id: 6.188, content: '6.188. 馬卡比起義 Maccabean Revolt<br>', editable: false, start: '3594', end: '3601', title: '167 BC - 160BC<br>', type:'', group: 6, className:'blue'},
+   //{id: 6.188, content: '6.188. 馬卡比起義 Maccabean Revolt<br>', editable: false, start: '3594', end: '3601', title: '167 BC - 160BC<br>', type:'', group: 6, className:'blue'},
+
     {id: 6.189, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_XII_Auletes" target="_blank">6.189</a>. 托勒密十二世 Ptolemy XII Auletes<br>', editable: false, start: '3706', end: '3710', title: '55 BC - 51 BC<br>', type:'', group: 6, className:'lightblue'},
     {id: 6.19, content: '<a href="https://en.wikipedia.org/wiki/Berenice_IV_of_Egypt" target="_blank">6.19</a>. 貝勒尼基四世 Berenice IV Epiphaneia<br>', editable: false, start: '3703', end: '3706', title: '58 BC - 55 BC<br>', type:'', group: 6, className:'lightblue'},
     {id: 6.191, content: '<a href="https://en.wikipedia.org/wiki/Ptolemy_XIII_Theos_Philopator" target="_blank">6.191</a>. 托勒密十三世 Ptolemy XIII Theos Philopator<br>', editable: false, start: '3710', end: '3714', title: '51 BC - 47 BC<br>', type:'', group: 6, className:'lightblue'},
@@ -2437,4 +2596,172 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 6.410, content: '<a href="https://en.wikipedia.org/wiki/Tiberius_II_Constantine" target="_blank">6.410</a>. 拜占庭皇帝 提比略二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Tiberius II Constantine<br>', editable: false, start: '4338', end: '4342', title: 'AD 578 - AD 582 <br>', type:'', group: 6, className:'lightblue'},
     {id: 6.411, content: '<a href="https://en.wikipedia.org/wiki/Maurice_(emperor)" target="_blank">6.411</a>. 拜占庭皇帝 莫里斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Maurice<br>', editable: false, start: '4342', end: '4362', title: 'AD 582 - AD 602 <br>', type:'', group: 6, className:'lightblue'},
     {id: 6.412, content: '<a href="https://en.wikipedia.org/wiki/Phocas" target="_blank">6.412</a>. 拜占庭皇帝 福卡斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Phocas<br>', editable: false, start: '4362', end: '4370', title: 'AD 602 - AD 610 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.413, content: '
+    {id: 6.413, content: '<a href="https://en.wikipedia.org/wiki/Heraclius" target="_blank">6.413</a>. 拜占庭皇帝 希拉克略<br>&emsp;&emsp;&emsp;Byzantine Emperor Heraclius<br>', editable: false, start: '4370', end: '4401', title: 'AD 610 - AD 641 <br>', type:'', group: 6, className:'lightblue'},
+    
+
+    {id: 6.467, content: '6.467. 首任教皇大貴格利<br>&emsp;&emsp;&emsp;First Pope, Gregory I<br>', editable: false, start: '4350', end: '4364', title: 'AD 590 - AD 604 <br>', type:'point', group: 6, className:''},
+    {id: 6.475, content: '<a href="https://en.wikipedia.org/wiki/Mosque_of_Omar_(Jerusalem)" target="_blank">6.475</a>. 清真寺建在所羅門聖殿遺址上<br>&emsp;&emsp;&emsp;Mosque built by Omar on the site of Solomon`s Temple<br>',  editable: false, start: '4397', title: 'AD 637', type:'point', group: 6, className:''}, 
+    {id: 6.476, content: '<a href="https://en.wikipedia.org/wiki/Constantine_III_(Byzantine_emperor)" target="_blank">6.476</a>. 拜占庭皇帝 君士坦丁三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine III<br>',  editable: false, start: '4401', end: '4401', title: 'AD 641 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.477, content: '<a href="https://en.wikipedia.org/wiki/Heraklonas" target="_blank">6.477</a>. 拜占庭皇帝 赫拉克洛納斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Heraklonas<br>',  editable: false, start: '4401', end: '4401', title: 'AD 641 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.478, content: '<a href="https://en.wikipedia.org/wiki/Constans_II" target="_blank">6.478</a>. 拜占庭皇帝 君士坦斯二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constans II<br>', editable: false, start: '4401', end: '4428', title: 'AD 641 - AD 668 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.479, content: '<a href="https://en.wikipedia.org/wiki/Constantine_IV" target="_blank">6.479</a>. 拜占庭皇帝 君士坦丁四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine IV `the Bearded`<br>', editable: false, start: '4428', end: '4445', title: 'AD 668 - AD 685 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.48, content: '<a href="https://en.wikipedia.org/wiki/Justinian_II" target="_blank">6.480</a>. 拜占庭皇帝 查士丁尼二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Justinian II `the Slit-nosed` <br>', editable: false, start: '4445', end: '4455', title: 'AD 685 - AD 695 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.481, content: '<a href="https://en.wikipedia.org/wiki/Leontios" target="_blank">6.481</a>. 拜占庭皇帝 列昂提<br>&emsp;&emsp;&emsp;Byzantine Emperor Leontios<br>', editable: false, start: '4455', end: '4458', title: 'AD 695 - AD 698 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.482, content: '<a href="https://en.wikipedia.org/wiki/Tiberios_III" target="_blank">6.482</a>. 拜占庭皇帝 提比略三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Tiberius III Apsimar<br>', editable: false, start: '4458', end: '4465', title: 'AD 698 - AD 705 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.483, content: '<a href="https://en.wikipedia.org/wiki/Justinian_II" target="_blank">6.483</a>. 拜占庭皇帝 查士丁尼二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Justinian II `the Slit-nosed`<br>', editable: false, start: '4465', end: '4471', title: 'AD 705 - AD 711 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.484, content: '<a href="https://en.wikipedia.org/wiki/Philippikos_Bardanes" target="_blank">6.484</a>. 拜占庭皇帝 菲利皮科斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Philippikos Bardanes<br>', editable: false, start: '4471', end: '4473', title: 'AD 711 - AD 713 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.485, content: '<a href="https://en.wikipedia.org/wiki/Anastasios_II" target="_blank">6.485</a>. 拜占庭皇帝 阿纳斯塔修斯二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Anastasios II<br>', editable: false, start: '4473', end: '4475', title: 'AD 713 - AD 715 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.486, content: '<a href="https://en.wikipedia.org/wiki/Theodosius_III" target="_blank">6.486</a>. 拜占庭皇帝 狄奥多西三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Theodosios III<br>', editable: false, start: '4475', end: '4477', title: 'AD 715 - AD 717 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.487, content: '<a href="https://en.wikipedia.org/wiki/Leo_III_the_Isaurian" target="_blank">6.487</a>. 拜占庭皇帝 利奥三世,東羅馬帝國皇帝<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo III<br>', editable: false, start: '4477', end: '4501', title: 'AD 717 - AD 741 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.488, content: '<a href="https://en.wikipedia.org/wiki/Constantine_V" target="_blank">6.488</a>. 拜占庭皇帝 君士坦丁五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine V `the Dung-named`<br>', editable: false, start: '4501', end: '4535', title: 'AD 741 - AD 775 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.49, content: '<a href="https://en.wikipedia.org/wiki/Charlemagne" target="_blank">6.49</a>. 查理曼大帝<br>&emsp;&emsp;&emsp;Emperor of the Romans, Charlemagne (Charles the Great)<br>', editable: false, start: '4528', end: '4574', title: 'AD 768 - AD 814 <br>(Emperor of the Romans, <br>King of the Lombards & <br>King of the Franks)<br>', type:'', group: 6, className:'beige'},
+    {id: 6.491, content: '<a href="https://en.wikipedia.org/wiki/Leo_IV_the_Khazar" target="_blank">6.491</a>. 拜占庭皇帝 利奥四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo IV `the Khazar`<br>', editable: false, start: '4535', end: '4540', title: 'AD 775 - AD 780 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.492, content: '<a href="https://en.wikipedia.org/wiki/Constantine_VI" target="_blank">6.492</a>. 拜占庭皇帝 君士坦丁六世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine VI<br>', editable: false, start: '4540', end: '4557', title: 'AD 780 - AD 797 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.493, content: '<a href="https://en.wikipedia.org/wiki/Irene_of_Athens" target="_blank">6.493</a>. 拜占庭女帝 伊琳娜<br>&emsp;&emsp;&emsp;Byzantine Empress Irene of Athens<br>', editable: false, start: '4557', end: '4562', title: 'AD 797 - AD 802 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.494, content: '<a href="https://en.wikipedia.org/wiki/Nikephoros_I" target="_blank">6.494</a>. 拜占庭皇帝 尼基弗魯斯一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Nikephoros I `Genikos`<br>', editable: false, start: '4562', end: '4571', title: 'AD 802 - AD 811 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.495, content: '<a href="https://en.wikipedia.org/wiki/Staurakios" target="_blank">6.495</a>. 拜占庭皇帝 斯陶拉基奥斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Staurakios<br>', editable: false, start: '4571', end: '4572', title: 'AD 811 - AD 812 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.496, content: '<a href="https://en.wikipedia.org/wiki/Michael_I_Rangabe" target="_blank">6.496</a>. 拜占庭皇帝 米海尔一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael I Rangabe<br>', editable: false, start: '4572', end: '4573', title: 'AD 812 - AD 813 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.497, content: '<a href="https://en.wikipedia.org/wiki/Leo_V_the_Armenian" target="_blank">6.497</a>. 拜占庭皇帝 利奥五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo V `the Armenian`<br>', editable: false, start: '4573', end: '4580', title: 'AD 813 - AD 820 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.498, content: '<a href="https://en.wikipedia.org/wiki/Michael_II" target="_blank">6.498</a>. 拜占庭皇帝 米海尔二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael II `the Amorian`<br>', editable: false, start: '4580', end: '4589', title: 'AD 820 - AD 829 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.499, content: '<a href="https://en.wikipedia.org/wiki/Theophilos_(emperor)" target="_blank">6.499</a>. 拜占庭皇帝 狄奥菲洛<br>&emsp;&emsp;&emsp;Byzantine Emperor Theophilos<br>', editable: false, start: '4589', end: '4602', title: 'AD 829 - AD 842 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.5, content: '<a href="https://en.wikipedia.org/wiki/Michael_III" target="_blank">6.5</a>. 拜占庭皇帝 米海尔三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael III `the Drunkard`<br>', editable: false, start: '4602', end: '4627', title: 'AD 842 - AD 867 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.501, content: '<a href="https://en.wikipedia.org/wiki/Basil_I" target="_blank">6.501</a>. 拜占庭皇帝 巴西爾一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Basil I `the Macedonian`<br>', editable: false, start: '4627', end: '4646', title: 'AD 867 - AD 886 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.502, content: '<a href="https://en.wikipedia.org/wiki/Leo_VI_the_Wise" target="_blank">6.502</a>. 拜占庭皇帝 利奧六世<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo VI `the Wise`<br>', editable: false, start: '4646', end: '4672', title: 'AD 886 - AD 912 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.503, content: '<a href="https://en.wikipedia.org/wiki/Alexander_(Byzantine_emperor)" target="_blank">6.503</a>. 拜占庭皇帝 亞歷山大<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexander<br>', editable: false, start: '4672', end: '4673', title: 'AD 912 - AD 913 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.504, content: '<a href="https://en.wikipedia.org/wiki/Constantine_VII" target="_blank">6.504</a>. 拜占庭皇帝 君士坦丁七世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine VII `the Purple-born`,Senior Byzantine Emperor<br>', editable: false, start: '4673', end: '4719', title: 'AD 913 - AD 959 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.521, content: '<a href="https://en.wikipedia.org/wiki/Romanos_I_Lekapenos" target="_blank">6.521</a>. 拜占庭皇帝 羅曼努斯一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos I Lekapenos<br>', editable: false, start: '4680', end: '4704', title: 'AD 920 - AD 944 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.536, content: '<a href="https://en.wikipedia.org/wiki/Romanos_II" target="_blank">6.536</a>. 拜占庭皇帝 羅曼努斯二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos II `the Purple-born`<br>', editable: false, start: '4719', end: '4723', title: 'AD 959 - AD 963 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.537, content: '<a href="https://en.wikipedia.org/wiki/Nikephoros_II_Phokas" target="_blank">6.537</a>. 拜占庭皇帝 尼基弗魯斯二世<br>&emsp;&emsp;&emsp;Nikephoros II Phokas<br>', editable: false, start: '4723', end: '4729', title: 'AD 963 - AD 969 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.538, content: '<a href="https://en.wikipedia.org/wiki/John_I_Tzimiskes" target="_blank">6.538</a>. 拜占庭皇帝 约翰一世<br>&emsp;&emsp;&emsp;Byzantine Emperor John I Tzimiskes<br>', editable: false, start: '4729', end: '4736', title: 'AD 969 - AD 976 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.549, content: '<a href="https://en.wikipedia.org/wiki/Basil_II" target="_blank">6.549</a>. 拜占庭皇帝 巴西爾二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Basil II `the Bulgar-Slayer`<br>', editable: false, start: '4736', end: '4785', title: 'AD 976 - AD 1025 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.602, content: '<a href="https://en.wikipedia.org/wiki/Constantine_VIII" target="_blank">6.602</a>. 拜占庭皇帝 君士坦丁八世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine VIII `the Purple-born`<br>', editable: false, start: '4785', end: '4788', title: 'AD 1025 - AD 1028 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.603, content: '<a href="https://en.wikipedia.org/wiki/Zo%C3%AB_Porphyrogenita" target="_blank">6.603</a>. 佐伊女皇, 拜占庭帝國女皇<br>&emsp;&emsp;&emsp;Byzantine Empress Zoe "the Purple-born"<br>', editable: false, start: '4788', end: '4810', title: 'AD 1028 - AD 1050 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.617, content: '<a href="https://en.wikipedia.org/wiki/Romanos_III_Argyros" target="_blank">6.617</a>. 拜占庭皇帝 羅曼努斯三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos III Argyros<br>', editable: false, start: '4788', end: '4794', title: 'AD 1028 - AD 1034 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.618, content: '<a href="https://en.wikipedia.org/wiki/Michael_IV_the_Paphlagonian" target="_blank">6.618</a>. 拜占庭皇帝 米海爾四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael IV `the Paphlagonian`<br>', editable: false, start: '4794', end: '4801', title: 'AD 1034 - AD 1041 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.619, content: '<a href="https://en.wikipedia.org/wiki/Michael_V_Kalaphates" target="_blank">6.619</a>. 拜占庭皇帝 米海爾五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael V "the Caulker"<br>', editable: false, start: '4801', end: '4802', title: 'AD 1041 - AD 1042 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.62, content: '<a href="https://en.wikipedia.org/wiki/Theodora_Porphyrogenita_(11th_century)" target="_blank">6.62</a>. 拜占庭皇帝 狄奧多拉女皇<br>&emsp;&emsp;&emsp;Byzantine Empress & Co-Ruler Theodora<br>', editable: false, start: '4802', end: '4816', title: 'AD 1042 - AD 1056 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.621, content: '<a href="https://en.wikipedia.org/wiki/Constantine_IX_Monomachos" target="_blank">6.621</a>. 拜占庭皇帝 君士坦丁九世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine IX Monomachos<br>', editable: false, start: '4802', end: '4815', title: 'AD 1042 - AD 1055 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.622, content: '<a href="https://en.wikipedia.org/wiki/Michael_VI_Bringas" target="_blank">6.622</a>. 拜占庭皇帝 米海尔六世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael VI Bringas `Stratiotikos`<br>', editable: false, start: '4816', end: '4817', title: 'AD 1056 - AD 1057 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.623, content: '<a href="https://en.wikipedia.org/wiki/Isaac_I_Komnenos" target="_blank">6.623</a>. 拜占庭皇帝 伊萨克一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Isaac I Komnenos<br>', editable: false, start: '4817', end: '4819', title: 'AD 1057 - AD 1059 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.624, content: '<a href="https://en.wikipedia.org/wiki/Constantine_X_Doukas" target="_blank">6.624</a>. 拜占庭皇帝 君士坦丁十世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine X Doukas<br>', editable: false, start: '4819', end: '4827', title: 'AD 1059 - AD 1067 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.625, content: '<a href="https://en.wikipedia.org/wiki/Michael_VII_Doukas" target="_blank">6.625</a>. 拜占庭皇帝 米海尔七世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael VII Doukas<br>', editable: false, start: '4827', end: '4838', title: 'AD 1067 - AD 1078 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.626, content: '<a href="https://en.wikipedia.org/wiki/Romanos_IV_Diogenes" target="_blank">6.626</a>. 拜占庭皇帝 罗曼努斯四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos IV Diogenes, Senior Byzantine Emperor<br>', editable: false, start: '4828', end: '4831', title: 'AD 1068 - AD 1071 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.627, content: '<a href="https://en.wikipedia.org/wiki/Nikephoros_III_Botaneiates" target="_blank">6.627</a>. 拜占庭皇帝 尼基弗鲁斯三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Nikephoros III Botaneiates<br>', editable: false, start: '4838', end: '4841', title: 'AD 1078 - AD 1081 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.628, content: '<a href="https://en.wikipedia.org/wiki/Alexios_I_Komnenos" target="_blank">6.628</a>. 拜占庭皇帝 阿历克塞一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios I Komnenos<br>', editable: false, start: '4841', end: '4878', title: 'AD 1081 - AD 1118 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.629, content: '<a href="https://en.wikipedia.org/wiki/John_II_Komnenos" target="_blank">6.629</a>. 拜占庭皇帝 约翰二世<br>&emsp;&emsp;&emsp;Byzantine Emperor John II Komnenos<br>', editable: false, start: '4878', end: '4903', title: 'AD 1118 - AD 1143 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.63, content: '<a href="https://en.wikipedia.org/wiki/Manuel_I_Komnenos" target="_blank">6.63</a>. 拜占庭皇帝 曼努埃尔一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Manuel I Komnenos<br>', editable: false, start: '4903', end: '4940', title: 'AD 1143 - AD 1180 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.631, content: '<a href="https://en.wikipedia.org/wiki/Alexios_II_Komnenos" target="_blank">6.631</a>. 拜占庭皇帝 阿历克塞二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios II Komnenos<br>', editable: false, start: '4940', end: '4943', title: 'AD 1180 - AD 1183 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.632, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_I_Komnenos" target="_blank">6.632</a>. 拜占庭皇帝 安德洛尼卡一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos I Komnenos<br>', editable: false, start: '4943', end: '4945', title: 'AD 1183 - AD 1185 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.633, content: '<a href="https://en.wikipedia.org/wiki/Isaac_II_Angelos" target="_blank">6.633</a>. 拜占庭皇帝 伊萨克二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Isaac II Angelos<br>', editable: false, start: '4945', end: '4955', title: 'AD 1185 - AD 1195 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.634, content: '<a href="https://en.wikipedia.org/wiki/Alexios_III_Angelos" target="_blank">6.634</a>. 拜占庭皇帝 阿历克塞三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios III Angelos<br>', editable: false, start: '4955', end: '4963', title: 'AD 1195 - AD 1203 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.635, content: '<a href="https://en.wikipedia.org/wiki/Isaac_II_Angelos" target="_blank">6.635</a>. <br>',  editable: false, start: '', title: 'AD  <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.636, content: '<a href="https://en.wikipedia.org/wiki/Alexios_IV_Angelos" target="_blank">6.636</a>. 拜占庭皇帝 阿历克塞四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios IV Angelos<br>', editable: false, start: '4963', end: '4964', title: 'AD 1203 - AD 1204 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.637, content: '<a href="https://en.wikipedia.org/wiki/Alexios_V_Doukas" target="_blank">6.637</a>. 拜占庭皇帝 阿历克塞五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios V Doukas `Mourtzouphlos`<br>',  editable: false, start: '4964', end: '4964', title: 'AD 1204 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.638, content: '<a href="https://en.wikipedia.org/wiki/Theodore_I_Laskaris" target="_blank">6.638</a>. 拜占庭皇帝 狄奥多尔一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Theodore I Laskaris<br>', editable: false, start: '4965', end: '4982', title: 'AD 1205 - AD 1222 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.604, content: '<a href="https://en.wikipedia.org/wiki/University_of_Oxford" target="_blank">6.604</a>. 牛頓大學成立<br>&emsp;&emsp;&emsp;Oxford University founded<br>',  editable: false, start: '4856', title: 'AD 1096', type:'point', group: 6, className:''},
+    {id: 6.61, content: '<a href="https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa" target="_blank">6.61</a>. &nbsp;比薩斜塔<br>&emsp;&emsp;&emsp;Leaning Tower of Pisa<br>', editable: false, start: '4933', end: '5132', title: 'AD 1173 - AD 1372', type:'point', group: 6, className:''},
+
+    {id: 6.641, content: '<a href="https://en.wikipedia.org/wiki/First_Crusade" target="_blank">6.641</a>. 第一次十字軍&emsp;First Crusade<img src="img/Crusade.png" style="width:80px; height:80px;">', editable: false, start: '4855', end: '4859', title: 'AD 1095 - AD 1099 <br>', type:'', group: 6, className:'grey'},
+
+    {id: 6.642, content: '<a href="https://en.wikipedia.org/wiki/Second_Crusade" target="_blank">6.642</a>. 第二次十字軍<br>&emsp;&emsp;&emsp;2nd Crusade<br>', editable: false, start: '4907', end: '4909', title: 'AD 1147 - AD 1149', type:'point', group: 6, className:'grey'},
+    {id: 6.643, content: '<a href="https://en.wikipedia.org/wiki/Third_Crusade" target="_blank">6.643</a>. 第三次十字軍<br>&emsp;&emsp;&emsp;3rd Crusade<br>', editable: false, start: '4949', end: '4952', title: 'AD 1189 - AD 1192', type:'point', group: 6, className:'grey'},
+    {id: 6.644, content: '<a href="https://en.wikipedia.org/wiki/Fourth_Crusade" target="_blank">6.644</a>. 第四次十字軍<br>&emsp;&emsp;&emsp;4th Crusade<br>', editable: false, start: '4955', end: '4957', title: 'AD 1195 - AD 1197', type:'point', group: 6, className:'grey'},
+    {id: 6.645, content: '<a href="https://en.wikipedia.org/wiki/Fifth_Crusade" target="_blank">6.645</a>. 第五次十字軍<br>&emsp;&emsp;&emsp;5th Crusade<br>',  editable: false, start: '4963', title: 'AD 1202', type:'point', group: 6, className:'grey'},
+    {id: 6.646, content: '<a href="https://en.wikipedia.org/wiki/Sixth_Crusade" target="_blank">6.646</a>. 第六次十字軍<br>&emsp;&emsp;&emsp;6th Crusade<br>',  editable: false, start: '4988', title: 'AD 1227', type:'point', group: 6, className:'grey'},
+    {id: 6.647, content: '<a href="https://en.wikipedia.org/wiki/Seventh_Crusade" target="_blank">6.647</a>. 第七次十字軍<br>&emsp;&emsp;&emsp;7th Crusade<br>', editable: false, start: '5008', end: '5010', title: 'AD 1248 - AD 1250', type:'point', group: 6, className:'grey'},
+    {id: 6.648, content: '<a href="https://en.wikipedia.org/wiki/Eighth_Crusade" target="_blank">6.648</a>. 第八次十字軍<br>&emsp;&emsp;&emsp;8th Crusade<br>', editable: false, start: '5030', end: '5037', title: 'AD 1270 - AD 1277', type:'point', group: 6, className:'grey'},
+    {id: 6.649, content: '<a href="https://en.wikipedia.org/wiki/Ninth_Crusade" target="_blank">6.649</a>. 第九次十字軍<br>&emsp;&emsp;&emsp;9th Crusade<br>', editable: false, start: '5031', end: '5032', title: 'AD 1271 - AD 1272', type:'point', group: 6, className:'grey'},
+    {id: 6.656, content: '<a href="https://en.wikipedia.org/wiki/Magna_Carta" target="_blank">6.656</a>. 英國大憲章簽署<br>&emsp;&emsp;&emsp;Magna Carta Libertatum was signed<br>',  editable: false, start: '4975', title: 'AD 1215-06-15', type:'point', group: 6, className:''},
+    {id: 6.657, content: '<a href="https://en.wikipedia.org/wiki/John_III_Doukas_Vatatzes" target="_blank">6.657</a>. 拜占庭帝國皇帝 约翰三世<br>&emsp;&emsp;&emsp;Byzantine Emperor John III Doukas Vatatzes<br>', editable: false, start: '4982', end: '5014', title: 'AD 1222 - AD 1254 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.659, content: '<a href="https://en.wikipedia.org/wiki/Westminster_Abbey" target="_blank">6.659</a>. 西敏寺建造<br>&emsp;&emsp;&emsp;Westminster Abbey built<br>', editable: false, start: '5005', end: '5029', title: 'AD 1245 - AD 1269', type:'point', group: 6, className:''},
+
+    {id: 6.66, content: '<a href="https://en.wikipedia.org/wiki/Theodore_II_Laskaris" target="_blank">6.66</a>. 拜占庭皇帝 狄奥多尔二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Theodore II Laskaris<br>', editable: false, start: '5014', end: '5018', title: 'AD 1254 - AD 1258 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.661, content: '<a href="https://en.wikipedia.org/wiki/John_IV_Laskaris" target="_blank">6.661</a>. 拜占庭皇帝 约翰四世<br>&emsp;&emsp;&emsp;Byzantine Emperor John IV Laskaris, Senior Byzantine Emperor<br>', editable: false, start: '5018', end: '5021', title: 'AD 1258 - AD 1261 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.662, content: '<a href="https://en.wikipedia.org/wiki/Michael_VIII_Palaiologos" target="_blank">6.662</a>. 拜占庭皇帝 米海尔八世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael VIII Palaiologos<br>', editable: false, start: '5019', end: '5042', title: 'AD 1259 - AD 1282 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.667, content: '<a href="https://en.wikipedia.org/wiki/Marco_Polo" target="_blank">6.667</a>. 馬可波羅到達中國<br>&emsp;&emsp;&emsp;Marco Polo reaches China<br>', editable: false, start: '5031', end: '5035', title: 'AD 1271 - AD 1275', type:'point', group: 6, className:''},
+    {id: 6.668, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_II_Palaiologos" target="_blank">6.668</a>. 拜占庭皇帝 安德洛尼卡二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos II Palaiologos<br>', editable: false, start: '5042', end: '5088', title: 'AD 1282 - AD 1328 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.669, content: '<a href="https://en.wikipedia.org/wiki/Ottoman_Empire" target="_blank">6.669</a>. 奧斯曼帝國的崛起<br>&emsp;&emsp;&emsp;Rise of the Ottoman Empire<br>', editable: false, start: '5059', end: '5059', title: 'AD 1299 - AD 1923', type:'', group: 6, className:''},
+
+    {id: 6.672, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_III_Palaiologos" target="_blank">6.672</a>. 拜占庭皇帝 安德洛尼卡三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos III Palaiologos<br>', editable: false, start: '5088', end: '5101', title: 'AD 1328 - AD 1341 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.676, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.676</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5101', end: '5107', title: 'AD 1341 - AD 1347 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.677, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.677</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5114', end: '5136', title: 'AD 1354 - AD 1376 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.678, content: '<a href="https://en.wikipedia.org/wiki/John_VI_Kantakouzenos" target="_blank">6.678</a>. 拜占庭皇帝 约翰六世<br>&emsp;&emsp;&emsp;Byzantine Emperor John VI Kantakouzenos<br>', editable: false, start: '5107', end: '5114', title: 'AD 1347 - AD 1354 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.679, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_IV_Palaiologos" target="_blank">6.679</a>. 拜占庭皇帝 安德洛尼卡四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos IV Palaiologos<br>', editable: false, start: '5136', end: '5139', title: 'AD 1376 - AD 1379 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.68, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.68</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5139', end: '5150', title: 'AD 1379 - AD 1390 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.681, content: '<a href="https://en.wikipedia.org/wiki/John_VII_Palaiologos" target="_blank">6.681</a>. 拜占庭皇帝 约翰七世<br>&emsp;&emsp;&emsp;Byzantine Emperor John VII Palaiologos<br>',  editable: false, start: '5150', end: '5150', title: 'AD 1390 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.682, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.682</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5150', end: '5151', title: 'AD 1390 - AD 1391 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.683, content: '<a href="https://en.wikipedia.org/wiki/Manuel_II_Palaiologos" target="_blank">6.683</a>. 拜占庭皇帝 曼努埃尔二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Manuel II Palaiologos<br>', editable: false, start: '5151', end: '5185', title: 'AD 1391 - AD 1425 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.684, content: '<a href="https://en.wikipedia.org/wiki/John_VIII_Palaiologos" target="_blank">6.684</a>. 拜占庭皇帝 約翰八世<br>&emsp;&emsp;&emsp;Byzantine Emperor John VIII Palaiologos<br>', editable: false, start: '5185', end: '5208', title: 'AD 1425 - AD 1448 <br>', type:'', group: 6, className:'lightblue'},
+    {id: 6.685, content: '<a href="https://en.wikipedia.org/wiki/Printing_press" target="_blank">6.685</a>. 印刷開始<br>&emsp;&emsp;&emsp;First printing by J. Gutenberg<br>',  editable: false, start: '5200', title: 'AD 1440 <br>', type:'point', group: 6, className:''},
+    {id: 6.686, content: '<a href="https://en.wikipedia.org/wiki/Constantine_XI_Palaiologos" target="_blank">6.686</a>. 拜占庭皇帝 君士坦丁十一世, 最後拜占庭帝國皇帝<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine XI Palaiologos, Last Byzantine Emperor<br>', editable: false, start: '5209', end: '5213', title: 'AD 1449 - AD 1453 <br>', type:'', group: 6, className:'lightblue'},
+
+    {id: 6.687, content: '<a href="https://en.wikipedia.org/wiki/Fall_of_Constantinople" target="_blank">6.687</a>. 奧斯曼帝國穆罕默德征服拜占庭帝國<br>&emsp;&emsp;&emsp;The Ottomans ended the Byzantine<br>&emsp;&emsp;&emsp;Empire by Mehmed the Conqueror',  editable: false, start: '5213', end: '5213', title: 'AD 1453', type:'point', group: 6, className:''},
+    {id: 6.688, content: '<a href="https://en.wikipedia.org/wiki/Martin_Luther" target="_blank">6.688</a>. 馬丁路德 Martin Luther<br>', editable: false, start: '5243', end: '5306', title: 'AD 1483 - AD 1546<br>在1517年發表了95篇論文,開始了新教改革<br>Posting 95 theses in 1517, beginning the Protestant Reformation', type:'point', group: 6, className:''},
+    {id: 6.689, content: '<a href="https://en.wikipedia.org/wiki/Christopher_Columbus" target="_blank">6.689</a>. 哥倫布發現新大陸<br>&emsp;&emsp;&emsp;Discovery of the new continent by C. Columbus<br>',  editable: false, start: '5252', title: 'AD 1492 <br>', type:'point', group: 6, className:''},
+    {id: 6.69, content: '<a href="https://en.wikipedia.org/wiki/Treaty_of_Granada_(1491)" target="_blank">6.69</a>. &nbsp;卡斯蒂利亞驅逐摩爾人出格拉納達<br>&emsp;&emsp;&emsp;Castilian authorities expels Moors from Granada<br>',  editable: false, start: '5260', title: 'AD 1500 <br>', type:'point', group: 6, className:''},
+    {id: 6.691, content: '<a href="https://en.wikipedia.org/wiki/Frascati_Cathedral" target="_blank">6.691</a>. 羅馬彼得大教堂開始建造<br>&emsp;&emsp;&emsp;Building of St. Peter`s Bascilica begins in Rome<br>',  editable: false, start: '5266', title: 'AD 1506', type:'point', group: 6, className:''},
+    {id: 6.692, content: '<a href="https://en.wikipedia.org/wiki/John_Knox" target="_blank">6.692</a>. 約翰諾克斯 John Knox<br>', editable: false, start: '5273', end: '5332', title: 'AD 1513 - AD 1572', type:'point', group: 6, className:''},
+    {id: 6.693, content: '<a href="https://en.wikipedia.org/wiki/Ferdinand_Magellan" target="_blank">6.693</a>. 麥哲倫的探險隊環遊世界<br>&emsp;&emsp;&emsp;Magellan`s expedition circumnavigates the globe<br>',  editable: false, start: '5282', title: 'AD 1522 <br>', type:'point', group: 6, className:''},
+    {id: 6.694, content: '<a href="https://en.wikipedia.org/wiki/Council_of_Trent" target="_blank">6.694</a>. 第19屆特倫特市議會 <br>&emsp;&emsp;&emsp;19th Council at Trent<br>', editable: false, start: '5305', end: '5323', title: 'AD 1545 - AD 1563', type:'point', group: 6, className:''},
+    {id: 6.698, content: '<a href="https://en.wikipedia.org/wiki/King_James_Version" target="_blank">6.698</a>. 授權的國王詹姆斯版本聖經<br>&emsp;&emsp;&emsp;Authorized King James version of the Bible', editable: false, start: '5371', title: 'AD 1610', type:'point', group: 6, className:''},
+    {id: 6.709, content: '<a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion" target="_blank">6.709</a>. 牛頓爵士發現了運動定律<br>&emsp;&emsp;&emsp;Sir Isaac Newton discovers the Law of Motion<br>',  editable: false, start: '5426', title: 'AD 1666', type:'point', group: 6, className:''},
+    {id: 6.71, content: '6.71. &nbsp;法國王帝路易十四<br>&emsp;&emsp;&emsp;French King Louis XIV<br>', editable: false, start: '5403', end: '5475', title: 'AD 1643 - AD 1715', type:'point', group: 6, className:''},
+    {id: 6.711, content: '6.711. 俄羅斯王帝彼德大帝<br>&emsp;&emsp;&emsp;Russian King Peter the Great<br>', editable: false, start: '5432', title: 'AD 1672', type:'point', group: 6, className:''},
+    {id: 6.712, content: '<a href="https://en.wikipedia.org/wiki/Steam_engine" target="_blank">6.712</a>. 瓦特發明蒸氣機<br>&emsp;&emsp;&emsp;James Watt discovers the power of steam<br>',  editable: false, start: '5510', title: 'AD 1750', type:'point', group: 6, className:''},
+    {id: 6.713, content: '<a href="https://en.wikipedia.org/wiki/Experiments_and_Observations_on_Electricity" target="_blank">6.713</a>. 富蘭克林發現閃電和電力的屬性<br>&emsp;&emsp;&emsp;Benjamin Franklin discovers the identify of <br>&emsp;&emsp;&emsp;lightning and electricity<br>',  editable: false, start: '5512', title: 'AD 1752', type:'point', group: 6, className:''},
+    {id: 6.714, content: '6.714. 美國獨立<br>&emsp;&emsp;&emsp;US declares independence<br>', editable: false, start: '5536', title: 'AD 1776', type:'point', group: 6, className:''},
+    {id: 6.715, content: '6.715. 拿破崙敗於滑鐵盧<br>&emsp;&emsp;&emsp;Napoleon lost battle in Waterloo<br>', editable: false, start: '5575', title: 'AD 1815', type:'point', group: 6, className:''},
+    {id: 6.716, content: '6.716. 大西洋電纜鋪設<br>&emsp;&emsp;&emsp;First Atlantic cable laid<br>', editable: false, start: '5618', title: 'AD 1858', type:'point', group: 6, className:''},
+    {id: 6.719, content: '6.719. 美國南北戰爭爆發<br>&emsp;&emsp;&emsp;America Civil War<br>', editable: false, start: '5621', title: 'AD 1861', type:'point', group: 6, className:''},
+    {id: 6.72, content: '6.72. 諾貝爾發明火藥<br>&emsp;&emsp;&emsp;Dynamite invented by Nobel<br>', editable: false, start: '5628', title: 'AD 1868', type:'point', group: 6, className:''},
+    {id: 6.721, content: '6.721. &nbsp;蘇伊士運河開航<br>&emsp;&emsp;&emsp;Suez Canal opens<br>', editable: false, start: '5629', title: 'AD 1869', type:'point', group: 6, className:''},
+    {id: 6.724, content: '6.724. 日本侵佔朝鮮<br>&emsp;&emsp;&emsp;Japan occupies Korea<br>', editable: false, start: '5670', title: 'AD 1910', type:'point', group: 6, className:''},
+    {id: 6.725, content: '6.725. 鐵達尼號沈船<br>&emsp;&emsp;&emsp;Lost of RMS Titanic<br>', editable: false, start: '5672', title: 'AD 1912', type:'point', group: 6, className:''},
+    {id: 6.726, content: '6.726. 巴拿馬運河開用<br>&emsp;&emsp;&emsp;Opening of Panama Canal<br>', editable: false, start: '5674', title: 'AD 1914', type:'point', group: 6, className:''},
+    {id: 6.728, content: '<a href="https://en.wikipedia.org/wiki/World_War_I" target="_blank">6.728</a>. 第一世界大戰<br>&emsp;&emsp;&emsp;World War I &emsp;<img src="img/Poppy.png" border="0" style="width:50px; height:50px;">', editable: false, start: '5674', end: '5670', title: 'AD 1914 - AD 1918 <br>1914-07-28 to 1918-11-11', type:'', group: 6, className:'grey'},
+    {id: 6.731, content: '6.731. 聯合國建立<br>&emsp;&emsp;&emsp;League of Nations founded<br>', editable: false, start: '5679', title: 'AD 1919', type:'point', group: 6, className:''},
+    {id: 6.732, content: '<a href="https://en.wikipedia.org/wiki/Dissolution_of_the_Ottoman_Empire" target="_blank">6.732</a>. 奧斯曼帝國的擊敗和解散<br>&emsp;&emsp;&emsp;Defeat and dissolution of the Ottoman Empire', editable: false, start: '5683', end: '5683', title: 'AD 1923', type:'', group: 6, className:''},
+    {id: 6.743, content: '6.743. 西班牙內戰<br>&emsp;&emsp;&emsp;Spanish Civil War<br>', editable: false, start: '5696', title: 'AD 1936', type:'point', group: 6, className:''},
+    {id: 6.744, content: '<a href="https://en.wikipedia.org/wiki/World_War_II" target="_blank">6.744</a>. 第二世界大戰 <br>&emsp;&emsp;&emsp;World War II<br>', editable: false, start: '5699', end: '5705', title: 'AD 1939 - AD 1945 <br>1939-09-01 to 1945-09-02', type:'', group: 6, className:'grey'},
+    {id: 6.745, content: '<a href="https://en.wikipedia.org/wiki/United_Nations_Partition_Plan_for_Palestine" target="_blank">6.745</a>. 聯合國允許將巴勒斯坦劃分<br>&emsp;&emsp;&emsp;為建立猶太人以色列國家<br>&emsp;&emsp;&emsp;UN partitions Palestine allowing the  <br>&emsp;&emsp;&emsp;creation of the Jewish state of Israel<br>', editable: false, start: '5707', title: 'AD 1947', type:'point', group: 6, className:''},
+    {id: 6.746, content: '<a href="https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence" target="_blank">6.746</a>. 以色列宣告獨立<br>&emsp;&emsp;&emsp;Israeli Declaration of Independence<br>',  editable: false, start: '5708', title: 'AD 1948', type:'point', group: 6, className:''},
+    {id: 6.747, content: '6.747. 以色列得回耶路撒冷<br>&emsp;&emsp;&emsp;Jerusalem returns to Israel<br>', editable: false, start: '5727', title: 'AD 1967', type:'point', group: 6, className:''},
+    {id: 6.748, content: '<a href="https://en.wikipedia.org/wiki/Apollo_11" target="_blank">6.748</a>. 第一個人登陸月球<br>&emsp;&emsp;&emsp;First man N. Armstrong lands on the moon (Apollo 11)<br>',  editable: false, start: '5729', title: 'AD 1969', type:'point', group: 6, className:''},
+    {id: 6.749, content: '<a href="https://en.wikipedia.org/wiki/In_vitro_fertilisation" target="_blank">6.749</a>. 第一個試管嬰兒出生<br>&emsp;&emsp;&emsp;First test-tube baby born<br>',  editable: false, start: '5738', title: 'AD 1978', type:'point', group: 6, className:''},
+    {id: 6.75, content: '<a href="https://en.wikipedia.org/wiki/Transfer_of_sovereignty_over_Hong_Kong" target="_blank">6.75</a>. &nbsp;香港回歸中國<br>&emsp;&emsp;&emsp;Hong Kong returns to China (1997)<br>',  editable: false, start: '5757', title: 'AD 1997', type:'point', group: 6, className:''},
+    {id: 6.751, content: '<a href="https://en.wikipedia.org/wiki/Transfer_of_sovereignty_over_Macau" target="_blank">6.751</a>. 澳門回歸中國<br>&emsp;&emsp;&emsp;Macau returns to China (1999)<br>',  editable: false, start: '5759', title: 'AD 1999', type:'point', group: 6, className:''},
+    {id: 6.752, content: '<a href="https://en.wikipedia.org/wiki/September_11_attacks" target="_blank">6.752</a>. 恐怖份子襲擊紐約<br>&emsp;&emsp;&emsp;Terroist attacks<br>&emsp;&emsp;&emsp;New York on 9/11 (2001)<br>',  editable: false, start: '5761', title: 'AD 2001', type:'point', group: 6, className:''},
+    {id: 6.76, content: '6.76. 世界衛生組織宣佈新冠肺炎疫<br>&nbsp;&nbsp;&emsp;&emsp;冠状病毒病(COVID-19)是全球大流行瘟疫<br>&nbsp;&nbsp;&emsp;&emsp;World Health Organization declares <br>&nbsp;&nbsp;&emsp;&emsp;the novel coronavirus (COVID-19) a pandemic<br>', editable: false, start: '5780-03-11', title: 'AD 2020-03-11 <br>', type:'point', group: 6, className:''},
+
+    {id: 6.761, content: '6.761. 首次使用新冠疫苗在英國開始<br>&nbsp;&emsp;&emsp;&emsp;UK first administers COVID-19 vaccine<br>', editable: false, start: '5780-12-08', title: 'AD 2020-12-08 <br>', type:'point', group: 6, className:''},
+
+
+    //{id: 6.999, content: '6.999. TODAY',  editable: false, start: '5779-06-28', title: 'AD 2018-06-28<br>', type:'point', group: 6, className:''},
+    //{id: 2000, content: 'z. Under Construction', editable: false, start: '2000-01-01', end: '2500-01-01', title: '0000 BC- 0000 BC', group: 6, className:'green'}
+   
+
+
+  ]);
+ 
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1L.1b=5(){K()};5 K(){2 O=3.13.T||3.w.T;2 x=3.w.17-3.w.19;2 H=(O/x)*Y;3.6("18").G.1g=H+"%"}2 c=3.6(\'t\');2 n={L:5(a,b){y a.7-b.7},1f:5(a,b,f){2 v=a.7;a.7=b.7;b.7=v},1e:5(A){2 c=3.z(\'1d\');2 r=3.z(\'1c\');r.D=A.1a+\' \';c.P(\'15\',r);2 j=3.z(\'16\');j.D=\'&#X\';j.G.Z=\'10\';j.11(\'14\',5(){f.12({h:A.h,1h:u})});c.P(\'1j\',j);y c},1v:u,1A:\'1B\',U:e,1C:e,1D:\'1E\',W:e,1F:p C(-1G,1,1),1H:p C(1I,1,1),};2 c=3.6(\'t\');g=p V.R(c,i,f,n);2 o=3.6(\'o\');o.1J=5(){g.1K({1z:o.S?1i:1y})};3.6(\'1\').l=5(){g.8(1)};3.6(\'F\').l=5(){g.8(F,{1k:{1w:1x,1u:\'1t\'}})};3.6(\'4.I\').l=5(){g.8(4.I)};2 q=3.6(\'q\');2 s=3.6(\'s\');2 8=3.6(\'8\');s.l=5(){2 Q=q.7.1s(\',\').1r(5(7){y 7.1q()});g.E(Q,{8:8.S})};2 M=3.6(\'1p-t\');2 n={W:u,U:e,x:1o,1n:e,L:\'h\'};2 N=p V.R(M,i,f,n);2 9=0;2 d=0;2 1m=5(B){d+=B;9+=B;k(9<0){9=f.m-1}J k(9>=f.m){9=0}2 i=1l[9];k(d<0){d=i.m-1}J k(d>=i.m){d=0}2 h=i[d].h;N.E(h,{8:e})}',62,110,'||var|document||function|getElementById|value|focus|groupIndex|||container|itemIndex|true|groups|timeline|id|items|hide|if|onclick|length|options|ordering|new|selection|label|select|visualization|false||documentElement|height|return|createElement|group|direction|Date|innerHTML|setSelection|777|style|scrolled|760|else|myFunction|groupOrder|container2|timeline2|winScroll|insertAdjacentElement|ids|Timeline|checked|scrollTop|stack|vis|editable|10025|100|fontSize|small|addEventListener|update|body|click|afterBegin|button|scrollHeight|myBar|clientHeight|content|onscroll|span|div|groupTemplate|groupOrderSwap|width|visible|customOrder|beforeEnd|animation|groupItems|moveToItem|verticalScroll|300|vertical|trim|map|split|linear|easingFunction|showCurrentTime|duration|3000|null|order|orientation|both|horizontalScroll|zoomKey|ctrlKey|start|0100|end|0200|onchange|setOptions|window'.split('|'),0,{}))
+
+
+
+
+//ENDING
+
+</script>
+
+
+<footer>
+  &nbsp;<font size="2" color="black">年份只是大約 Years are only approximate. [9530]</font>
+</footer> 
+
+</body>
+</html>
