@@ -16,7 +16,106 @@
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
     
 <!--Style Sheet goes here-->
+  <style type="text/css">
 
+
+        /*Reponsive images */
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+
+
+    div.vis-editable,
+      div.vis-editable.vis-selected {
+      /* custom styling for editable items... */
+    }
+
+    div.vis-readonly,
+      div.vis-readonly.vis-selected {
+      /* custom styling for readonly items... */
+//      background-color: #d8d8e7;
+//      background-color: #FF4500;
+      background-color: #9a4bfa;
+      border-color: ;
+      color: black;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+      //box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.4);
+    }
+
+    /* Custom new classes overrule the styles for selected events */
+    .vis-item.vis-selected.black {
+      background-color: #9a4bfa;
+      border-color: white;
+      border-width: 2px;
+      color: black;
+      font-size: 12pt;
+      font-weight: bold;
+      //box-shadow: 0 0 10px grey;
+    }
+
+    /* Custom new classes overrule the styles for selected events */
+    .vis-item.vis-selected {
+      background-color: ;
+      border-color: white;
+      border-width: 2px;
+      color: black;
+      font-size: 12pt;
+      font-weight: bold;
+      //box-shadow: 0 0 10px grey;
+    }
+
+
+    .vis-item .vis-item-overflow {
+      overflow: visible;
+    }
+
+    .vis-item.vis-background.negative {
+      background-color: rgba(255, 255, 0, 0.2);
+    }
+
+
+    // Background color of box
+    .vis-item.white { background-color: #ffffff;}
+    .vis-item.lightgrey { background-color: #f1f1f1;}
+    .vis-item.grey { background-color: #EAEAEA;}
+    .vis-item.darkgrey { background-color: #cccccc;}
+    .vis-item.darkgrey2 { background-color: #19181A;}
+    .vis-item.pink { background-color: #ffe6e6;}    
+    .vis-item.red { background-color: #FA8072;}
+    .vis-item.bloodred { background-color: #FF4500;}
+    .vis-item.orange { background-color: #ffd699;}
+    .vis-item.yellow { background-color: #ffff99;}
+    .vis-item.lightyellow { background-color: #ffffe6;}
+    .vis-item.darkyellow { background-color: #ffff00;}        
+    .vis-item.green { background-color: #B4EEB4;}
+    .vis-item.lightgreen { background-color: #e6ffcc;}
+    .vis-item.turquoise { background-color: #7beadf;}
+    .vis-item.lightblue { background-color: #cceeff;}
+    .vis-item.blue { background-color: #99daff;}
+    .vis-item.lightpurple { background-color: #ffe6ff;}
+    .vis-item.purple { background-color: #ff99ff;} 
+    .vis-item.darkpurple { background-color: #ff4dff;}
+    .vis-item.beige { background-color: #f9f2ec;}
+    .vis-item.brown { background-color: #d2a679;}
+    .vis-item.black { background-color: #000000;}     
+    .vis-item.silver { background-color: #c0c0c0;}
+
+
+   
+<!-- for Home button -->
+	a.button {
+    	-webkit-appearance: button;
+    	-moz-appearance: button;
+    	appearance: button;
+
+    	text-decoration: none;
+    	color: initial;
+	}
+<!-- Home button ends -->
+
+    	
+  </style>
 
 
 <META name="GENERATOR" content="MSHTML 11.00.9600.18860">
@@ -2437,179 +2536,4 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
     {id: 6.410, content: '<a href="https://en.wikipedia.org/wiki/Tiberius_II_Constantine" target="_blank">6.410</a>. 拜占庭皇帝 提比略二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Tiberius II Constantine<br>', editable: false, start: '4338', end: '4342', title: 'AD 578 - AD 582 <br>', type:'', group: 6, className:'lightblue'},
     {id: 6.411, content: '<a href="https://en.wikipedia.org/wiki/Maurice_(emperor)" target="_blank">6.411</a>. 拜占庭皇帝 莫里斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Maurice<br>', editable: false, start: '4342', end: '4362', title: 'AD 582 - AD 602 <br>', type:'', group: 6, className:'lightblue'},
     {id: 6.412, content: '<a href="https://en.wikipedia.org/wiki/Phocas" target="_blank">6.412</a>. 拜占庭皇帝 福卡斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Phocas<br>', editable: false, start: '4362', end: '4370', title: 'AD 602 - AD 610 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.413, content: '<a href="https://en.wikipedia.org/wiki/Heraclius" target="_blank">6.413</a>. 拜占庭皇帝 希拉克略<br>&emsp;&emsp;&emsp;Byzantine Emperor Heraclius<br>', editable: false, start: '4370', end: '4401', title: 'AD 610 - AD 641 <br>', type:'', group: 6, className:'lightblue'},
-    
-
-    {id: 6.467, content: '6.467. 首任教皇大貴格利<br>&emsp;&emsp;&emsp;First Pope, Gregory I<br>', editable: false, start: '4350', end: '4364', title: 'AD 590 - AD 604 <br>', type:'point', group: 6, className:''},
-    {id: 6.475, content: '<a href="https://en.wikipedia.org/wiki/Mosque_of_Omar_(Jerusalem)" target="_blank">6.475</a>. 清真寺建在所羅門聖殿遺址上<br>&emsp;&emsp;&emsp;Mosque built by Omar on the site of Solomon`s Temple<br>',  editable: false, start: '4397', title: 'AD 637', type:'point', group: 6, className:''}, 
-    {id: 6.476, content: '<a href="https://en.wikipedia.org/wiki/Constantine_III_(Byzantine_emperor)" target="_blank">6.476</a>. 拜占庭皇帝 君士坦丁三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine III<br>',  editable: false, start: '4401', end: '4401', title: 'AD 641 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.477, content: '<a href="https://en.wikipedia.org/wiki/Heraklonas" target="_blank">6.477</a>. 拜占庭皇帝 赫拉克洛納斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Heraklonas<br>',  editable: false, start: '4401', end: '4401', title: 'AD 641 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.478, content: '<a href="https://en.wikipedia.org/wiki/Constans_II" target="_blank">6.478</a>. 拜占庭皇帝 君士坦斯二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constans II<br>', editable: false, start: '4401', end: '4428', title: 'AD 641 - AD 668 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.479, content: '<a href="https://en.wikipedia.org/wiki/Constantine_IV" target="_blank">6.479</a>. 拜占庭皇帝 君士坦丁四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine IV `the Bearded`<br>', editable: false, start: '4428', end: '4445', title: 'AD 668 - AD 685 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.48, content: '<a href="https://en.wikipedia.org/wiki/Justinian_II" target="_blank">6.480</a>. 拜占庭皇帝 查士丁尼二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Justinian II `the Slit-nosed` <br>', editable: false, start: '4445', end: '4455', title: 'AD 685 - AD 695 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.481, content: '<a href="https://en.wikipedia.org/wiki/Leontios" target="_blank">6.481</a>. 拜占庭皇帝 列昂提<br>&emsp;&emsp;&emsp;Byzantine Emperor Leontios<br>', editable: false, start: '4455', end: '4458', title: 'AD 695 - AD 698 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.482, content: '<a href="https://en.wikipedia.org/wiki/Tiberios_III" target="_blank">6.482</a>. 拜占庭皇帝 提比略三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Tiberius III Apsimar<br>', editable: false, start: '4458', end: '4465', title: 'AD 698 - AD 705 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.483, content: '<a href="https://en.wikipedia.org/wiki/Justinian_II" target="_blank">6.483</a>. 拜占庭皇帝 查士丁尼二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Justinian II `the Slit-nosed`<br>', editable: false, start: '4465', end: '4471', title: 'AD 705 - AD 711 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.484, content: '<a href="https://en.wikipedia.org/wiki/Philippikos_Bardanes" target="_blank">6.484</a>. 拜占庭皇帝 菲利皮科斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Philippikos Bardanes<br>', editable: false, start: '4471', end: '4473', title: 'AD 711 - AD 713 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.485, content: '<a href="https://en.wikipedia.org/wiki/Anastasios_II" target="_blank">6.485</a>. 拜占庭皇帝 阿纳斯塔修斯二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Anastasios II<br>', editable: false, start: '4473', end: '4475', title: 'AD 713 - AD 715 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.486, content: '<a href="https://en.wikipedia.org/wiki/Theodosius_III" target="_blank">6.486</a>. 拜占庭皇帝 狄奥多西三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Theodosios III<br>', editable: false, start: '4475', end: '4477', title: 'AD 715 - AD 717 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.487, content: '<a href="https://en.wikipedia.org/wiki/Leo_III_the_Isaurian" target="_blank">6.487</a>. 拜占庭皇帝 利奥三世,東羅馬帝國皇帝<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo III<br>', editable: false, start: '4477', end: '4501', title: 'AD 717 - AD 741 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.488, content: '<a href="https://en.wikipedia.org/wiki/Constantine_V" target="_blank">6.488</a>. 拜占庭皇帝 君士坦丁五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine V `the Dung-named`<br>', editable: false, start: '4501', end: '4535', title: 'AD 741 - AD 775 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.49, content: '<a href="https://en.wikipedia.org/wiki/Charlemagne" target="_blank">6.49</a>. 查理曼大帝<br>&emsp;&emsp;&emsp;Emperor of the Romans, Charlemagne (Charles the Great)<br>', editable: false, start: '4528', end: '4574', title: 'AD 768 - AD 814 <br>(Emperor of the Romans, <br>King of the Lombards & <br>King of the Franks)<br>', type:'', group: 6, className:'beige'},
-    {id: 6.491, content: '<a href="https://en.wikipedia.org/wiki/Leo_IV_the_Khazar" target="_blank">6.491</a>. 拜占庭皇帝 利奥四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo IV `the Khazar`<br>', editable: false, start: '4535', end: '4540', title: 'AD 775 - AD 780 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.492, content: '<a href="https://en.wikipedia.org/wiki/Constantine_VI" target="_blank">6.492</a>. 拜占庭皇帝 君士坦丁六世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine VI<br>', editable: false, start: '4540', end: '4557', title: 'AD 780 - AD 797 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.493, content: '<a href="https://en.wikipedia.org/wiki/Irene_of_Athens" target="_blank">6.493</a>. 拜占庭女帝 伊琳娜<br>&emsp;&emsp;&emsp;Byzantine Empress Irene of Athens<br>', editable: false, start: '4557', end: '4562', title: 'AD 797 - AD 802 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.494, content: '<a href="https://en.wikipedia.org/wiki/Nikephoros_I" target="_blank">6.494</a>. 拜占庭皇帝 尼基弗魯斯一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Nikephoros I `Genikos`<br>', editable: false, start: '4562', end: '4571', title: 'AD 802 - AD 811 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.495, content: '<a href="https://en.wikipedia.org/wiki/Staurakios" target="_blank">6.495</a>. 拜占庭皇帝 斯陶拉基奥斯<br>&emsp;&emsp;&emsp;Byzantine Emperor Staurakios<br>', editable: false, start: '4571', end: '4572', title: 'AD 811 - AD 812 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.496, content: '<a href="https://en.wikipedia.org/wiki/Michael_I_Rangabe" target="_blank">6.496</a>. 拜占庭皇帝 米海尔一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael I Rangabe<br>', editable: false, start: '4572', end: '4573', title: 'AD 812 - AD 813 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.497, content: '<a href="https://en.wikipedia.org/wiki/Leo_V_the_Armenian" target="_blank">6.497</a>. 拜占庭皇帝 利奥五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo V `the Armenian`<br>', editable: false, start: '4573', end: '4580', title: 'AD 813 - AD 820 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.498, content: '<a href="https://en.wikipedia.org/wiki/Michael_II" target="_blank">6.498</a>. 拜占庭皇帝 米海尔二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael II `the Amorian`<br>', editable: false, start: '4580', end: '4589', title: 'AD 820 - AD 829 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.499, content: '<a href="https://en.wikipedia.org/wiki/Theophilos_(emperor)" target="_blank">6.499</a>. 拜占庭皇帝 狄奥菲洛<br>&emsp;&emsp;&emsp;Byzantine Emperor Theophilos<br>', editable: false, start: '4589', end: '4602', title: 'AD 829 - AD 842 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.5, content: '<a href="https://en.wikipedia.org/wiki/Michael_III" target="_blank">6.5</a>. 拜占庭皇帝 米海尔三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael III `the Drunkard`<br>', editable: false, start: '4602', end: '4627', title: 'AD 842 - AD 867 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.501, content: '<a href="https://en.wikipedia.org/wiki/Basil_I" target="_blank">6.501</a>. 拜占庭皇帝 巴西爾一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Basil I `the Macedonian`<br>', editable: false, start: '4627', end: '4646', title: 'AD 867 - AD 886 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.502, content: '<a href="https://en.wikipedia.org/wiki/Leo_VI_the_Wise" target="_blank">6.502</a>. 拜占庭皇帝 利奧六世<br>&emsp;&emsp;&emsp;Byzantine Emperor Leo VI `the Wise`<br>', editable: false, start: '4646', end: '4672', title: 'AD 886 - AD 912 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.503, content: '<a href="https://en.wikipedia.org/wiki/Alexander_(Byzantine_emperor)" target="_blank">6.503</a>. 拜占庭皇帝 亞歷山大<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexander<br>', editable: false, start: '4672', end: '4673', title: 'AD 912 - AD 913 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.504, content: '<a href="https://en.wikipedia.org/wiki/Constantine_VII" target="_blank">6.504</a>. 拜占庭皇帝 君士坦丁七世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine VII `the Purple-born`,Senior Byzantine Emperor<br>', editable: false, start: '4673', end: '4719', title: 'AD 913 - AD 959 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.521, content: '<a href="https://en.wikipedia.org/wiki/Romanos_I_Lekapenos" target="_blank">6.521</a>. 拜占庭皇帝 羅曼努斯一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos I Lekapenos<br>', editable: false, start: '4680', end: '4704', title: 'AD 920 - AD 944 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.536, content: '<a href="https://en.wikipedia.org/wiki/Romanos_II" target="_blank">6.536</a>. 拜占庭皇帝 羅曼努斯二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos II `the Purple-born`<br>', editable: false, start: '4719', end: '4723', title: 'AD 959 - AD 963 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.537, content: '<a href="https://en.wikipedia.org/wiki/Nikephoros_II_Phokas" target="_blank">6.537</a>. 拜占庭皇帝 尼基弗魯斯二世<br>&emsp;&emsp;&emsp;Nikephoros II Phokas<br>', editable: false, start: '4723', end: '4729', title: 'AD 963 - AD 969 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.538, content: '<a href="https://en.wikipedia.org/wiki/John_I_Tzimiskes" target="_blank">6.538</a>. 拜占庭皇帝 约翰一世<br>&emsp;&emsp;&emsp;Byzantine Emperor John I Tzimiskes<br>', editable: false, start: '4729', end: '4736', title: 'AD 969 - AD 976 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.549, content: '<a href="https://en.wikipedia.org/wiki/Basil_II" target="_blank">6.549</a>. 拜占庭皇帝 巴西爾二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Basil II `the Bulgar-Slayer`<br>', editable: false, start: '4736', end: '4785', title: 'AD 976 - AD 1025 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.602, content: '<a href="https://en.wikipedia.org/wiki/Constantine_VIII" target="_blank">6.602</a>. 拜占庭皇帝 君士坦丁八世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine VIII `the Purple-born`<br>', editable: false, start: '4785', end: '4788', title: 'AD 1025 - AD 1028 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.603, content: '<a href="https://en.wikipedia.org/wiki/Zo%C3%AB_Porphyrogenita" target="_blank">6.603</a>. 佐伊女皇, 拜占庭帝國女皇<br>&emsp;&emsp;&emsp;Byzantine Empress Zoe "the Purple-born"<br>', editable: false, start: '4788', end: '4810', title: 'AD 1028 - AD 1050 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.617, content: '<a href="https://en.wikipedia.org/wiki/Romanos_III_Argyros" target="_blank">6.617</a>. 拜占庭皇帝 羅曼努斯三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos III Argyros<br>', editable: false, start: '4788', end: '4794', title: 'AD 1028 - AD 1034 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.618, content: '<a href="https://en.wikipedia.org/wiki/Michael_IV_the_Paphlagonian" target="_blank">6.618</a>. 拜占庭皇帝 米海爾四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael IV `the Paphlagonian`<br>', editable: false, start: '4794', end: '4801', title: 'AD 1034 - AD 1041 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.619, content: '<a href="https://en.wikipedia.org/wiki/Michael_V_Kalaphates" target="_blank">6.619</a>. 拜占庭皇帝 米海爾五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael V "the Caulker"<br>', editable: false, start: '4801', end: '4802', title: 'AD 1041 - AD 1042 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.62, content: '<a href="https://en.wikipedia.org/wiki/Theodora_Porphyrogenita_(11th_century)" target="_blank">6.62</a>. 拜占庭皇帝 狄奧多拉女皇<br>&emsp;&emsp;&emsp;Byzantine Empress & Co-Ruler Theodora<br>', editable: false, start: '4802', end: '4816', title: 'AD 1042 - AD 1056 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.621, content: '<a href="https://en.wikipedia.org/wiki/Constantine_IX_Monomachos" target="_blank">6.621</a>. 拜占庭皇帝 君士坦丁九世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine IX Monomachos<br>', editable: false, start: '4802', end: '4815', title: 'AD 1042 - AD 1055 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.622, content: '<a href="https://en.wikipedia.org/wiki/Michael_VI_Bringas" target="_blank">6.622</a>. 拜占庭皇帝 米海尔六世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael VI Bringas `Stratiotikos`<br>', editable: false, start: '4816', end: '4817', title: 'AD 1056 - AD 1057 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.623, content: '<a href="https://en.wikipedia.org/wiki/Isaac_I_Komnenos" target="_blank">6.623</a>. 拜占庭皇帝 伊萨克一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Isaac I Komnenos<br>', editable: false, start: '4817', end: '4819', title: 'AD 1057 - AD 1059 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.624, content: '<a href="https://en.wikipedia.org/wiki/Constantine_X_Doukas" target="_blank">6.624</a>. 拜占庭皇帝 君士坦丁十世<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine X Doukas<br>', editable: false, start: '4819', end: '4827', title: 'AD 1059 - AD 1067 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.625, content: '<a href="https://en.wikipedia.org/wiki/Michael_VII_Doukas" target="_blank">6.625</a>. 拜占庭皇帝 米海尔七世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael VII Doukas<br>', editable: false, start: '4827', end: '4838', title: 'AD 1067 - AD 1078 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.626, content: '<a href="https://en.wikipedia.org/wiki/Romanos_IV_Diogenes" target="_blank">6.626</a>. 拜占庭皇帝 罗曼努斯四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Romanos IV Diogenes, Senior Byzantine Emperor<br>', editable: false, start: '4828', end: '4831', title: 'AD 1068 - AD 1071 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.627, content: '<a href="https://en.wikipedia.org/wiki/Nikephoros_III_Botaneiates" target="_blank">6.627</a>. 拜占庭皇帝 尼基弗鲁斯三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Nikephoros III Botaneiates<br>', editable: false, start: '4838', end: '4841', title: 'AD 1078 - AD 1081 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.628, content: '<a href="https://en.wikipedia.org/wiki/Alexios_I_Komnenos" target="_blank">6.628</a>. 拜占庭皇帝 阿历克塞一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios I Komnenos<br>', editable: false, start: '4841', end: '4878', title: 'AD 1081 - AD 1118 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.629, content: '<a href="https://en.wikipedia.org/wiki/John_II_Komnenos" target="_blank">6.629</a>. 拜占庭皇帝 约翰二世<br>&emsp;&emsp;&emsp;Byzantine Emperor John II Komnenos<br>', editable: false, start: '4878', end: '4903', title: 'AD 1118 - AD 1143 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.63, content: '<a href="https://en.wikipedia.org/wiki/Manuel_I_Komnenos" target="_blank">6.63</a>. 拜占庭皇帝 曼努埃尔一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Manuel I Komnenos<br>', editable: false, start: '4903', end: '4940', title: 'AD 1143 - AD 1180 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.631, content: '<a href="https://en.wikipedia.org/wiki/Alexios_II_Komnenos" target="_blank">6.631</a>. 拜占庭皇帝 阿历克塞二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios II Komnenos<br>', editable: false, start: '4940', end: '4943', title: 'AD 1180 - AD 1183 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.632, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_I_Komnenos" target="_blank">6.632</a>. 拜占庭皇帝 安德洛尼卡一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos I Komnenos<br>', editable: false, start: '4943', end: '4945', title: 'AD 1183 - AD 1185 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.633, content: '<a href="https://en.wikipedia.org/wiki/Isaac_II_Angelos" target="_blank">6.633</a>. 拜占庭皇帝 伊萨克二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Isaac II Angelos<br>', editable: false, start: '4945', end: '4955', title: 'AD 1185 - AD 1195 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.634, content: '<a href="https://en.wikipedia.org/wiki/Alexios_III_Angelos" target="_blank">6.634</a>. 拜占庭皇帝 阿历克塞三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios III Angelos<br>', editable: false, start: '4955', end: '4963', title: 'AD 1195 - AD 1203 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.635, content: '<a href="https://en.wikipedia.org/wiki/Isaac_II_Angelos" target="_blank">6.635</a>. <br>',  editable: false, start: '', title: 'AD  <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.636, content: '<a href="https://en.wikipedia.org/wiki/Alexios_IV_Angelos" target="_blank">6.636</a>. 拜占庭皇帝 阿历克塞四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios IV Angelos<br>', editable: false, start: '4963', end: '4964', title: 'AD 1203 - AD 1204 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.637, content: '<a href="https://en.wikipedia.org/wiki/Alexios_V_Doukas" target="_blank">6.637</a>. 拜占庭皇帝 阿历克塞五世<br>&emsp;&emsp;&emsp;Byzantine Emperor Alexios V Doukas `Mourtzouphlos`<br>',  editable: false, start: '4964', end: '4964', title: 'AD 1204 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.638, content: '<a href="https://en.wikipedia.org/wiki/Theodore_I_Laskaris" target="_blank">6.638</a>. 拜占庭皇帝 狄奥多尔一世<br>&emsp;&emsp;&emsp;Byzantine Emperor Theodore I Laskaris<br>', editable: false, start: '4965', end: '4982', title: 'AD 1205 - AD 1222 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.604, content: '<a href="https://en.wikipedia.org/wiki/University_of_Oxford" target="_blank">6.604</a>. 牛頓大學成立<br>&emsp;&emsp;&emsp;Oxford University founded<br>',  editable: false, start: '4856', title: 'AD 1096', type:'point', group: 6, className:''},
-    {id: 6.61, content: '<a href="https://en.wikipedia.org/wiki/Leaning_Tower_of_Pisa" target="_blank">6.61</a>. &nbsp;比薩斜塔<br>&emsp;&emsp;&emsp;Leaning Tower of Pisa<br>', editable: false, start: '4933', end: '5132', title: 'AD 1173 - AD 1372', type:'point', group: 6, className:''},
-
-    {id: 6.641, content: '<a href="https://en.wikipedia.org/wiki/First_Crusade" target="_blank">6.641</a>. 第一次十字軍&emsp;First Crusade<img src="img/Crusade.png" style="width:80px; height:80px;">', editable: false, start: '4855', end: '4859', title: 'AD 1095 - AD 1099 <br>', type:'', group: 6, className:'grey'},
-
-    {id: 6.642, content: '<a href="https://en.wikipedia.org/wiki/Second_Crusade" target="_blank">6.642</a>. 第二次十字軍<br>&emsp;&emsp;&emsp;2nd Crusade<br>', editable: false, start: '4907', end: '4909', title: 'AD 1147 - AD 1149', type:'point', group: 6, className:'grey'},
-    {id: 6.643, content: '<a href="https://en.wikipedia.org/wiki/Third_Crusade" target="_blank">6.643</a>. 第三次十字軍<br>&emsp;&emsp;&emsp;3rd Crusade<br>', editable: false, start: '4949', end: '4952', title: 'AD 1189 - AD 1192', type:'point', group: 6, className:'grey'},
-    {id: 6.644, content: '<a href="https://en.wikipedia.org/wiki/Fourth_Crusade" target="_blank">6.644</a>. 第四次十字軍<br>&emsp;&emsp;&emsp;4th Crusade<br>', editable: false, start: '4955', end: '4957', title: 'AD 1195 - AD 1197', type:'point', group: 6, className:'grey'},
-    {id: 6.645, content: '<a href="https://en.wikipedia.org/wiki/Fifth_Crusade" target="_blank">6.645</a>. 第五次十字軍<br>&emsp;&emsp;&emsp;5th Crusade<br>',  editable: false, start: '4963', title: 'AD 1202', type:'point', group: 6, className:'grey'},
-    {id: 6.646, content: '<a href="https://en.wikipedia.org/wiki/Sixth_Crusade" target="_blank">6.646</a>. 第六次十字軍<br>&emsp;&emsp;&emsp;6th Crusade<br>',  editable: false, start: '4988', title: 'AD 1227', type:'point', group: 6, className:'grey'},
-    {id: 6.647, content: '<a href="https://en.wikipedia.org/wiki/Seventh_Crusade" target="_blank">6.647</a>. 第七次十字軍<br>&emsp;&emsp;&emsp;7th Crusade<br>', editable: false, start: '5008', end: '5010', title: 'AD 1248 - AD 1250', type:'point', group: 6, className:'grey'},
-    {id: 6.648, content: '<a href="https://en.wikipedia.org/wiki/Eighth_Crusade" target="_blank">6.648</a>. 第八次十字軍<br>&emsp;&emsp;&emsp;8th Crusade<br>', editable: false, start: '5030', end: '5037', title: 'AD 1270 - AD 1277', type:'point', group: 6, className:'grey'},
-    {id: 6.649, content: '<a href="https://en.wikipedia.org/wiki/Ninth_Crusade" target="_blank">6.649</a>. 第九次十字軍<br>&emsp;&emsp;&emsp;9th Crusade<br>', editable: false, start: '5031', end: '5032', title: 'AD 1271 - AD 1272', type:'point', group: 6, className:'grey'},
-    {id: 6.656, content: '<a href="https://en.wikipedia.org/wiki/Magna_Carta" target="_blank">6.656</a>. 英國大憲章簽署<br>&emsp;&emsp;&emsp;Magna Carta Libertatum was signed<br>',  editable: false, start: '4975', title: 'AD 1215-06-15', type:'point', group: 6, className:''},
-    {id: 6.657, content: '<a href="https://en.wikipedia.org/wiki/John_III_Doukas_Vatatzes" target="_blank">6.657</a>. 拜占庭帝國皇帝 约翰三世<br>&emsp;&emsp;&emsp;Byzantine Emperor John III Doukas Vatatzes<br>', editable: false, start: '4982', end: '5014', title: 'AD 1222 - AD 1254 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.659, content: '<a href="https://en.wikipedia.org/wiki/Westminster_Abbey" target="_blank">6.659</a>. 西敏寺建造<br>&emsp;&emsp;&emsp;Westminster Abbey built<br>', editable: false, start: '5005', end: '5029', title: 'AD 1245 - AD 1269', type:'point', group: 6, className:''},
-
-    {id: 6.66, content: '<a href="https://en.wikipedia.org/wiki/Theodore_II_Laskaris" target="_blank">6.66</a>. 拜占庭皇帝 狄奥多尔二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Theodore II Laskaris<br>', editable: false, start: '5014', end: '5018', title: 'AD 1254 - AD 1258 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.661, content: '<a href="https://en.wikipedia.org/wiki/John_IV_Laskaris" target="_blank">6.661</a>. 拜占庭皇帝 约翰四世<br>&emsp;&emsp;&emsp;Byzantine Emperor John IV Laskaris, Senior Byzantine Emperor<br>', editable: false, start: '5018', end: '5021', title: 'AD 1258 - AD 1261 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.662, content: '<a href="https://en.wikipedia.org/wiki/Michael_VIII_Palaiologos" target="_blank">6.662</a>. 拜占庭皇帝 米海尔八世<br>&emsp;&emsp;&emsp;Byzantine Emperor Michael VIII Palaiologos<br>', editable: false, start: '5019', end: '5042', title: 'AD 1259 - AD 1282 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.667, content: '<a href="https://en.wikipedia.org/wiki/Marco_Polo" target="_blank">6.667</a>. 馬可波羅到達中國<br>&emsp;&emsp;&emsp;Marco Polo reaches China<br>', editable: false, start: '5031', end: '5035', title: 'AD 1271 - AD 1275', type:'point', group: 6, className:''},
-    {id: 6.668, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_II_Palaiologos" target="_blank">6.668</a>. 拜占庭皇帝 安德洛尼卡二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos II Palaiologos<br>', editable: false, start: '5042', end: '5088', title: 'AD 1282 - AD 1328 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.669, content: '<a href="https://en.wikipedia.org/wiki/Ottoman_Empire" target="_blank">6.669</a>. 奧斯曼帝國的崛起<br>&emsp;&emsp;&emsp;Rise of the Ottoman Empire<br>', editable: false, start: '5059', end: '5059', title: 'AD 1299 - AD 1923', type:'', group: 6, className:''},
-
-    {id: 6.672, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_III_Palaiologos" target="_blank">6.672</a>. 拜占庭皇帝 安德洛尼卡三世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos III Palaiologos<br>', editable: false, start: '5088', end: '5101', title: 'AD 1328 - AD 1341 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.676, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.676</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5101', end: '5107', title: 'AD 1341 - AD 1347 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.677, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.677</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5114', end: '5136', title: 'AD 1354 - AD 1376 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.678, content: '<a href="https://en.wikipedia.org/wiki/John_VI_Kantakouzenos" target="_blank">6.678</a>. 拜占庭皇帝 约翰六世<br>&emsp;&emsp;&emsp;Byzantine Emperor John VI Kantakouzenos<br>', editable: false, start: '5107', end: '5114', title: 'AD 1347 - AD 1354 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.679, content: '<a href="https://en.wikipedia.org/wiki/Andronikos_IV_Palaiologos" target="_blank">6.679</a>. 拜占庭皇帝 安德洛尼卡四世<br>&emsp;&emsp;&emsp;Byzantine Emperor Andronikos IV Palaiologos<br>', editable: false, start: '5136', end: '5139', title: 'AD 1376 - AD 1379 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.68, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.68</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5139', end: '5150', title: 'AD 1379 - AD 1390 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.681, content: '<a href="https://en.wikipedia.org/wiki/John_VII_Palaiologos" target="_blank">6.681</a>. 拜占庭皇帝 约翰七世<br>&emsp;&emsp;&emsp;Byzantine Emperor John VII Palaiologos<br>',  editable: false, start: '5150', end: '5150', title: 'AD 1390 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.682, content: '<a href="https://en.wikipedia.org/wiki/John_V_Palaiologos" target="_blank">6.682</a>. 拜占庭皇帝 约翰五世<br>&emsp;&emsp;&emsp;Byzantine Emperor John V Palaiologos<br>', editable: false, start: '5150', end: '5151', title: 'AD 1390 - AD 1391 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.683, content: '<a href="https://en.wikipedia.org/wiki/Manuel_II_Palaiologos" target="_blank">6.683</a>. 拜占庭皇帝 曼努埃尔二世<br>&emsp;&emsp;&emsp;Byzantine Emperor Manuel II Palaiologos<br>', editable: false, start: '5151', end: '5185', title: 'AD 1391 - AD 1425 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.684, content: '<a href="https://en.wikipedia.org/wiki/John_VIII_Palaiologos" target="_blank">6.684</a>. 拜占庭皇帝 約翰八世<br>&emsp;&emsp;&emsp;Byzantine Emperor John VIII Palaiologos<br>', editable: false, start: '5185', end: '5208', title: 'AD 1425 - AD 1448 <br>', type:'', group: 6, className:'lightblue'},
-    {id: 6.685, content: '<a href="https://en.wikipedia.org/wiki/Printing_press" target="_blank">6.685</a>. 印刷開始<br>&emsp;&emsp;&emsp;First printing by J. Gutenberg<br>',  editable: false, start: '5200', title: 'AD 1440 <br>', type:'point', group: 6, className:''},
-    {id: 6.686, content: '<a href="https://en.wikipedia.org/wiki/Constantine_XI_Palaiologos" target="_blank">6.686</a>. 拜占庭皇帝 君士坦丁十一世, 最後拜占庭帝國皇帝<br>&emsp;&emsp;&emsp;Byzantine Emperor Constantine XI Palaiologos, Last Byzantine Emperor<br>', editable: false, start: '5209', end: '5213', title: 'AD 1449 - AD 1453 <br>', type:'', group: 6, className:'lightblue'},
-
-    {id: 6.687, content: '<a href="https://en.wikipedia.org/wiki/Fall_of_Constantinople" target="_blank">6.687</a>. 奧斯曼帝國穆罕默德征服拜占庭帝國<br>&emsp;&emsp;&emsp;The Ottomans ended the Byzantine<br>&emsp;&emsp;&emsp;Empire by Mehmed the Conqueror',  editable: false, start: '5213', end: '5213', title: 'AD 1453', type:'point', group: 6, className:''},
-    {id: 6.688, content: '<a href="https://en.wikipedia.org/wiki/Martin_Luther" target="_blank">6.688</a>. 馬丁路德 Martin Luther<br>', editable: false, start: '5243', end: '5306', title: 'AD 1483 - AD 1546<br>在1517年發表了95篇論文,開始了新教改革<br>Posting 95 theses in 1517, beginning the Protestant Reformation', type:'point', group: 6, className:''},
-    {id: 6.689, content: '<a href="https://en.wikipedia.org/wiki/Christopher_Columbus" target="_blank">6.689</a>. 哥倫布發現新大陸<br>&emsp;&emsp;&emsp;Discovery of the new continent by C. Columbus<br>',  editable: false, start: '5252', title: 'AD 1492 <br>', type:'point', group: 6, className:''},
-    {id: 6.69, content: '<a href="https://en.wikipedia.org/wiki/Treaty_of_Granada_(1491)" target="_blank">6.69</a>. &nbsp;卡斯蒂利亞驅逐摩爾人出格拉納達<br>&emsp;&emsp;&emsp;Castilian authorities expels Moors from Granada<br>',  editable: false, start: '5260', title: 'AD 1500 <br>', type:'point', group: 6, className:''},
-    {id: 6.691, content: '<a href="https://en.wikipedia.org/wiki/Frascati_Cathedral" target="_blank">6.691</a>. 羅馬彼得大教堂開始建造<br>&emsp;&emsp;&emsp;Building of St. Peter`s Bascilica begins in Rome<br>',  editable: false, start: '5266', title: 'AD 1506', type:'point', group: 6, className:''},
-    {id: 6.692, content: '<a href="https://en.wikipedia.org/wiki/John_Knox" target="_blank">6.692</a>. 約翰諾克斯 John Knox<br>', editable: false, start: '5273', end: '5332', title: 'AD 1513 - AD 1572', type:'point', group: 6, className:''},
-    {id: 6.693, content: '<a href="https://en.wikipedia.org/wiki/Ferdinand_Magellan" target="_blank">6.693</a>. 麥哲倫的探險隊環遊世界<br>&emsp;&emsp;&emsp;Magellan`s expedition circumnavigates the globe<br>',  editable: false, start: '5282', title: 'AD 1522 <br>', type:'point', group: 6, className:''},
-    {id: 6.694, content: '<a href="https://en.wikipedia.org/wiki/Council_of_Trent" target="_blank">6.694</a>. 第19屆特倫特市議會 <br>&emsp;&emsp;&emsp;19th Council at Trent<br>', editable: false, start: '5305', end: '5323', title: 'AD 1545 - AD 1563', type:'point', group: 6, className:''},
-    {id: 6.698, content: '<a href="https://en.wikipedia.org/wiki/King_James_Version" target="_blank">6.698</a>. 授權的國王詹姆斯版本聖經<br>&emsp;&emsp;&emsp;Authorized King James version of the Bible', editable: false, start: '5371', title: 'AD 1610', type:'point', group: 6, className:''},
-    {id: 6.709, content: '<a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion" target="_blank">6.709</a>. 牛頓爵士發現了運動定律<br>&emsp;&emsp;&emsp;Sir Isaac Newton discovers the Law of Motion<br>',  editable: false, start: '5426', title: 'AD 1666', type:'point', group: 6, className:''},
-    {id: 6.71, content: '6.71. &nbsp;法國王帝路易十四<br>&emsp;&emsp;&emsp;French King Louis XIV<br>', editable: false, start: '5403', end: '5475', title: 'AD 1643 - AD 1715', type:'point', group: 6, className:''},
-    {id: 6.711, content: '6.711. 俄羅斯王帝彼德大帝<br>&emsp;&emsp;&emsp;Russian King Peter the Great<br>', editable: false, start: '5432', title: 'AD 1672', type:'point', group: 6, className:''},
-    {id: 6.712, content: '<a href="https://en.wikipedia.org/wiki/Steam_engine" target="_blank">6.712</a>. 瓦特發明蒸氣機<br>&emsp;&emsp;&emsp;James Watt discovers the power of steam<br>',  editable: false, start: '5510', title: 'AD 1750', type:'point', group: 6, className:''},
-    {id: 6.713, content: '<a href="https://en.wikipedia.org/wiki/Experiments_and_Observations_on_Electricity" target="_blank">6.713</a>. 富蘭克林發現閃電和電力的屬性<br>&emsp;&emsp;&emsp;Benjamin Franklin discovers the identify of <br>&emsp;&emsp;&emsp;lightning and electricity<br>',  editable: false, start: '5512', title: 'AD 1752', type:'point', group: 6, className:''},
-    {id: 6.714, content: '6.714. 美國獨立<br>&emsp;&emsp;&emsp;US declares independence<br>', editable: false, start: '5536', title: 'AD 1776', type:'point', group: 6, className:''},
-    {id: 6.715, content: '6.715. 拿破崙敗於滑鐵盧<br>&emsp;&emsp;&emsp;Napoleon lost battle in Waterloo<br>', editable: false, start: '5575', title: 'AD 1815', type:'point', group: 6, className:''},
-    {id: 6.716, content: '6.716. 大西洋電纜鋪設<br>&emsp;&emsp;&emsp;First Atlantic cable laid<br>', editable: false, start: '5618', title: 'AD 1858', type:'point', group: 6, className:''},
-    {id: 6.719, content: '6.719. 美國南北戰爭爆發<br>&emsp;&emsp;&emsp;America Civil War<br>', editable: false, start: '5621', title: 'AD 1861', type:'point', group: 6, className:''},
-    {id: 6.72, content: '6.72. 諾貝爾發明火藥<br>&emsp;&emsp;&emsp;Dynamite invented by Nobel<br>', editable: false, start: '5628', title: 'AD 1868', type:'point', group: 6, className:''},
-    {id: 6.721, content: '6.721. &nbsp;蘇伊士運河開航<br>&emsp;&emsp;&emsp;Suez Canal opens<br>', editable: false, start: '5629', title: 'AD 1869', type:'point', group: 6, className:''},
-    {id: 6.724, content: '6.724. 日本侵佔朝鮮<br>&emsp;&emsp;&emsp;Japan occupies Korea<br>', editable: false, start: '5670', title: 'AD 1910', type:'point', group: 6, className:''},
-    {id: 6.725, content: '6.725. 鐵達尼號沈船<br>&emsp;&emsp;&emsp;Lost of RMS Titanic<br>', editable: false, start: '5672', title: 'AD 1912', type:'point', group: 6, className:''},
-    {id: 6.726, content: '6.726. 巴拿馬運河開用<br>&emsp;&emsp;&emsp;Opening of Panama Canal<br>', editable: false, start: '5674', title: 'AD 1914', type:'point', group: 6, className:''},
-    {id: 6.728, content: '<a href="https://en.wikipedia.org/wiki/World_War_I" target="_blank">6.728</a>. 第一世界大戰<br>&emsp;&emsp;&emsp;World War I &emsp;<img src="img/Poppy.png" border="0" style="width:50px; height:50px;">', editable: false, start: '5674', end: '5670', title: 'AD 1914 - AD 1918 <br>1914-07-28 to 1918-11-11', type:'', group: 6, className:'grey'},
-    {id: 6.731, content: '6.731. 聯合國建立<br>&emsp;&emsp;&emsp;League of Nations founded<br>', editable: false, start: '5679', title: 'AD 1919', type:'point', group: 6, className:''},
-    {id: 6.732, content: '<a href="https://en.wikipedia.org/wiki/Dissolution_of_the_Ottoman_Empire" target="_blank">6.732</a>. 奧斯曼帝國的擊敗和解散<br>&emsp;&emsp;&emsp;Defeat and dissolution of the Ottoman Empire', editable: false, start: '5683', end: '5683', title: 'AD 1923', type:'', group: 6, className:''},
-    {id: 6.743, content: '6.743. 西班牙內戰<br>&emsp;&emsp;&emsp;Spanish Civil War<br>', editable: false, start: '5696', title: 'AD 1936', type:'point', group: 6, className:''},
-    {id: 6.744, content: '<a href="https://en.wikipedia.org/wiki/World_War_II" target="_blank">6.744</a>. 第二世界大戰 <br>&emsp;&emsp;&emsp;World War II<br>', editable: false, start: '5699', end: '5705', title: 'AD 1939 - AD 1945 <br>1939-09-01 to 1945-09-02', type:'', group: 6, className:'grey'},
-    {id: 6.745, content: '<a href="https://en.wikipedia.org/wiki/United_Nations_Partition_Plan_for_Palestine" target="_blank">6.745</a>. 聯合國允許將巴勒斯坦劃分<br>&emsp;&emsp;&emsp;為建立猶太人以色列國家<br>&emsp;&emsp;&emsp;UN partitions Palestine allowing the  <br>&emsp;&emsp;&emsp;creation of the Jewish state of Israel<br>', editable: false, start: '5707', title: 'AD 1947', type:'point', group: 6, className:''},
-    {id: 6.746, content: '<a href="https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence" target="_blank">6.746</a>. 以色列宣告獨立<br>&emsp;&emsp;&emsp;Israeli Declaration of Independence<br>',  editable: false, start: '5708', title: 'AD 1948', type:'point', group: 6, className:''},
-    {id: 6.747, content: '6.747. 以色列得回耶路撒冷<br>&emsp;&emsp;&emsp;Jerusalem returns to Israel<br>', editable: false, start: '5727', title: 'AD 1967', type:'point', group: 6, className:''},
-    {id: 6.748, content: '<a href="https://en.wikipedia.org/wiki/Apollo_11" target="_blank">6.748</a>. 第一個人登陸月球<br>&emsp;&emsp;&emsp;First man N. Armstrong lands on the moon (Apollo 11)<br>',  editable: false, start: '5729', title: 'AD 1969', type:'point', group: 6, className:''},
-    {id: 6.749, content: '<a href="https://en.wikipedia.org/wiki/In_vitro_fertilisation" target="_blank">6.749</a>. 第一個試管嬰兒出生<br>&emsp;&emsp;&emsp;First test-tube baby born<br>',  editable: false, start: '5738', title: 'AD 1978', type:'point', group: 6, className:''},
-    {id: 6.75, content: '<a href="https://en.wikipedia.org/wiki/Transfer_of_sovereignty_over_Hong_Kong" target="_blank">6.75</a>. &nbsp;香港回歸中國<br>&emsp;&emsp;&emsp;Hong Kong returns to China (1997)<br>',  editable: false, start: '5757', title: 'AD 1997', type:'point', group: 6, className:''},
-    {id: 6.751, content: '<a href="https://en.wikipedia.org/wiki/Transfer_of_sovereignty_over_Macau" target="_blank">6.751</a>. 澳門回歸中國<br>&emsp;&emsp;&emsp;Macau returns to China (1999)<br>',  editable: false, start: '5759', title: 'AD 1999', type:'point', group: 6, className:''},
-    {id: 6.752, content: '<a href="https://en.wikipedia.org/wiki/September_11_attacks" target="_blank">6.752</a>. 恐怖份子襲擊紐約<br>&emsp;&emsp;&emsp;Terroist attacks<br>&emsp;&emsp;&emsp;New York on 9/11 (2001)<br>',  editable: false, start: '5761', title: 'AD 2001', type:'point', group: 6, className:''},
-    {id: 6.76, content: '6.76. 世界衛生組織宣佈新冠肺炎疫<br>&nbsp;&nbsp;&emsp;&emsp;冠状病毒病(COVID-19)是全球大流行瘟疫<br>&nbsp;&nbsp;&emsp;&emsp;World Health Organization declares <br>&nbsp;&nbsp;&emsp;&emsp;the novel coronavirus (COVID-19) a pandemic<br>', editable: false, start: '5780', title: 'AD 2020-03-11 <br>', type:'point', group: 6, className:''},
-    {id: 6.761, content: '6.761. 首次使用新冠疫苗在英國開始<br>&nbsp;&emsp;&emsp;&emsp;UK first administers COVID-19 vaccine<br>', editable: false, start: '5780-12-08', title: 'AD 2020-12-08 <br>', type:'point', group: 6, className:''},
-
-	    
-	    
-  //{id: 7.999, content: '7.999. TODAY',  editable: false, start: '5779-06-28', title: 'AD 2018-06-28<br>', type:'point', group: 6, className:''},
-  //{id: 2000, content: 'z. Under Construction', editable: false, start: '2000-01-01', end: '2500-01-01', title: '0000 BC- 0000 BC', group: 6, className:'green'}
-
-
-
-  ]);
- 
- 
-
-//var _0x81d4=["\x6F\x6E\x73\x63\x72\x6F\x6C\x6C","\x73\x63\x72\x6F\x6C\x6C\x54\x6F\x70","\x62\x6F\x64\x79","\x64\x6F\x63\x75\x6D\x65\x6E\x74\x45\x6C\x65\x6D\x65\x6E\x74","\x73\x63\x72\x6F\x6C\x6C\x48\x65\x69\x67\x68\x74","\x63\x6C\x69\x65\x6E\x74\x48\x65\x69\x67\x68\x74","\x77\x69\x64\x74\x68","\x73\x74\x79\x6C\x65","\x6D\x79\x42\x61\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x25","\x76\x61\x6C\x75\x65","\x64\x69\x76","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x73\x70\x61\x6E","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x63\x6F\x6E\x74\x65\x6E\x74","\x20","\x61\x66\x74\x65\x72\x42\x65\x67\x69\x6E","\x69\x6E\x73\x65\x72\x74\x41\x64\x6A\x61\x63\x65\x6E\x74\x45\x6C\x65\x6D\x65\x6E\x74","\x62\x75\x74\x74\x6F\x6E","\x26\x23\x31\x30\x30\x32\x35","\x66\x6F\x6E\x74\x53\x69\x7A\x65","\x73\x6D\x61\x6C\x6C","\x63\x6C\x69\x63\x6B","\x69\x64","\x75\x70\x64\x61\x74\x65","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x62\x65\x66\x6F\x72\x65\x45\x6E\x64","\x62\x6F\x74\x68","\x63\x74\x72\x6C\x4B\x65\x79","\x74\x6F\x70","\x76\x69\x73\x75\x61\x6C\x69\x7A\x61\x74\x69\x6F\x6E","\x6F\x6E\x63\x6C\x69\x63\x6B","\x31","\x66\x6F\x63\x75\x73","\x37\x37\x37","\x6C\x69\x6E\x65\x61\x72","\x34\x2E\x37\x36\x30","\x73\x65\x6C\x65\x63\x74\x69\x6F\x6E","\x73\x65\x6C\x65\x63\x74","\x74\x72\x69\x6D","\x6D\x61\x70","\x2C","\x73\x70\x6C\x69\x74","\x63\x68\x65\x63\x6B\x65\x64","\x73\x65\x74\x53\x65\x6C\x65\x63\x74\x69\x6F\x6E","\x76\x65\x72\x74\x69\x63\x61\x6C\x2D\x76\x69\x73\x75\x61\x6C\x69\x7A\x61\x74\x69\x6F\x6E","\x6C\x65\x6E\x67\x74\x68"];window[_0x81d4[0]]= function(){myFunction()};function myFunction(){var _0xd3d5x2=document[_0x81d4[2]][_0x81d4[1]]|| document[_0x81d4[3]][_0x81d4[1]];var _0xd3d5x3=document[_0x81d4[3]][_0x81d4[4]]- document[_0x81d4[3]][_0x81d4[5]];var _0xd3d5x4=(_0xd3d5x2/ _0xd3d5x3)* 100;document[_0x81d4[9]](_0x81d4[8])[_0x81d4[7]][_0x81d4[6]]= _0xd3d5x4+ _0x81d4[10]}var options={groupOrder:function(_0xd3d5x6,_0xd3d5x7){return _0xd3d5x6[_0x81d4[11]]- _0xd3d5x7[_0x81d4[11]]},groupOrderSwap:function(_0xd3d5x6,_0xd3d5x7,_0xd3d5x8){var _0xd3d5x9=_0xd3d5x6[_0x81d4[11]];_0xd3d5x6[_0x81d4[11]]= _0xd3d5x7[_0x81d4[11]];_0xd3d5x7[_0x81d4[11]]= _0xd3d5x9},groupTemplate:function(_0xd3d5xa){var container=document[_0x81d4[13]](_0x81d4[12]);var _0xd3d5xc=document[_0x81d4[13]](_0x81d4[14]);_0xd3d5xc[_0x81d4[15]]= _0xd3d5xa[_0x81d4[16]]+ _0x81d4[17];container[_0x81d4[19]](_0x81d4[18],_0xd3d5xc);var _0xd3d5xd=document[_0x81d4[13]](_0x81d4[20]);_0xd3d5xd[_0x81d4[15]]= _0x81d4[21];_0xd3d5xd[_0x81d4[7]][_0x81d4[22]]= _0x81d4[23];_0xd3d5xd[_0x81d4[27]](_0x81d4[24],function(){groups[_0x81d4[26]]({id:_0xd3d5xa[_0x81d4[25]],visible:false})});container[_0x81d4[19]](_0x81d4[28],_0xd3d5xd);return container},showCurrentTime:false,orientation:_0x81d4[29],stack:true,horizontalScroll:true,zoomKey:_0x81d4[30],start: new Date(-64,1,1),end: new Date(128,1,1),editable:true,margin:{item:10,axis:5},orientation:_0x81d4[31]};var container=document[_0x81d4[9]](_0x81d4[32]);timeline=  new vis.Timeline(container,items,groups,options);document[_0x81d4[9]](_0x81d4[34])[_0x81d4[33]]= function(){timeline[_0x81d4[35]](1)};document[_0x81d4[9]](_0x81d4[36])[_0x81d4[33]]= function(){timeline[_0x81d4[35]](777,{animation:{duration:3000,easingFunction:_0x81d4[37]}})};document[_0x81d4[9]](_0x81d4[38])[_0x81d4[33]]= function(){timeline[_0x81d4[35]](4.760)};var selection=document[_0x81d4[9]](_0x81d4[39]);var select=document[_0x81d4[9]](_0x81d4[40]);var focus=document[_0x81d4[9]](_0x81d4[35]);select[_0x81d4[33]]= function(){var _0xd3d5x11=selection[_0x81d4[11]][_0x81d4[44]](_0x81d4[43])[_0x81d4[42]](function(_0xd3d5x12){return _0xd3d5x12[_0x81d4[41]]()});timeline[_0x81d4[46]](_0xd3d5x11,{focus:focus[_0x81d4[45]]})};var container2=document[_0x81d4[9]](_0x81d4[47]);var options={editable:false,stack:true,height:300,verticalScroll:true,groupOrder:_0x81d4[25]};var timeline2= new vis.Timeline(container2,items,groups,options);var groupIndex=0;var itemIndex=0;var moveToItem=function(_0xd3d5x18){itemIndex+= _0xd3d5x18;groupIndex+= _0xd3d5x18;if(groupIndex< 0){groupIndex= groups[_0x81d4[48]]- 1}else {if(groupIndex>= groups[_0x81d4[48]]){groupIndex= 0}};var _0xd3d5x19=groupItems[groupIndex];if(itemIndex< 0){itemIndex= _0xd3d5x19[_0x81d4[48]]- 1}else {if(itemIndex>= _0xd3d5x19[_0x81d4[48]]){itemIndex= 0}};var _0xd3d5x1a=_0xd3d5x19[itemIndex][_0x81d4[25]];timeline2[_0x81d4[46]](_0xd3d5x1a,{focus:true})}
-
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1L.1b=5(){K()};5 K(){2 O=3.13.T||3.w.T;2 x=3.w.17-3.w.19;2 H=(O/x)*Y;3.6("18").G.1g=H+"%"}2 c=3.6(\'t\');2 n={L:5(a,b){y a.7-b.7},1f:5(a,b,f){2 v=a.7;a.7=b.7;b.7=v},1e:5(A){2 c=3.z(\'1d\');2 r=3.z(\'1c\');r.D=A.1a+\' \';c.P(\'15\',r);2 j=3.z(\'16\');j.D=\'&#X\';j.G.Z=\'10\';j.11(\'14\',5(){f.12({h:A.h,1h:u})});c.P(\'1j\',j);y c},1v:u,1A:\'1B\',U:e,1C:e,1D:\'1E\',W:e,1F:p C(-1G,1,1),1H:p C(1I,1,1),};2 c=3.6(\'t\');g=p V.R(c,i,f,n);2 o=3.6(\'o\');o.1J=5(){g.1K({1z:o.S?1i:1y})};3.6(\'1\').l=5(){g.8(1)};3.6(\'F\').l=5(){g.8(F,{1k:{1w:1x,1u:\'1t\'}})};3.6(\'4.I\').l=5(){g.8(4.I)};2 q=3.6(\'q\');2 s=3.6(\'s\');2 8=3.6(\'8\');s.l=5(){2 Q=q.7.1s(\',\').1r(5(7){y 7.1q()});g.E(Q,{8:8.S})};2 M=3.6(\'1p-t\');2 n={W:u,U:e,x:1o,1n:e,L:\'h\'};2 N=p V.R(M,i,f,n);2 9=0;2 d=0;2 1m=5(B){d+=B;9+=B;k(9<0){9=f.m-1}J k(9>=f.m){9=0}2 i=1l[9];k(d<0){d=i.m-1}J k(d>=i.m){d=0}2 h=i[d].h;N.E(h,{8:e})}',62,110,'||var|document||function|getElementById|value|focus|groupIndex|||container|itemIndex|true|groups|timeline|id|items|hide|if|onclick|length|options|ordering|new|selection|label|select|visualization|false||documentElement|height|return|createElement|group|direction|Date|innerHTML|setSelection|777|style|scrolled|760|else|myFunction|groupOrder|container2|timeline2|winScroll|insertAdjacentElement|ids|Timeline|checked|scrollTop|stack|vis|editable|10025|100|fontSize|small|addEventListener|update|body|click|afterBegin|button|scrollHeight|myBar|clientHeight|content|onscroll|span|div|groupTemplate|groupOrderSwap|width|visible|customOrder|beforeEnd|animation|groupItems|moveToItem|verticalScroll|300|vertical|trim|map|split|linear|easingFunction|showCurrentTime|duration|3000|null|order|orientation|both|horizontalScroll|zoomKey|ctrlKey|start|0100|end|0200|onchange|setOptions|window'.split('|'),0,{}))
-
-
-
-
-  
-//ENDING
-
-</script>
-
-<footer>
-  &nbsp;<font size="2" color="black">年份只是大約 Years are only approximate.&nbsp;&nbsp; © 2021 - [9530]</font>
-</footer> 
-
-</body>
-</html>
-
-
-
+    {id: 6.413, content: '
