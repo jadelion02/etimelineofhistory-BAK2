@@ -29,8 +29,8 @@
 	    max-width: calc(100% - 10px);		/* */
 
 
-	@media (max-sidth: 600px) {
-		.modal-content {background: red;}
+	@media (max-width: 600px) {
+		.modal-content {background: orange;}
 	}
 
 
