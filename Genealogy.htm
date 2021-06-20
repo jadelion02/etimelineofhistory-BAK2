@@ -1,0 +1,1111 @@
+﻿<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <title>Genealogy of Jesus</title>
+
+    <script type="text/javascript" src="js/vis-network.min.js"></script>
+    <link href="js/vis-network.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/Responsivestyle.css" rel="stylesheet" type="text/css" /> 
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <script src="js/jquery-min.js"></script>
+	<script src="js/persistent-checkboxes.js"></script>
+    
+    <style type="text/css">
+    
+    /*Reponsive images */
+     .responsive {
+        width: 100%;
+        height: auto;
+      }
+      
+    .header {
+      position: auto;
+      top: 25px;
+      z-index: 1;     
+      width: 100%;
+      height: 0px;				/* Height of header colour */
+    }
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 4px;
+        font-size: 10px;
+        border: none;
+    }
+    .dropdown {
+    	position: relative;
+    	display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 360px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {background-color: #ddd}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+        }
+	a.button {
+    	-webkit-appearance: button;
+    	-moz-appearance: button;
+    	appearance: button;
+    	text-decoration: none;
+    	color: initial;
+	}
+
+    
+      #mynetwork {
+        width: 100%;
+        height: 86vh;
+        border: 2px solid lightgray;
+        background-color: beige;
+      }
+   
+      /* @media (max-width: 600px) { */
+	  /*		body { background: orange; } */
+	  /*	} */
+		
+      
+/* Navigation Buttons */      
+		div.vis-network div.vis-navigation div.vis-button.vis-up, 
+		div.vis-network div.vis-navigation div.vis-button.vis-down, 
+		div.vis-network div.vis-navigation div.vis-button.vis-left, 
+		div.vis-network div.vis-navigation div.vis-button.vis-right, 
+		div.vis-network div.vis-navigation div.vis-button.vis-zoomIn, 
+		div.vis-network div.vis-navigation div.vis-button.vis-zoomOut, 
+		div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
+			background-image: none !important;
+		}
+
+		div.vis-network div.vis-navigation div.vis-button:hover {
+			box-shadow: none !important;
+		}
+		.vis-button:after {
+			font-size: 2em;
+			color: gray;
+		}
+		.vis-button:hover:after {
+			font-size: 2em;
+			color: lightgray;
+		}
+		.vis-button.vis-zoomExtends:after {
+			content: "➧";
+		}
+		.vis-button.vis-up:after {
+			content: "▴";
+		}
+		.vis-button.vis-down:after {
+			content: "▾";
+		}
+		.vis-button.vis-left:after {
+			content: "◂";
+		}
+		.vis-button.vis-right:after {
+			content: "▸";
+		}
+		.vis-button.vis-zoomIn:after {
+			content: "+";
+			font-weight: bold;
+		}
+		.vis-button.vis-zoomOut:after {
+			content: "-";
+			font-weight: bold;
+		}
+		.vis-button.vis-zoomExtends:after {
+			content: "▣";
+		}
+/* Navigation Buttons End */ 
+     
+      p {
+        max-width: 600px;
+      }
+      .indented {
+        margin-left: 30px;
+      }
+      
+       code {
+        font-size: 14px;
+        background: #dddddd;
+      }
+      .sep {
+        height: 1px;
+        width: 35%;
+        margin-left: 40px;
+        background-color: #dddddd;
+      }
+
+		/* Button{ */
+		/*	Float: right; */
+		/* } */
+
+		.dropbtn {
+			width: 15px;
+			float: right;
+		 	/* margin-left: 150px; */			
+		}
+
+		.modal-droptn-right{
+			float: right;
+		}
+
+      .hirdirDiv {
+		border: 0px;
+		background-color: "";    
+		text-align: center;
+		}
+		
+		/* Accordinig Initial Display */
+		.accordion-body{
+		display: none;
+			padding: 0 10px;
+		}
+
+		
+    </style>
+   </head>
+
+
+
+  <body>
+    
+    <H2>
+	<div class="header">
+     &emsp;<font size="5" font face="Times New Roman" color="red">e</font><font size="5" font face="Times New Roman" color="black">Genealogy of Jesus <font size="4">耶穌家譜 &nbsp;&nbsp;&nbsp;</font>
+	<a href="index.htm" class="button">&#127968;</a>
+     
+    <div class="dropdown">
+    &emsp;<button id="myBtn">^</button>   
+
+    <div class="dropdown-content">
+        
+    <!-- <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');"> -->
+    <!-- <p style="font-size:70%;">&emsp;Show Control &emsp;顯示控制</p> -->
+    <!-- <style="font-size:="3"> Show Control &emsp;顯示控制 -->
+    </div>
+    </div>
+   <div align="right"><font size="1" color="grey">R. Siew  © 2020 &emsp; </font></div>
+
+
+    <div id="mynetwork"></div>
+
+<!-- Background OK -->
+  	 <Body background="img/bg15.jpg">  
+<!-- Background ends -->
+
+</body>
+
+<!-- The Modal -->
+
+
+
+<div id="myModal" class="modal">
+<!-- Modal content -->
+		<div class = "modal-content">
+		<div id = "modal01" class = "w3-modal w3-animate-left" onclick = "this.style.display='none'">
+</div>
+    	<span class="close">&times;</span >
+<!--    <p>Some text in the Modal..</p>  -->
+
+<!-- Enable Physics Checkbox -->
+<font size="2">
+
+<script type="text/javascript">
+		function ShowHideDiv(checkbox1) {
+			var OverlapDisplay = document.getElementById("OverlapDisplay");
+			OverlapDisplay.style.display = checkbox1.checked ? "block" : "none";
+		}
+</script>
+	
+	<label for="checkbox1">
+		<input type="checkbox" id="checkbox1" onclick="ShowHideDiv(this)" />
+		啟用模擬 &emsp;&emsp;Enable Approximation Visualization:
+	</label>
+	&emsp;&emsp;	
+	<label><input type="checkbox" id="checkbox2">亞當 Adam</input></label>
+	&emsp;<label><input type="checkbox" id="checkbox3">耶穌 Jesus</input></label>
+
+	<div id="OverlapDisplay" style="display: none">
+	&emsp;&emsp;輸入重曡數字 Enter Overlap Number: ( 0 to 1 )
+	&emsp;<input type="number" id="myTextarea"  min="0" max="1" step="0.2">
+		<label for="myTextarea"> </label>
+	</div>
+	<br>
+	
+<!--<label><input type="checkbox" id="checkbox5">分層視化 Hierachical Visualization</input></label>	-->
+	<label><input type="checkbox" id="checkbox5" onclick="myFunction()">啟用分層視化&nbsp; Enable Hierachical Visualization Selection:</input></label>	
+<!--	&emsp;&emsp;<input type="text" id="Hresult" style="width:60px"> -->
+
+<!-- Hierachical Direction -->
+<!-- -->
+	<div class="hirdirDiv" id="HirDirresult"></div>
+<!-- -->
+
+	<div id="radioDIV" style="display: none;">
+	<form id="HDirValue"> 
+ 		&emsp; 選擇顯示方向 Choose your display direction: <br> 
+<!--	&emsp;<label><input type="radio" name="HDir" id="first_radio" onclick="AssignValue();" value="LR" checked>LR - Left to Right <br></label> -->
+		&emsp;<label><input type="radio" name="HDir" id="first_radio" onclick="AssignValue();" value="LR">&emsp;左右&emsp; LR - Left to Right <br></label> 
+ 		&emsp;<label><input type="radio" name="HDir" id="second_radio" onclick="AssignValue();" value="RL">&emsp;右左&emsp; RL - Right to Left<br></label>  
+ 		&emsp;<label><input type="radio" name="HDir" id="3rd_radio" onclick="AssignValue();" value="UD">&emsp;上下&emsp; UD - Up to Down<br></label> 
+ 		&emsp;<label><input type="radio" name="HDir" id="4th_radio" onclick="AssignValue();" value="DU">&emsp;下上&emsp; DU - Down to Up<br></label>
+<!-- 	&emsp;<label><input type="radio" name="HDir" id="radioDU" onclick="HDFunction(this.value)" value="DU">DU - Down to Up<br></label>  --> 
+	</form>	 
+
+<!-- Assign radio button selection -->
+<script type="text/javascript">
+    function AssignValue() {
+        var checkedRadioValue = "-1";
+        if (document.getElementById("first_radio").checked)
+            checkedRadioValue = "LR";
+        else if(document.getElementById("second_radio").checked)
+            checkedRadioValue = "RL";
+        else if(document.getElementById("3rd_radio").checked)
+            checkedRadioValue = "UD";
+        else if(document.getElementById("4th_radio").checked)
+            checkedRadioValue = "DU";            
+            
+        //Radio button Local Storage
+        //sessionStorage.setItem("CheckedRadioValue", checkedRadioValue);
+          localStorage.setItem("CheckedRadioValue", checkedRadioValue);
+
+        //alert(checkedRadioValue);
+        
+  }
+</script>
+
+<!-- Show and Hide Radio Buttons -->	
+<script>
+	function myFunction() {
+		var radioButton = document.getElementById("radioDIV");
+		if (radioButton.style.display === "block") {
+			radioButton.style.display = "none";
+		} else {
+		radioButton.style.display = "block";
+		}
+	}
+</script>
+
+	</div>
+	
+	<label><input type="checkbox" id="checkbox4">穩定 &emsp;&emsp;&emsp;&emsp;Enable Stabilzation (may take a minute)</input></label>
+
+	</font>
+
+
+<!-- 	<div class="dropdown"> -->
+<!-- 		<button class="dropbtn">?</button> -->
+<!-- 	<div class="dropdown-content"> -->
+
+
+<div class="parent-div">	<button type="button" style="float: right" onClick="save()">重整 Reset</button>
+    <div class="accordion-heading"> <span class="plusminus">+</span></div>
+    <div class="accordion-body">
+    	<font size="2">
+		<hr>   
+		&nbsp;▪&nbsp;拖動光標向上/下或左/右移動網絡圖表<br>&emsp;Drag cursor L/R & U/D to move network<br>
+		&nbsp;▪&nbsp;滾動滑鼠輪向上/下拉近放遠網絡圖表<br>&emsp;Srcoll wheel U/D to expand/compress network<br>
+		&nbsp;▪&nbsp;  ▴ 向上 Up<br>
+		&nbsp;▪&nbsp;  ▾ 向下 Down<br>
+		&nbsp;▪&nbsp;  ◂ 向左 Left<br>
+		&nbsp;▪&nbsp;  ▸ 向右 Right<br>
+		&nbsp;▪&nbsp;  + 拉近 Zoom In<br>
+		&nbsp;▪&nbsp;  - 放遠 Zoom Out<br>
+		&nbsp;▪&nbsp;  ▣ 視圖全景 Zoom Extends<br>
+		</font>     
+
+    </div>    
+</div>
+
+<script language="javascript"> 
+    $(document).ready(function(){
+        $(".accordion-heading").click(function(){  
+              if($(".accordion-body").is(':visible')){  		/* check condition accordion-body is visible or not */
+                  $(".accordion-body").slideUp(600);  			/*if content is visible then close accordion-body with specific time duration */
+                $(".plusminus").text('+')    					/* add plus sign */
+            }
+            else{
+                $(this).next(".accordion-body").slideDown(600); /*if content not visible then show the accordion-body */
+                $(this).children(".plusminus").text('-');  		/* add minus sign */
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+<!--Modal Ends-->
+
+
+
+	<!-- <select id="theItems" name="theItems" onchange="otherSelect(this)" style="height:20px; width:256px"> -->
+<!--	<select id="theItems" name="theItems" onchange="otherSelect(this)" style="height:0px; width:0px">
+
+	<option value=">""</option>
+	<option value="1">1. 聖經人物&nbsp;Biblical Characters</option>
+	<option value="1"> Adam</option>
+	<option value="1.002">塞特 Seth</option>
+	<option value="1.003">以挪士 Enosh</option>
+	<option value="1.004">該南 Cainan</option>
+	
+	<option value="1.052">馬但 Matthan</option>
+	<option value="1.053">雅各 Jacob</option>
+	<option value="1.054">約瑟 Joseph</option>
+	<option value="777">耶穌 Jesus</option>
+<option value="">&emsp;&emsp;&emsp;&emsp;----- 公元 AD 1  -----</option>
+
+</select> -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+   /**
+     * Move the timeline a given percentage to left or right
+     * @param {Number} percentage   For example 0.1 (left) or -0.1 (right)
+     */
+    
+
+// Get the modal
+	var modal = document.getElementById('myModal');
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+//Modal Ends
+
+
+//Dropdown OK
+    function otherSelect(obj)  
+    {           
+        var input = document.getElementById('selection');
+        input.value = obj.value;
+    }
+
+
+//Persistent Local Storage
+	function save() {	
+		var checkbox = document.getElementById("checkbox1");
+			localStorage.setItem("checkbox1", checkbox.checked);
+		var checkbox2 = document.getElementById("checkbox2");
+			localStorage.setItem("checkbox2", checkbox2.checked);
+		var checkbox3 = document.getElementById("checkbox3");
+			localStorage.setItem("checkbox3", checkbox3.checked);			
+		var checkbox4 = document.getElementById("checkbox4");
+			localStorage.setItem("checkbox4", checkbox4.checked);
+		var checkbox5 = document.getElementById("checkbox5");
+			localStorage.setItem("checkbox5", checkbox5.checked);	
+		var OverlapValue = document.getElementById("myTextarea").value;
+			localStorage.setItem("Overlap", OverlapValue);
+
+//Save and reload page			
+		location.reload()	
+	}
+//for loading
+		var checked = JSON.parse(localStorage.getItem("checkbox1"));
+			document.getElementById("checkbox1").checked = checked;
+		var checked2 = JSON.parse(localStorage.getItem("checkbox2"));
+			document.getElementById("checkbox2").checked = checked2;
+		var checked3 = JSON.parse(localStorage.getItem("checkbox3"));
+			document.getElementById("checkbox3").checked = checked3;
+		var checked4 = JSON.parse(localStorage.getItem("checkbox4"));
+			document.getElementById("checkbox4").checked = checked4;
+		var checked5 = JSON.parse(localStorage.getItem("checkbox5"));
+			document.getElementById("checkbox5").checked = checked5;
+		var OverlapValue = localStorage.getItem("Overlap");
+			document.getElementById("myTextarea").value = OverlapValue;	
+		var HDValue = document.getElementById("HirDirresult").innerHTML = localStorage.getItem("CheckedRadioValue");
+		
+		//alert(x);
+		//alert(OverlapValue);
+
+
+//Color Samples
+//      var nodes = new vis.DataSet([
+//        { id: 10, label: "1. html color", color: "lime" },
+//        { id: 20, label: "2. rgb color", color: "rgb(255,168,7)" },
+//        { id: 30, label: "3. hex color", color: "#7BE141" },
+//        { id: 40, label: "4. rgba color", color: "rgba(97,195,238,0.5)" },
+//        { id: 50, label: "5. colorObject", color: { background: "pink", border: "purple" },},
+//        { id: 60, label: "6. colorObject + highlight", color: { background: "#F03967", border: "#713E7F", highlight: { background: "red", border: "black" },},},
+//        { id: 70, label: "7. colorObject + highlight + hover", color: { background: "cyan", border: "blue", highlight: { background: "red", border: "blue" }, hover: { background: "white", border: "red" },},},
+//        ]);
+
+
+      var nodes = [
+      
+    //SAMPLES  
+	//{id: 100, label: "亞當 夏娃 \nAdam Eve", widthConstraint: {minimum: 120, valign: "middle"}, shape: "box", x: -50, y: -700, color: "lightblue" },
+	//{id: 100, label: "亞當 & 夏娃 \nAdam & Eve", widthConstraint: {minimum: 120, valign: "middle"}, shape: "box", font: { background: "yellow" }, x: -50, y: -700,},
+	//{id: 100, font: { multi: true }, label: "<b>亞當 & 夏娃 \n<b>Adam & Eve</b>", widthConstraint: {minimum: 180, valign: "middle"}, heightConstraint: {minimum: 50, valign: "middle"}, physics: false, shape: "box", font: { background: "lightblue" }, color: "lightblue", x: -50, y: -700,},
+	//{id: 1, font: { multi: true }, label: "<b>亞當 & 夏娃 \n<b>Adam & Eve</b>", widthConstraint: {minimum: 120, valign: "middle"}, physics: false, shape: "box", x: -350, y: -800, color: { background: "orange", border: "red" }},
+	//{id: 1.0001, label: "該隱 Cain", valign: "middle", shape: "box", x: -150, y: -750, Group: 2, color: { background: "lightgreen", border: "green" }},
+	//{id: 1.0002, label: "   亞伯 Abel   ", valign: "", shape: "ellipse", x: -300, y: -700, Group: "0", color: { background: "lightgrey", border: "grey" }},
+	//{id: 1.002, label: "塞特 Seth", widthConstraint: {minimum: "", valign: "middle"}, shape: "box", x: -500, y: -700},
+	//{id: 220, widthConstraint: { maximum: 170 }, label: "220. maximum width and breaks have been automatically inserted into the label", x: -150, y: -150,},
+	//{id: 221, widthConstraint: { maximum: 170 }, label: "221...this too", x: -100, y: 0,},       
+	//{id: 200, font: { multi: true }, widthConstraint: 150, label: "200. <b>This</b> node has a fixed width and breaks have been automatically inserted into the label", x: -300, y: 50,},
+	//{id: 201, widthConstraint: "", label: "...this as well", x: -300, y: 200,},
+	//{id: 301, heightConstraint: { minimum: 70 }, label: "X301. ...this one here too", x: 100, y: 0,},
+	//{id: 400, heightConstraint: { minimum: 100, valign: "top" }, label: "400. Minimum height\nvertical alignment\nmay be top", x: 300, y: -200,},
+	//{id: 401, heightConstraint: { minimum: 100, valign: "middle" }, label: "401. Minimum height\nvertical alignment\nmay be middle\n(default)", x: 300, y: 0,},
+	//{id: 402, heightConstraint: { minimum: 100, valign: "bottom" }, label: "402. Minimum height\nvertical alignment\nmay be bottom", x: 300, y: 200,},
+
+	{id: 1, label: "亞當 & 夏娃 \nAdam & Eve", title: "亞當 Adam (3761 BC - 2831 BC)", widthConstraint: {minimum: "120", valign: "middle"}, physics: checked2, shape: "box", x: -50, y: -700, Group: "1", color: {background: "orange", border: "red"} },
+	{id: 1.0001, label: "該隱 Cain", title: "該隱 Cain", widthConstraint: {minimum: "", valign: "middle"}, shape: "box", x: -50, y: -600, Group: "2", color: {background: "#ccb3ff", border: "#5500ff"} },
+	{id: 1.0002, label: "    亞伯 Abel    ", valign: "", shape: "ellipse", title: "亞伯 Abel", x: 200, y: -620, Group: "0", color: {background: "lightgrey", border: "grey"} },
+	{id: 1.002, label: "塞特 Seth", title: "塞特 Seth (3631 BC - 2719 BC)", valign: "middle", shape: "box", x: -280, y: -650, Group: "1", },
+	{id: 1.003, label: "以挪士 Enosh", title: "以挪士 Enosh (3526 BC - 2621 BC)", valign: "middle", shape: "box", x: -500, y: -600, Group: "1", color: {background: "", border: ""} },
+	{id: 1.004, label: "該南 Cainan", title: "該南 Cainan (3436 BC - 2526 BC)", valign: "middle", shape: "box", x: -500, y: -550, Group: "1", color: {background: "", border: ""} },
+	{id: 1.005, label: "瑪勒列 Mahalalel", title: "瑪勒列 Mahalalel (3366 BC - 2471 BC)", valign: "middle", shape: "box", x: -500, y: -500, Group: "1", color: {background: "", border: ""} },
+	{id: 1.006, label: "雅列 Jared", title: "雅列 Jared (3301 BC - 2339 BC)", valign: "", shape: "box", x: -500, y: -450, Group: "1", color: {background: "", border: ""} },
+	{id: 1.007, label: "以諾 Enoch", title: "以諾 Enoch (3139 BC - 2774 BC)", valign: "", shape: "box", x: -500, y: -400, Group: "1", color: {background: "", border: ""} },
+	{id: 1.008, label: "瑪土撒拉 Methuselah", title: "瑪土撒拉 Methuselah (3074 BC - 2105 BC)", valign: "", shape: "box", x: -500, y: -350, Group: "1", color: {background: "", border: ""} },
+	{id: 1.009, label: "拉麥 Lamech", title: "拉麥 Lamech (2887 BC - 2110 BC)", valign: "", shape: "box", x: -500, y: -300, Group: "1", color: {background: "", border: ""} },
+	{id: 1.01, label: "挪亞 Noah", title: "挪亞 Noah (2705 BC - 1755 BC)", valign: "", shape: "box", x: -500, y: -250, Group: "1", color: {background: "", border: ""} },
+	{id: 1.0105, label: "1. 雅弗 Japheth", title: "1. 雅弗 Japheth (2205 BC)", valign: "", shape: "box", x: -700, y: -350, Group: "2", color: {background: "orange", border: "grey"} },
+	{id: 1.011, label: "2. 閃 Shem", title: "2. 閃 Shem (2203 BC - 1603 BC)", valign: "", shape: "box", x: -500, y: -200, Group: "1", },
+	{id: 1.0115, label: "3. 含 Ham ", title: "3. 含 Ham  (2201 BC)", widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: -200, Group: "3", color: {background: "pink", border: "purple"} },
+	{id: 1.012, label: "亞法撒 Arphaxad", title: "亞法撒 Arphaxad (2103 BC - 1665 BC)", valign: "", shape: "box", x: -500, y: -150, Group: "1", color: {background: "", border: ""} },
+	{id: 1.0125, label: "該南 Cainan", valign: "", shape: "box", x: -500, y: -100, Group: "1", color: {background: "", border: ""} },
+	{id: 1.013, label: "沙拉 Salah", title: "沙拉 Salah (2068 BC - 1635 BC)", valign: "", shape: "box", x: -500, y: -50, Group: "1", color: {background: "", border: ""} },
+	{id: 1.014, label: "希伯 Eber ", title: "希伯 Eber (2038 BC - 1574 BC) (Hebrews)", valign: "", shape: "box", x: -500, y: 0, Group: "1", color: {background: "", border: ""} },
+	{id: 1.015, label: "法勒 Peleg ", title: "法勒 Peleg  (2004 BC - 1765 BC)", valign: "", shape: "box", x: -500, y: 50, Group: "1", color: {background: "", border: ""} },
+	{id: 1.016, label: "拉吳 Reu ", title: "拉吳 Reu  (1974 BC - 1735 BC)", valign: "", shape: "box", x: -500, y: 100, Group: "1", color: {background: "", border: ""} },
+	{id: 1.017, label: "西鹿 Sequg ", title: "西鹿 Sequg  (1942 BC - 1712 BC)", valign: "", shape: "box", x: -500, y: 150, Group: "1", color: {background: "", border: ""} },
+	{id: 1.018, label: "拿鶴 Nahor", title: "拿鶴 Nahor (1912 BC - 1764 BC)", valign: "", shape: "box", x: -500, y: 200, Group: "1", color: {background: "", border: ""} },
+	{id: 1.019, label: "他拉 Terah", title: "他拉 Terah (1883 BC - 1678 BC)", valign: "", shape: "box", x: -500, y: 250, Group: "1", color: {background: "", border: ""} },
+
+	{id: 1.02, label: "亞伯拉罕 Abraham", title: "亞伯拉罕 Abraham (1813 BC - 1638 BC)", valign: "", shape: "box", x: -500, y: 300, Group: "1", color: {background: "", border: ""} },
+	{id: 1.0201, label: "以實瑪利 Ismael", title: "以實瑪利 Ismael (1727BC - 1590 BC)", valign: "", shape: "box", x: -700, y: 350, Group: "4", color: {background: "#adad85", border: "grey"} },
+	{id: 1.021, label: "以撒 Issac", title: "以撒 Issac (1713 BC - 1533 BC)", valign: "", shape: "box", x: -500, y: 350, Group: "1", color: {background: "", border: ""} },
+	{id: 1.022, label: "雅各 Jacob", title: "雅各 Jacob (1653 BC - 1506 BC)", valign: "", shape: "box", x: -500, y: 400, Group: "1", color: {background: "", border: ""} },
+	{id: 1.023, label: "猶大 Judah", title: "猶大 Judah", x: -500, y: 450, Group: "1", },
+	{id: 1.03, label: "法勒斯 Phares", title: "法勒斯 Phares", x: -500, y: 500, Group: "1", },
+	{id: 1.04, label: "希斯崙 Esrom", title: "希斯崙 Esrom", x: -500, y: 550, Group: "1", },
+	{id: 1.05, label: "亞蘭 Aram", title: "亞蘭 Aram", x: -500, y: 600, Group: "1", },
+	{id: 1.06, label: "亞米拿達 Amminadab", title: "亞米拿達 Amminadab", x: -500, y: 650, Group: "1", },
+	{id: 1.07, label: "拿順 Naasson", title: "拿順 Naasson", x: -500, y: 700, Group: "1", },
+	{id: 1.08, label: "撒門 Salmon", title: "撒門 Salmon", x: -50, y: 700, Group: "1", },
+	{id: 1.09, label: "波阿斯 Boaz", title: "波阿斯 Boaz", x: -50, y: 650, Group: "1", },
+	{id: 1.1, label: "俄備 Obed", title: "俄備 Obed", x: -50, y: 600, Group: "1", },
+	{id: 1.11, label: "耶西 Jesse", title: "耶西 Jesse", x: -50, y: 550, Group: "1", },
+	{id: 1.12, label: "大衛 David", title: "大衛 David", x: -50, y: 500, Group: "1", },
+	{id: 1.13, label: "拿單 Nathan", title: "拿單 Nathan", x: -50, y: 450, Group: "1", },
+	{id: 1.14, label: "瑪達他 Mattatha", title: "瑪達他 Mattatha", x: -50, y: 400, Group: "1", },
+	{id: 1.15, label: "買南 Menna", title: "買南 Menna", x: -50, y: 350, Group: "1", },
+	{id: 1.16, label: "米利亞 Melea", title: "米利亞 Melea", x: -50, y: 300, Group: "1", },
+	{id: 1.17, label: "以利亞敬 Eliakim", title: "以利亞敬 Eliakim", x: -50, y: 250, Group: "1", },
+	{id: 1.18, label: "約南 Jonam", title: "約南 Jonam", x: -50, y: 200, Group: "1", },
+	{id: 1.19, label: "約瑟 Joseph", title: "約瑟 Joseph", x: -50, y: 150, Group: "1", },
+	{id: 1.2, label: "猶大 Judah", title: "猶大 Judah", x: -50, y: 100, Group: "1", },
+	{id: 1.21, label: "西緬 Simeon", title: "西緬 Simeon", x: -50, y: 50, Group: "1", },
+	{id: 1.22, label: "利未 Levi", title: "利未 Levi", x: -50, y: 0, Group: "1", },
+	{id: 1.23, label: "瑪塔 Matthat", title: "瑪塔 Matthat", x: -50, y: -50, Group: "1", },
+	{id: 1.24, label: "約令 Jorim", title: "約令 Jorim", x: -50, y: -100, Group: "1", },
+	{id: 1.25, label: "以利以謝 Eliezer", title: "以利以謝 Eliezer", x: -50, y: -150, Group: "1", },
+	{id: 1.26, label: "約細 Jose", title: "約細 Jose", x: -50, y: -200, Group: "1", },
+	{id: 1.27, label: "珥 Er", title: "珥 Er", x: -50, y: -250, Group: "1", },
+	{id: 1.28, label: "以摩當 Elmandam", title: "以摩當 Elmandam", x: -50, y: -300, Group: "1", },
+	{id: 1.29, label: "哥桑 Cosam", title: "哥桑 Cosam", x: -50, y: -350, Group: "1", },
+	{id: 1.3, label: "亞底 Addi", title: "亞底 Addi", x: -50, y: -400, Group: "1", },
+	{id: 1.31, label: "麥基 Melchi", title: "麥基 Melchi", x: -50, y: -450, Group: "1", },
+	{id: 1.32, label: "尼利 Neri", title: "尼利 Neri", x: -50, y: -500, Group: "1", },
+	{id: 1.33, label: "撒拉鐵 Shealtiel", title: "撒拉鐵 Shealtiel", x: 400, y: -500, Group: "1", },
+	{id: 1.34, label: "所羅巴伯 Zerubbabel", title: "所羅巴伯 Zerubbabel", x: 400, y: -450, Group: "1", },
+	{id: 1.35, label: "利撒 Rhesa", title: "利撒 Rhesa", x: 400, y: -400, Group: "1", },
+	{id: 1.36, label: "約亞拿 Joanna", title: "約亞拿 Joanna", x: 400, y: -350, Group: "1", },
+	{id: 1.37, label: "猶大 Juda", title: "猶大 Juda", x: 400, y: -300, Group: "1", },
+	{id: 1.38, label: "約瑟 Joseph", title: "約瑟 Joseph", x: 400, y: -250, Group: "1", },
+	{id: 1.39, label: "西美 Semei", title: "西美 Semei", x: 400, y: -200, Group: "1", },
+	{id: 1.4, label: "瑪他提亞 Mattathias", title: "瑪他提亞 Mattathias", x: 400, y: -150, Group: "1", },
+	{id: 1.41, label: "瑪押 Maath", title: "瑪押 Maath", x: 400, y: -100, Group: "1", },
+	{id: 1.42, label: "拿該 Nagge", title: "拿該 Nagge", x: 400, y: -50, Group: "1", },
+	{id: 1.43, label: "以斯利 Esli", title: "以斯利 Esli", x: 400, y: 0, Group: "1", },
+	{id: 1.44, label: "拿鴻 Naum", title: "拿鴻 Naum", x: 400, y: 50, Group: "1", },
+	{id: 1.45, label: "亞摩斯 Amos", title: "亞摩斯 Amos", x: 400, y: 100, Group: "1", },
+	{id: 1.46, label: "瑪他提亞 Mattathias", title: "瑪他提亞 Mattathias", x: 400, y: 150, Group: "1", },
+	{id: 1.47, label: "約瑟 Joseph", title: "約瑟 Joseph", x: 400, y: 200, Group: "1", },
+	{id: 1.48, label: "雅拿 Janna", title: "雅拿 Janna", x: 400, y: 250, Group: "1", },
+	{id: 1.49, label: "麥基 Melchi", title: "麥基 Melchi", x: 400, y: 300, Group: "1", },
+	{id: 1.5, label: "利未 Levi", title: "利未 Levi", x: 400, y: 350, Group: "1", },
+	{id: 1.51, label: "瑪塔 Matthat", title: "瑪塔 Matthat", x: 400, y: 400, Group: "1", },
+	{id: 1.52, label: "希里 Heli", title: "希里 Heli", x: 400, y: 450, Group: "1", },
+	{id: 1.53, label: "馬利亞 Mary", title: "馬利亞 Mary", x: 400, y: 500, Group: "1", },
+	{id: 777, label: "   耶穌 Jesus   ", title: "耶穌 Jesus (~6 BC - AD 27)", valign: "", shape: "eclipse", physics: checked3, x: 400, y: 550, Group: "1", color: {background: "white", border: "red"} },
+
+	{id: 1.601, label: "歌篾 Gomar", title: "歌篾 Gomar", valign: "", shape: "box", x: -1360, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.602, label: "亞實基拿 Ashkenaz", title: "亞實基拿 Ashkenaz", valign: "", shape: "box", x: -1500, y: -250, Group: "2", color: {background: "yellow", border: "grey"} },
+	{id: 1.603, label: "利法 Riphath", title: "利法 Riphath", valign: "", shape: "box", x: -1360, y: -250, Group: "2", color: {background: "yellow", border: "grey"} },
+	{id: 1.604, label: "陀迦瑪 Togarmah", title: "陀迦瑪 Togarmah", valign: "", shape: "box", x: -1220, y: -250, Group: "2", color: {background: "yellow", border: "grey"} },
+	{id: 1.605, label: "瑪各 Magog", title: "瑪各 Magog", valign: "", shape: "box", x: -1250, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.606, label: "瑪代 Madal", title: "瑪代 Madal", valign: "", shape: "box", x: -1140, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.607, label: "雅完 Javan", title: "雅完 Javan", valign: "", shape: "box", x: -1030, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.608, label: "以利沙 Elishah", title: "以利沙 Elishah", valign: "", shape: "box", x: -1030, y: -250, Group: "2", color: {background: "lightgreen", border: "grey"} },
+	{id: 1.609, label: "他施 Tarshish", title: "他施 Tarshish", valign: "", shape: "box", x: -910, y: -250, Group: "2", color: {background: "lightgreen", border: "grey"} },
+	{id: 1.61, label: "基提 Kittim", title: "基提 Kittim", valign: "", shape: "box", x: -800, y: -250, Group: "2", color: {background: "lightgreen", border: "grey"} },
+	{id: 1.611, label: "多單 Dodanim", title: "多單 Dodanim", valign: "", shape: "box", x: -690, y: -250, Group: "2", color: {background: "lightgreen", border: "grey"} },
+	{id: 1.612, label: "土巴 Tubal", title: "土巴 Tubal", valign: "", shape: "box", x: -920, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.613, label: "米設 Mechech", title: "米設 Mechech", valign: "", shape: "box", x: -810, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.614, label: "提拉 Tiras", title: "提拉 Tiras", valign: "", shape: "box", x: -700, y: -300, Group: "2", color: {background: "white", border: "grey"} },
+	{id: 1.707, label: "約坍 Joktan", title: "約坍 Joktan", valign: "", shape: "box", x: -700, y: 200, Group: "1", color: {background: "#ebebe0", border: "#6b6b47"} },
+	{id: 1.708, label: "亞摩答 Almodad", title: "亞摩答 Almodad", valign: "", shape: "box", x: -700, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.709, label: "沙列 Sheleph", title: "沙列 Sheleph", valign: "", shape: "box", x: -830, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.71, label: "哈薩瑪非 Hazarmaveth", title: "哈薩瑪非 Hazarmaveth", valign: "", shape: "box", x: -980, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.711, label: "耶拉 Jerah", title: "耶拉 Jerah", valign: "", shape: "box", x: -1125, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.712, label: "哈多蘭 Hadoram", title: "哈多蘭 Hadoram", valign: "", shape: "box", x: -1250, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.713, label: "烏薩 Uzal", title: "烏薩 Uzal", valign: "", shape: "box", x: -1370, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.714, label: "德拉 Diklah", title: "德拉 Diklah", valign: "", shape: "box", x: -1470, y: 250, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.715, label: "俄巴路 Obal", title: "俄巴路 Obal", valign: "", shape: "box", x: -700, y: 300, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.716, label: "亞比瑪利 Abimael", title: "亞比瑪利 Abimael", valign: "", shape: "box", x: -830, y: 300, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.717, label: "示巴 Sheba", title: "示巴 Sheba", valign: "", shape: "box", x: -960, y: 300, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.718, label: "阿斐 Ophir", title: "阿斐 Ophir", valign: "", shape: "box", x: -1070, y: 300, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.719, label: "哈腓拉 Havilah", title: "哈腓拉 Havilah", valign: "", shape: "box", x: -1190, y: 300, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.72, label: "約巴 Jobab", title: "約巴 Jobab", valign: "", shape: "box", x: -1310, y: 300, Group: "1", color: {background: "#d6d6c2", border: "#6b6b47"} },
+	{id: 1.0112, label: "以攔 Elam", title: "以攔 Elam", valign: "", shape: "box", x: -380, y: -150, Group: "1", color: {background: "#0099ff", border: "#0073e6"} },
+	{id: 1.0113, label: "亞述 Asshur", title: "亞述 Asshur", valign: "", shape: "box", x: -380, y: -100, Group: "1", color: {background: "#0099ff", border: "#0073e6"} },
+	{id: 1.721, label: "路德 Lud", title: "路德 Lud", valign: "", shape: "box", x: -380, y: -50, Group: "1", color: {background: "#0099ff", border: "#0073e6"} },
+	{id: 1.722, label: "亞蘭 Aram", title: "亞蘭 Aram", valign: "", shape: "box", x: -380, y: 0, Group: "1", color: {background: "#0099ff", border: "#0073e6"} },
+
+//According to Gospel Matthew 1:1-17
+	{id: 1.035, label: "所羅門 Solomon", title: "所羅門 Solomon",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 450, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.036, label: "羅波安 Roboam", title: "羅波安 Roboam",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 400, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.037, label: "亞比雅 Abia", title: "亞比雅 Abia",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 350, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.038, label: "亞撒 Asa", title: "亞撒 Asa",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 300, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.039, label: "約沙法 Josaphat", title: "約沙法 Josaphat",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 250, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.9, label: "約蘭 Joram", title: "約蘭 Joram",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 200, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.901, label: "烏西亞 Ozias", title: "烏西亞 Ozias",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 150, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.902, label: "約坦 Joatham", title: "約坦 Joatham",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 100, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.903, label: "亞哈斯 Achaz", title: "亞哈斯 Achaz",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 50, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.904, label: "希西家 Ezekias ", title: "希西家 Ezekias ",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: 0, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.905, label: "瑪拿西 Manasses", title: "瑪拿西 Manasses",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: -50, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.906, label: "亞們 Amon", title: "亞們 Amon",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: -100, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.907, label: "約西亞 Josias", title: "約西亞 Josias",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 100, y: -150, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.908, label: "耶哥尼雅 Jechonias", title: "耶哥尼雅 Jechonias",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 240, y: -150, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.909, label: "撒拉鐵 Salathiel", title: "撒拉鐵 Salathiel",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: -100, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.91, label: "所羅巴伯 Zorobabel", title: "所羅巴伯 Zorobabel",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: -50, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.911, label: "亞比玉 Abiud", title: "亞比玉 Abiud",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 0, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.912, label: "以利亞敬 Eliakim", title: "以利亞敬 Eliakim",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 50, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.913, label: "亞所 Azor", title: "亞所 Azor",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 100, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.914, label: "撒督 Sadoc", title: "撒督 Sadoc",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 150, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.915, label: "亞金 Achim", title: "亞金 Achim",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 200, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.916, label: "以律 Eliud", title: "以律 Eliud",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 250, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.917, label: "以利亞撒 Eleazar", title: "以利亞撒 Eleazar",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 300, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.918, label: "馬但 Matthan", title: "馬但 Matthan",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 350, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.919, label: "雅各 Jacob", title: "雅各 Jacob",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 400, Group: "1", color: {background: "#e6f2ff", border: ""} },
+	{id: 1.92, label: "約瑟 Joseph", title: "約瑟 Joseph",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: 250, y: 500 , Group: "1", color: {background: "#e6f2ff", border: ""} },
+
+//
+	{id: 1.801, label: "古實 Cush", title: "古實 Cush",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: -150, Group: "3", color: {background: "#ffdf80", border: "#cc9900"} },
+	{id: 1.814, label: "麥西 Mazraim", title: "麥西 Mazraim (Egypt)",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -820, y: -150, Group: "3", color: {background: "#ffdf80", border: "#cc9900"} },
+	{id: 1.822, label: "弗 Put", title: "弗 Put",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -920, y: -150, Group: "3", color: {background: "#ffdf80", border: "#cc9900"} },
+	{id: 1.823, label: "迦南 Canaan", title: "迦南 Canaan",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1020, y: -150, Group: "3", color: {background: "#ffdf80", border: "#cc9900"} },
+	{id: 1.802, label: "西巴 Seba", title: "西巴 Seba",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: 100, Group: "3", color: {background: "#ffddcc", border: "#993300"} },
+	{id: 1.803, label: "哈腓拉 Havilah", title: "哈腓拉 Havilah",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -820, y: 100, Group: "3", color: {background: "#ffddcc", border: "#993300"} },
+	{id: 1.804, label: "撒弗他 Sabtah", title: "撒弗他 Sabtah",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -950, y: 100, Group: "3", color: {background: "#ffddcc", border: "#993300"} },
+	{id: 1.805, label: "拉瑪 Raamah", title: "拉瑪 Raamah",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1070, y: 100, Group: "3", color: {background: "#ffddcc", border: "#993300"} },
+	{id: 1.806, label: "示巴 Sheba", title: "示巴 Sheba",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1070, y: 150, Group: "3", color: {background: "#ffaa80", border: "#b33c00"} },
+	{id: 1.807, label: "底但 Dedan", title: "底但 Dedan",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1185, y: 150, Group: "3", color: {background: "#ffaa80", border: "#b33c00"} },
+	{id: 1.808, label: "撒弗提迦 Sabteca", title: "撒弗提迦 Sabteca",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1200, y: 100, Group: "3", color: {background: "#ffddcc", border: "#993300"} },
+//
+	{id: 1.809, label: "寧錄 Nimord", title: "寧錄 Nimord",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1330, y: 100, Group: "3", color: {background: "#ffddcc", border: "#993300"} },
+	{id: 1.81, label: "巴別 Babel", title: "巴別 Babel",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1330, y: 150, Group: "3", color: {background: "#c2c2d6", border: "#666699"} },
+	{id: 1.811, label: "以力 Erech", title: "以力 Erech",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1440, y: 150, Group: "3", color: {background: "#c2c2d6", border: "#666699"} },
+	{id: 1.812, label: "亞甲 Accad", title: "亞甲 Accad",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1550, y: 150, Group: "3", color: {background: "#c2c2d6", border: "#666699"} },
+	{id: 1.813, label: "甲尼 Calneh", title: "甲尼 Calneh",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1660, y: 150, Group: "3", color: {background: "#c2c2d6", border: "#666699"} },
+	{id: 1.815, label: "路低人 Ludites", title: "路低人 Ludites",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -820, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.816, label: "亞拿米人 Anamites", title: "亞拿米人 Anamites",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -960, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.817, label: "利哈比人 Lehabites", title: "利哈比人 Lehabites",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1110, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.818, label: "拿弗土希人 Naphtuhites", title: "拿弗土希人 Naphtuhites",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1280, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.819, label: "帕斯魯細人 Pathrusim", title: "帕斯魯細人 Pathrusim",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1460, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.82, label: "迦斯路希人 Casluhim (非利士人Philistines)", title: "迦斯路希人 Casluhim (非利士人Philistines)",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1630, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.821, label: "迦斐託人 Caphtorim", title: "迦斐託人 Caphtorim",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1800, y: 50, Group: "3", color: {background: "#b3ffd9", border: "#006633"} },
+	{id: 1.824, label: "西頓 Sidon", title: "西頓 Sidon",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1020, y: -100, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.825, label: "赫  Heth (Hittites)", title: "赫  Heth (Hittites)",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1140, y: -100, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.826, label: "和耶布斯人 Jebusite", title: "和耶布斯人 Jebusite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1290, y: -100, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.827, label: "亞摩利人 Amorite", title: "亞摩利人 Amorite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1440, y: -100, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.828, label: "革迦撒人 Girgashite", title: "革迦撒人 Girgashite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1590, y: -100, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.829, label: "希未人 Hivite", title: "希未人 Hivite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1730, y: -100, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.83, label: "亞基人 Arkite", title: "亞基人 Arkite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1020, y: -50, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.831, label: "西尼人 Sinite", title: "西尼人 Sinite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1140, y: -50, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.832, label: "亞瓦底人 Arvadite", title: "亞瓦底人 Arvadite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1280, y: -50, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.833, label: "洗瑪利人 Zemarite", title: "洗瑪利人 Zemarite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1440, y: -50, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+	{id: 1.834, label: "哈馬人 Hamthite", title: "哈馬人 Hamthite",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1580, y: -50, Group: "3", color: {background: "#ffffb3", border: "#994d00"} },
+
+	{id: 2.01, label: "2 尼拜約 Nebajoth", title: "尼拜約 Nebajoth",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: 400, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.02, label: "2 基達 Kedar", title: "基達 Kedar",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -835, y: 400, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.03, label: "2 亞德別 Adbeel", title: "亞德別 Adbeel",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -960, y: 400, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.04, label: "2 米比衫 Mibsam", title: "米比衫 Mibsam",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1100, y: 400, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.05, label: "2 米施瑪 Mishma", title: "米施瑪 Mishma",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1240, y: 400, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.06, label: "2 度瑪 Dumah", title: "度瑪 Dumah",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1375, y: 400, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.07, label: "2 瑪撒 Massa", title: "瑪撒 Massa",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: 450, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.08, label: "2 哈大 Hadar", title: "哈大 Hadar",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -820, y: 450, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.09, label: "2 提瑪 Tema", title: "提瑪 Tema",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -940, y: 450, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.1, label: "2 伊突 Jetur", title: "伊突 Jetur",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1060, y: 450, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.11, label: "2 拿非施 Naphish", title: "拿非施 Naphish",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1190, y: 450, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+	{id: 2.12, label: "2 基底瑪 Kedemah", title: "基底瑪 Kedemah",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1340, y: 450, Group: "4", color: {background: "#e6ffff", border: "#6b6b47"} },
+//
+	{id: 3.01, label: "2 流便 Reuben", title: "2 流便 Reuben", valign: "", shape: "box", x: -700, y: 650, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.02, label: "2 西缅 Simeon", title: "2 西缅 Simeon", valign: "", shape: "box", x: -830, y: 650, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.03, label: "2 利未 Levi", title: "2 利未 Levi", valign: "", shape: "box", x: -960, y: 650, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.04, label: "2 猶大 Judah", title: "2 猶大 Judah", valign: "", shape: "box", x: -1080, y: 650, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.05, label: "2 以薩迦 Issachar", title: "2 以薩迦 Issachar", valign: "", shape: "box", x: -1220, y: 650, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.06, label: "2 西布倫 Zebulun", title: "2 西布倫 Zebulun", valign: "", shape: "box", x: -1380, y: 650, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.07, label: "2 迦得 Gad", title: "2 迦得 Gad", valign: "", shape: "box", x: -700, y: 700, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.08, label: "2 亞設 Asher", title: "2 亞設 Asher", valign: "", shape: "box", x: -820, y: 700, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.09, label: "2 但 Dan", title: "2 但 Dan", valign: "", shape: "box", x: -930, y: 700, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.1, label: "2 拿弗他利 Naphtali", title: "2 拿弗他利 Naphtali", valign: "", shape: "box", x: -1060, y: 700, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.11, label: "2 约瑟 Joseph", title: "2 约瑟 Joseph", valign: "", shape: "box", x: -1210, y: 700, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+	{id: 3.12, label: "2 便雅憫 Benjamin", title: "2 便雅悯 Benjamin", valign: "", shape: "box", x: -1360, y: 700, Group: "1", color: {background: "#f0f0f5", border: "#47476b"} },
+
+	{id: 5.001, label: "以掃 Esau (Edom)", title: "以掃 Esau (Edom)",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: 500, Group: "5", color: {background: "#e6ac00", border: "#664d00"} },
+	{id: 5.002, label: "以利法 Eliphaz", title: "以利法 Eliphaz",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -700, y: 550, Group: "5", color: {background: "#e6ccb3", border: "#4d3900"} },
+	{id: 5.01, label: "流珥 Reuel", title: "流珥 Reuel",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -820, y: 550, Group: "5", color: {background: "#e6ccb3", border: "#4d3900"} },
+	{id: 5.015, label: "耶烏施 Jeush", title: "耶烏施 Jeush",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -940, y: 550, Group: "5", color: {background: "#e6ccb3", border: "#4d3900"} },
+	{id: 5.016, label: "雅蘭 Jaalam", title: "雅蘭 Jaalam",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1060, y: 550, Group: "5", color: {background: "#e6ccb3", border: "#4d3900"} },
+	{id: 5.017, label: "可拉 Karah", title: "可拉 Karah",  widthConstraint: {minimum: "", valign: ""}, shape: "box", x: -1180, y: 550, Group: "5", color: {background: "#e6ccb3", border: "#4d3900"} },
+
+	{id: 6.001, label: "以諾 Enoch", title: "以諾 Enoch", valign: "", shape: "box", x: -200, y: -500, Group: "6", color: {background: "#e6e6ff", border: "#6666ff"} },
+	{id: 6.002, label: "以拿 Irad", title: "以拿 Irad", valign: "", shape: "box", x: -200, y: -450, Group: "6", color: {background: "#e6e6ff", border: "#6666ff"} },
+	{id: 6.003, label: "米戶雅利 Mehujael", title: "", valign: "", shape: "box", x: -200, y: -400, Group: "6", color: {background: "#e6e6ff", border: "#6666ff"} },
+	{id: 6.004, label: "瑪土撒利 Methusael", title: "", valign: "", shape: "box", x: -200, y: -350, Group: "6", color: {background: "#e6e6ff", border: "#6666ff"} },
+	{id: 6.005, label: "拉麥 Lamech", title: "拉麥 Lamech", valign: "", shape: "box", x: -200, y: -300, Group: "6", color: {background: "#e6e6ff", border: "#6666ff"} },
+	{id: 6.006, label: "雅八 Jabal", title: "雅八 Jabal", valign: "", shape: "box", x: -200, y: -250, Group: "6", color: {background: "#79d2a6", border: "#339966"} },
+	{id: 6.007, label: "猶八 Jubal", title: "猶八 Jubal", valign: "", shape: "box", x: -200, y: -200, Group: "6", color: {background: "#79d2a6", border: "#339966"} },
+	{id: 6.008, label: "八該隱 Tubal–cain", title: "八該隱 Tubal–cain", valign: "", shape: "box", x: -200, y: -150, Group: "6", color: {background: "#79d2a6", border: "#339966"} },
+	{id: 6.009, label: "拿瑪 Naamah", title: "拿瑪 Naamah", valign: "", shape: "box", x: -200, y: -100, Group: "6", color: {background: "#79d2a6", border: "#339966"} },
+
+	{id: 7.001, label: "拿鶴 Nahor", title: "拿鶴 Nahor", valign: "", shape: "box", x: -360, y: 300, Group: "7", color: {background: "#c2d6d6", border: "#0073e6"} },
+	{id: 7.002, label: "哈蘭 Haran", title: "哈蘭 Haran", valign: "", shape: "box", x: -360, y: 350, Group: "7", color: {background: "#c2d6d6", border: "#0073e6"} },
+	{id: 7.003, label: "羅得 Lot", title: "羅得 Lot", valign: "", shape: "box", x: -360, y: 400, Group: "7", color: {background: "#9494b8", border: "#0073e6"} },
+	{id: 7.004, label: "摩押 Moab (Moabites)", title: "摩押 Moab (Moabites)", valign: "", shape: "box", x: -340, y: 450, Group: "7", color: {background: " #94b8b8", border: "#3d5c5c"} },
+	{id: 7.005, label: "便亞米 Ben-ammi (Ammon)", title: "便亞米 Ben-ammi (Ammon)", valign: "", shape: "box", x: -320, y: 500, Group: "7", color: {background: " #94b8b8", border: "#3d5c5c"} },
+
+
+
+     ];
+	
+
+
+	 
+   var edges = [
+   
+   	{from: 1, to: 1.002, label: "路 Luke: 3:23-38" , arrows: "to", color: { color: "blue"}},
+   	{from: 1, to: 1.0001, label: "" , arrows: "to", color: { color: "blue"}},
+   	{from: 1, to: 1.0002, label: "", arrows: "to", color: { color: "blue"}},
+   	{from: 1.002, to: 1.003, label: "" , arrows: "middle",}, 
+   	{from: 1.003, to: 1.004, label: "" , arrows: "middle",},
+   	{from: 1.004, to: 1.005, label: "" , arrows: "middle",},
+	{from: 1.005, to:1.006, label: "" , arrows: "to"},
+	{from: 1.006, to:1.007, label: "" , arrows: "middle"},
+	{from: 1.007, to:1.008, label: "" , arrows: "middle"},
+	{from: 1.008, to:1.009, label: "" , arrows: "middle"},
+	{from: 1.009, to:1.01, label: "" , arrows: "middle"},
+	{from: 1.01, to:1.0105, label: "" , arrows: "to", color: { color: "blue"}},
+	{from: 1.01, to:1.011, label: "" , arrows: "to", color: { color: "blue"}},
+	{from: 1.01, to:1.0115, label: "" , arrows: "to", color: { color: "blue"}},
+	{from: 1.011, to:1.012, label: "" , arrows: "to"},
+	{from: 1.011, to:1.0112, label: "" , arrows: "middle"},
+	{from: 1.011, to:1.0113, label: "" , arrows: "middle"},
+	{from: 1.011, to:1.721, label: "" , arrows: "middle"},
+	{from: 1.011, to:1.722, label: "" , arrows: "middle"},
+	
+	{from: 1.012, to:1.0125, label: "" , arrows: "to"},
+	{from: 1.0125, to:1.013, label: "" , arrows: "to"},
+	{from: 1.013, to:1.014, label: "" , arrows: "to"},
+	{from: 1.014, to:1.015, label: "" , arrows: "to"},
+	{from: 1.015, to:1.016, label: "" , arrows: "to"},
+	{from: 1.016, to:1.017, label: "" , arrows: "to"},
+	{from: 1.017, to:1.018, label: "" , arrows: "to"},
+	{from: 1.018, to:1.019, label: "" , arrows: "to"},
+	{from: 1.019, to:1.02, label: "" , arrows: "to"},
+	{from: 1.02, to:1.021, label: "" , arrows: "to"},
+	{from: 1.02, to:1.0201, label: "" , arrows: "to"},
+	{from: 1.021, to:1.022, label: "" , arrows: "to"},
+	{from: 1.022, to:1.023, label: "" , arrows: "to"},
+	{from: 1.023, to:1.03, label: "" , arrows: "to"},
+	{from: 1.03, to:1.04, label: "" , arrows: "to"},
+	{from: 1.04, to:1.05, label: "" , arrows: "to"},
+	{from: 1.05, to:1.06, label: "" , arrows: "to"},
+	{from: 1.06, to:1.07, label: "" , arrows: "to"},
+	{from: 1.07, to:1.08, label: "" , arrows: "to"},
+	{from: 1.08, to:1.09, label: "" , arrows: "to"},
+	{from: 1.09, to:1.1, label: "" , arrows: "to"},
+	{from: 1.1, to:1.11, label: "" , arrows: "to"},
+	{from: 1.11, to:1.12, label: "" , arrows: "to"},
+	{from: 1.12, to:1.13, label: "" , arrows: "to"},
+	{from: 1.13, to:1.14, label: "" , arrows: "to"},
+	{from: 1.14, to:1.15, label: "" , arrows: "to"},
+	{from: 1.15, to:1.16, label: "" , arrows: "to"},
+	{from: 1.16, to:1.17, label: "" , arrows: "to"},
+	{from: 1.17, to:1.18, label: "" , arrows: "to"},
+	{from: 1.18, to:1.19, label: "" , arrows: "to"},
+	{from: 1.19, to:1.2, label: "" , arrows: "to"},
+	{from: 1.2, to:1.21, label: "" , arrows: "to"},
+	{from: 1.21, to:1.22, label: "" , arrows: "to"},
+	{from: 1.22, to:1.23, label: "" , arrows: "to"},
+	{from: 1.23, to:1.24, label: "" , arrows: "to"},
+	{from: 1.24, to:1.25, label: "" , arrows: "to"},
+	{from: 1.25, to:1.26, label: "" , arrows: "to"},
+	{from: 1.26, to:1.27, label: "" , arrows: "to"},
+	{from: 1.27, to:1.28, label: "" , arrows: "to"},
+	{from: 1.28, to:1.29, label: "" , arrows: "to"},
+	{from: 1.29, to:1.3, label: "" , arrows: "to"},
+	{from: 1.3, to:1.31, label: "" , arrows: "to"},
+	{from: 1.31, to:1.32, label: "" , arrows: "to"},
+	{from: 1.32, to:1.33, label: "" , arrows: "to"},
+	{from: 1.33, to:1.34, label: "" , arrows: "to"},
+	{from: 1.34, to:1.35, label: "" , arrows: "to"},
+	{from: 1.35, to:1.36, label: "" , arrows: "to"},
+	{from: 1.36, to:1.37, label: "" , arrows: "to"},
+	{from: 1.37, to:1.38, label: "" , arrows: "to"},
+	{from: 1.38, to:1.39, label: "" , arrows: "to"},
+	{from: 1.39, to:1.4, label: "" , arrows: "to"},
+	{from: 1.4, to:1.41, label: "" , arrows: "to"},
+	{from: 1.41, to:1.42, label: "" , arrows: "to"},
+	{from: 1.42, to:1.43, label: "" , arrows: "to"},
+	{from: 1.43, to:1.44, label: "" , arrows: "to"},
+	{from: 1.44, to:1.45, label: "" , arrows: "to"},
+	{from: 1.45, to:1.46, label: "" , arrows: "to"},
+	{from: 1.46, to:1.47, label: "" , arrows: "to"},
+	{from: 1.47, to:1.48, label: "" , arrows: "to"},
+	{from: 1.48, to:1.49, label: "" , arrows: "to"},
+	{from: 1.49, to:1.5, label: "" , arrows: "to"},
+	{from: 1.5, to:1.51, label: "" , arrows: "to"},
+	{from: 1.51, to:1.52, label: "" , arrows: "to"},
+	{from: 1.52, to:1.53, label: "" , arrows: "to"},
+	{from: 1.53, to:777, label: "" , arrows: "to"},
+	{from: 1.0105, to:1.601, label: "" , arrows: "middle"},
+	{from: 1.601, to:1.602, label: "" , arrows: "middle"},
+	{from: 1.601, to:1.603, label: "" , arrows: "middle"},
+	{from: 1.601, to:1.604, label: "" , arrows: "middle"},
+	{from: 1.0105, to:1.605, label: "" , arrows: "middle"},
+	{from: 1.0105, to:1.606, label: "" , arrows: "middle"},
+	{from: 1.0105, to:1.607, label: "" , arrows: "middle"},
+	{from: 1.0105, to:1.612, label: "" , arrows: "middle"},
+	{from: 1.0105, to:1.613, label: "" , arrows: "middle"},	
+	{from: 1.0105, to:1.614, label: "" , arrows: "middle"},
+	{from: 1.607, to:1.608, label: "" , arrows: "middle"},
+	{from: 1.607, to:1.609, label: "" , arrows: "middle"},
+	{from: 1.607, to:1.61, label: "" , arrows: "middle"},
+	{from: 1.607, to:1.611, label: "" , arrows: "middle"},
+	{from: 1.014, to:1.707, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.708, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.709, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.71, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.711, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.712, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.713, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.714, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.715, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.716, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.717, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.718, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.719, label: "" , arrows: "middle"},
+	{from: 1.707, to:1.72, label: "" , arrows: "middle"},
+	{from: 1.801, to:1.802, label: "" , arrows: "middle"},
+	{from: 1.801, to:1.803, label: "" , arrows: "middle"},
+	{from: 1.801, to:1.804, label: "" , arrows: "middle"},
+	{from: 1.801, to:1.805, label: "" , arrows: "middle"},
+	{from: 1.805, to:1.806, label: "" , arrows: "middle"},
+	{from: 1.805, to:1.807, label: "" , arrows: "middle"},
+	{from: 1.801, to:1.808, label: "" , arrows: "middle"},
+	{from: 1.801, to:1.809, label: "" , arrows: "middle"},
+	{from: 1.814, to:1.815, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.814, to:1.816, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.814, to:1.817, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.814, to:1.818, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.814, to:1.819, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.814, to:1.82, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.814, to:1.821, label: "" , arrows: "middle", color: { color: "#006633"}},
+	{from: 1.809, to:1.81, label: "" , arrows: "middle"},
+	{from: 1.809, to:1.811, label: "" , arrows: "middle"},
+	{from: 1.809, to:1.812, label: "" , arrows: "middle"},
+	{from: 1.809, to:1.813, label: "" , arrows: "middle"},
+	{from: 1.0115, to:1.824, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.825, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.826, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.827, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.828, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.829, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.83, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.831, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.832, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.833, label: "" , arrows: "middle"},
+	{from: 1.823, to:1.834, label: "" , arrows: "middle"},
+
+//According to Gospel Matthew - Double line begins
+	{from: 1.02, to:1.021, label: "太 Matthew 1:1-17" , arrows: "to", color: { color: "black"}},
+	{from: 1.021, to:1.022, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.022, to:1.023, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.023, to:1.03, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.03, to:1.04, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.04, to:1.05, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.05, to:1.06, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.06, to:1.07, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.07, to:1.08, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.08, to:1.09, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.09, to:1.1, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.1, to:1.11, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.11, to:1.12, label: "" , arrows: "to", color: { color: "black"}},
+//Double line ends
+
+	{from: 1.12, to: 1.035, label: "太 Matthew 1:1-17" , arrows: "to", color: { color: "black"}},
+	{from: 1.035, to: 1.036, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.036, to: 1.037, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.037, to: 1.038, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.038, to: 1.039, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.039, to: 1.9, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.9, to: 1.901, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.901, to: 1.902, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.902, to: 1.903, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.903, to: 1.904, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.904, to: 1.905, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.905, to: 1.906, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.906, to: 1.907, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.907, to: 1.908, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.908, to: 1.909, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.909, to: 1.91, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.91, to: 1.911, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.911, to: 1.912, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.912, to: 1.913, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.913, to: 1.914, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.914, to: 1.915, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.915, to: 1.916, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.916, to: 1.917, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.917, to: 1.918, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.918, to: 1.919, label: "" , arrows: "to", color: { color: "black"}},
+//	{from: 1.919, to: 1.53, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.919, to: 1.92, label: "" , arrows: "to", color: { color: "black"}},
+
+	{from: 1.92, to: 777, label: "" , arrows: "to", color: { color: "black"}},
+	{from: 1.0115, to:1.801, label: "" , arrows: "middle"},
+	{from: 1.0115, to:1.814, label: "" , arrows: "middle"},
+	{from: 1.0115, to:1.822, label: "" , arrows: "middle"},
+	{from: 1.0115, to:1.823, label: "" , arrows: "middle"},
+	
+	{from: 1.0201, to:2.01, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.02, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.03, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.04, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.05, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.06, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.07, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.08, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.09, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.1, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.11, label: "" , arrows: "middle"},
+	{from: 1.0201, to:2.12, label: "" , arrows: "middle"},
+	
+	{from: 1.022, to:3.01, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.02, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.03, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.04, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.05, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.06, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.07, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.08, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.09, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.1, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.11, label: "" , arrows: "middle"},
+	{from: 1.022, to:3.12, label: "" , arrows: "middle"},
+
+	{from: 1.021, to:5.001, label: "" , arrows: "middle"},
+	{from: 5.001, to:5.002, label: "" , arrows: "middle"},
+	{from: 5.001, to:5.01, label: "" , arrows: "middle"},
+	{from: 5.001, to:5.015, label: "" , arrows: "middle"},
+	{from: 5.001, to:5.016, label: "" , arrows: "middle"},
+	{from: 5.001, to:5.017, label: "" , arrows: "middle"},
+	
+	{from: 1.0001, to:6.001, label: "" , arrows: "middle"},
+	{from: 6.001, to:6.002, label: "" , arrows: "middle"},
+	{from: 6.002, to:6.003, label: "" , arrows: "middle"},
+	{from: 6.003, to:6.004, label: "" , arrows: "middle"},
+	{from: 6.004, to:6.005, label: "" , arrows: "middle"},
+	{from: 6.005, to:6.006, label: "" , arrows: "middle"},
+	{from: 6.005, to:6.007, label: "" , arrows: "middle"},
+	{from: 6.005, to:6.008, label: "" , arrows: "middle"},
+	{from: 6.005, to:6.009, label: "" , arrows: "middle"},
+	
+	{from: 1.019, to:7.001, label: "" , arrows: "middle"},
+	{from: 1.019, to:7.002, label: "" , arrows: "middle"},
+	{from: 7.002, to:7.003, label: "" , arrows: "middle"},
+	{from: 7.003, to:7.004, label: "" , arrows: "middle"},
+	{from: 7.003, to:7.005, label: "" , arrows: "middle"},
+
+	
+// //{from: 100, to: 220, label: "", color: { color: "blue" } },
+   // {from: 220, to: 221, label: "more maximum width"},
+   // {from: 210, to: 200, label: "minimum width to fixed width" },
+   // {from: 220, to: 200, label: "maximum width to fixed width" },
+   // {from: 200, to: 201, label: "more fixed width" },
+   // {from: 300, to: 301, label: "more minimum height" },
+   // {from: 100, to: 400, label: "unconstrained to top valign", color: { color: "blue" } },
+   // {from: 400, to: 401, label: "top valign to middle valign" },
+   // {from: 401, to: 402, widthConstraint: { maximum: 150 }, label: "middle valign to bottom valign",},
+
+    ];
+
+
+
+      var container = document.getElementById("mynetwork");
+            
+      var data = {
+        nodes: nodes,
+        edges: edges,
+      };
+      var options = {
+      
+         layout: {
+            hierarchical: {
+              enabled: checked5,
+              direction: HDValue,							// "LR" or "UD"
+           // sortMethod: "hubsize",						//  "hubsize" or "directed"
+            },
+          },
+            
+        edges: {
+		  shadow: true,
+          font: {
+            size: 12,
+          },
+          widthConstraint: {
+            maximum: 90,
+          },
+          smooth: true,
+        },
+        nodes: {
+          shape: "box",
+          margin: 12,
+          widthConstraint: {
+            maximum: 200,
+          },
+		  borderWidth: 2,
+          shadow: true, 
+        },
+               
+        physics: {
+          enabled: checked,			//from Persistent Local Storage 
+          stabilization: checked4,	//Stabilizatioln Enable Checkbox
+           barnesHut: {
+			theta: 0.5,
+			gravitationalConstant: -2000,
+			centralGravity: 0.3,
+			springLength: 95,
+			springConstant: 0.04,
+			damping: 0.09,
+//			avoidOverlap: 0.2
+			avoidOverlap: OverlapValue,
+		  },
+		  
+		  repulsion: {
+			nodeDistance: 10,
+			centralGravity: 0.2,
+			springLength: 200,
+			springConstant: 0.05,
+			damping: 0.09
+		  },
+
+//Optional Tooltip
+		   tooltip: {
+				delay: 300,
+				fontColor: "black",
+				fontSize: 14, // px
+				fontFace: "verdana",
+				color: {
+				border: "#666",
+				background: "#FFFFC6"
+				}
+			}		 
+//Tooltip Ends
+        },
+          
+        navigation: true,
+        interaction:{
+            navigationButtons: true,
+            keyboard: true,
+   			dragNodes:true,
+			dragView: true,
+			hideEdgesOnDrag: false,
+			hideEdgesOnZoom: false,
+			hideNodesOnDrag: false,
+			hover: true,
+			hoverConnectedEdges: true,
+			keyboard: {
+			enabled: true,
+			speed: {x: 10, y: 10, zoom: 0.02},
+			bindToWindow: true
+			},
+			multiselect: false,
+			navigationButtons: true,
+			selectable: true,
+			selectConnectedEdges: true,
+			tooltipDelay: 300,
+			zoomSpeed: 1,
+			zoomView: true
+			},
+			
+			//clustering: true,
+
+
+			
+			
+        groups: {
+          1: {color: { background: "red", border: "white" }, shape: "diamond",}, dotsWithLabel: {label: "I'm a dot!", shape: "dot", color: "cyan",},
+          2: {color: "rgb(0,255,140)" }, icons: {shape: "icon", icon: {face: "FontAwesome", code: "\uf0c0", size: 50, color: "orange",},},
+          3: {color: { border: "white" },},
+        },			
+		
+      };
+      
+   
+    
+      
+      
+    var network = new vis.Network(container, data, options);
+
+
+</script>
+
+
+
+</body>
+</html>
