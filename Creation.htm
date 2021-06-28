@@ -82,7 +82,23 @@
       background-color: rgba(255, 255, 0, 0.2);
     }
 
-
+    .vis-item.vis-background.blacktogrey {
+	background-image: linear-gradient(to right, #000000 11%, #cccccc 100%);		
+    }
+    .vis-item.vis-background.greytogreen {
+	background-image: linear-gradient(to right, #cccccc 11%, #e6ffcc 100%);		
+    }
+    .vis-item.vis-background.greentoyellow {
+	background-image: linear-gradient(to right, #e6ffcc 11%, #ffffe6 100%);		
+    }	
+    .vis-item.vis-background.yellowtopurple {
+	background-image: linear-gradient(to right, #ffffe6 11%, #ffe6ff 100%);		
+    }	
+    .vis-item.vis-background.purpletogrey {
+	background-image: linear-gradient(to right, #ffe6ff 11%, #f1f1f1 100%);		
+    }	
+		
+	
     // Background color of box
     .vis-item.white { background-color: #ffffff;}
     .vis-item.lightgrey { background-color: #f1f1f1;}
@@ -569,12 +585,17 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
 
 	//BACKGROUND GROUP 1
 
-	{id: 'B101', content: '', start: '0000-10-07T04:01:00', end: '0923', type: 'background', group: 1, className: 'black'},
-	{id: 'B102', content: '冥古宙 <br>HADEAN Eon', start: '0923', end: '0980', type: 'background', group: 1, className: 'darkgrey'},
-	{id: 'B103', content: '太古宙 <br>ARCHEAN Eon', start: '0980', end: '1130', type: 'background', group: 1, className: 'lightgreen'},
-	{id: 'B104', content: '元古宙 <br>PROTEROZOIC Eon', start: '1130', end: '1326', type: 'background', group: 1, className: 'lightyellow'},
-	{id: 'B105', content: '<br>寒武紀 <br>CAMBRIAN <br>Period', start: '1326', end: '1331-06-30', type: 'background', group: 1, className: 'lightpurple'},
-	{id: 'B106', content: '<br><br>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1331-07-01', end: '1335', type: 'background', group: 1, className: 'lightorange'},
+	{id: 'B101', content: '', start: '0000-10-07T04:01:00', end: '0918', type: 'background', group: 1, className: 'black'},
+	{id: 'B1012', content: '', start: '0918', end: '0923', type: 'background', group: 1, className: 'blacktogrey'},	
+	{id: 'B102', content: '冥古宙 <br>HADEAN Eon', start: '0923', end: '0978', type: 'background', group: 1, className: 'darkgrey'},
+	{id: 'B1022', content: '', start: '0978', end: '0983', type: 'background', group: 1, className: 'greytogreen'},
+	{id: 'B103', content: '太古宙 <br>ARCHEAN Eon', start: '0983', end: '1127', type: 'background', group: 1, className: 'lightgreen'},
+	{id: 'B1032', content: '', start: '1127', end: '1132', type: 'background', group: 1, className: 'greentoyellow'},	
+	{id: 'B104', content: '元古宙 <br>PROTEROZOIC Eon', start: '1132', end: '1326', type: 'background', group: 1, className: 'lightyellow'},
+	{id: 'B1042', content: '', start: '1326', end: '1329', type: 'background', group: 1, className: 'yellowtopurple'},	
+	{id: 'B105', content: '<br>寒武紀 <br>CAMBRIAN <br>Period', start: '1329', end: '1331-06-30', type: 'background', group: 1, className: 'lightpurple'},
+	{id: 'B1052', content: '', start: '1331-06-30', end: '1332-06-30', type: 'background', group: 1, className: 'purpletogrey'},
+	{id: 'B106', content: '<br><br>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1332-07-01', end: '1335', type: 'background', group: 1, className: 'lightgrey'},
 	{id: 'B107', content: '<br>志留紀 <br>SILURIAN <br>Period', start: '1335', end: '1338', type: 'background', group: 1, className: 'pink'},
 	{id: 'B108', content: '<br><br>泥盆纪 <br>DEVONIAN <br>Period', start: '1338', end: '1344', type: 'background', group: 1, className: 'green'},
 	{id: 'B109', content: '<br>石炭纪 <br>CARBONIFEROUS <br>Period', start: '1344', end: '1350', type: 'background', group: 1, className: 'blue'},
@@ -590,12 +611,17 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
 
 	//BACKGROUND GROUP 2
 
-	{id: 'B201', content: '', start: '0000-10-07T04:01:00', end: '0923', type: 'background', group: 2, className: 'black'},
-	{id: 'B202', content: '<b>冥古宙 <br>HADEAN Eon', start: '0923', end: '0980', type: 'background', group: 2, className: 'darkgrey'},
-	{id: 'B203', content: '<br><b>太古宙 <br>ARCHEAN Eon', start: '0980', end: '1130', type: 'background', group: 2, className: 'lightgreen'},
-	{id: 'B204', content: '<br><br><b>元古宙 <br>PROTEROZOIC Eon', start: '1130', end: '1326', type: 'background', group: 2, className: 'lightyellow'},
-	{id: 'B205', content: '<br><b>寒武紀 <br>CAMBRIAN <br>Period', start: '1326', end: '1331-06-30', type: 'background', group: 2, className: 'lightpurple'},
-	{id: 'B206', content: '<br><br><b>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1331-07-01', end: '1335', type: 'background', group: 2, className:'lightgrey'},
+	{id: 'B201', content: '', start: '0000-10-07T04:01:00', end: '0918', type: 'background', group: 2, className: 'black'},
+	{id: 'B2012', content: '', start: '0918', end: '0923', type: 'background', group: 2, className: 'blacktogrey'},		
+	{id: 'B202', content: '<b>冥古宙 <br>HADEAN Eon', start: '0923', end: '0978', type: 'background', group: 2, className: 'darkgrey'},
+	{id: 'B2022', content: '', start: '0978', end: '0983', type: 'background', group: 2, className: 'greytogreen'},	
+	{id: 'B203', content: '<br><b>太古宙 <br>ARCHEAN Eon', start: '0983', end: '1127', type: 'background', group: 2, className: 'lightgreen'},
+	{id: 'B2032', content: '', start: '1127', end: '1132', type: 'background', group: 2, className: 'greentoyellow'},		
+	{id: 'B204', content: '<br><br><b>元古宙 <br>PROTEROZOIC Eon', start: '1132', end: '1326', type: 'background', group: 2, className: 'lightyellow'},
+	{id: 'B2042', content: '', start: '1326', end: '1329', type: 'background', group: 2, className: 'yellowtopurple'},	
+	{id: 'B205', content: '<br><b>寒武紀 <br>CAMBRIAN <br>Period', start: '1329', end: '1331-06-30', type: 'background', group: 2, className: 'lightpurple'},
+	{id: 'B2052', content: '', start: '1331-06-30', end: '1332-06-30', type: 'background', group: 2, className: 'purpletogrey'},
+	{id: 'B206', content: '<br><br><b>奥陶紀 <br>ORDOVICIAN <br>Period', start: '1332-07-01', end: '1335', type: 'background', group: 2, className:'lightgrey'},
 	{id: 'B207', content: '<br><b>志留紀 <br>SILURIAN <br>Period', start: '1335', end: '1338', type: 'background', group: 2, className: 'pink'},
 	{id: 'B208', content: '<br><br><b>泥盆纪 <br>DEVONIAN <br>Period', start: '1338', end: '1344', type: 'background', group: 2, className: 'green'},
 	{id: 'B209', content: '<br><b>石炭纪 <br>CARBONIFEROUS <br>Period', start: '1344', end: '1350', type: 'background', group: 2, className: 'blue'},
@@ -611,63 +637,28 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
 
 	// BACKGROUND GROUP 3
 
-	//{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0236',type: 'background', group: 3, className: 'black'},
-	//{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0236', end: '0471', title: '', type:'background', group: 3, className:'black'},
-	//{id: 'B303', content: '<b>3. 第三日<br>&emsp;Third Day', editable: false, start: '0471', end: '0707', title: '', type:'background', group: 3, className:'black'},
-	//{id: 'B304', content: '<b>4. 第四日<br>&emsp;Fourth Day', editable: false, start: '0707', end: '0923', title: '', type:'background', group: 3, className:'black'},
-	//{id: 'B305', content: '<b>4. 第四日<br>&emsp;Fourth Day', editable: false, start: '0923', end: '0942', title: '', type:'background', group: 3, className:'darkgrey'},
-	//{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '0942', end: '0980', title: '', type:'background', group: 3, className:'darkgrey'},
-	//{id: 'B307', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '0980', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
-	//{id: 'B308', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1130', end: '1178', title: '', type:'background', group: 3, className:'lightyellow'},
-	//{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1178', end: '1326', title: '', type:'background', group: 3, className:'lightyellow'},
-	//{id: 'B310', content: '6. 第六日<br>&emsp;Sixth Day', start: '1326', end: '1331-06-30', type: 'background', group: 3, className:'lightpurple'},
-
-//UPDATE
-//	{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0710',type: 'background', group: 3, className: 'black'},
-//	{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0710', end: '0923', title: '', type:'background', group: 3, className:'black'},
-//	{id: 'B3021', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0923', end: '0980', title: '', type:'background', group: 3, className:'darkgrey'},
-//	{id: 'B3022', content: '2. 第二日<br>&emsp;Second Day', editable: false, start: '0980', end: '1056', title: '', type:'background', group: 3, className:'lightgreen'},
-//	{id: 'B303', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1056', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
-//	{id: 'B3031', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1130', end: '1226', title: '', type:'background', group: 3, className:'lightyellow'},
-//	{id: 'B304', content: '4. 第四日<br>&emsp;Fourth Day', editable: false, start: '1226', end: '1303', title: '', type:'background', group: 3, className:'lightyellow'},
-//	{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1303', end: '1326', title: '', type:'background', group: 3, className:'lightyellow'},
-//	{id: 'B3061', content: '<br>', editable: false, start: '1326', end: '1331-07-01', title: '', type:'background', group: 3, className:'lightpurple'},
-//	{id: 'B3062', content: '<br>', editable: false, start: '1331', end: '1335', title: '', type:'background', group: 3, className:'lightgrey'},
-//	{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1343', end: '1343', title: '', type:'background', group: 3, className:'lightyellow'},
-//	{id: 'B310', content: '<br>', start: '1343', end: '1344', type: 'background', group: 3, className:'green'},
-//
-//	{id: 'B311', content: '<br><br>&ensp;<b>', start: '1331-07-01', end: '1335', type: 'background', group: 3, className: 'lightorange'},
-//	{id: 'B312', content: '<br>&ensp;<b>', start: '1335', end: '1338', type: 'background', group: 3, className: 'pink'},
-//	{id: 'B313', content: '<br><br>&ensp;<b>', start: '1338', end: '1344', type: 'background', group: 3, className: 'green'},
-//	{id: 'B314', content: '<br>&ensp;<b>', start: '1344', end: '1350', type: 'background', group: 3, className: 'blue'},
-//	{id: 'B315', content: '6. 第六日<br>&emsp;Sixth Day', start: '1350', end: '1354-11-23', type: 'background', group: 3, className: 'beige'},
-//	{id: 'B316', content: '<br>&ensp;<b>', start: '1354-11-23', end: '1359-11-23', type: 'background', group: 3, className: 'orange'},
-//	{id: 'B317', content: '<br><br>&ensp;<b>', start: '1359-11-23', end: '1365-06-30', type: 'background', group: 3, className: 'brown'},
-//	{id: 'B318', content: '<br>&ensp;<b>', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 3, className: 'LavenderBlush'},
-//	{id: 'B319', content: '<br><br>&ensp;<b>', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 3, className: 'turquoise'},
-//	{id: 'B320', content: '<br>&ensp;<b>', start: '1377-09-11', end: '1379-09-29T18:00:00', type: 'background', group: 3, className: 'darkgrey'},
-//	{id: 'B321', content: '<br><br>&ensp;<b>', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 3, className: 'lightred'},
-//	{id: 'B322', content: '<br>&ensp;<b>', start: '1379-12-29T18:56:12', end: '1379-12-29T22:13:37', type: 'background', group: 3, className: 'lightblue'},
-//	{id: 'B323', content: '<br>&ensp;<b>', start: '1379-12-29T22:13:37', end: '1379-12-30T00:03:00', type: 'background', group: 3, className: 'red'},
-//
-//	{id: 'B324', content: '6. 第六日 Sixth Day', editable: false, start: '1379-12-29T18:56:12', type: '', group: 3, className: 'grey'},
-//	{id: 'B325', content: '7. 第七日 Seventh Day', editable: false, start: '1379-12-29T18:56:13', type: '', group: 3, className: ''},
-//
-	{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0696',type:'background', group: 3, className: 'black'},
-	{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0677', end: '0923', title: '', type:'background', group: 3, className:'black'},
-	{id: 'B3022', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0923', end: '0980', title: '', type:'background', group: 3, className:'darkgrey'},
-	{id: 'B3024', content: '2. 第二日<br>&emsp;Second Day', editable: false, start: '0980', end: '1027', title: '', type:'background', group: 3, className:'lightgreen'},
+//UPDATE 3
+	{id: 'B301', content: '<b>1. 頭一日<br>&emsp;Day One', editable: false, start: '0000-10-07T04:00:00', end: '0918',type:'background', group: 3, className: 'black'},
+	{id: 'B3012', content: '', editable: false, start: '0918', end: '0923', title: '', type:'background', group: 3, className:'blacktogrey'},
+	{id: 'B302', content: '<b>2. 第二日<br>&emsp;Second Day', editable: false, start: '0923', end: '0978', title: '', type:'background', group: 3, className:'darkgrey'},
+	{id: 'B3022', content: '', start: '0978', end: '0983', type: 'background', group: 3, className: 'greytogreen'},		
+	{id: 'B3024', content: '2. 第二日<br>&emsp;Second Day', editable: false, start: '0983', end: '1127', title: '', type:'background', group: 3, className:'lightgreen'},
+	{id: 'B3035', content: '', start: '1127', end: '1132', type: 'background', group: 3, className: 'greentoyellow'},	
 	{id: 'B303', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1027', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
 	{id: 'B3032', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1027', end: '1130', title: '', type:'background', group: 3, className:'lightgreen'},
-	{id: 'B3034', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1130', end: '1226', title: '', type:'background', group: 3, className:'lightyellow'},
+	{id: 'B3034', content: '3. 第三日<br>&emsp;Third Day', editable: false, start: '1132', end: '1226', title: '', type:'background', group: 3, className:'lightyellow'},
 	{id: 'B304', content: '4. 第四日<br>&emsp;Fourth Day', editable: false, start: '1226', end: '1289', title: '', type:'background', group: 3, className:'lightyellow'},
 	{id: 'B306', content: '5. 第五日<br> &emsp;Fifth Day', editable: false, start: '1289', end: '1326', title: '', type:'background', group: 3, className:'lightyellow'},
 	//{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1330', end: '1379-12-29T18:56:12', title: '', type:'background', group: 3, className:''},
-	{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1330', end: '1379-12-29T18:56:12', title: '', type:'', group: 3, className:''},
+	{id: 'B3042', content: '', start: '1326', end: '1329', type: 'background', group: 3, className: 'yellowtopurple'},		
+	{id: 'B305', content: '', start: '1329', end: '1331-06-30', type: 'background', group: 3, className: 'lightpurple'},
+	{id: 'B3052', content: '', start: '1331-06-30', end: '1332-06-30', type: 'background', group: 3, className: 'purpletogrey'},
+	{id: 'B309', content: '6. 第六日<br>&emsp;Sixth Day', editable: false, start: '1329', end: '1379-12-29T18:56:12', title: '', type:'', group: 3, className:''},
 	{id: 'B325', content: '7. 第七日<br> Seventh Day', editable: false, start: '1379-12-29T18:56:13', type: '', group: 3, className: ''},
-
 	{id: 'C205', content: '', start: '1326', end: '1331-06-30', type: 'background', group: 3, className: 'lightpurple'},
-	{id: 'C206', content: '', start: '1331-07-01', end: '1335', type: 'background', group: 3, className:'lightgrey'},
+	
+	{id: 'C206', content: '', start: '1332-07-01', end: '1335', type: 'background', group: 3, className:'lightgrey'},	
+//	{id: 'C206', content: '', start: '1334-07-01', end: '1335', type: 'background', group: 3, className:'lightgrey'},
 	{id: 'C207', content: '', start: '1335', end: '1338', type: 'background', group: 3, className: 'pink'},
 	{id: 'C208', content: '', start: '1338', end: '1344', type: 'background', group: 3, className: 'green'},
 	{id: 'C209', content: '', start: '1344', end: '1350', type: 'background', group: 3, className: 'blue'},
@@ -677,7 +668,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){w
 	{id: 'C213', content: '', start: '1365-06-30', end: '1373-05-25', type: 'background', group: 3, className: 'LavenderBlush'},
 	{id: 'C214', content: '', start: '1373-05-25', end: '1377-09-11', type: 'background', group: 3, className: 'turquoise'},
 	{id: 'C215', content: '', start: '1377-09-11', end: '1379-09-29T18:56:12', type: 'background', group: 3, className: 'darkgrey'},
-	{id: 'C216', content: '', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 3, className: 'lightred'},						   
+	{id: 'C216', content: '', start: '1379-09-29T18:00:00', end: '1379-12-29T18:56:12', type: 'background', group: 3, className: 'lightred'},
 							   
 							   
     // CREATION OF THE HEAVEN AND THE EARTH - GROUP 1
