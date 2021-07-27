@@ -8,13 +8,28 @@
 
 	<script src="js/fp.js"></script>
 	<script src="js/vis.min.js" type="text/javascript"></script
+    	<script src="js/jquery-min.js"></script>			
 	<script type="text/javascript" class="silex-script"></script>
 	<link href="css/vis.min.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/front-end.css">
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
-    
+
+	<script src="https://www.blueletterbible.org/assets/scripts/blbToolTip/BLB_ScriptTagger-min.js" type="text/javascript"></script> 
+	<script type="text/javascript">
+	// Additional settings
+	BLB.Tagger.Translation = 'KJV';				//KJV, NKJV, NLT, NIV, ESV, CSB, LXX ...
+	BLB.Tagger.HyperLinks = 'all'; 				// 'all', 'none', 'hover'
+	BLB.Tagger.HideTanslationAbbrev = false;
+	BLB.Tagger.TargetNewWindow = true;
+	BLB.Tagger.Style = 'par'; 				// 'line' or 'par'
+	BLB.Tagger.NoSearchTagNames = ''; 			// HTML element list
+	BLB.Tagger.NoSearchClassNames = 'noTag doNotTag'; 	// CSS class list
+	</script>	
+	
+		
+	
 <!--Style Sheet goes here-->
 
 <style>
@@ -116,7 +131,13 @@
     	color: initial;
 	}
 /* Home button ends */	
-	
+
+/* Accordinig Initial Display */
+	.accordion-body{
+	display: none;
+		padding: 0 10px;
+	}
+		
 </style>
 
 	
@@ -225,7 +246,7 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
   </div>
 </div>
 
-      &nbsp;&nbsp;<input id="selection" size="9" value="1"> 
+      &nbsp;&nbsp;<input id="selection" size="9" value="1" style="height:14px; width:82px"> 
 
   <!--Find Check Box & Find Button-->
   <!--	<input type="text" id="selection" value="777"><input type="button" id="select" value="Find & Focus"> <label><input type="checkbox" id="focus" checked></label>-->
@@ -1031,6 +1052,74 @@ document.write(unescape('%20%20%3C%21%2D%2D%46%69%6E%64%20%42%75%74%74%6F%6E%2D%
 </script>
 
 
+<!-- Accordion Starts - Requires jquery-min.js-->
+	<div class="parent-div">	
+		<div class="accordion-heading"> <span class="plusminus">+</span></div>
+			<div class="accordion-body">
+			<hr>   
+	
+		<font size="2">	&nbsp;
+		在聖經中查找單詞或段落 Lookup a word or passage in the Bible<br>
+		&nbsp;
+		<font size="2">
+	
+1. 尋找中英文 Search 
+	<font size="2" font face="Times New Roman" font color="brown">
+	Bible Gateway:
+	</font><br>
+	<form action="https://www.biblegateway.com/quicksearch" target="_blank" /">
+		<input type="text"  value="" style="height:14px; width:235px;" name="quicksearch" />
+		&emsp;&emsp;
+		<input style="width:30px" type="submit" value="&#128269" /><br />
+		<a href="https://www.biblegateway.com/" title="The Bible in multiple languages, versions, and formats" ></a>
+		<!-- <img src="https://www.biblegateway.com/assets/images/logos/bglogo_sm.gif?103106" width="146" height="44" alt="BibleGateway.com" border="0" /></a><br /> -->
+	</form>
+	&nbsp;
+
+2. 	尋找英文 Search 
+	<font size="2" font face="Times New Roman" font color="blue">
+	Blue Letter Bible:
+	</font>
+	<form action="https://www.blueletterbible.org/search/preSearch.cfm" method="get" target="_new">
+		<input type="text"  value="" name="Criteria" style="height:14px; width:235px";/>
+		&emsp;&emsp;
+		<input type="submit" value="&#128269" style="width:30px";/>
+	</form>
+	<form id="bstSearchBox" target="_blank" method="get" action="https://www.biblestudytools.com/search/">
+	<div style="width:320px;">
+		<div style="overflow:hidden; width:320px;">
+			<a href="https://www.biblestudytools.com/" style="float:left; margin:0px 3px;"></a>
+		<div class="title" style="float:left; margin:0px 3px; height:12px; display:block; line-height:45px;">
+	</div>
+	</div>
+	</div>
+	</form>  
+    </div>    
+
+<script language="javascript"> 
+    $(document).ready(function(){
+        $(".accordion-heading").click(function(){  
+              if($(".accordion-body").is(':visible')){  		/* check condition accordion-body is visible or not */
+                  $(".accordion-body").slideUp(600);  			/*if content is visible then close accordion-body with specific time duration */
+                $(".plusminus").text('+')    					/* add plus sign */
+            }
+            else{
+                $(this).next(".accordion-body").slideDown(600); /*if content not visible then show the accordion-body */
+                $(this).children(".plusminus").text('-');  		/* add minus sign */
+            }
+        });
+    });
+</script>
+     
+      </div>
+    </div>
+  </div>
+  
+ <!-- Accordion Ends --> 
+			     
+			     
+			     
+			     
 <script>
 
    /**
