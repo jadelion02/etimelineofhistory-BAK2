@@ -1045,6 +1045,22 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
 //-->
 </script>
 
+<!-- Accordion Script -->
+<script language="javascript"> 
+    $(document).ready(function(){
+        $(".accordion-heading").click(function(){  
+              if($(".accordion-body").is(':visible')){  		/* check condition accordion-body is visible or not */
+                  $(".accordion-body").slideUp(600);  			/*if content is visible then close accordion-body with specific time duration */
+                $(".plusminus").text('+')    				/* add plus sign */
+            }
+            else{
+                $(this).next(".accordion-body").slideDown(600); 	/*if content not visible then show the accordion-body */
+                $(this).children(".plusminus").text('-');  		/* add minus sign */
+            }
+        });
+    });
+</script>
+<!-- Accordion Script Ends -->
 
   <!--Find Button-->
   	<input type="checkbox" id="focus" checked>
@@ -1102,6 +1118,7 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
   
  <!-- AAA Begins --> 
  <!-- <br><br> -->
+	<br>
 	&nbsp;
 	<a href="#" onclick="document.body.style.fontSize='x-small';"><font size="2">A</a>&nbsp;    
 	<a href="#" onclick="document.body.style.fontSize='medium';"><font size="3">A</a>&nbsp;    
@@ -1115,23 +1132,6 @@ document.write(unescape('%3C%64%69%76%20%69%64%3D%22%6D%79%4D%6F%64%61%6C%22%20%
     &nbsp;<font size="1" color="grey">R. Siew  © 2020</font>
 </footer>
  
-<!-- Accordion Script -->
-<script language="javascript"> 
-    $(document).ready(function(){
-        $(".accordion-heading").click(function(){  
-              if($(".accordion-body").is(':visible')){  		/* check condition accordion-body is visible or not */
-                  $(".accordion-body").slideUp(600);  			/*if content is visible then close accordion-body with specific time duration */
-                $(".plusminus").text('+')    				/* add plus sign */
-            }
-            else{
-                $(this).next(".accordion-body").slideDown(600); 	/*if content not visible then show the accordion-body */
-                $(this).children(".plusminus").text('-');  		/* add minus sign */
-            }
-        });
-    });
-</script>
-<!-- Accordion Script Ends -->
-
 		     
 			     
 <script>
