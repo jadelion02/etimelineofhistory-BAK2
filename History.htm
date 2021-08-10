@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>History Timeline</title>
+  <title>Creation Timeline</title>
 
 <META http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,47 +26,102 @@
 	BLB.Tagger.Style = 'par'; 				// 'line' or 'par'
 	BLB.Tagger.NoSearchTagNames = ''; 			// HTML element list
 	BLB.Tagger.NoSearchClassNames = 'noTag doNotTag'; 	// CSS class list
-	</script>	
-	
-		
-	
-<!--Style Sheet goes here-->
+	</script>
 
-<style>
+<!--Style Sheet goes here-->
+  <style type="text/css">
 
 /* Accordinig Initial Display */
 	.accordion-body{
 	display: none;
 		padding: 0 10px;
-	}
-		
-
-     /*Reponsive images */
+	} 
+	  
+     /*Reponsive images */	  
      .responsive {
          width: 100%;
          height: auto;
      }
 
       @media (max-width: 600px) { 
-	  /* body { background: orange; } */
+	  body { background: orange; } 
 	  .modal-content {
 	  	 width: 95%;
 	 }
      } 
-	
-	
+
+    div.vis-editable,
+      div.vis-editable.vis-selected {
+      /* custom styling for editable items... */
+    }
+
+    div.vis-readonly,
+      div.vis-readonly.vis-selected {
+      /* custom styling for readonly items... */
+//      background-color: #d8d8e7;
+//      background-color: #FF4500;
+      background-color: #9a4bfa;
+      border-color: ;
+      color: black;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+      //box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.4);
+    }
+
+    /* Custom new classes overrule the styles for selected events */
+    .vis-item.vis-selected.black {
+      background-color: #9a4bfa;
+      border-color: white;
+      border-width: 2px;
+      color: black;
+      font-size: 12pt;
+      font-weight: bold;
+      //box-shadow: 10px 12px 16px 0px rgba(0,0,0,0.4);
+      }
+
+    /* Custom new classes overrule the styles for selected events */
+    .vis-item.vis-selected {
+      background-color: ;
+      border-color: white;
+      border-width: 2px;
+      color: black;
+      font-size: 12pt;
+      font-weight: bold;
+      //box-shadow: 0 0 10px grey;
+    }
+
+
+    .vis-item .vis-item-overflow {
+      overflow: visible;
+    }
+
     .vis-item.vis-background.negative {
       background-color: rgba(255, 255, 0, 0.2);
     }
 
-    /* Background color of box
+    .vis-item.vis-background.blacktogrey {
+	background-image: linear-gradient(to right, #000000 11%, #cccccc 100%);		
+    }
+    .vis-item.vis-background.greytogreen {
+	background-image: linear-gradient(to right, #cccccc 11%, #e6ffcc 100%);		
+    }
+    .vis-item.vis-background.greentoyellow {
+	background-image: linear-gradient(to right, #e6ffcc 11%, #ffffe6 100%);		
+    }	
+    .vis-item.vis-background.yellowtopurple {
+	background-image: linear-gradient(to right, #ffffe6 11%, #ffe6ff 100%);		
+    }	
+    .vis-item.vis-background.purpletogrey {
+	background-image: linear-gradient(to right, #ffe6ff 11%, #f1f1f1 100%);		
+    }	
+		
+	
+    // Background color of box
     .vis-item.white { background-color: #ffffff;}
     .vis-item.lightgrey { background-color: #f1f1f1;}
     .vis-item.grey { background-color: #EAEAEA;}
     .vis-item.darkgrey { background-color: #cccccc;}
     .vis-item.darkgrey2 { background-color: #19181A;}
- /* .vis-item.pink { background-color: #ffe6e6; z-index: -1;} */
-    .vis-item.pink { background-color: #ffe6e6;} 	
+    .vis-item.pink { background-color: #ffe6e6;}    
     .vis-item.red { background-color: #FA8072;}
     .vis-item.bloodred { background-color: #FF4500;}
     .vis-item.orange { background-color: #ffd699;}
@@ -85,49 +140,11 @@
     .vis-item.brown { background-color: #d2a679;}
     .vis-item.black { background-color: #000000;}     
     .vis-item.silver { background-color: #c0c0c0;}
-    .vis-item.brown1 { background-color: #cc6600;}
-    .vis-item.brown2 { background-color: #ad5c47;}
-    .vis-item.brown3 { background-color: #ffb37e;}
-    .vis-item.brown4 { background-color: #ffa143;}    
-    .vis-item.blue1 { background-color: #34dbeb;}    
-    .vis-item.blue2 { background-color: #06a2c9;}
-    .vis-item.blue3 { background-color: #4287f5;}
-    .vis-item.blue4 { background-color: #1b61d1;}
 
-/* Back To Top Arrow  */
-        body {font-family:Verdana, sans-serif;}
-      /*  p {padding:20px 0;} */
 
-        #backtop {
-            position: fixed;
-            left:auto;right: 20px;top:auto;bottom: 20px;
-            outline: none;
-            overflow:hidden;
-            color:#fff;
-            text-align:center;
-            background-color:rgba(49,79,96,0.84);
-            height:40px;
-            width:40px;
-            line-height:40px;
-            font-size:14px;
-            border-radius:2px;
-            cursor:pointer;
-            transition:all 0.3s linear;
-            z-index:999999;
-            opacity:1;
-            display:none;
-        }
-
-        #backtop:hover {
-	    background-color:#27CFC3;
-        }
-        #backtop.mcOut {
-            opacity:0;
-        }
-/* Back To Top Arrow */   
 
  
-/* for Home button */
+<!-- for Home button -->
 	a.button {
     	-webkit-appearance: button;
     	-moz-appearance: button;
@@ -136,48 +153,46 @@
     	text-decoration: none;
     	color: initial;
 	}
-/* Home button ends */	
+<!-- Home button ends -->
 
 
+    	
+  </style>
 
-</style>
 
-	
 <META name="GENERATOR" content="MSHTML 11.00.9600.18860">
 
 <!--    -->
 </head>
 <body>
 
-
 <div id="visualization"></div>
 
 <!-- Header Title -->
 <div class="header">
-     <h2>&emsp;<font size="5" font face="Times New Roman" color="red">e</font><font size="5" font face="Times New Roman" color="black">Timeline of History &nbsp;&nbsp;</font>
+     <h2>&emsp;<font size="5" font face="Times New Roman" color="red">e</font><font size="5" font face="Times New Roman" color="black">Timeline of Creation &nbsp;&nbsp;</font>
 
-
-
+	     
+	     
 <!-- Background OK -->
-  	 <Body background="img/bg15.jpg">  
-<!-- Background ends -->
-
-
+  	<Body background="img/bg11.jpg">  
+<!-- Background ends -->		     
+	     
+	     
 <!-- Trigger/Open The Modal -->
 <!-- <button id="myBtn">^</button>-->
 <!-- <img src="img/favicon.ico" alt="Control">-->
 
-
+	     
 <!-- Home button -->
 <!--   <div align="center"> -->
-	<a href="index.htm" class="button">&#127968;</a> 
+	<a href="index.htm" class="button">&#127968;</a>&emsp; 
 <!--   </div> -->
 <!-- Home button Ends -->
 
-
+	     
   <div class="dropdown">
-    &emsp;<button id="myBtn">^</button>
-
+    <button id="myBtn">^</button>  
 
     <div class="dropdown-content">
     <input type="button" value="&#8505;" onclick="window.open('img/eTimeline Information.pdf');">
@@ -192,23 +207,15 @@
 <button class="btn" id="moveLeft2" style="float: right; width:60px"> < </button>
 <!--NAV BUTTONS--> 
 
-
+		
 <!-- Back To Top Arrow  -->
     <div id="backtop">&#9650;</div>
 <!-- Back To Top Arrow  -->
 
-  <div class="progress-container">	
-    <div class="progress-bar" id="myBar"></div>
-  </div> 
- 	
-    <!-- </div> -->
-
-    <!-- </div> -->
-
-</body>
 
 
 <!-- The Modal -->
+
 
 
 <script language="javascript">
